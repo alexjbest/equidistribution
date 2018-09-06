@@ -260,7 +260,7 @@ MathJax.Hub.Config({
 <h2 class="link active"><a href="sec-equidistribution-intro.html" data-scroll="sec-equidistribution-intro"><span class="codenumber">1</span> <span class="title">Equidistribution in Number Theory</span></a></h2>
 <ul>
 <li><a href="sec-equidistribution-intro.html#subsection-1" data-scroll="subsection-1">Intro</a></li>
-<li><a href="sec-equidistribution-intro.html#subsection-2" data-scroll="subsection-2"></a></li>
+<li><a href="sec-equidistribution-intro.html#subsection-2" data-scroll="subsection-2">Linnik and Duke</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-equidistribution-intro"><h2 class="heading hide-type">
@@ -268,11 +268,14 @@ MathJax.Hub.Config({
 </h2>
 <a href="sec-equidistribution-intro.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><aside class="aside-like" id="aside-1"><p id="p-1">Lecture 1 6/9/2018</p></aside><p id="p-2">These are notes for Ali Altuğ's course MA841 at BU Fall 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_3/2018_3_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_3/2018_3_sem.html</code></a>.</p>
-<p id="p-4">Course overview: Upon Akshay Venkatesh winning the fields medal I decided to dedicate this term to various aspects of equidistribution results in number theory and their relations to L-functions. I am aiming to cover basic results like Linnik's and Duke's theorems, as well as certain aspects of subconvexity. As we move along we may briefly touch several other aspects like quantum unique ergodicity (QUE) or equidistribution in other settings (e.g. over function fields). There is an abundance of material on this topic. We will not follow a single book or an article (although the first book and the surv ey articles following that will be the main reference), however here are a bunch of helpful papers/books. I will update these references as we move along.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<p id="p-4">Course overview: Upon Akshay Venkatesh winning the fields medal I decided to dedicate this term to various aspects of equidistribution results in number theory and their relations to L-functions. I am aiming to cover basic results like Linnik's and Duke's theorems, as well as certain aspects of subconvexity. As we move along we may briefly touch several other aspects like quantum unique ergodicity (QUE) or equidistribution in other settings (e.g. over function fields). There is an abundance of material on this topic. We will not follow a single book or an article (although the first book and the survey articles following that will be the main reference), however here are a bunch of helpful papers/books. I will update these references as we move along.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Intro</span>
 </h3>
-<blockquote class="blockquote" id="blockquote-1"></blockquote>
-<p id="p-5">Some topics we will try and cover:</p>
+<blockquote class="blockquote" id="blockquote-1">
+<p id="p-5">I wasn't going to do this at all, but then Akshay won the Fields medal.</p>
+<cite class="attribution">―Ali Altuğ</cite>
+</blockquote>
+<p id="p-6">Some topics we will try and cover:</p>
 <ol class="decimal">
 <li id="li-1">Linnik's and Duke's theorem 1970-1990</li>
 <li id="li-2">lattice points and hyperbolic geometry</li>
@@ -283,21 +286,21 @@ MathJax.Hub.Config({
 <li id="li-7">Kusnetsoz formula</li>
 <li id="li-8">Other topics!</li>
 </ol></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title"></span>
+<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Linnik and Duke</span>
 </h3>
-<p id="p-6">Akshay's first breakthrough, according to Sarnak, was subconvexity. He became interested in ergodic theory, because they could prove hard theorems, equidistribution is a powerful tool in number theory.</p>
-<p id="p-7">Our main goal will be to talk about: Some problems stated (and proved) by Linnik. In the book, Ergodic properties of algebraic fields, 1968. He considered lattice points on a sphere of radius \(n\text{,}\) these are points (say in \(\RR^3\)) whose coordinates are integral of a fixed distance from the origin. Analogous to the circle problem. If \(n\) is fixed there is nothing to distribute, but if we vary \(n\) and project down we can ask do they accumulate miss any patches, generally how do they distribute. Of course this can be generalised.</p>
+<p id="p-7">Akshay's first breakthrough, according to Sarnak, was subconvexity. He became interested in ergodic theory, because they could prove hard theorems, equidistribution is a powerful tool in number theory.</p>
+<p id="p-8">Our main goal will be to talk about: Some problems stated (and proved) by Linnik. In the book, Ergodic properties of algebraic fields, 1968. He considered lattice points on a sphere of radius \(n\text{,}\) these are points (say in \(\RR^3\)) whose coordinates are integral of a fixed distance from the origin. Analogous to the circle problem. If \(n\) is fixed there is nothing to distribute, but if we vary \(n\) and project down we can ask do they accumulate miss any patches, generally how do they distribute. Of course this can be generalised.</p>
 <article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Setup</span></h5>
-<p id="p-8">Sphere \(S^2\text{.}\)</p>
-<p id="p-9">Lattice points \(\alpha = (x_1, x_2, x_3) \in \ZZ^3\text{.}\)</p>
-<div class="displaymath" id="p-10">
+<p id="p-9">Sphere \(S^2\text{.}\)</p>
+<p id="p-10">Lattice points \(\alpha = (x_1, x_2, x_3) \in \ZZ^3\text{.}\)</p>
+<div class="displaymath" id="p-11">
 \begin{equation*}
 |\alpha|^2 =  x_1^2 + x_2^2 + x_3^2
 \end{equation*}
 </div>
 <p>this is where the number theory comes, we are looking at representability of numbers \(n\) by this ternary quadratic form.</p>
-<p id="p-11">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogarov for \(n=4\text{.}\) \(n=3\) is the cut off, here half integral weight modular forms are relevant.</p>
-<p id="p-12">Set</p>
+<p id="p-12">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogarov for \(n=4\text{.}\) \(n=3\) is the cut off, here half integral weight modular forms are relevant.</p>
+<p id="p-13">Set</p>
 <div class="displaymath">
 \begin{equation*}
 \Omega_N = \left\{x= \frac{\alpha}{|\alpha|} : \alpha \in \ZZ^2 ,\,|\alpha|^2 = N \right\}\subseteq S^2\text{.}
@@ -305,8 +308,8 @@ MathJax.Hub.Config({
 </div></article><article class="example-like" id="question-1"><h6 class="heading">
 <span class="type">Question</span> <span class="codenumber">1.1</span>
 </h6>
-<p id="p-13">Are \(\Omega_N\) “equidistributed”  as \(N \to \infty\text{?}\)</p></article><p id="p-14">There is an immediate obstruction to \(N\) being a sum of \(3\) squares, e.g. \(N = 7\) implies \(\Omega_7 = \emptyset\text{.}\)</p>
-<p id="p-15">Recall: (Gauss/Legendre)</p>
+<p id="p-14">Are \(\Omega_N\) “equidistributed”  as \(N \to \infty\text{?}\)</p></article><p id="p-15">There is an immediate obstruction to \(N\) being a sum of \(3\) squares, e.g. \(N = 7\) implies \(\Omega_7 = \emptyset\text{.}\)</p>
+<p id="p-16">Recall: (Gauss/Legendre)</p>
 <div class="displaymath">
 \begin{equation*}
 N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
@@ -316,22 +319,22 @@ N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
 <article class="theorem-like" id="thm-linnik"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.2</span> <span class="title">Linnik</span>
 </h6>
-<p id="p-16">Let \(f \in \cinf(S^2)\text{,}\) then as \(N \to \infty\text{,}\) \(N\) squarefree \(N \not\equiv 7 \pmod 8\text{,}\) \(\legendre{N}{p} = 1\) for some fixed odd prime \(p\)</p>
+<p id="p-17">Let \(f \in \cinf(S^2)\text{,}\) then as \(N \to \infty\text{,}\) \(N\) squarefree \(N \not\equiv 7 \pmod 8\text{,}\) \(\legendre{N}{p} = 1\) for some fixed odd prime \(p\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{\# \Omega_N} \sum_{x\in \Omega_N} f(x) \to \int_{S^2} f\diff \sigma
 \end{equation*}
 </div>
-<p>where \(\diff \sigma\) is the Lebesgue measure on \(S^2\text{.}\)</p></article><p id="p-17">This is saying that the points are equidistributed with respect to the Lebesgue measure.</p>
-<p id="p-18">The last condition is a defect of the method, known as a Linnik condition.</p>
+<p>where \(\diff \sigma\) is the Lebesgue measure on \(S^2\text{.}\)</p></article><p id="p-18">This is saying that the points are equidistributed with respect to the Lebesgue measure.</p>
+<p id="p-19">The last condition is a defect of the method, known as a Linnik condition.</p>
 <article class="remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.3</span>
 </h6>
-<p id="p-19">Linnik's proof is ergodic theoretic.</p></article><p id="p-20">After this came Duke in 1988, in the mean time, Weil conjectures were proved, Iwaniec gave bounds for Kloosterman sums. Duke was a graduate student of Sarnak at Courant. He gave a more direct proof of <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">Theorem 1.2</a> which does not have the \(\legendre{N}{p} = 1\) condition. His proof is based on the theory of (half integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.</p>
-<p id="p-21">Why do exponential sums enter the picture? We are trying to prove that we have a sum converging to an integral. Generally we work with a basis of functions first, we could try using fourier analysis, using harmonics as our basis, this is when exponential sums appear. That requires us to work out harmonics on the sphere (spherical harmonics) which leads to representation theory, which as the sphere is compact involves Weyl representations etc.</p>
-<p id="p-22">Duke also proved “the same” theorem over  modular surfaces. Instead of looking at expanding spheres we study expanding hyperboloids.</p>
+<p id="p-20">Linnik's proof is ergodic theoretic.</p></article><p id="p-21">After this came Duke in 1988, in the mean time, Weil conjectures were proved, Iwaniec gave bounds for Kloosterman sums. Duke was a graduate student of Sarnak at Courant. He gave a more direct proof of <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">Theorem 1.2</a> which does not have the \(\legendre{N}{p} = 1\) condition. His proof is based on the theory of (half integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.</p>
+<p id="p-22">Why do exponential sums enter the picture? We are trying to prove that we have a sum converging to an integral. Generally we work with a basis of functions first, we could try using fourier analysis, using harmonics as our basis, this is when exponential sums appear. That requires us to work out harmonics on the sphere (spherical harmonics) which leads to representation theory, which as the sphere is compact involves Weyl representations etc.</p>
+<p id="p-23">Duke also proved “the same” theorem over  modular surfaces. Instead of looking at expanding spheres we study expanding hyperboloids.</p>
 <article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Setup</span></h5>
-<p id="p-23">Space</p>
+<p id="p-24">Space</p>
 <div class="displaymath">
 \begin{equation*}
 \pm \Gamma\backslash \HH
@@ -352,8 +355,8 @@ N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
 \mathcal F = \left\{ z\in \HH : -\frac12 \le \Re(z) \le 0, |z| \ge 1 \text{ or }\frac12 \gt \Re(z) \gt 0, |z| \gt 1 \right\}
 \end{equation*}
 </div>
-<p id="p-24">\(\Omega_N\)'s are now replaced with, CM points.</p></article><article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Digression (CM points)</span></h5>
-<p id="p-25">\(Q\) a binary quadratic form</p>
+<p id="p-25">\(\Omega_N\)'s are now replaced with, CM points.</p></article><article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Digression (CM points)</span></h5>
+<p id="p-26">\(Q\) a binary quadratic form</p>
 <div class="displaymath">
 \begin{equation*}
 Q(x,y) = ax^2+ bxy + cy^2
@@ -363,39 +366,39 @@ Q(x,y) = ax^2+ bxy + cy^2
 <article class="theorem-like" id="theorem-2"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.4</span> <span class="title">Gauss</span>
 </h6>
-<p id="p-26">There are only finitely many equivalence classes of such forms for fixed  \(d\text{.}\)</p></article><p id="p-27">The number of such is given by the Hurwitz class number.</p>
-<p id="p-28">Given \(Q\) we associate a CM point</p>
+<p id="p-27">There are only finitely many equivalence classes of such forms for fixed  \(d\text{.}\)</p></article><p id="p-28">The number of such is given by the Hurwitz class number.</p>
+<p id="p-29">Given \(Q\) we associate a CM point</p>
 <div class="displaymath">
 \begin{equation*}
 z_Q = \frac{-b + \sqrt{d}}{2a} \in \HH\text{.}
 \end{equation*}
 </div>
-<p id="p-29">The action of \(\Gamma\) on \(Q\) is the same as the action of \(\Gamma\) on \(z_Q\text{.}\)</p>
+<p id="p-30">The action of \(\Gamma\) on \(Q\) is the same as the action of \(\Gamma\) on \(z_Q\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 z_{\gamma Q }  =\gamma z_Q\text{.}
 \end{equation*}
 </div>
-<p id="p-30">Let</p>
+<p id="p-31">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \Lambda_d  = \{z_Q \in \mathcal F : \disc(Q) = d\}\text{.}
 \end{equation*}
 </div>
-<p id="p-31">We need to sum properly to take automorphisms into account.</p>
+<p id="p-32">We need to sum properly to take automorphisms into account.</p>
 <article class="definition-like" id="definition-1"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">1.5</span>
 </h6>
-<div class="displaymath" id="p-32">
+<div class="displaymath" id="p-33">
 \begin{equation*}
 \sum{\vphantom{\sum}}^*_{z_Q \in \Lambda_d}
 \end{equation*}
 </div>
-<p>is the sum weighted by \(\frac 12\) if \(Q = a(x^2+ y^2)\) (\(d= -4\)), \(\frac 13\) if \(Q = a(x^2+ xy+y^2)\) (\(d= -3\)).</p></article><p id="p-33">If we want to be fancy we can say the word stack here.</p>
+<p>is the sum weighted by \(\frac 12\) if \(Q = a(x^2+ y^2)\) (\(d= -4\)), \(\frac 13\) if \(Q = a(x^2+ xy+y^2)\) (\(d= -3\)).</p></article><p id="p-34">If we want to be fancy we can say the word stack here.</p>
 <article class="remark-like" id="remark-2"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.6</span>
 </h6>
-<div class="displaymath" id="p-34">
+<div class="displaymath" id="p-35">
 \begin{equation*}
 \sum_{z_Q \in \Lambda_d}{\vphantom{\sum}}^*1 = H(d)
 \end{equation*}
@@ -403,7 +406,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 <p>where \(H(d)\) is the Hurwitz class number.</p></article><article class="remark-like" id="remark-3"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.7</span>
 </h6>
-<p id="p-35">If \(d\) is fundamental, i.e. a discriminant of some \(\QQ(\sqrt{d})\) then \(H(d) = h(d)\) the regular class number.</p></article></article><p id="p-36">For the measure on \(\mathcal F\) we take</p>
+<p id="p-36">If \(d\) is fundamental, i.e. a discriminant of some \(\QQ(\sqrt{d})\) then \(H(d) = h(d)\) the regular class number.</p></article></article><p id="p-37">For the measure on \(\mathcal F\) we take</p>
 <div class="displaymath">
 \begin{equation*}
 \diff\mu = \frac 3\pi \frac{\diff x \diff y}{y^2}\text{.}
@@ -412,12 +415,12 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 <article class="theorem-like" id="thm-duke"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.8</span> <span class="title">Duke</span>
 </h6>
-<p id="p-37">Let \(f \in \cinf(\HH)\text{,}\) that is \(\Gamma\) invariant and bounded on \(\mathcal F\text{,}\)  then as \(d \to \infty\) over fundamental discriminants</p>
+<p id="p-38">Let \(f \in \cinf(\HH)\text{,}\) that is \(\Gamma\) invariant and bounded on \(\mathcal F\text{,}\)  then as \(d \to \infty\) over fundamental discriminants</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{1}{\# \Lambda_d} \sum_{z\in \Lambda_d}{\vphantom{\sum}}^* f(z) \to \int\int_{\mathcal F} f\diff \mu\text{.}
+\frac{1}{\# \Lambda_d} \sum_{z\in \Lambda_d}{\vphantom{\sum}}^* f(z) \to \iint_{\mathcal F} f\diff \mu\text{.}
 \end{equation*}
-</div></article><p id="p-38">Equidistribution implies density, but is so much more, for example we cannot have all points lying on an increasingly dense grid.</p></section></section></div></main>
+</div></article><p id="p-39">Equidistribution implies density, but is so much more, for example we cannot have all points lying on an increasingly dense grid.</p></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
