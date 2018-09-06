@@ -1,0 +1,199 @@
+section#sec-equidistribution-intro
+    title Equidistribution in Number Theory
+
+    introduction
+        aside: p Lecture 1 6/9/2018
+        p.
+            These are notes for Ali Altuğ's course MA841 at BU Fall 2018.
+
+        p.
+            The course webpage is #[url(href="http://math.bu.edu/people/saaltug/2018_3/2018_3_sem.html")/].
+        p.
+            Course overview:
+
+            Upon Akshay Venkatesh winning the fields medal I decided to dedicate this term to various aspects of equidistribution results in number theory and their relations to L-functions. I am aiming to cover basic results like Linnik's and Duke's theorems, as well as certain aspects of subconvexity. As we move along we may briefly touch several other aspects like quantum unique ergodicity (QUE) or equidistribution in other settings (e.g. over function fields).
+
+            There is an abundance of material on this topic. We will not follow a single book or an article (although the first book and the surv ey articles following that will be the main reference), however here are a bunch of helpful papers/books. I will update these references as we move along.
+
+    subsection
+        title Intro
+
+        blockquote
+            | I wan't going to do this at all, but then Akshay won the Fields medal.
+
+        p
+            | Some topics we will try and cover:
+            ol
+                li
+                    | Linnik's and Duke's theorem 1970-1990
+                li
+                    | lattice points and hyperbolic geometry
+                li
+                    | modular forms
+                li
+                    | spectral theory
+                li
+                    | modular forms of half integral weight.
+                li
+                    | harmonic analysis
+                li
+                    | Kusnetsoz formula
+                li
+                    | Other topics!
+
+    subsection
+
+        p
+            | Akshay's first breakthrough, according to Sarnak, was subconvexity.
+            | He became interested in ergodic theory, because they could prove hard theorems, equidistribution is a powerful tool in number theory.
+
+        p
+            | Our main goal will be to talk about: Some problems stated (and proved) by Linnik.
+            | In the book, Ergodic properties of algebraic fields, 1968.
+            | He considered lattice points on a sphere of radius #[m n], these are points (say in #[m \RR^3]) whose coordinates are integral of a fixed distance from the origin.
+            | Analogous to the circle problem.
+            | If #[m n] is fixed there is nothing to distribute, but if we vary #[m n] and project down we can ask do they accumulate miss any patches, generally how do they distribute.
+
+            | Of course this can be generalised.
+
+        paragraphs
+            title Setup
+
+            p
+                | Sphere #[m S^2].
+            p
+                | Lattice points #[m \alpha = (x_1, x_2, x_3) \in \ZZ^3].
+            p
+                me |\alpha|^2 =  x_1^2 + x_2^2 + x_3^2
+                | this is where the number theory comes, we are looking at representability of numbers #[m n] by this ternary quadratic form.
+            p
+                | Various methods exist for studying this for varying #[m n], quadratic reciprocity for #[m n=2], circle method/Vinogarov for #[m n=4].
+                | #[m n=3] is the cut off, here half integral weight modular forms are relevant.
+
+            p
+                | Set
+                me \Omega_N = \left\{x= \frac{\alpha}{|\alpha|} : \alpha \in \ZZ^2 ,\,|\alpha|^2 = N \right\}\subseteq S^2
+                | .
+
+        question
+            statement: p
+                | Are #[m \Omega_N] #[q equidistributed]  as #[m N \to \infty]?
+
+        p
+            | There is an immediate obstruction to #[m N] being a sum of #[m 3] squares, e.g. #[m N = 7] implies #[m \Omega_7 = \emptyset].
+        p
+            | Recall: (Gauss/Legendre)
+            me N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)
+            | , so we avoid these sets and ask the same question.
+
+        theorem#thm-linnik
+            title Linnik
+            statement: p
+                | Let #[m f \in \cinf(S^2)], then as #[m N \to \infty], #[m N] squarefree #[m N \not\equiv 7 \pmod 8], #[m \legendre{N}{p} = 1] for some fixed odd prime #[m p]
+                me \frac{1}{\# \Omega_N} \sum_{x\in \Omega_N} f(x) \to \int_{S^2} f\diff \sigma
+                | where #[m \diff \sigma] is the Lebesgue measure on #[m S^2].
+
+        p
+            | This is saying that the points are equidistributed with respect to the Lebesgue measure.
+
+        p
+            | The last condition is a defect of the method, known as a Linnik condition.
+
+        remark: p
+            | Linnik's proof is ergodic theoretic.
+        p
+            | After this came Duke in 1988, in the mean time, Weil conjectures were proved, Iwaniec gave bounds for Kloosterman sums.
+            | Duke was a graduate student of Sarnak at Courant.
+
+            | He gave a more direct proof of #[xref(ref="thm-linnik")/] which does not have the #[m \legendre{N}{p} = 1] condition.
+            | His proof is based on the theory of (half integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.
+
+        p
+            | Why do exponential sums enter the picture?
+            | We are trying to prove that we have a sum converging to an integral.
+            | Generally we work with a basis of functions first, we could try using fourier analysis, using harmonics as our basis, this is when exponential sums appear.
+            | That requires us to work out harmonics on the sphere (spherical harmonics) which leads to representation theory, which as the sphere is compact involves Weyl representations etc.
+        p
+            | Duke also proved #[q the same] theorem over  modular surfaces.
+            | Instead of looking at expanding spheres we study expanding hyperboloids.
+
+
+        paragraphs
+            title Setup
+
+            p
+                | Space
+                me \pm \Gamma\backslash \HH
+                me \HH = \left\{ x+iy \in CC : y \gt 0\right\}
+                me \Gamma = \SL_2(\ZZ)
+                me \mathcal F = \left\{ z\in \HH : -\frac12 \le \Re(z) \le 0, |z| \ge 1 \text{ or }\frac12 \gt \Re(z) \gt 0, |z| \gt 1 \right\}
+                // TODO picture upper half plane half open fundamental domain
+            p
+                | #[m \Omega_N]'s are now replaced with, CM points.
+
+        paragraphs
+            title Digression (CM points)
+
+            p
+                | #[m Q] a binary quadratic form
+                me Q(x,y) = ax^2+ bxy + cy^2
+                | of discriminant #[m d = b^2-  4ac \lt 0], #[m a,b,c\in \ZZ].
+                // TODO do we need a gt 0 here?!
+
+            theorem
+                title Gauss
+                statement: p
+                    | There are only finitely many equivalence classes of such forms for fixed  #[m d].
+
+            p
+                | The number of such is given by the Hurwitz class number.
+            p
+                | Given #[m Q] we associate a CM point
+                me z_Q = \frac{-b + \sqrt{d}}{2a} \in \HH
+                | .
+
+            p
+                | The action of #[m \Gamma] on #[m Q] is the same as the action of #[m \Gamma] on #[m z_Q].
+                me z_{\gamma Q }  =\gamma z_Q
+                |.
+
+            p
+                | Let
+                me \Lambda_d  = \{z_Q \in \mathcal F : \disc(Q) = d\}
+                | .
+
+            p
+                | We need to sum properly to take automorphisms into account.
+
+            definition
+                statement: p
+                    me \sum{\vphantom{\sum}}^*_{z_Q \in \Lambda_d}
+                    | is the sum weighted by #[m \frac 12] if #[m Q = a(x^2+ y^2)] (#[m d= -4]), #[m \frac 13] if #[m Q = a(x^2+ xy+y^2)] (#[m d= -3]).
+
+            p
+                | If we want to be fancy we can say the word stack here.
+
+            remark
+                p
+                    me \sum_{z_Q \in \Lambda_d}{\vphantom{\sum}}^*1 = H(d)
+                    | where #[m H(d)] is the Hurwitz class number.
+
+
+            remark
+                p
+                    | If #[m d] is fundamental, i.e. a discriminant of some #[m \QQ(\sqrt{d})] then #[m H(d) = h(d)] the regular class number.
+
+        p
+            | For the measure on #[m \mathcal F] we take
+            me \diff\mu = \frac 3\pi \frac{\diff x \diff y}{y^2}
+            |.
+
+        theorem#thm-duke
+            title Duke
+            statement: p
+                | Let #[m f \in \cinf(\HH)], that is #[m \Gamma] invariant and bounded on #[m \mathcal F],  then as #[m d \to \infty] over fundamental discriminants
+                me \frac{1}{\# \Lambda_d} \sum_{z\in \Lambda_d}{\vphantom{\sum}}^* f(z) \to \int\int_{\mathcal F} f\diff \mu
+                | .
+
+        p
+            | Equidistribution implies density, but is so much more, for example we cannot have all points lying on an increasingly dense grid.

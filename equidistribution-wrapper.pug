@@ -1,0 +1,32 @@
+doctype xml
+
+mathbook
+
+    docinfo
+        latex-preamble
+            package xypic
+            package newpxtext
+            package newpxmath
+
+
+        include ./macros.pug
+
+        feedback: url https://github.com/alexjbest/equidistribution/issues
+
+        initialism AFAS
+
+        analytics: google: tracking UA-48250536-1
+
+        rename(element="inlineexercise" lang="en-US") Exercise
+
+    article#equidistribution
+        title Equidistribution in Number Theory
+        subtitle MA841 BU Fall 2018
+
+        frontmatter
+            titlepage
+                author: personname Salim Ali Altuğ
+
+                date: today/
+
+        include ./equidistribution.pug
