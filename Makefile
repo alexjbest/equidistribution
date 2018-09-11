@@ -2,7 +2,9 @@
 
 XSLTPROC = xsltproc --timing --stringparam debug.datedfiles no # -v
 
-docs:	docs/equidistribution.pdf equidistribution-pretty.xml equidistribution.xsl filter.xsl
+MATHBOOK_ROOT = ../mathbook/ # TODO implement this everywhere
+
+docs/:	docs/equidistribution.pdf equidistribution-pretty.xml equidistribution.xsl filter.xsl
 	mkdir -p docs
 	cd docs/; \
 	$(XSLTPROC) ../equidistribution.xsl ../equidistribution-pretty.xml
@@ -45,3 +47,7 @@ clean:	clean-html
 	rm -f equidistribution.md
 	rm -f equidistribution*.tex
 	rm -f equidistribution*.xml
+
+docs/images/:	docs equidistribution-wrapper.xml
+	mkdir -p docs/images
+	../mathbook/script/mbx -vv -c latex-image -f svg -d ~/equidistribution/docs/images ~/equidistribution/equidistribution-wrapper.xml

@@ -230,7 +230,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\PSL}{PSL}
 \DeclareMathOperator{\PGL}{PGL}
-\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\specialorthogonal}{SO}
 \DeclareMathOperator{\Sp}{Sp}
 \DeclareMathOperator{\orth}{O}
 \DeclareMathOperator{\unitary}{U}
@@ -283,7 +283,7 @@ MathJax.Hub.Config({
 <li id="li-4">spectral theory</li>
 <li id="li-5">modular forms of half integral weight.</li>
 <li id="li-6">harmonic analysis</li>
-<li id="li-7">Kusnetsoz formula</li>
+<li id="li-7">Kuznetsov formula</li>
 <li id="li-8">Other topics!</li>
 </ol></section><section class="subsection" id="subsec-linnik-duke"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Linnik and Duke</span>
@@ -299,7 +299,7 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p>this is where the number theory comes, we are looking at representability of numbers \(n\) by this ternary quadratic form.</p>
-<p id="p-12">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogarov for \(n=4\text{.}\) \(n=3\) is the cut off, here half integral weight modular forms are relevant.</p>
+<p id="p-12">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogradov for \(n=4\text{.}\) \(n=3\) is the cut off, here half integral weight modular forms are relevant.</p>
 <p id="p-13">Set</p>
 <div class="displaymath">
 \begin{equation*}
@@ -355,7 +355,8 @@ N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
 \mathcal F = \left\{ z\in \HH : -\frac12 \le \Re(z) \le 0, |z| \ge 1 \text{ or }\frac12 \gt \Re(z) \gt 0, |z| \gt 1 \right\}
 \end{equation*}
 </div>
-<p id="p-25">\(\Omega_N\)'s are now replaced with, CM points.</p></article><article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Digression (CM points)</span></h5>
+<figure class="figure-like" id="figure-1"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-1.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.4</span> \(\mathcal F\)</figcaption></figure><p id="p-25">\(\Omega_N\)'s are now replaced with CM points.</p></article><article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Digression (CM points)</span></h5>
 <p id="p-26">\(Q\) a binary quadratic form</p>
 <div class="displaymath">
 \begin{equation*}
@@ -364,7 +365,7 @@ Q(x,y) = ax^2+ bxy + cy^2
 </div>
 <p>of discriminant \(d = b^2-  4ac \lt 0\text{,}\) \(a,b,c\in \ZZ\text{.}\)</p>
 <article class="theorem-like" id="theorem-2"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">1.4</span> <span class="title">Gauss</span>
+<span class="type">Theorem</span> <span class="codenumber">1.5</span> <span class="title">Gauss</span>
 </h6>
 <p id="p-27">There are only finitely many equivalence classes of such forms for fixed  \(d\text{.}\)</p></article><p id="p-28">The number of such is given by the Hurwitz class number.</p>
 <p id="p-29">Given \(Q\) we associate a CM point</p>
@@ -387,7 +388,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 </div>
 <p id="p-32">We need to sum properly to take automorphisms into account.</p>
 <article class="definition-like" id="definition-1"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.5</span>
+<span class="type">Definition</span> <span class="codenumber">1.6</span>
 </h6>
 <div class="displaymath" id="p-33">
 \begin{equation*}
@@ -396,7 +397,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 </div>
 <p>is the sum weighted by \(\frac 12\) if \(Q = a(x^2+ y^2)\) (\(d= -4\)), \(\frac 13\) if \(Q = a(x^2+ xy+y^2)\) (\(d= -3\)).</p></article><p id="p-34">If we want to be fancy we can say the word stack here.</p>
 <article class="remark-like" id="remark-2"><h6 class="heading">
-<span class="type">Remark</span> <span class="codenumber">1.6</span>
+<span class="type">Remark</span> <span class="codenumber">1.7</span>
 </h6>
 <div class="displaymath" id="p-35">
 \begin{equation*}
@@ -404,7 +405,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 \end{equation*}
 </div>
 <p>where \(H(d)\) is the Hurwitz class number.</p></article><article class="remark-like" id="remark-3"><h6 class="heading">
-<span class="type">Remark</span> <span class="codenumber">1.7</span>
+<span class="type">Remark</span> <span class="codenumber">1.8</span>
 </h6>
 <p id="p-36">If \(d\) is fundamental, i.e. a discriminant of some \(\QQ(\sqrt{d})\) then \(H(d) = h(d)\) the regular class number.</p></article></article><p id="p-37">For the measure on \(\mathcal F\) we take</p>
 <div class="displaymath">
@@ -413,14 +414,14 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="thm-duke"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">1.8</span> <span class="title">Duke</span>
+<span class="type">Theorem</span> <span class="codenumber">1.9</span> <span class="title">Duke</span>
 </h6>
 <p id="p-38">Let \(f \in \cinf(\HH)\text{,}\) that is \(\Gamma\) invariant and bounded on \(\mathcal F\text{,}\)  then as \(d \to \infty\) over fundamental discriminants</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{\# \Lambda_d} \sum_{z\in \Lambda_d}{\vphantom{\sum}}^* f(z) \to \iint_{\mathcal F} f\diff \mu\text{.}
 \end{equation*}
-</div></article><p id="p-39">Equidistribution implies density, but is so much more, for example we cannot have all points lying on an increasingly dense grid.</p></section></section></div></main>
+</div></article><p id="p-39">Equidistribution implies density, but is so much more, for example we cannot have dense points but which happen to cluster towards some line for example.</p></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
