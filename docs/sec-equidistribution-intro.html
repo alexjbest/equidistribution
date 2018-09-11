@@ -48,7 +48,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\newenvironment{smallermatrix}[1]
 {\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
 \array{#1}}
 {\endarray}
@@ -261,6 +261,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="sec-equidistribution-intro.html#subsec-equidistribution-introduction" data-scroll="subsec-equidistribution-introduction">Introduction</a></li>
 <li><a href="sec-equidistribution-intro.html#subsec-linnik-duke" data-scroll="subsec-linnik-duke">Linnik and Duke</a></li>
+<li><a href="sec-equidistribution-intro.html#subsec-equidist-basics" data-scroll="subsec-equidist-basics">Basics</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-equidistribution-intro"><h2 class="heading hide-type">
@@ -421,7 +422,171 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 \begin{equation*}
 \frac{1}{\# \Lambda_d} \sum_{z\in \Lambda_d}{\vphantom{\sum}}^* f(z) \to \iint_{\mathcal F} f\diff \mu\text{.}
 \end{equation*}
-</div></article><p id="p-39">Equidistribution implies density, but is so much more, for example we cannot have dense points but which happen to cluster towards some line for example.</p></section></section></div></main>
+</div></article><p id="p-39">Equidistribution implies density, but is so much more, for example we cannot have dense points but which happen to cluster towards some line for example.</p></section><section class="subsection" id="subsec-equidist-basics"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Basics</span>
+</h3>
+<a href="sec-equidistribution-intro.html#subsec-equidist-basics" class="permalink">¶</a><aside class="aside-like" id="aside-2"><p id="p-40">Lecture 2 11/9/2018</p></aside><p id="p-41">Question: Let \(\alpha \in \RR\) and consider \(\{ \alpha n \}\) where \(\{ x \} = x \pmod 1\) so \(\left\{\frac32\right\} = \frac 12\text{.}\) How are these distributed?</p>
+<article class="example-like" id="example-1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.10</span>
+</h6>
+<p id="p-42">If \(\alpha = \frac 27\) then we have \(\{ \{\alpha n \} : n \in \NN\}  = \{\frac i7 : i \in \{0,\ldots, 6\}\}\) and in fact it hits each evenly.</p></article><article class="example-like" id="example-2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.11</span>
+</h6>
+<p id="p-43">If \(\alpha = \sqrt 2\) so \(\{\alpha\}  \approx 0.4142?...\) \(\{\alpha2\}  \approx 0.8284?...\) \(\{\alpha3\}  \approx 0.24264...\) \(\{\alpha4\}  \approx 0.656854..\text{.}\) These spread out densely, but there is a difference between density and equidistribution. In this example, equidistribution says that the proportion of time the sequence spends in each interval \((a,b)\) is \(b -a\text{.}\)</p></article><p id="p-44">So questions are: is \(\{n\alpha\}\) dense?</p>
+<p id="p-45">Is \(\{n \alpha\}\) <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> (equidistributed with respect to the standard measure)?</p>
+<p id="p-46">The answer to both questions is yes.</p>
+<article class="theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.12</span> <span class="title">Kronecker</span>
+</h6>
+<p id="p-47">Let \(\alpha \in \RR\smallsetminus \QQ\) then \(\{n \alpha\}\) is dense in \(\lb 0,1)\text{.}\)</p></article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">Digression (Diophantine approximation)</span></h5>
+<p id="p-48">This is a very tough area of number theory, not so many definitive results here.</p>
+<article class="theorem-like" id="theorem-5"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.13</span> <span class="title">Dirichlet</span>
+</h6>
+<p id="p-49">Let \(\alpha \in \RR,N\in \ZZ_{\gt 0}\) then there exists \(p,q\) with \(q \gt 0\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left| q\alpha - p \right| \lt \frac 1N\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-1" id="proof-1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-50">(Pidgeonhole) divide \(\lb 0, 1)\) into even \(N\) subintervals of width \(\frac 1N\text{,}\) consider</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_0 = 0,\alpha_1 = \left\{ \alpha 1\right\}, \alpha_2 = \left\{ \alpha 2\right\}, \ldots\in \lb 0,1)
+\end{equation*}
+</div>
+<p>as soon as we get to \(\alpha_N\) we must have two in one subinterval say \(|\alpha_{n_1} - \alpha_{n_2}| \lt \frac 1N\text{.}\) So there exists \(p_{n_1}, p_{n_2}\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+| n_1 \alpha - k_{n_1} - (n_2\alpha - k_{n_2}) | \lt 1N
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+| (n_1  - n_2)\alpha -( k_{n_1} - k_{n_2}) | \lt 1N\text{.}
+\end{equation*}
+</div></article></div>
+<article class="theorem-like" id="corollary-1"><h6 class="heading">
+<span class="type">Corollary</span> <span class="codenumber">1.14</span>
+</h6>
+<p id="p-51">Let \(\alpha \in \RR\smallsetminus \QQ\) then there exists infinitely many coprime \(p,q\) with \(q \gt 0\) satisfying</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \lt \frac {1}{q^2}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-2" id="proof-2"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-52">Exercise.</p></article></div>
+<p id="p-53">This is very strong, Roth's theorem tells us that even \(q^{2+\epsilon}\) here is enough to force finiteness.</p>
+<article class="remark-like" id="note-1"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.15</span>
+</h6>
+<p id="p-54">\(\alpha \not \in \QQ\) is necessary! Otherwise</p>
+<div class="displaymath">
+\begin{equation*}
+\left | \frac{p_0}{q_0} - \frac pq \right| = \left | \frac{p_0q - pq_0}{qq_0} \right| \ge \frac{\left | p_0q - pq_0 \right|}{\max \left\{q^2 ,q_0^2 \right\}}
+\end{equation*}
+</div>
+<p>so choose \(q \gt q_0\) implies \(\frac {p_0}{q_0} = \frac pq\text{.}\)</p></article><p id="p-55">One can do better:</p>
+<article class="theorem-like" id="theorem-6"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.16</span> <span class="title">Hurwitz</span>
+</h6>
+<p id="p-56">Let \(\alpha \in \RR\smallsetminus \QQ\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \lt \frac {1}{\sqrt 5q^2}
+\end{equation*}
+</div>
+<p>then there exists infinitely many coprime \(p,q\) with \(q \gt 0\) satisfying.</p></article><article class="remark-like" id="note-2"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.17</span>
+</h6>
+<p id="p-57">\(\sqrt 5\) is the best possible without further restriction on \(\alpha\text{.}\)</p></article><article class="example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.18</span>
+</h6>
+<p id="p-58">If \(\alpha = \frac{1- \sqrt 5}{2}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \lt \frac {1}{\sqrt Aq^2}
+\end{equation*}
+</div>
+<p>has only finitely many solutions for \(A \gt \sqrt 5\text{.}\)</p></article><p id="p-59">What if we allow further restriction?</p>
+<article class="theorem-like" id="theorem-7"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.19</span> <span class="title">Liouville</span>
+</h6>
+<p id="p-60">Let \(\alpha \in \RR\) algebraic of degree \(n \gt 1\text{.}\) Then there exists \(A \gt 0\) such that for all \(p,q\) with \(g \gt 0\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \gt \frac {A}{q^n}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-3" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-61">Let \(f \in \ZZ\lb x \rb\) be the minimal polynomial of \(\alpha\text{.}\) Gauss's lemma implies that \(f\) is irreducible over \(\QQ\) so</p>
+<div class="displaymath">
+\begin{equation*}
+q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ\text{.}
+\end{equation*}
+</div>
+<p>The mean value theorem says that there exists \(x_0 \in \lb \alpha , p/q )\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{f(p/q) - \cancelto{0}{f(\alpha)}}{p/q - \alpha} = f'(x_0)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{q^nf(p/q) }{q^n f'(x_0)} = |p/q - \alpha|\text{,}
+\end{equation*}
+</div>
+<p>notice how \(n\) appears here.</p></article></div>
+<p id="p-62">This theme of using some calculus is repeated across diophantine analysis.</p>
+<article class="remark-like" id="remark-4"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.20</span>
+</h6>
+<ul id="p-63" class="disc">
+<li id="li-9">Thue: can replace \(n\) with \((\deg(\alpha) + 2)/2\) (This already has implications to integral solutions of degree \(\ge 3\) polynomials \(f \in \ZZ\lb x \rb\text{,}\) e.g. elliptic curves with bounded integral discriminant)</li>
+<li id="li-10">Roth (\(\sim\) 1958): for all \(\epsilon \gt 0 \text{,}\) there are only finitely many \(p/q\) satisfying<div class="displaymath">
+\begin{equation*}
+| \alpha - \frac pq| \lt  \frac{1}{q^{2+\epsilon}}\text{.}
+\end{equation*}
+</div>
+</li>
+</ul></article></article><article class="paragraphs" id="paragraphs-5"><h5 class="heading"><span class="title">Back to equidistribution</span></h5>
+<p id="p-64">\(a_n =  \left\{n \alpha\right\} , \left\{a_n\right\}_{n=1}^\infty\text{.}\)</p>
+<article class="theorem-like" id="theorem-8"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.21</span> <span class="title">Kronecker</span>
+</h6>
+<p id="p-65">\(a_n\) is dense in \(\lb 0,1)\) if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-4" id="proof-4"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-4" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-66">Will show for any \(x \in \lb 0,1)\) there exists</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{ a_{n_j}\right\}_{j=1}^\infty\text{ s.t. } a_{n_j} \to x\text{.}
+\end{equation*}
+</div>
+<p>Notation \(\| x\|\) means the distance to the nearest integer. Dirichlet implies that infinitely many \(p/q\) have \(\alpha - p/q| \lt 1/q^2\text{.}\)Given \(\epsilon \gt 0\) let  \(q\) be such that</p>
+<div class="displaymath">
+\begin{equation*}
+| \alpha - \frac pq |  \lt \frac{1}{q^2} \implies | q\alpha - p| \lt \frac 1q
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac 1q \lt \epsilon
+\end{equation*}
+</div>
+<p>Choose \(j\) such that \(j (\alpha q- p)\) is within \(1/q\) of \(x\) (why?). So</p>
+<div class="displaymath">
+\begin{equation*}
+\| j(\alpha q - p ) -x\| \lt \frac 1q \lt \epsilon\text{.}
+\end{equation*}
+</div>
+<p>(Fill in the gaps here).</p></article></div>
+<p id="p-67">Now let's definie what is means to be <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p>
+<article class="definition-like" id="def-unif-dist"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.22</span> <span class="title">Uniformly distributed sequence</span>
+</h6>
+<p id="p-68">\(a_1, a_2, \ldots\) is called <dfn class="terminology">uniformly distributed</dfn> if for all \((b,c) \subseteq \lb 0,1)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\#\left\{ n \le N : \left\{ a_n\right\} \in (b,c) \right\} \sim N(c-b)\text{.}
+\end{equation*}
+</div></article><p id="p-69">Uniformly distributed or not?</p>
+<p id="p-70">When \(\alpha \in \RR \smallsetminus \QQ\text{:}\)  \(\{ n\alpha \}\text{,}\) \(\{ n^2\alpha \}\text{,}\) \(\{ (3n^2 + 2n + 1)\alpha \}\) \(\{ (\sqrt 5 n^3  + 2n - (\zeta_{10} + \bar \zeta_{10}))\alpha \}\) all are.</p>
+<p id="p-71">\(\{ n! e \}\text{,}\)  \(\{\log(n)\}\) and \(\{ \log (p_n)\}\) are not.</p></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];

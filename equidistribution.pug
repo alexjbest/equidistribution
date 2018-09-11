@@ -246,3 +246,167 @@ section#sec-equidistribution-intro
 
         p
             | Equidistribution implies density, but is so much more, for example we cannot have dense points but which happen to cluster towards some line for example.
+
+    subsection#subsec-equidist-basics
+        title Basics
+
+        aside: p Lecture 2 11/9/2018
+
+        p
+            | Question: Let #[m \alpha \in \RR] and consider #[m \{ \alpha n \}] where #[m \{ x \} = x \pmod 1] so #[m \left\{\frac32\right\} = \frac 12].
+            | How are these distributed?
+
+        example
+            statement: p
+                | If #[m \alpha = \frac 27] then we have #[m \{ \{\alpha n \} : n \in \NN\}  = \{\frac i7 : i \in \{0,\ldots, 6\}\}] and in fact it hits each evenly.
+
+
+        example
+            statement: p
+                | If #[m \alpha = \sqrt 2] so #[m \{\alpha\}  \approx 0.4142?...] #[m \{\alpha2\}  \approx 0.8284?...] #[m \{\alpha3\}  \approx 0.24264...] #[m \{\alpha4\}  \approx 0.656854..].
+                | These spread out densely, but there is a difference between density and equidistribution.
+                | In this example, equidistribution says that the proportion of time the sequence spends in each interval #[m (a,b)] is #[m b -a].
+
+        p
+            | So questions are: is #[m \{n\alpha\}] dense?
+        p
+            | Is #[m \{n \alpha\}] uniformly distributed (equidistributed with respect to the standard measure)?
+        p
+            | The answer to both questions is yes.
+
+        theorem
+            title Kronecker
+            statement: p
+                | Let #[m \alpha \in \RR\smallsetminus \QQ] then #[m \{n \alpha\}] is dense in #[m \lb 0,1)].
+
+        paragraphs
+            title Digression (Diophantine approximation)
+
+            p
+                | This is a very tough area of number theory, not so many definitive results here.
+
+            theorem
+                title Dirichlet
+                statement: p
+                    | Let #[m \alpha \in \RR,N\in \ZZ_{\gt 0}] then there exists #[m p,q] with #[m q \gt 0].
+                    me \left| q\alpha - p \right| \lt \frac 1N
+                    | .
+                proof: p
+                    | (Pidgeonhole) divide #[m \lb 0, 1)] into even #[m N] subintervals of width #[m \frac 1N], consider
+                    me \alpha_0 = 0,\alpha_1 = \left\{ \alpha 1\right\}, \alpha_2 = \left\{ \alpha 2\right\}, \ldots\in \lb 0,1)
+                    | as soon as we get to #[m \alpha_N] we must have two in one subinterval say #[m |\alpha_{n_1} - \alpha_{n_2}| \lt \frac 1N].
+                    | So there exists #[m p_{n_1}, p_{n_2}] such that
+                    me | n_1 \alpha - k_{n_1} - (n_2\alpha - k_{n_2}) | \lt 1N
+                    me | (n_1  - n_2)\alpha -( k_{n_1} - k_{n_2}) | \lt 1N
+                    | .
+
+            corollary
+                statement: p
+                    | Let #[m \alpha \in \RR\smallsetminus \QQ] then there exists infinitely many coprime #[m p,q] with #[m q \gt 0] satisfying
+                    me \left| \alpha - \frac pq \right| \lt \frac {1}{q^2}
+                    | .
+                proof: p Exercise.
+
+            p
+                | This is very strong, Roth's theorem tells us that even #[m q^{2+\epsilon}] here is enough to force finiteness.
+
+            note: p
+                | #[m \alpha \not \in \QQ] is necessary! Otherwise
+                me \left | \frac{p_0}{q_0} - \frac pq \right| = \left | \frac{p_0q - pq_0}{qq_0} \right| \ge \frac{\left | p_0q - pq_0 \right|}{\max \left\{q^2 ,q_0^2 \right\}}
+                | so choose #[m q \gt q_0] implies #[m \frac {p_0}{q_0} = \frac pq].
+
+            p
+                | One can do better:
+
+            theorem
+                title Hurwitz
+                statement: p
+                    | Let #[m \alpha \in \RR\smallsetminus \QQ]
+                    me \left| \alpha - \frac pq \right| \lt \frac {1}{\sqrt 5q^2}
+                    | then there exists infinitely many coprime #[m p,q] with #[m q \gt 0] satisfying.
+
+            note: p
+                | #[m \sqrt 5] is the best possible without further restriction on #[m \alpha].
+
+            example: statement: p
+                | If #[m \alpha = \frac{1- \sqrt 5}{2}] then
+                me \left| \alpha - \frac pq \right| \lt \frac {1}{\sqrt Aq^2}
+                | has only finitely many solutions for #[m A \gt \sqrt 5].
+
+            p
+                | What if we allow further restriction?
+
+            theorem
+                title Liouville
+                statement: p
+                    | Let #[m \alpha \in \RR] algebraic of degree #[m n \gt 1].
+                    | Then there exists #[m A \gt 0] such that for all #[m p,q] with #[m g \gt 0]
+                    me \left| \alpha - \frac pq \right| \gt \frac {A}{q^n}
+                    | .
+                proof: p
+                    | Let #[m f \in \ZZ\lb x \rb] be the minimal polynomial of #[m \alpha].
+                    | Gauss's lemma implies that #[m f] is irreducible over #[m \QQ] so
+                    me q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ
+                    | .
+                    | The mean value theorem says that there exists #[m x_0 \in \lb \alpha , p/q )] s.t.
+                    me \frac{f(p/q) - \cancelto{0}{f(\alpha)}}{p/q - \alpha} = f'(x_0)
+                    | so
+                    me \frac{q^nf(p/q) }{q^n f'(x_0)} = |p/q - \alpha|
+                    | , notice how #[m n] appears here.
+
+            p
+                | This theme of using some calculus is repeated across diophantine analysis.
+
+            remark
+                statement: p
+                    ul
+                        li
+                            | Thue: can replace #[m n] with #[m (\deg(\alpha) + 2)/2]
+                            | (This already has implications to integral solutions of degree #[m \ge 3] polynomials #[m f \in \ZZ\lb x \rb], e.g. elliptic curves with bounded integral discriminant)
+                        li
+                            | Roth (#[m \sim] 1958): for all #[m \epsilon \gt 0 ], there are only finitely many #[m p/q] satisfying
+                            me | \alpha - \frac pq| \lt  \frac{1}{q^{2+\epsilon}}
+                            | .
+
+        paragraphs
+            title Back to equidistribution
+
+            p
+                | #[m a_n =  \left\{n \alpha\right\} , \left\{a_n\right\}_{n=1}^\infty].
+
+            theorem
+                title Kronecker
+                statement: p
+                    | #[m a_n] is dense in #[m \lb 0,1)] if #[m \alpha \not \in \QQ].
+                proof: p
+                    | Will show for any #[m x \in \lb 0,1)] there exists
+                    me \left\{ a_{n_j}\right\}_{j=1}^\infty\text{ s.t. } a_{n_j} \to x
+                    | .
+                    | Notation #[m \| x\|] means the distance to the nearest integer.
+
+                    | Dirichlet implies that infinitely many #[m p/q] have #[m \alpha - p/q| \lt 1/q^2].
+                    // TODO xref
+                    | Given #[m \epsilon \gt 0] let  #[m q] be such that
+                    me | \alpha - \frac pq |  \lt \frac{1}{q^2} \implies | q\alpha - p| \lt \frac 1q
+                    me \frac 1q \lt \epsilon
+                    | Choose #[m j] such that #[m j (\alpha q- p)] is within #[m 1/q] of #[m x] (why?).
+                    | So
+                    me \| j(\alpha q - p ) -x\| \lt \frac 1q \lt \epsilon
+                    |. (Fill in the gaps here).
+
+            p
+                | Now let's definie what is means to be uniformly distributed.
+
+            definition#def-unif-dist
+                title Uniformly distributed sequence
+                statement: p
+                    | #[m a_1, a_2, \ldots] is called #[term uniformly distributed] if for all #[m (b,c) \subseteq \lb 0,1)]
+                    me \#\left\{ n \le N : \left\{ a_n\right\} \in (b,c) \right\} \sim N(c-b)
+                    | .
+
+            p
+                | Uniformly distributed or not?
+            p
+                | When #[m \alpha \in \RR \smallsetminus \QQ]:  #[m \{ n\alpha \}], #[m \{ n^2\alpha \}], #[m \{ (3n^2 + 2n + 1)\alpha \}] #[m \{ (\sqrt 5 n^3  + 2n - (\zeta_{10} + \bar \zeta_{10}))\alpha \}] all are.
+            p
+                | #[m  \{ n! e \}],  #[m \{\log(n)\}] and #[m \{ \log (p_n)\}] are not.

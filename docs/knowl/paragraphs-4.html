@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Digression (Diophantine approximation)</span></h5>
+<p>This is a very tough area of number theory, not so many definitive results here.</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.13</span> <span class="title">Dirichlet</span>
+</h6>
+<p>Let \(\alpha \in \RR,N\in \ZZ_{\gt 0}\) then there exists \(p,q\) with \(q \gt 0\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left| q\alpha - p \right| \lt \frac 1N\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-1-hidden.html" title="Proof 1.13.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Corollary</span> <span class="codenumber">1.14</span>
+</h6>
+<p>Let \(\alpha \in \RR\smallsetminus \QQ\) then there exists infinitely many coprime \(p,q\) with \(q \gt 0\) satisfying</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \lt \frac {1}{q^2}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-2-hidden.html" title="Proof 1.14.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>This is very strong, Roth's theorem tells us that even \(q^{2+\epsilon}\) here is enough to force finiteness.</p>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.15</span>
+</h6>
+<p>\(\alpha \not \in \QQ\) is necessary! Otherwise</p>
+<div class="displaymath">
+\begin{equation*}
+\left | \frac{p_0}{q_0} - \frac pq \right| = \left | \frac{p_0q - pq_0}{qq_0} \right| \ge \frac{\left | p_0q - pq_0 \right|}{\max \left\{q^2 ,q_0^2 \right\}}
+\end{equation*}
+</div>
+<p>so choose \(q \gt q_0\) implies \(\frac {p_0}{q_0} = \frac pq\text{.}\)</p></article><p>One can do better:</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.16</span> <span class="title">Hurwitz</span>
+</h6>
+<p>Let \(\alpha \in \RR\smallsetminus \QQ\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \lt \frac {1}{\sqrt 5q^2}
+\end{equation*}
+</div>
+<p>then there exists infinitely many coprime \(p,q\) with \(q \gt 0\) satisfying.</p></article><article class="remark-like"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.17</span>
+</h6>
+<p>\(\sqrt 5\) is the best possible without further restriction on \(\alpha\text{.}\)</p></article><article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.18</span>
+</h6>
+<p>If \(\alpha = \frac{1- \sqrt 5}{2}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \lt \frac {1}{\sqrt Aq^2}
+\end{equation*}
+</div>
+<p>has only finitely many solutions for \(A \gt \sqrt 5\text{.}\)</p></article><p>What if we allow further restriction?</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.19</span> <span class="title">Liouville</span>
+</h6>
+<p>Let \(\alpha \in \RR\) algebraic of degree \(n \gt 1\text{.}\) Then there exists \(A \gt 0\) such that for all \(p,q\) with \(g \gt 0\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \alpha - \frac pq \right| \gt \frac {A}{q^n}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-3-hidden.html" title="Proof 1.19.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>This theme of using some calculus is repeated across diophantine analysis.</p>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.20</span>
+</h6>
+<ul class="disc">
+<li>Thue: can replace \(n\) with \((\deg(\alpha) + 2)/2\) (This already has implications to integral solutions of degree \(\ge 3\) polynomials \(f \in \ZZ\lb x \rb\text{,}\) e.g. elliptic curves with bounded integral discriminant)</li>
+<li>Roth (\(\sim\) 1958): for all \(\epsilon \gt 0 \text{,}\) there are only finitely many \(p/q\) satisfying<div class="displaymath">
+\begin{equation*}
+| \alpha - \frac pq| \lt  \frac{1}{q^{2+\epsilon}}\text{.}
+\end{equation*}
+</div>
+</li>
+</ul></article></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-4">in-context</a></span>
+</body>
+</html>
