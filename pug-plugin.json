@@ -84,7 +84,7 @@
 
             var regexs = [];
             for (var i = 0; i < terms.length; i++) {
-                regexs.push(RegExp('\\s(' + RegExp.escape(terms[i]) + '|' + RegExp.escape(pluralize(terms[i])) + ')([\\s.,:/)]|$)', 'gi'));
+                regexs.push(RegExp('(\\s|\-)(' + RegExp.escape(terms[i]) + '|' + RegExp.escape(pluralize(terms[i])) + ')([\\s.,:/)]|$)', 'gi'));
             }
 
             var ou = pugWalk(ast, function (node) {
@@ -101,7 +101,7 @@
                 if (node.type === 'Text') {
                     for (var i = 0; i < terms.length; i++) {
                         node.val = node.val.replace(regexs[i],
-                            function replacer(match,p1,p2,offset,string) {
+                            function replacer(match,p0,p1,p2,offset,string) {
                                 count++;
                                 return match.replace(p1,'<xref ref="' + refs[terms[i]] + '" text="title">' + p1 + '</xref>');
                             } );
