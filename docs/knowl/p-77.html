@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now \(0 \le \gamma \lt 1\) and let</p>
+<div class="displaymath">
+\begin{equation*}
+K_i = \lfloor \delta N_i + \gamma_i \rfloor
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\# \{ k \lt N_i : \{ \delta k + \gamma_i \} \in \lb b,c\rb \} = \sum_{j=0}^{K_i} \# \{k \le  N_i : \delta k + \gamma  \in [j+b,j+c] \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (K_i + O(1)) \left(\frac{c-b}{\delta} + O(1) \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+N_i(c-b) + O\left( \frac {c-b}{\delta} + \delta N_i + 1 \right)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+S =  \bigsqcup_{i=1}^m S_i
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\# S = N(c-b) + O\left( \frac M\delta + \delta N \right)
+\end{equation*}
+</div>
+<p>(check!). Finally choose \(N \gt \frac{M}{\delta^2}\text{.}\) So that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{M}{\delta} + \delta N \lt \epsilon N\text{.}
+\end{equation*}
+</div>
+<p>Which implies</p>
+<div class="displaymath">
+\begin{equation*}
+\# \{ n \lt N : \{n\alpha \} \in [b,c] \}  =\#S =N(c-b) + \epsilon N\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec-equidistribution-intro.html#p-77">in-context</a></span>
+</body>
+</html>

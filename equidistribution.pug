@@ -296,8 +296,8 @@ section#sec-equidistribution-intro
                     me \alpha_0 = 0,\alpha_1 = \left\{ \alpha 1\right\}, \alpha_2 = \left\{ \alpha 2\right\}, \ldots\in \lb 0,1)
                     | as soon as we get to #[m \alpha_N] we must have two in one subinterval say #[m |\alpha_{n_1} - \alpha_{n_2}| \lt \frac 1N].
                     | So there exists #[m p_{n_1}, p_{n_2}] such that
-                    me | n_1 \alpha - k_{n_1} - (n_2\alpha - k_{n_2}) | \lt 1N
-                    me | (n_1  - n_2)\alpha -( k_{n_1} - k_{n_2}) | \lt 1N
+                    me | n_1 \alpha - k_{n_1} - (n_2\alpha - k_{n_2}) | \lt \frac1N
+                    me | (n_1  - n_2)\alpha -( k_{n_1} - k_{n_2}) | \lt \frac1N
                     | .
 
             corollary
@@ -395,13 +395,15 @@ section#sec-equidistribution-intro
                     |. (Fill in the gaps here).
 
             p
-                | Now let's definie what is means to be uniformly distributed.
+                | Now let's define what is means to be uniformly distributed.
 
             definition#def-unif-dist
                 title Uniformly distributed sequence
                 statement: p
                     | #[m a_1, a_2, \ldots] is called #[term uniformly distributed] if for all #[m (b,c) \subseteq \lb 0,1)]
                     me \#\left\{ n \le N : \left\{ a_n\right\} \in (b,c) \right\} \sim N(c-b)
+                    | or
+                    me \lim_{N \to \infty} \frac{\#\left\{ n \le N : \left\{ a_n\right\} \in (b,c) \right\}}{N} = c-b
                     | .
 
             p
@@ -410,3 +412,153 @@ section#sec-equidistribution-intro
                 | When #[m \alpha \in \RR \smallsetminus \QQ]:  #[m \{ n\alpha \}], #[m \{ n^2\alpha \}], #[m \{ (3n^2 + 2n + 1)\alpha \}] #[m \{ (\sqrt 5 n^3  + 2n - (\zeta_{10} + \bar \zeta_{10}))\alpha \}] all are.
             p
                 | #[m  \{ n! e \}],  #[m \{\log(n)\}] and #[m \{ \log (p_n)\}] are not.
+
+        aside: p Lecture 3 13/9/2018
+
+        example
+            title Several
+            p
+                ol
+                    li
+                        | #[m \alpha\in \RR\smallsetminus\QQ,\,a_n = \{n\alpha\}]. Yes
+                    li
+                        | #[m \alpha\in \RR\smallsetminus\QQ,\,a_n = \{n^2\alpha + \}]. Yes
+                    li
+                        | #[m a_n = \{\log(n)\}]. No
+                    li
+                        | #[m a_n = \{n! e\}]. No (not dense).
+                    li
+                        | #[m \{ \log (p_n)\}]. No.
+                    li
+                        | #[m a_n = \{\sqrt{n}\}]. Yes.
+                    li
+                        | #[m a_n = \{e^n\}]. ?
+                    li
+                        | #[m a_n = \{\log n!\}]. Yes ?
+                    li
+                        | #[m a_n = \{\log \log n!\}]. No
+
+            p
+                | To begin let's show #[m a_n = \{n!e\}] is not equidistributed as it has only one limit point #[m 0].
+                me e = \sum_{n=1}^\infty \frac{1}{n!}
+                | so #[m n!e \in \ZZ + \frac{1}{n+1} + \frac{(n+1)(n+2)} + \cdots \le \frac{e}{n+1} \to 0], as #[m n\to \infty].
+                | So its not dense, hence certainly not equidistributed.
+
+        theorem
+            statement: p
+                | The sequence #[m a_n = \{ n\alpha\}] is equidistributed.
+            proof
+                p
+                    | Let #[m \epsilon\gt 0], choose #[m M \gt 0] such that #[m \frac1M\lt \epsilon], furthermore choose a #[m \delta \lt \frac1M].
+                    | Dirichlet implies there exists #[m m \in \ZZ] s.t. #[m \| m\alpha\| = \delta].
+                    me  0\lt \delta \lt \frac1M \lt\epsilon
+                    | recall #[m \| x\|] is the distance to the nearest integer.
+
+                    | Consider the set #[m S_i = \left\{ \{n \alpha\} : n \lt N,\,n \equiv i \pmod m\right\}] then
+                    me S = \{ \{n \alpha\} : n\lt N \}  = \bigsqcup_{i=1}^m S_i
+                    | moreover,
+                    me S_i =  \{\{ km\alpha + i\alpha\}  : 0 \le k \le N_i\}
+                    | where
+                    me N_i = \frac Nm + O(1)
+                    | (why is the #[m O(1)] here?).
+                    | We can rewrite these #[m S_i] as follows:
+                    me S_i = \{ \delta k + \gamma_i \pmod 1 : 0 \le k \le N_i\}
+                    | where
+                    me.
+                        \begin{cases} i\alpha \pmod 1 \amp \text{ if } \delta  = \{ m\alpha \} \\
+                                      i\alpha - \delta (N_i + 1)\pmod 1 \amp \text{ if } \delta  = 1 - \{ m\alpha \} \\
+                        \end{cases}
+
+                    | replace #[m k] by #[m N_i  + 1-k ].
+                p
+                    | Now #[m 0 \le \gamma \lt 1] and let
+                    me K_i = \lfloor \delta N_i + \gamma_i \rfloor
+                    me \# \{ k \lt N_i : \{ \delta k + \gamma_i \} \in \lb b,c\rb \} = \sum_{j=0}^{K_i} \# \{k \le  N_i : \delta k + \gamma  \in [j+b,j+c] \}
+                    me = (K_i + O(1)) \left(\frac{c-b}{\delta} + O(1) \right)
+                    me N_i(c-b) + O\left( \frac {c-b}{\delta} + \delta N_i + 1 \right)
+                    | so
+                    me S =  \bigsqcup_{i=1}^m S_i
+                    me \# S = N(c-b) + O\left( \frac M\delta + \delta N \right)
+                    | (check!).
+                    | Finally choose #[m N \gt \frac{M}{\delta^2}].
+                    | So that
+                    me \frac{M}{\delta} + \delta N \lt \epsilon N
+                    | .
+                    | Which implies
+                    me \# \{ n \lt N : \{n\alpha \} \in [b,c] \}  =\#S =N(c-b) + \epsilon N
+                    |.
+
+        p
+            | We followed our nose essentially, but we needed to put ourselves in a favourable position so that we can get a good handle on the error.
+
+        example
+            title 10
+
+            statement: p
+                | Consider the sequence
+                me b_{m,i} = \frac i m
+                | and define
+                me a_{\binom{m}{2} + i } = b_{m,i}
+                | so that
+                me b_{m,i}
+                me 0,1
+                me 0,\frac 12 , 1
+                me 0,\frac 13 ,\frac 23, 1
+                me 0,\frac 14 ,\frac 24,\frac 34, 1
+                me a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1,, 0,\frac 14 ,\frac 24,\frac 34, 1
+                | this is uniformly distributed!
+
+        exercise
+            statement: p
+                | Prove this (in a similar way to before).
+
+        proposition
+            statement: p
+                ol
+                    li
+                        | Any sequence has a rearrangement that is not uniformly distributed.
+                    li
+                        | Any dense sequence has a rearrangement that is uniformly distributed.
+            proof: p
+                ol
+                    li
+                        | If not sense we are done already.
+                        | Otherwise let #[m I_1 = \lb 0, \frac 12) ,I_2 = \lb\frac 12, 1\rb]
+                        | Let #[m X = \{a_n \in I_1\}, Y = \{a_n \in I_2\}], so both sets are infinite.
+                        | Let #[m b_n  = x_1, \ldots, x_{10^{10}}, y_1, x_{10^{10} + 1}, \ldots, x_{20^{20}},\ldots]
+                        | so #[m \# \{n:b_n  \in \lb4/5,1\rb \}  \sim \frac{N}{10^{10}}].
+                    li
+                        | If #[m a_n] is dense then, let
+                        me b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
+                        | by the example above this is equidistributed.
+
+        p
+            | What can we say about the space of uniformly distributed sequences?
+            | Is it closed under addition? No (#[m a_n = -b_n]).
+            | #[m \{k a_n\}] neither (#[m a_n = \alpha n,\,\frac1\alpha a_n = n]).
+            | #[m a_nb_n] doesn't work either, but if #[m b_n] converges then #[m a_nb_n] is uniformly distributed.
+
+    subsection
+        title Weyl's criterion (1916)
+
+        theorem
+            title Weyl
+            statement: p
+                | #[m \{a_n\}_{n=1}^\infty \in \lb 0 ,1 \rb] then TFAE:
+                ol
+                    li
+                        | #[m \{a_n\}_{n=1}^\infty] is uniformly distributed.
+
+                    li
+                        | #[m \forall f \in C(\lb 0,1\rb)]
+                        me \lim_{N\to \infty} \frac 1N \sum_{n=1}^N f(a_n) = \int _0^1 f \diff x
+                        | .
+                    li
+                        me \lim_{N\to \infty} \frac 1N \sum_{n=1}^N e(ma_n) = \delta_m
+                | where #[m e(x) = e^{2\pi i x}],
+                me \delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}
+                | .
+
+
+
+

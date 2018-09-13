@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AFAS Equidistribution in Number Theory</title>
+<title>EQ Equidistribution in Number Theory</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -262,6 +262,7 @@ MathJax.Hub.Config({
 <li><a href="sec-equidistribution-intro.html#subsec-equidistribution-introduction" data-scroll="subsec-equidistribution-introduction">Introduction</a></li>
 <li><a href="sec-equidistribution-intro.html#subsec-linnik-duke" data-scroll="subsec-linnik-duke">Linnik and Duke</a></li>
 <li><a href="sec-equidistribution-intro.html#subsec-equidist-basics" data-scroll="subsec-equidist-basics">Basics</a></li>
+<li><a href="sec-equidistribution-intro.html#subsection-4" data-scroll="subsection-4">Weyl's criterion (1916)</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-equidistribution-intro"><h2 class="heading hide-type">
@@ -457,12 +458,12 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 <p>as soon as we get to \(\alpha_N\) we must have two in one subinterval say \(|\alpha_{n_1} - \alpha_{n_2}| \lt \frac 1N\text{.}\) So there exists \(p_{n_1}, p_{n_2}\) such that</p>
 <div class="displaymath">
 \begin{equation*}
-| n_1 \alpha - k_{n_1} - (n_2\alpha - k_{n_2}) | \lt 1N
+| n_1 \alpha - k_{n_1} - (n_2\alpha - k_{n_2}) | \lt \frac1N
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-| (n_1  - n_2)\alpha -( k_{n_1} - k_{n_2}) | \lt 1N\text{.}
+| (n_1  - n_2)\alpha -( k_{n_1} - k_{n_2}) | \lt \frac1N\text{.}
 \end{equation*}
 </div></article></div>
 <article class="theorem-like" id="corollary-1"><h6 class="heading">
@@ -575,18 +576,220 @@ q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ
 \end{equation*}
 </div>
 <p>(Fill in the gaps here).</p></article></div>
-<p id="p-67">Now let's definie what is means to be <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p>
+<p id="p-67">Now let's define what is means to be <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p>
 <article class="definition-like" id="def-unif-dist"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">1.22</span> <span class="title">Uniformly distributed sequence</span>
 </h6>
 <p id="p-68">\(a_1, a_2, \ldots\) is called <dfn class="terminology">uniformly distributed</dfn> if for all \((b,c) \subseteq \lb 0,1)\)</p>
 <div class="displaymath">
 \begin{equation*}
-\#\left\{ n \le N : \left\{ a_n\right\} \in (b,c) \right\} \sim N(c-b)\text{.}
+\#\left\{ n \le N : \left\{ a_n\right\} \in (b,c) \right\} \sim N(c-b)
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{N \to \infty} \frac{\#\left\{ n \le N : \left\{ a_n\right\} \in (b,c) \right\}}{N} = c-b\text{.}
 \end{equation*}
 </div></article><p id="p-69">Uniformly distributed or not?</p>
 <p id="p-70">When \(\alpha \in \RR \smallsetminus \QQ\text{:}\)  \(\{ n\alpha \}\text{,}\) \(\{ n^2\alpha \}\text{,}\) \(\{ (3n^2 + 2n + 1)\alpha \}\) \(\{ (\sqrt 5 n^3  + 2n - (\zeta_{10} + \bar \zeta_{10}))\alpha \}\) all are.</p>
-<p id="p-71">\(\{ n! e \}\text{,}\)  \(\{\log(n)\}\) and \(\{ \log (p_n)\}\) are not.</p></article></section></section></div></main>
+<p id="p-71">\(\{ n! e \}\text{,}\)  \(\{\log(n)\}\) and \(\{ \log (p_n)\}\) are not.</p></article><aside class="aside-like" id="aside-3"><p id="p-72">Lecture 3 13/9/2018</p></aside><article class="example-like" id="example-4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.23</span> <span class="title">Several</span>
+</h6>
+<ol id="p-73" class="decimal">
+<li id="li-11">\(\alpha\in \RR\smallsetminus\QQ,\,a_n = \{n\alpha\}\text{.}\) Yes</li>
+<li id="li-12">\(\alpha\in \RR\smallsetminus\QQ,\,a_n = \{n^2\alpha + \}\text{.}\) Yes</li>
+<li id="li-13">\(a_n = \{\log(n)\}\text{.}\) No</li>
+<li id="li-14">\(a_n = \{n! e\}\text{.}\) No (not dense).</li>
+<li id="li-15">\(\{ \log (p_n)\}\text{.}\) No.</li>
+<li id="li-16">\(a_n = \{\sqrt{n}\}\text{.}\) Yes.</li>
+<li id="li-17">\(a_n = \{e^n\}\text{.}\) ?</li>
+<li id="li-18">\(a_n = \{\log n!\}\text{.}\) Yes ?</li>
+<li id="li-19">\(a_n = \{\log \log n!\}\text{.}\) No</li>
+</ol>
+<p id="p-74">To begin let's show \(a_n = \{n!e\}\) is not equidistributed as it has only one limit point \(0\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+e = \sum_{n=1}^\infty \frac{1}{n!}
+\end{equation*}
+</div>
+<p>so \(n!e \in \ZZ + \frac{1}{n+1} + \frac{(n+1)(n+2)} + \cdots \le \frac{e}{n+1} \to 0\text{,}\) as \(n\to \infty\text{.}\) So its not dense, hence certainly not equidistributed.</p></article><article class="theorem-like" id="theorem-9"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.24</span>
+</h6>
+<p id="p-75">The sequence \(a_n = \{ n\alpha\}\) is equidistributed.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-5" id="proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-76">Let \(\epsilon\gt 0\text{,}\) choose \(M \gt 0\) such that \(\frac1M\lt \epsilon\text{,}\) furthermore choose a \(\delta \lt \frac1M\text{.}\) Dirichlet implies there exists \(m \in \ZZ\) s.t. \(\| m\alpha\| = \delta\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+0\lt \delta \lt \frac1M \lt\epsilon
+\end{equation*}
+</div>
+<p>recall \(\| x\|\) is the distance to the nearest integer. Consider the set \(S_i = \left\{ \{n \alpha\} : n \lt N,\,n \equiv i \pmod m\right\}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+S = \{ \{n \alpha\} : n\lt N \}  = \bigsqcup_{i=1}^m S_i
+\end{equation*}
+</div>
+<p>moreover,</p>
+<div class="displaymath">
+\begin{equation*}
+S_i =  \{\{ km\alpha + i\alpha\}  : 0 \le k \le N_i\}
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+N_i = \frac Nm + O(1)
+\end{equation*}
+</div>
+<p>(why is the \(O(1)\) here?). We can rewrite these \(S_i\) as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+S_i = \{ \delta k + \gamma_i \pmod 1 : 0 \le k \le N_i\}
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{cases} i\alpha \pmod 1 \amp \text{ if } \delta  = \{ m\alpha \} \\
+i\alpha - \delta (N_i + 1)\pmod 1 \amp \text{ if } \delta  = 1 - \{ m\alpha \} \\
+\end{cases}
+\end{equation*}
+</div>
+<p>replace \(k\) by \(N_i  + 1-k \text{.}\)</p>
+<p id="p-77">Now \(0 \le \gamma \lt 1\) and let</p>
+<div class="displaymath">
+\begin{equation*}
+K_i = \lfloor \delta N_i + \gamma_i \rfloor
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\# \{ k \lt N_i : \{ \delta k + \gamma_i \} \in \lb b,c\rb \} = \sum_{j=0}^{K_i} \# \{k \le  N_i : \delta k + \gamma  \in [j+b,j+c] \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (K_i + O(1)) \left(\frac{c-b}{\delta} + O(1) \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+N_i(c-b) + O\left( \frac {c-b}{\delta} + \delta N_i + 1 \right)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+S =  \bigsqcup_{i=1}^m S_i
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\# S = N(c-b) + O\left( \frac M\delta + \delta N \right)
+\end{equation*}
+</div>
+<p>(check!). Finally choose \(N \gt \frac{M}{\delta^2}\text{.}\) So that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{M}{\delta} + \delta N \lt \epsilon N\text{.}
+\end{equation*}
+</div>
+<p>Which implies</p>
+<div class="displaymath">
+\begin{equation*}
+\# \{ n \lt N : \{n\alpha \} \in [b,c] \}  =\#S =N(c-b) + \epsilon N\text{.}
+\end{equation*}
+</div></article></div>
+<p id="p-78">We followed our nose essentially, but we needed to put ourselves in a favourable position so that we can get a good handle on the error.</p>
+<article class="example-like" id="example-5"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.25</span> <span class="title">10</span>
+</h6>
+<p id="p-79">Consider the sequence</p>
+<div class="displaymath">
+\begin{equation*}
+b_{m,i} = \frac i m
+\end{equation*}
+</div>
+<p>and define</p>
+<div class="displaymath">
+\begin{equation*}
+a_{\binom{m}{2} + i } = b_{m,i}
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+b_{m,i}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0,1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0,\frac 12 , 1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0,\frac 13 ,\frac 23, 1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+0,\frac 14 ,\frac 24,\frac 34, 1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1,, 0,\frac 14 ,\frac 24,\frac 34, 1
+\end{equation*}
+</div>
+<p>this is uniformly distributed!</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.26</span>
+</h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-80">Prove this (in a similar way to before).</p></article></div>
+<article class="theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">1.27</span>
+</h6>
+<ol id="p-81" class="decimal">
+<li id="li-20">Any sequence has a rearrangement that is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
+<li id="li-21">Any dense sequence has a rearrangement that is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
+</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-6" id="proof-6"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-6" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-82" class="decimal">
+<li id="li-22">If not sense we are done already. Otherwise let \(I_1 = \lb 0, \frac 12) ,I_2 = \lb\frac 12, 1\rb\) Let \(X = \{a_n \in I_1\}, Y = \{a_n \in I_2\}\text{,}\) so both sets are infinite. Let \(b_n  = x_1, \ldots, x_{10^{10}}, y_1, x_{10^{10} + 1}, \ldots, x_{20^{20}},\ldots\) so \(\# \{n:b_n  \in \lb4/5,1\rb \}  \sim \frac{N}{10^{10}}\text{.}\)</li>
+<li id="li-23">If \(a_n\) is dense then, let<div class="displaymath">
+\begin{equation*}
+b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
+\end{equation*}
+</div>by the example above this is equidistributed.</li>
+</ol></article></div>
+<p id="p-83">What can we say about the space of <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> sequences? Is it closed under addition? No (\(a_n = -b_n\)). \(\{k a_n\}\) neither (\(a_n = \alpha n,\,\frac1\alpha a_n = n\)). \(a_nb_n\) doesn't work either, but if \(b_n\) converges then \(a_nb_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Weyl's criterion (1916)</span>
+</h3>
+<article class="theorem-like" id="theorem-10"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.28</span> <span class="title">Weyl</span>
+</h6>
+<p id="p-84">\(\{a_n\}_{n=1}^\infty \in \lb 0 ,1 \rb\) then TFAE:</p>
+<ol class="decimal">
+<li id="li-24">\(\{a_n\}_{n=1}^\infty\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
+<li id="li-25">\(\forall f \in C(\lb 0,1\rb)\)<div class="displaymath">
+\begin{equation*}
+\lim_{N\to \infty} \frac 1N \sum_{n=1}^N f(a_n) = \int _0^1 f \diff x\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-26"><div class="displaymath">
+\begin{equation*}
+\lim_{N\to \infty} \frac 1N \sum_{n=1}^N e(ma_n) = \delta_m
+\end{equation*}
+</div></li>
+</ol>
+<p>where \(e(x) = e^{2\pi i x}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}\text{.}
+\end{equation*}
+</div></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
