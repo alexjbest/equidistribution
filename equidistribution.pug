@@ -505,7 +505,7 @@ section#sec-equidistribution-intro
                 me 0,\frac 12 , 1
                 me 0,\frac 13 ,\frac 23, 1
                 me 0,\frac 14 ,\frac 24,\frac 34, 1
-                me a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1,, 0,\frac 14 ,\frac 24,\frac 34, 1
+                me a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1, 0,\frac 14 ,\frac 24,\frac 34, 1
                 | this is uniformly distributed!
 
         exercise
@@ -544,21 +544,170 @@ section#sec-equidistribution-intro
         theorem
             title Weyl
             statement: p
-                | #[m \{a_n\}_{n=1}^\infty \in \lb 0 ,1 \rb] then TFAE:
+                | #[m \{a_n\}_{n=1}^\infty \in \RR] then TFAE:
                 ol
                     li
-                        | #[m \{a_n\}_{n=1}^\infty] is uniformly distributed.
+                        | #[m \{a_n\}_{n=1}^\infty] is uniformly distributed mod #[m 1].
 
                     li
                         | #[m \forall f \in C(\lb 0,1\rb)]
-                        me \lim_{N\to \infty} \frac 1N \sum_{n=1}^N f(a_n) = \int _0^1 f \diff x
+                        me \lim_{N\to \infty} \frac 1N \sum_{n=1}^N f(\{a_n\}) = \int _0^1 f \diff x
                         | .
                     li
-                        me \lim_{N\to \infty} \frac 1N \sum_{n=1}^N e(ma_n) = \delta_m
+                        me \lim_{N\to \infty} \frac 1N \sum_{n=1}^N e(ma_n) = \delta_m,\, \forall m \in \ZZ
                 | where #[m e(x) = e^{2\pi i x}],
                 me \delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}
                 | .
+            proof
+                proofcase
+                    title  #[m 1.\implies 2.]
+                    aside: p Lecture 4 18/9/2018
+                    p
+                        | #[m 1.] means #[m 2.] is true for the characteristic function of #[m \lb b,c\rb], hence true for step functions (because everything is linear).
+                    p
+                        | Recall that any #[m f \in C\lb 0,1\rb)] is the uniform limit of such functions.
+                    p
+                        | Exercise: Choose one that is #[m \epsilon] close to #[m f] and finish the proof.
+
+                proofcase
+                    title  #[m 2.\implies 1.]
+                    p
+                        | Find #[m f_1,f_2 \in C(\lb 0,1 \rb)] such that #[m f_1(x) \le \chi_{(b,c)}(x) \le f_2(x)] s.t.
+                        me \int f_1 - \chi_{(b,c)}) \le \epsilon
+                        | Exercise, finish this proof.
+                proofcase
+                    title  #[m 2.\implies 3.]
+                    p
+                        | Obvious.
+                proofcase
+                    title  #[m 3.\implies 2.]
+                    p
+                        | Recall Fejer's theorem that #[m f\in C\lb 0,1 \rb)] is the uniform limit of its fourier series.
+                        | Pick an #[m n \in \NN] s.t.
+                        me f_n(x) - \epsilon \le f(x) \le f_n(x) + \epsilon
+                        | .
+                    p
+                        | Exercise, finish this proof.
 
 
+        p
+            | Using this we can tackle more examples, e.g.:
+            ol
+                li #[m \{\alpha p_n\}], #[m n]-th primes, #[m \alpha\in \RR\smallsetminus \QQ].
+                li #[m \{\sqrt{n}\}]
+                li #[m \{\log(n)\}]
+                li #[m \{\log(p_n)\}]
+                li #[m \{\beta^n\}], #[m \beta \in \RR].
+                li #[m \{\alpha a_n\}], #[m a_n \in \ZZ]
 
+    subsection
+        title Some applications of Weyl's criterion
 
+        paragraphs
+            title Application 1
+            p
+                | #[m \{n \alpha \}] is uniformly distributed iff #[m \alpha \in \RR\smallsetminus \QQ].
+                | Let
+                me S_N(h,\alpha) = \sum_{n=0}^N e(h\alpha n)
+                |then
+                me S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}
+                | .
+                | Then #[m e(h\alpha ) - 1 \ne 0] for all #[m h \in \ZZ\smallsetminus \{0\} ] iff #[m \alpha \not \in \QQ] so #[m S_N(h,\alpha ) = O_{h,\alpha}(1) ] iff #[m \alpha \not \in \QQ].
+                | So #[m \lim_{N \to \infty} S_N(h,\alpha)  = 0,\,\forall h \ne  0 \iff \alpha\not \in \QQ].
+                | And #[m S_N(0,\alpha) = N+1] which implies
+                me \lim_{N\to \infty} \frac1N S_N(0,\alpha) = 1
+                | so by Weyl's criterion #[m \left\{ n\alpha \right\}] is uniformly distributed if #[m \alpha \not \in \QQ].
+
+        paragraphs
+            title Digression
+
+            theorem
+                title Vinogradov 1937
+                statement: p
+                    | #[m \{ \alpha p_n\} ] is uniformly distributed iff #[m \alpha \not \in \QQ].
+            p
+                | He actually showed weak Goldbach conjecture, Every (sufficiently large) #[em odd] integer is a sum of 3 primes.
+                | No bound by Vinogradov, Borozdin gave a large bound, Helfgott brought it down to reality.
+
+        paragraphs
+            title Application 2
+            p
+                me \{\beta^n \}
+            theorem
+                title Koksma 1935
+                statement: p
+                    | For almost every (Lebesgue) #[m \beta\in \RR_{\gt 1}], #[m \left\{\beta^n\right\}] is equidistributed.
+            p
+                | Koksma was a Dutch student of Van der Corput.
+
+            theorem
+                title Weyl
+                statement: p
+                    | Let #[m |a_n| \to \infty] be a sequence of integers, the set of #[m \alpha \in \RR] such that #[m \alpha a_n] is not uniformly distributed has Lebesgue measure 0.
+        paragraphs
+            title Application 3
+            p
+                me \{\log(n) \}
+                | is not equidistributed.
+            exercise
+                statement: p
+                    | Prove this.
+                    | Hint : assume it was
+                    me \# \{ n \lt 1001 N : \} =\# \{ n \lt 1000N : \} + \# \{1000N \le n \le 1001 N : \}
+                    | then
+                    me \log(n) - \log(100N + n_1) = \log(1000N) + \log (1+ n_1/1000N)
+        paragraphs
+            title Application 4
+            p
+                me \{\sqrt{n} \}
+            p
+                | Before this, lets introduce
+            definition#def-discrepancy
+                title Discrepancy
+                statement: p
+                    | Let #[m a_n \in \lb0,1)] be a sequence and #[m N\in \ZZ_{\ge 0}] we define
+                    me D_N = \sup_{(0\le b\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [b,c ]\}}{N}  - (c-b)\right| \right\}
+                    | .
+
+            p
+                | Some useful lemmas:
+            lemma
+                statement: p
+                    | Let
+                    me D_N^*= \sup_{(0\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [0,c ]\}}{N}  - c \right|\right\}
+                    | then
+                    me D_N^* \to 0 \iff D_N \to 0
+                    | .
+                proof
+                    p
+                        | Exercise (hint squeeze).
+
+            lemma
+                statement: p
+                    | #[m a_n] is uniformly distributed #[m  \iff  D_N \to 0 \iff D_N^* \to 0].
+                proof
+                    p
+                        | Ommitted/exercise, 2.1.1 of Kuipers and Niederreiter.
+
+            p
+                | For #[m \sqrt{n}] now.
+                me S_N(c) = \# \{ n \le N : 0 \le \{ \sqrt n \} \le c\}
+                | .
+            note
+                statement: p
+                    | If #[m d = \lfloor \sqrt{n} \rfloor] then
+                    me \sqrt n =  d + \{ \sqrt n \}
+                    | and #[m d \le \sqrt n \le d+ 1] and #[m \#\{ n :  d \ le \sqrt  n \le d+ 1\} = 2d+ 2].
+            p
+                | Similarly
+                me  \# \{ n : d \le \sqrt n \le d + \alpha \} = 2\alpha d + \alpha^2 + 1
+                | then
+                me S_N(\alpha) = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# \{ n : j + \alpha \le \sqrt n\le j + \alpha\}
+                me             = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# 2\alpha d + \alpha^2 + O(1)
+                me = 2\alpha  \frac{ \lfloor \sqrt N \rfloor (\lfloor \sqrt N \rfloor + 1)}{2} + O(\sqrt N) = \alpha N + O(\sqrt N)
+                | so
+                me D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \right| \right\} = \sup_{0\le \alpha \le 1 } O_\alpha (1/\sqrt{N}) = O(1/\sqrt N)
+                | .
+            exercise
+                statement: p
+                    | Make the dependence on #[m \alpha ] explicit and make the proof rigorous.

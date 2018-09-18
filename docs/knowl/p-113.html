@@ -11,52 +11,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="example-like"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.25</span> <span class="title">10</span>
-</h6>
-<p>Consider the sequence</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Similarly</p>
 <div class="displaymath">
 \begin{equation*}
-b_{m,i} = \frac i m
+\# \{ n : d \le \sqrt n \le d + \alpha \} = 2\alpha d + \alpha^2 + 1
 \end{equation*}
 </div>
-<p>and define</p>
+<p>then</p>
 <div class="displaymath">
 \begin{equation*}
-a_{\binom{m}{2} + i } = b_{m,i}
-\end{equation*}
-</div>
-<p>so that</p>
-<div class="displaymath">
-\begin{equation*}
-b_{m,i}
+S_N(\alpha) = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# \{ n : j + \alpha \le \sqrt n\le j + \alpha\}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-0,1
+= \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# 2\alpha d + \alpha^2 + O(1)
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-0,\frac 12 , 1
+= 2\alpha  \frac{ \lfloor \sqrt N \rfloor (\lfloor \sqrt N \rfloor + 1)}{2} + O(\sqrt N) = \alpha N + O(\sqrt N)
 \end{equation*}
 </div>
+<p>so</p>
 <div class="displaymath">
 \begin{equation*}
-0,\frac 13 ,\frac 23, 1
+D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \right| \right\} = \sup_{0\le \alpha \le 1 } O_\alpha (1/\sqrt{N}) = O(1/\sqrt N)\text{.}
 \end{equation*}
 </div>
-<div class="displaymath">
-\begin{equation*}
-0,\frac 14 ,\frac 24,\frac 34, 1
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1, 0,\frac 14 ,\frac 24,\frac 34, 1
-\end{equation*}
-</div>
-<p>this is uniformly distributed!</p></article><span class="incontext"><a href="sec-equidistribution-intro.html#example-5">in-context</a></span>
+<span class="incontext"><a href="sec-equidistribution-intro.html#p-113">in-context</a></span>
 </body>
 </html>

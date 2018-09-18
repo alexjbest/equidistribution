@@ -263,6 +263,7 @@ MathJax.Hub.Config({
 <li><a href="sec-equidistribution-intro.html#subsec-linnik-duke" data-scroll="subsec-linnik-duke">Linnik and Duke</a></li>
 <li><a href="sec-equidistribution-intro.html#subsec-equidist-basics" data-scroll="subsec-equidist-basics">Basics</a></li>
 <li><a href="sec-equidistribution-intro.html#subsection-4" data-scroll="subsection-4">Weyl's criterion (1916)</a></li>
+<li><a href="sec-equidistribution-intro.html#subsection-5" data-scroll="subsection-5">Some applications of Weyl's criterion</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-equidistribution-intro"><h2 class="heading hide-type">
@@ -743,7 +744,7 @@ b_{m,i}
 </div>
 <div class="displaymath">
 \begin{equation*}
-a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1,, 0,\frac 14 ,\frac 24,\frac 34, 1
+a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1, 0,\frac 14 ,\frac 24,\frac 34, 1
 \end{equation*}
 </div>
 <p>this is uniformly distributed!</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
@@ -769,18 +770,18 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 <article class="theorem-like" id="theorem-10"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.28</span> <span class="title">Weyl</span>
 </h6>
-<p id="p-84">\(\{a_n\}_{n=1}^\infty \in \lb 0 ,1 \rb\) then TFAE:</p>
+<p id="p-84">\(\{a_n\}_{n=1}^\infty \in \RR\) then TFAE:</p>
 <ol class="decimal">
-<li id="li-24">\(\{a_n\}_{n=1}^\infty\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
+<li id="li-24">\(\{a_n\}_{n=1}^\infty\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> mod \(1\text{.}\)</li>
 <li id="li-25">\(\forall f \in C(\lb 0,1\rb)\)<div class="displaymath">
 \begin{equation*}
-\lim_{N\to \infty} \frac 1N \sum_{n=1}^N f(a_n) = \int _0^1 f \diff x\text{.}
+\lim_{N\to \infty} \frac 1N \sum_{n=1}^N f(\{a_n\}) = \int _0^1 f \diff x\text{.}
 \end{equation*}
 </div>
 </li>
 <li id="li-26"><div class="displaymath">
 \begin{equation*}
-\lim_{N\to \infty} \frac 1N \sum_{n=1}^N e(ma_n) = \delta_m
+\lim_{N\to \infty} \frac 1N \sum_{n=1}^N e(ma_n) = \delta_m,\, \forall m \in \ZZ
 \end{equation*}
 </div></li>
 </ol>
@@ -789,7 +790,173 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 \begin{equation*}
 \delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}\text{.}
 \end{equation*}
-</div></article></section></section></div></main>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\).</h6>
+<aside class="aside-like" id="aside-4"><p id="p-85">Lecture 4 18/9/2018</p></aside><p id="p-86">\(1.\) means \(2.\) is true for the characteristic function of \(\lb b,c\rb\text{,}\) hence true for step functions (because everything is linear).</p>
+<p id="p-87">Recall that any \(f \in C\lb 0,1\rb)\) is the uniform limit of such functions.</p>
+<p id="p-88">Exercise: Choose one that is \(\epsilon\) close to \(f\) and finish the proof.</p></article><article class="case" id="case-2"><h6 class="heading">\(2.\implies 1.\).</h6>
+<p id="p-89">Find \(f_1,f_2 \in C(\lb 0,1 \rb)\) such that \(f_1(x) \le \chi_{(b,c)}(x) \le f_2(x)\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\int f_1 - \chi_{(b,c)}) \le \epsilon
+\end{equation*}
+</div>
+<p>Exercise, finish this proof.</p></article><article class="case" id="case-3"><h6 class="heading">\(2.\implies 3.\).</h6>
+<p id="p-90">Obvious.</p></article><article class="case" id="case-4"><h6 class="heading">\(3.\implies 2.\).</h6>
+<p id="p-91">Recall Fejer's theorem that \(f\in C\lb 0,1 \rb)\) is the uniform limit of its fourier series. Pick an \(n \in \NN\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+f_n(x) - \epsilon \le f(x) \le f_n(x) + \epsilon\text{.}
+\end{equation*}
+</div>
+<p id="p-92">Exercise, finish this proof.</p></article></article></div>
+<p id="p-93">Using this we can tackle more examples, e.g.:</p>
+<ol class="decimal">
+<li id="li-27">\(\{\alpha p_n\}\text{,}\) \(n\)-th primes, \(\alpha\in \RR\smallsetminus \QQ\text{.}\)</li>
+<li id="li-28">\(\{\sqrt{n}\}\)</li>
+<li id="li-29">\(\{\log(n)\}\)</li>
+<li id="li-30">\(\{\log(p_n)\}\)</li>
+<li id="li-31">\(\{\beta^n\}\text{,}\) \(\beta \in \RR\text{.}\)</li>
+<li id="li-32">\(\{\alpha a_n\}\text{,}\) \(a_n \in \ZZ\)</li>
+</ol></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5</span> <span class="title">Some applications of Weyl's criterion</span>
+</h3>
+<article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Application 1</span></h5>
+<p id="p-94">\(\{n \alpha \}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> iff \(\alpha \in \RR\smallsetminus \QQ\text{.}\) Let</p>
+<div class="displaymath">
+\begin{equation*}
+S_N(h,\alpha) = \sum_{n=0}^N e(h\alpha n)
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
+\end{equation*}
+</div>
+<p>Then \(e(h\alpha ) - 1 \ne 0\) for all \(h \in \ZZ\smallsetminus \{0\} \) iff \(\alpha \not \in \QQ\) so \(S_N(h,\alpha ) = O_{h,\alpha}(1) \) iff \(\alpha \not \in \QQ\text{.}\) So \(\lim_{N \to \infty} S_N(h,\alpha)  = 0,\,\forall h \ne  0 \iff \alpha\not \in \QQ\text{.}\) And \(S_N(0,\alpha) = N+1\) which implies</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{N\to \infty} \frac1N S_N(0,\alpha) = 1
+\end{equation*}
+</div>
+<p>so by Weyl's criterion \(\left\{ n\alpha \right\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Digression</span></h5>
+<article class="theorem-like" id="theorem-11"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.29</span> <span class="title">Vinogradov 1937</span>
+</h6>
+<p id="p-95">\(\{ \alpha p_n\} \) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> iff \(\alpha \not \in \QQ\text{.}\)</p></article><p id="p-96">He actually showed weak Goldbach conjecture, Every (sufficiently large) <em class="emphasis">odd</em> integer is a sum of 3 primes. No bound by Vinogradov, Borozdin gave a large bound, Helfgott brought it down to reality.</p></article><article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Application 2</span></h5>
+<div class="displaymath" id="p-97">
+\begin{equation*}
+\{\beta^n \}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-12"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.30</span> <span class="title">Koksma 1935</span>
+</h6>
+<p id="p-98">For almost every (Lebesgue) \(\beta\in \RR_{\gt 1}\text{,}\) \(\left\{\beta^n\right\}\) is equidistributed.</p></article><p id="p-99">Koksma was a Dutch student of Van der Corput.</p>
+<article class="theorem-like" id="theorem-13"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.31</span> <span class="title">Weyl</span>
+</h6>
+<p id="p-100">Let \(|a_n| \to \infty\) be a sequence of integers, the set of \(\alpha \in \RR\) such that \(\alpha a_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Application 3</span></h5>
+<div class="displaymath" id="p-101">
+\begin{equation*}
+\{\log(n) \}
+\end{equation*}
+</div>
+<p>is not equidistributed.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.32</span>
+</h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-102">Prove this. Hint : assume it was</p>
+<div class="displaymath">
+\begin{equation*}
+\# \{ n \lt 1001 N : \} =\# \{ n \lt 1000N : \} + \# \{1000N \le n \le 1001 N : \}
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+\log(n) - \log(100N + n_1) = \log(1000N) + \log (1+ n_1/1000N)
+\end{equation*}
+</div></article></div></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Application 4</span></h5>
+<div class="displaymath" id="p-103">
+\begin{equation*}
+\{\sqrt{n} \}
+\end{equation*}
+</div>
+<p id="p-104">Before this, lets introduce</p>
+<article class="definition-like" id="def-discrepancy"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.33</span> <span class="title">Discrepancy</span>
+</h6>
+<p id="p-105">Let \(a_n \in \lb0,1)\) be a sequence and \(N\in \ZZ_{\ge 0}\) we define</p>
+<div class="displaymath">
+\begin{equation*}
+D_N = \sup_{(0\le b\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [b,c ]\}}{N}  - (c-b)\right| \right\}\text{.}
+\end{equation*}
+</div></article><p id="p-106">Some useful lemmas:</p>
+<article class="theorem-like" id="lemma-1"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.34</span>
+</h6>
+<p id="p-107">Let</p>
+<div class="displaymath">
+\begin{equation*}
+D_N^*= \sup_{(0\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [0,c ]\}}{N}  - c \right|\right\}
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+D_N^* \to 0 \iff D_N \to 0\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-8" id="proof-8"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-108">Exercise (hint squeeze).</p></article></div>
+<article class="theorem-like" id="lemma-2"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.35</span>
+</h6>
+<p id="p-109">\(a_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> \(\iff  D_N \to 0 \iff D_N^* \to 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-9" id="proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-110">Ommitted/exercise, 2.1.1 of Kuipers and Niederreiter.</p></article></div>
+<p id="p-111">For \(\sqrt{n}\) now.</p>
+<div class="displaymath">
+\begin{equation*}
+S_N(c) = \# \{ n \le N : 0 \le \{ \sqrt n \} \le c\}\text{.}
+\end{equation*}
+</div>
+<article class="remark-like" id="note-3"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.36</span>
+</h6>
+<p id="p-112">If \(d = \lfloor \sqrt{n} \rfloor\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\sqrt n =  d + \{ \sqrt n \}
+\end{equation*}
+</div>
+<p>and \(d \le \sqrt n \le d+ 1\) and \(\#\{ n :  d \ le \sqrt  n \le d+ 1\} = 2d+ 2\text{.}\)</p></article><p id="p-113">Similarly</p>
+<div class="displaymath">
+\begin{equation*}
+\# \{ n : d \le \sqrt n \le d + \alpha \} = 2\alpha d + \alpha^2 + 1
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+S_N(\alpha) = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# \{ n : j + \alpha \le \sqrt n\le j + \alpha\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# 2\alpha d + \alpha^2 + O(1)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= 2\alpha  \frac{ \lfloor \sqrt N \rfloor (\lfloor \sqrt N \rfloor + 1)}{2} + O(\sqrt N) = \alpha N + O(\sqrt N)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \right| \right\} = \sup_{0\le \alpha \le 1 } O_\alpha (1/\sqrt{N}) = O(1/\sqrt N)\text{.}
+\end{equation*}
+</div>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.37</span>
+</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-114">Make the dependence on \(\alpha \) explicit and make the proof rigorous.</p></article></div></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
