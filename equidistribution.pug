@@ -358,7 +358,7 @@ section#sec-equidistribution-intro
                 | This theme of using some calculus is repeated across diophantine analysis.
 
             remark
-                statement: p
+                p
                     ul
                         li
                             | Thue: can replace #[m n] with #[m (\deg(\alpha) + 2)/2]
@@ -582,7 +582,7 @@ section#sec-equidistribution-intro
                 proofcase
                     title  #[m 3.\implies 2.]
                     p
-                        | Recall Fejer's theorem that #[m f\in C\lb 0,1 \rb)] is the uniform limit of its fourier series.
+                        | Recall Fejér's theorem that #[m f\in C\lb 0,1 \rb)] is the uniform limit of its fourier series.
                         | Pick an #[m n \in \NN] s.t.
                         me f_n(x) - \epsilon \le f(x) \le f_n(x) + \epsilon
                         | .
@@ -666,7 +666,7 @@ section#sec-equidistribution-intro
                 title Discrepancy
                 statement: p
                     | Let #[m a_n \in \lb0,1)] be a sequence and #[m N\in \ZZ_{\ge 0}] we define
-                    me D_N = \sup_{(0\le b\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [b,c ]\}}{N}  - (c-b)\right| \right\}
+                    me D_N = \sup_{0\le b\le c \le 1}\left\{ \left| \frac{\# \{n \lt N : a_n \in [b,c ]\}}{N}  - (c-b)\right| \right\}
                     | .
 
             p
@@ -674,7 +674,7 @@ section#sec-equidistribution-intro
             lemma
                 statement: p
                     | Let
-                    me D_N^*= \sup_{(0\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [0,c ]\}}{N}  - c \right|\right\}
+                    me D_N^*= \sup_{0\le c \le 1}\left\{ \left| \frac{\# \{n \lt N : a_n \in [0,c ]\}}{N}  - c \right|\right\}
                     | then
                     me D_N^* \to 0 \iff D_N \to 0
                     | .
@@ -694,10 +694,10 @@ section#sec-equidistribution-intro
                 me S_N(c) = \# \{ n \le N : 0 \le \{ \sqrt n \} \le c\}
                 | .
             note
-                statement: p
+                p
                     | If #[m d = \lfloor \sqrt{n} \rfloor] then
                     me \sqrt n =  d + \{ \sqrt n \}
-                    | and #[m d \le \sqrt n \le d+ 1] and #[m \#\{ n :  d \ le \sqrt  n \le d+ 1\} = 2d+ 2].
+                    | and #[m d \le \sqrt n \le d+ 1] and #[m \#\{ n :  d \le \sqrt  n \le d+ 1\} = 2d+ 2].
             p
                 | Similarly
                 me  \# \{ n : d \le \sqrt n \le d + \alpha \} = 2\alpha d + \alpha^2 + 1

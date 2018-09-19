@@ -802,7 +802,7 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 </div>
 <p>Exercise, finish this proof.</p></article><article class="case" id="case-3"><h6 class="heading">\(2.\implies 3.\).</h6>
 <p id="p-90">Obvious.</p></article><article class="case" id="case-4"><h6 class="heading">\(3.\implies 2.\).</h6>
-<p id="p-91">Recall Fejer's theorem that \(f\in C\lb 0,1 \rb)\) is the uniform limit of its fourier series. Pick an \(n \in \NN\) s.t.</p>
+<p id="p-91">Recall Fejér's theorem that \(f\in C\lb 0,1 \rb)\) is the uniform limit of its fourier series. Pick an \(n \in \NN\) s.t.</p>
 <div class="displaymath">
 \begin{equation*}
 f_n(x) - \epsilon \le f(x) \le f_n(x) + \epsilon\text{.}
@@ -889,7 +889,7 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 <p id="p-105">Let \(a_n \in \lb0,1)\) be a sequence and \(N\in \ZZ_{\ge 0}\) we define</p>
 <div class="displaymath">
 \begin{equation*}
-D_N = \sup_{(0\le b\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [b,c ]\}}{N}  - (c-b)\right| \right\}\text{.}
+D_N = \sup_{0\le b\le c \le 1}\left\{ \left| \frac{\# \{n \lt N : a_n \in [b,c ]\}}{N}  - (c-b)\right| \right\}\text{.}
 \end{equation*}
 </div></article><p id="p-106">Some useful lemmas:</p>
 <article class="theorem-like" id="lemma-1"><h6 class="heading">
@@ -898,7 +898,7 @@ D_N = \sup_{(0\le b\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [b,c
 <p id="p-107">Let</p>
 <div class="displaymath">
 \begin{equation*}
-D_N^*= \sup_{(0\le c \le 1)}\left\{ \left| \frac{\# \{n \lt N : a_n \in [0,c ]\}}{N}  - c \right|\right\}
+D_N^*= \sup_{0\le c \le 1}\left\{ \left| \frac{\# \{n \lt N : a_n \in [0,c ]\}}{N}  - c \right|\right\}
 \end{equation*}
 </div>
 <p>then</p>
@@ -926,7 +926,7 @@ S_N(c) = \# \{ n \le N : 0 \le \{ \sqrt n \} \le c\}\text{.}
 \sqrt n =  d + \{ \sqrt n \}
 \end{equation*}
 </div>
-<p>and \(d \le \sqrt n \le d+ 1\) and \(\#\{ n :  d \ le \sqrt  n \le d+ 1\} = 2d+ 2\text{.}\)</p></article><p id="p-113">Similarly</p>
+<p>and \(d \le \sqrt n \le d+ 1\) and \(\#\{ n :  d \le \sqrt  n \le d+ 1\} = 2d+ 2\text{.}\)</p></article><p id="p-113">Similarly</p>
 <div class="displaymath">
 \begin{equation*}
 \# \{ n : d \le \sqrt n \le d + \alpha \} = 2\alpha d + \alpha^2 + 1
