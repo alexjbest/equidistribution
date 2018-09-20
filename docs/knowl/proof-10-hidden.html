@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+I_k = \min\{ n : p_n \gt e^k \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+I_{k-1/2} = \min\{ n : p_n \gt e^{k-1/2} \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\chi_{\lb 0,1/2)} = \text{char. fn. of }\lb 0, 1/2)\text{.}
+\end{equation*}
+</div>
+<p>Consider</p>
+<div class="displaymath">
+\begin{equation*}
+S_k = \sum_{n \lt I_k} \chi_{\lb 0,1/2)} ( \{\log (p_n) \} )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+S_{k-1/2} = \sum_{n \lt I_{k-1/2}} \chi_{\lb 0,1/2\rb} ( \{\log (p_n) \} )
+\end{equation*}
+</div>
+<p>Note that \(S_k = S_{k-1/2}\text{.}\)</p>
+<p>If <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a></p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{k\to \infty} \frac{S_k}{I_k} = \lim_{k\to \infty} \frac{S_{k-1/2}}{I_{k-1/2}} = L
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+L\gt 0 \implies I_{k}/I_{k-1/2} \to 1\text{.}
+\end{equation*}
+</div>
+<p>But the prime number theorem says</p>
+<div class="displaymath">
+\begin{equation*}
+\pi(N)  =\# \{ p \lt N \}  \sim \frac{N}{\log N}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+I_{k}/I_{k-1/2} \sim \sqrt e \ne 1
+\end{equation*}
+</div>
+<p>so \(L=0\) but this cannot happen either.</p>
+<div class="displaymath">
+\begin{equation*}
+S_{k-1/2} \ge \pi(e^{k-1/2}) - \pi (e^{k-1})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\ge e^{k-1} \frac{\sqrt e - 1}k \gt 0\text{.}
+\end{equation*}
+</div></article></body>
+</html>

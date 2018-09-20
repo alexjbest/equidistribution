@@ -264,6 +264,7 @@ MathJax.Hub.Config({
 <li><a href="sec-equidistribution-intro.html#subsec-equidist-basics" data-scroll="subsec-equidist-basics">Basics</a></li>
 <li><a href="sec-equidistribution-intro.html#subsection-4" data-scroll="subsection-4">Weyl's criterion (1916)</a></li>
 <li><a href="sec-equidistribution-intro.html#subsection-5" data-scroll="subsection-5">Some applications of Weyl's criterion</a></li>
+<li><a href="sec-equidistribution-intro.html#subsection-6" data-scroll="subsection-6">Weyl differencing and the Van der Corput inequality</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-equidistribution-intro"><h2 class="heading hide-type">
@@ -856,7 +857,7 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 <article class="theorem-like" id="theorem-13"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.31</span> <span class="title">Weyl</span>
 </h6>
-<p id="p-100">Let \(|a_n| \to \infty\) be a sequence of integers, the set of \(\alpha \in \RR\) such that \(\alpha a_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Application 3</span></h5>
+<p id="p-100">Let \(|a_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha a_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Application 3</span></h5>
 <div class="displaymath" id="p-101">
 \begin{equation*}
 \{\log(n) \}
@@ -940,7 +941,7 @@ S_N(\alpha) = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# \{ n : j + \alpha \le \sqr
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# 2\alpha d + \alpha^2 + O(1)
+= \sum_{j=0}^{\lfloor \sqrt N \rfloor} 2\alpha d + \alpha^2 + O(1)
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -956,7 +957,220 @@ D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \
 </div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.37</span>
-</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-114">Make the dependence on \(\alpha \) explicit and make the proof rigorous.</p></article></div></article></section></section></div></main>
+</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-114">Make the dependence on \(\alpha \) explicit and make the proof rigorous.</p></article></div></article><article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Application 5</span></h5>
+<aside class="aside-like" id="aside-5"><p id="p-115">Lecture 5 20/9/2018</p></aside><article class="theorem-like" id="proposition-2"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">1.38</span>
+</h6>
+<div class="displaymath" id="p-116">
+\begin{equation*}
+\{\log(p_n) \}
+\end{equation*}
+</div>
+<p>is not equidistributed.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-10" id="proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-117">Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+I_k = \min\{ n : p_n \gt e^k \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+I_{k-1/2} = \min\{ n : p_n \gt e^{k-1/2} \}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\chi_{\lb 0,1/2)} = \text{char. fn. of }\lb 0, 1/2)\text{.}
+\end{equation*}
+</div>
+<p id="p-118">Consider</p>
+<div class="displaymath">
+\begin{equation*}
+S_k = \sum_{n \lt I_k} \chi_{\lb 0,1/2)} ( \{\log (p_n) \} )
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+S_{k-1/2} = \sum_{n \lt I_{k-1/2}} \chi_{\lb 0,1/2\rb} ( \{\log (p_n) \} )
+\end{equation*}
+</div>
+<p id="p-119">Note that \(S_k = S_{k-1/2}\text{.}\)</p>
+<p id="p-120">If <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a></p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{k\to \infty} \frac{S_k}{I_k} = \lim_{k\to \infty} \frac{S_{k-1/2}}{I_{k-1/2}} = L
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+L\gt 0 \implies I_{k}/I_{k-1/2} \to 1\text{.}
+\end{equation*}
+</div>
+<p id="p-121">But the prime number theorem says</p>
+<div class="displaymath">
+\begin{equation*}
+\pi(N)  =\# \{ p \lt N \}  \sim \frac{N}{\log N}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+I_{k}/I_{k-1/2} \sim \sqrt e \ne 1
+\end{equation*}
+</div>
+<p>so \(L=0\) but this cannot happen either.</p>
+<div class="displaymath">
+\begin{equation*}
+S_{k-1/2} \ge \pi(e^{k-1/2}) - \pi (e^{k-1})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\ge e^{k-1} \frac{\sqrt e - 1}k \gt 0\text{.}
+\end{equation*}
+</div></article></div></article></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.6</span> <span class="title">Weyl differencing and the Van der Corput inequality</span>
+</h3>
+<article class="theorem-like" id="theorem-14"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.39</span> <span class="title">Weyl</span>
+</h6>
+<p id="p-122">Let</p>
+<div class="displaymath">
+\begin{equation*}
+P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in \RR\lb x\rb
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+\{P(n)\}
+\end{equation*}
+</div>
+<p>is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> mod 1 iff there exists \(n_0 \in \lb n \rb\) s.t. \(a_{n_0} \not \in \QQ\text{.}\)</p></article><article class="theorem-like" id="lemma-3"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.40</span> <span class="title">Weyl differencing</span>
+</h6>
+<p id="p-123">Let \(y_n  \in \CC\text{,}\) such that \(y_n = 0\) if \(n \lt 1\) or \(n \gt N\) then we would like to bound</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_m \sum_n y_n \overline y_m  = \sum_{m,n=1}^N = S_N \overline S_N = |S_N|^2\text{,}
+\end{equation*}
+</div>
+<p>Weyl differencing gives</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{m=1}^N \sum_{n=1}^N y_n \overline y_m  = \underbrace{\sum_n |y_n| ^2}_{\text{diagonal contribution}}  + \underbrace{2 \Re \left( \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m} \overline y_m \right) }_{\text{off diagonal terms}}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-11" id="proof-11"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-11" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-124">Idea: Use the transformation</p>
+<div class="displaymath">
+\begin{equation*}
+n \mapsto n+ m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+m \mapsto m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} n\\ m\end{pmatrix}
+\begin{pmatrix} 1\amp 1 \\ 0 \amp 1\end{pmatrix}
+\end{equation*}
+</div>
+<p>switch orders</p>
+<figure class="figure-like" id="figure-2"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-2.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.41</span> Regions</figcaption></figure><div class="displaymath" id="p-125">
+\begin{equation*}
+\sum_m \sum_n y_n \overline y_m =  \sum_m \sum_n y_{n+m} \overline y_m
+\end{equation*}
+</div>
+<p>Note: if \(n \ge 0\) then \(m  = 1 ,\ldots, N-n\text{,}\)  \(n = 0, 1,\ldots, N-1\text{.}\) If \(n \lt 0\) then</p>
+<div class="displaymath">
+\begin{equation*}
+m = 1-n, \ldots, N
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+n = 1-N, \ldots, -1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{m=1}^N |y_m|^2 + \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m}\overline y_m +  \sum_{n = -N+1}^{-1} \sum_{m= 1-n}^N y_{m+n} \overline y_m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{m=1}^N |y_m| ^2  + 2 \Re \left( \sum_{n=1}^{N-1} \sum _{m=1}^{N-n} y_{n+m} \overline y_m \right)
+\end{equation*}
+</div></article></div>
+<article class="theorem-like" id="theorem-15"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.42</span> <span class="title">Weyl</span>
+</h6>
+<p id="p-126">Let \(|x_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha x_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-12" id="proof-12"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-127">Let \(\alpha \in  \lb 0,1)\text{,}\) let \(h \in \ZZ \smallsetminus \{ 0 \}\)</p>
+<div class="displaymath">
+\begin{equation*}
+S_h(N,\alpha) = \frac 1N \sum_{n=1}^N e(hx_n\alpha)
+\end{equation*}
+</div>
+<p>the trick is now to bound \(|S_h(N,\alpha)|^2\)</p>
+<div class="displaymath">
+\begin{equation*}
+N^2|S_h(N,\alpha)|^2 = \sum_{n=1}^N 1 +2\Re \left( \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} e(h(x_{n+m} - x_m) \alpha) \right)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 |S_h(N,\alpha)|^2 \diff \alpha = \frac 1N\text{.}
+\end{equation*}
+</div>
+<p id="p-128">Recall Fatou's lemma: Let \(f_n  \gt 0\) be  sequence of positive measurable functions, then if</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \liminf f_n(x)
+\end{equation*}
+</div>
+<p>we have</p>
+<div class="displaymath">
+\begin{equation*}
+\int f \le \liminf \int f_n\text{.}
+\end{equation*}
+</div>
+<p id="p-129">Take</p>
+<div class="displaymath">
+\begin{equation*}
+f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
+\end{equation*}
+</div>
+<p>Fatou implies</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 \sum_{n=1}^\infty |S_h(N^2,\alpha)|^2 \diff \alpha \le \sum_{N=1}^\infty \int_0^1 |S_h(N^2,\alpha)|^2\diff \alpha \lt \infty
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{N=1}^\infty  |S_h(N^2 ,\alpha)|^2
+\end{equation*}
+</div>
+<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by Weyl's criterion we are done.</p></article></div>
+<article class="theorem-like" id="theorem-16"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.43</span> <span class="title">Van der Corput</span>
+</h6>
+<p id="p-130">Let \(y_n  \in \CC\text{,}\) such that \(y_n = 0\) if \(n \lt 1\) or \(n \gt N\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\forall h \in \ZZ_{\gt 0 }
+\end{equation*}
+</div>
+<p>we have</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+!} \sum_{n=1}^H \left(1 = \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|\text{.}
+\end{equation*}
+</div></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];

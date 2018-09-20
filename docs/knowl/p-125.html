@@ -12,34 +12,32 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Similarly</p>
 <div class="displaymath">
 \begin{equation*}
-\# \{ n : d \le \sqrt n \le d + \alpha \} = 2\alpha d + \alpha^2 + 1
+\sum_m \sum_n y_n \overline y_m =  \sum_m \sum_n y_{n+m} \overline y_m
 \end{equation*}
 </div>
-<p>then</p>
+<p>Note: if \(n \ge 0\) then \(m  = 1 ,\ldots, N-n\text{,}\)  \(n = 0, 1,\ldots, N-1\text{.}\) If \(n \lt 0\) then</p>
 <div class="displaymath">
 \begin{equation*}
-S_N(\alpha) = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# \{ n : j + \alpha \le \sqrt n\le j + \alpha\}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{j=0}^{\lfloor \sqrt N \rfloor} 2\alpha d + \alpha^2 + O(1)
+m = 1-n, \ldots, N
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= 2\alpha  \frac{ \lfloor \sqrt N \rfloor (\lfloor \sqrt N \rfloor + 1)}{2} + O(\sqrt N) = \alpha N + O(\sqrt N)
+n = 1-N, \ldots, -1
 \end{equation*}
 </div>
-<p>so</p>
 <div class="displaymath">
 \begin{equation*}
-D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \right| \right\} = \sup_{0\le \alpha \le 1 } O_\alpha (1/\sqrt{N}) = O(1/\sqrt N)\text{.}
+\sum_{m=1}^N |y_m|^2 + \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m}\overline y_m +  \sum_{n = -N+1}^{-1} \sum_{m= 1-n}^N y_{m+n} \overline y_m
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec-equidistribution-intro.html#p-113">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{m=1}^N |y_m| ^2  + 2 \Re \left( \sum_{n=1}^{N-1} \sum _{m=1}^{N-n} y_{n+m} \overline y_m \right)
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec-equidistribution-intro.html#p-125">in-context</a></span>
 </body>
 </html>

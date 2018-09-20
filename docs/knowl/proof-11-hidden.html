@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>Idea: Use the transformation</p>
+<div class="displaymath">
+\begin{equation*}
+n \mapsto n+ m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+m \mapsto m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} n\\ m\end{pmatrix}
+\begin{pmatrix} 1\amp 1 \\ 0 \amp 1\end{pmatrix}
+\end{equation*}
+</div>
+<p>switch orders</p>
+<figure class="figure-like"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-2.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.41</span> Regions</figcaption></figure><div class="displaymath">
+\begin{equation*}
+\sum_m \sum_n y_n \overline y_m =  \sum_m \sum_n y_{n+m} \overline y_m
+\end{equation*}
+</div>
+<p>Note: if \(n \ge 0\) then \(m  = 1 ,\ldots, N-n\text{,}\)  \(n = 0, 1,\ldots, N-1\text{.}\) If \(n \lt 0\) then</p>
+<div class="displaymath">
+\begin{equation*}
+m = 1-n, \ldots, N
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+n = 1-N, \ldots, -1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{m=1}^N |y_m|^2 + \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m}\overline y_m +  \sum_{n = -N+1}^{-1} \sum_{m= 1-n}^N y_{m+n} \overline y_m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{m=1}^N |y_m| ^2  + 2 \Re \left( \sum_{n=1}^{N-1} \sum _{m=1}^{N-n} y_{n+m} \overline y_m \right)
+\end{equation*}
+</div></article></body>
+</html>

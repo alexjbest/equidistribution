@@ -643,7 +643,8 @@ section#sec-equidistribution-intro
             theorem
                 title Weyl
                 statement: p
-                    | Let #[m |a_n| \to \infty] be a sequence of integers, the set of #[m \alpha \in \RR] such that #[m \alpha a_n] is not uniformly distributed has Lebesgue measure 0.
+                    | Let #[m |a_n| \to \infty] be a sequence of distinct integers, the set of #[m \alpha \in \RR] such that #[m \alpha a_n] is not uniformly distributed has Lebesgue measure 0.
+
         paragraphs
             title Application 3
             p
@@ -656,6 +657,7 @@ section#sec-equidistribution-intro
                     me \# \{ n \lt 1001 N : \} =\# \{ n \lt 1000N : \} + \# \{1000N \le n \le 1001 N : \}
                     | then
                     me \log(n) - \log(100N + n_1) = \log(1000N) + \log (1+ n_1/1000N)
+
         paragraphs
             title Application 4
             p
@@ -703,7 +705,7 @@ section#sec-equidistribution-intro
                 me  \# \{ n : d \le \sqrt n \le d + \alpha \} = 2\alpha d + \alpha^2 + 1
                 | then
                 me S_N(\alpha) = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# \{ n : j + \alpha \le \sqrt n\le j + \alpha\}
-                me             = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# 2\alpha d + \alpha^2 + O(1)
+                me             = \sum_{j=0}^{\lfloor \sqrt N \rfloor} 2\alpha d + \alpha^2 + O(1)
                 me = 2\alpha  \frac{ \lfloor \sqrt N \rfloor (\lfloor \sqrt N \rfloor + 1)}{2} + O(\sqrt N) = \alpha N + O(\sqrt N)
                 | so
                 me D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \right| \right\} = \sup_{0\le \alpha \le 1 } O_\alpha (1/\sqrt{N}) = O(1/\sqrt N)
@@ -711,3 +713,132 @@ section#sec-equidistribution-intro
             exercise
                 statement: p
                     | Make the dependence on #[m \alpha ] explicit and make the proof rigorous.
+
+
+
+        paragraphs
+            title Application 5
+            aside: p Lecture 5 20/9/2018
+            proposition
+                statement: p
+                    me \{\log(p_n) \}
+                    | is not equidistributed.
+                proof
+                    p
+                        | Assume otherwise, let #[m k \in \ZZ_{\gt0}].
+                        me I_k = \min\{ n : p_n \gt e^k \}
+                        me I_{k-1/2} = \min\{ n : p_n \gt e^{k-1/2} \}
+                        me \chi_{\lb 0,1/2)} = \text{char. fn. of }\lb 0, 1/2)
+                        | .
+                    p
+                        | Consider
+                        me S_k = \sum_{n \lt I_k} \chi_{\lb 0,1/2)} ( \{\log (p_n) \} )
+                        me S_{k-1/2} = \sum_{n \lt I_{k-1/2}} \chi_{\lb 0,1/2\rb} ( \{\log (p_n) \} )
+                    p
+                        | Note that #[m S_k = S_{k-1/2}].
+                    p
+                        | If uniformly distributed
+                        me \lim_{k\to \infty} \frac{S_k}{I_k} = \lim_{k\to \infty} \frac{S_{k-1/2}}{I_{k-1/2}} = L
+                        me L\gt 0 \implies I_{k}/I_{k-1/2} \to 1
+                        |.
+                    p
+                        | But the prime number theorem says
+                        me \pi(N)  =\# \{ p \lt N \}  \sim \frac{N}{\log N}
+                        | so
+                        me I_{k}/I_{k-1/2} \sim \sqrt e \ne 1
+                        | so #[m L=0] but this cannot happen either.
+                        me S_{k-1/2} \ge \pi(e^{k-1/2}) - \pi (e^{k-1})
+                        me           \ge e^{k-1} \frac{\sqrt e - 1}k \gt 0
+                        | .
+
+    subsection
+        title Weyl differencing and the Van der Corput inequality
+
+
+        theorem
+            title Weyl
+            statement: p
+                | Let
+                me P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in \RR\lb x\rb
+                | then
+                me \{P(n)\}
+                | is uniformly distributed mod 1 iff there exists #[m n_0 \in \lb n \rb] s.t. #[m a_{n_0} \not \in \QQ].
+
+        lemma
+            title Weyl differencing
+            statement: p
+                | Let #[m y_n  \in \CC], such that #[m y_n = 0] if #[m n \lt 1] or #[m n \gt N] then we would like to bound
+                me \sum_m \sum_n y_n \overline y_m  = \sum_{m,n=1}^N = S_N \overline S_N = |S_N|^2
+                | , Weyl differencing gives
+                me \sum_{m=1}^N \sum_{n=1}^N y_n \overline y_m  = \underbrace{\sum_n |y_n| ^2}_{\text{diagonal contribution}}  + \underbrace{2 \Re \left( \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m} \overline y_m \right) }_{\text{off diagonal terms}}
+                | .
+            proof
+                p
+                    | Idea: Use the transformation
+                    me n \mapsto n+ m
+                    me m \mapsto m
+                    me.
+                        \begin{pmatrix} n\\ m\end{pmatrix}
+                        \begin{pmatrix} 1\amp 1 \\ 0 \amp 1\end{pmatrix}
+                    | switch orders
+                figure
+                    caption Regions
+                    image: latex-image.
+                        <![CDATA[
+                        \begin{tikzpicture}
+                            \draw[thick] (-1,0) -- (5,0);
+                            \draw[thick] (0,-1) -- (0,5);
+                            \filldraw[fill=gray!20!white, draw=gray!20!black] (1,1) -- (1,4) -- (4,4) -- (4,1) -- (1,1);
+                            \draw[thick] (7,0) -- (12,0);
+                            \draw[thick] (8,-1) -- (8,5);
+                            \filldraw[fill=gray!20!white, draw=gray!20!black] (8,1) -- (5,4) -- (8,4) -- (11,1) -- (8,1);
+                        \end{tikzpicture}
+                        ]]>
+                p
+                    me \sum_m \sum_n y_n \overline y_m =  \sum_m \sum_n y_{n+m} \overline y_m
+                    | Note: if #[m n \ge 0] then #[m m  = 1 ,\ldots, N-n],  #[m n = 0, 1,\ldots, N-1].
+                    | If #[m n \lt 0] then
+                    me m = 1-n, \ldots, N
+                    me n = 1-N, \ldots, -1
+                    me \sum_{m=1}^N |y_m|^2 + \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m}\overline y_m +  \sum_{n = -N+1}^{-1} \sum_{m= 1-n}^N y_{m+n} \overline y_m
+                    me = \sum_{m=1}^N |y_m| ^2  + 2 \Re \left( \sum_{n=1}^{N-1} \sum _{m=1}^{N-n} y_{n+m} \overline y_m \right)
+
+
+        theorem
+            title Weyl
+            statement: p
+                | Let #[m |x_n| \to \infty] be a sequence of distinct integers, the set of #[m \alpha \in \RR] such that #[m \alpha x_n] is not uniformly distributed has Lebesgue measure 0.
+            proof
+                p
+                    | Let #[m \alpha \in  \lb 0,1)], let #[m h \in \ZZ \smallsetminus \{ 0 \}]
+                    me S_h(N,\alpha) = \frac 1N \sum_{n=1}^N e(hx_n\alpha)
+                    | the trick is now to bound #[m |S_h(N,\alpha)|^2]
+                    me N^2|S_h(N,\alpha)|^2 = \sum_{n=1}^N 1 +2\Re \left( \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} e(h(x_{n+m} - x_m) \alpha) \right)
+                    | so
+                    me \int_0^1 |S_h(N,\alpha)|^2 \diff \alpha = \frac 1N
+                    | .
+                p
+                    | Recall Fatou's lemma:
+                    | Let #[m f_n  \gt 0] be  sequence of positive measurable functions, then if
+                    me f(x) = \liminf f_n(x)
+                    | we have
+                    me \int f \le \liminf \int f_n
+                    | .
+                p
+                    | Take
+                    me f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
+                    | Fatou implies
+                    me  \int_0^1 \sum_{n=1}^\infty |S_h(N^2,\alpha)|^2 \diff \alpha \le \sum_{N=1}^\infty \int_0^1 |S_h(N^2,\alpha)|^2\diff \alpha \lt \infty
+                    | so
+                    me \sum_{N=1}^\infty  |S_h(N^2 ,\alpha)|^2
+                    | is finite for almost all #[m \alpha] and for any #[m h \ne 0].
+                    | Then by Weyl's criterion we are done.
+
+        theorem
+            title Van der Corput
+            statement: p
+                | Let #[m y_n  \in \CC], such that #[m y_n = 0] if #[m n \lt 1] or #[m n \gt N] then
+                me \forall h \in \ZZ_{\gt 0 }
+                | we have
+                me \left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+!} \sum_{n=1}^H \left(1 = \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|
+                | .
