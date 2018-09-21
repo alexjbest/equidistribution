@@ -768,7 +768,7 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 <p id="p-83">What can we say about the space of <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> sequences? Is it closed under addition? No (\(a_n = -b_n\)). \(\{k a_n\}\) neither (\(a_n = \alpha n,\,\frac1\alpha a_n = n\)). \(a_nb_n\) doesn't work either, but if \(b_n\) converges then \(a_nb_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Weyl's criterion (1916)</span>
 </h3>
-<article class="theorem-like" id="theorem-10"><h6 class="heading">
+<article class="theorem-like" id="thm-weyl-criterion"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.28</span> <span class="title">Weyl</span>
 </h6>
 <p id="p-84">\(\{a_n\}_{n=1}^\infty \in \RR\) then TFAE:</p>
@@ -789,9 +789,10 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 <p>where \(e(x) = e^{2\pi i x}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}\text{.}
+\delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}\text{,}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\).</h6>
+</div>
+<p>collectively this is known as <dfn class="terminology">Weyl's criterion</dfn>.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\).</h6>
 <aside class="aside-like" id="aside-4"><p id="p-85">Lecture 4 18/9/2018</p></aside><p id="p-86">\(1.\) means \(2.\) is true for the characteristic function of \(\lb b,c\rb\text{,}\) hence true for step functions (because everything is linear).</p>
 <p id="p-87">Recall that any \(f \in C\lb 0,1\rb)\) is the uniform limit of such functions.</p>
 <p id="p-88">Exercise: Choose one that is \(\epsilon\) close to \(f\) and finish the proof.</p></article><article class="case" id="case-2"><h6 class="heading">\(2.\implies 1.\).</h6>
@@ -840,7 +841,7 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 \lim_{N\to \infty} \frac1N S_N(0,\alpha) = 1
 \end{equation*}
 </div>
-<p>so by Weyl's criterion \(\left\{ n\alpha \right\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Digression</span></h5>
+<p>so by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a> \(\left\{ n\alpha \right\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Digression</span></h5>
 <article class="theorem-like" id="theorem-11"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.29</span> <span class="title">Vinogradov 1937</span>
 </h6>
@@ -1155,7 +1156,7 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 \sum_{N=1}^\infty  |S_h(N^2 ,\alpha)|^2
 \end{equation*}
 </div>
-<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by Weyl's criterion we are done.</p></article></div>
+<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a> we are done.</p></article></div>
 <article class="theorem-like" id="theorem-16"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.43</span> <span class="title">Van der Corput</span>
 </h6>
@@ -1168,7 +1169,7 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 <p>we have</p>
 <div class="displaymath">
 \begin{equation*}
-\left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+!} \sum_{n=1}^H \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|\text{.}
+\left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+1} \sum_{n=1}^H \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|\text{.}
 \end{equation*}
 </div></article></section></section></div></main>
 </div>
