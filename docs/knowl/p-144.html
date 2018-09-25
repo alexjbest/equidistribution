@@ -12,18 +12,26 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(y_n  \in \CC\text{,}\) such that \(y_n = 0\) if \(n \lt 1\) or \(n \gt N\) then we would like to bound</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_m \sum_n y_n \overline y_m  = \sum_{m,n=1}^N = S_N \overline S_N = |S_N|^2\text{,}
+T_\alpha \colon T^2 \to T^2
 \end{equation*}
 </div>
-<p><dfn class="terminology">Weyl differencing</dfn> gives</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{m=1}^N \sum_{n=1}^N y_n \overline y_m  = \underbrace{\sum_n |y_n| ^2}_{\text{diagonal contribution}}  + \underbrace{2 \Re \left( \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m} \overline y_m \right) }_{\text{off diagonal terms}}\text{.}
+(x,y) \mapsto (x+\alpha, 2x+y + \alpha)
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec-equidistribution-intro.html#p-123">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(n\alpha, n^2 \alpha)
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec-equidistribution-intro.html#p-144">in-context</a></span>
 </body>
 </html>

@@ -265,6 +265,7 @@ MathJax.Hub.Config({
 <li><a href="sec-equidistribution-intro.html#subsection-4" data-scroll="subsection-4">Weyl's criterion (1916)</a></li>
 <li><a href="sec-equidistribution-intro.html#subsection-5" data-scroll="subsection-5">Some applications of Weyl's criterion</a></li>
 <li><a href="sec-equidistribution-intro.html#subsection-6" data-scroll="subsection-6">Weyl differencing and the Van der Corput inequality</a></li>
+<li><a href="sec-equidistribution-intro.html#subsection-7" data-scroll="subsection-7">A different perspective (Ergodic)</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-equidistribution-intro"><h2 class="heading hide-type">
@@ -451,7 +452,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 \begin{equation*}
 \left| q\alpha - p \right| \lt \frac 1N\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-1" id="proof-1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-50">(Pidgeonhole) divide \(\lb 0, 1)\) into even \(N\) subintervals of width \(\frac 1N\text{,}\) consider</p>
+</div></article><article class="hiddenproof" id="proof-1"><a knowl="" class="id-ref" refid="hk-proof-1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-50">(Pidgeonhole) divide \(\lb 0, 1)\) into even \(N\) subintervals of width \(\frac 1N\text{,}\) consider</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha_0 = 0,\alpha_1 = \left\{ \alpha 1\right\}, \alpha_2 = \left\{ \alpha 2\right\}, \ldots\in \lb 0,1)
@@ -476,7 +477,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 \begin{equation*}
 \left| \alpha - \frac pq \right| \lt \frac {1}{q^2}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-2" id="proof-2"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-52">Exercise.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-2"><a knowl="" class="id-ref" refid="hk-proof-2"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-52">Exercise.</p></article></div>
 <p id="p-53">This is very strong, Roth's theorem tells us that even \(q^{2+\epsilon}\) here is enough to force finiteness.</p>
 <article class="remark-like" id="note-1"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">1.15</span>
@@ -518,7 +519,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 \begin{equation*}
 \left| \alpha - \frac pq \right| \gt \frac {A}{q^n}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-3" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-61">Let \(f \in \ZZ\lb x \rb\) be the minimal polynomial of \(\alpha\text{.}\) Gauss's lemma implies that \(f\) is irreducible over \(\QQ\) so</p>
+</div></article><article class="hiddenproof" id="proof-3"><a knowl="" class="id-ref" refid="hk-proof-3"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-61">Let \(f \in \ZZ\lb x \rb\) be the minimal polynomial of \(\alpha\text{.}\) Gauss's lemma implies that \(f\) is irreducible over \(\QQ\) so</p>
 <div class="displaymath">
 \begin{equation*}
 q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ\text{.}
@@ -554,7 +555,7 @@ q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ
 <article class="theorem-like" id="theorem-8"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.21</span> <span class="title">Kronecker</span>
 </h6>
-<p id="p-65">\(a_n\) is dense in \(\lb 0,1)\) if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-4" id="proof-4"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-4" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-66">Will show for any \(x \in \lb 0,1)\) there exists</p>
+<p id="p-65">\(a_n\) is dense in \(\lb 0,1)\) if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="hiddenproof" id="proof-4"><a knowl="" class="id-ref" refid="hk-proof-4"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-4" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-66">Will show for any \(x \in \lb 0,1)\) there exists</p>
 <div class="displaymath">
 \begin{equation*}
 \left\{ a_{n_j}\right\}_{j=1}^\infty\text{ s.t. } a_{n_j} \to x\text{.}
@@ -618,7 +619,7 @@ e = \sum_{n=1}^\infty \frac{1}{n!}
 <p>so \(n!e \in \ZZ + \frac{1}{n+1} + \frac{(n+1)(n+2)} + \cdots \le \frac{e}{n+1} \to 0\text{,}\) as \(n\to \infty\text{.}\) So its not dense, hence certainly not equidistributed.</p></article><article class="theorem-like" id="theorem-9"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.24</span>
 </h6>
-<p id="p-75">The sequence \(a_n = \{ n\alpha\}\) is equidistributed.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-5" id="proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-76">Let \(\epsilon\gt 0\text{,}\) choose \(M \gt 0\) such that \(\frac1M\lt \epsilon\text{,}\) furthermore choose a \(\delta \lt \frac1M\text{.}\) Dirichlet implies there exists \(m \in \ZZ\) s.t. \(\| m\alpha\| = \delta\text{.}\)</p>
+<p id="p-75">The sequence \(a_n = \{ n\alpha\}\) is equidistributed.</p></article><article class="hiddenproof" id="proof-5"><a knowl="" class="id-ref" refid="hk-proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-76">Let \(\epsilon\gt 0\text{,}\) choose \(M \gt 0\) such that \(\frac1M\lt \epsilon\text{,}\) furthermore choose a \(\delta \lt \frac1M\text{.}\) Dirichlet implies there exists \(m \in \ZZ\) s.t. \(\| m\alpha\| = \delta\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 0\lt \delta \lt \frac1M \lt\epsilon
@@ -748,7 +749,7 @@ b_{m,i}
 a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1, 0,\frac 14 ,\frac 24,\frac 34, 1
 \end{equation*}
 </div>
-<p>this is uniformly distributed!</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
+<p>this is uniformly distributed!</p></article><article class="exercise-like" id="exercise-1"><a knowl="" class="id-ref" refid="hk-exercise-1"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.26</span>
 </h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-80">Prove this (in a similar way to before).</p></article></div>
 <article class="theorem-like" id="proposition-1"><h6 class="heading">
@@ -757,7 +758,7 @@ a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1, 0,\frac 14 ,\frac 24,\frac 3
 <ol id="p-81" class="decimal">
 <li id="li-20">Any sequence has a rearrangement that is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
 <li id="li-21">Any dense sequence has a rearrangement that is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
-</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-6" id="proof-6"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-6" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-82" class="decimal">
+</ol></article><article class="hiddenproof" id="proof-6"><a knowl="" class="id-ref" refid="hk-proof-6"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-6" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-82" class="decimal">
 <li id="li-22">If not sense we are done already. Otherwise let \(I_1 = \lb 0, \frac 12) ,I_2 = \lb\frac 12, 1\rb\) Let \(X = \{a_n \in I_1\}, Y = \{a_n \in I_2\}\text{,}\) so both sets are infinite. Let \(b_n  = x_1, \ldots, x_{10^{10}}, y_1, x_{10^{10} + 1}, \ldots, x_{20^{20}},\ldots\) so \(\# \{n:b_n  \in \lb4/5,1\rb \}  \sim \frac{N}{10^{10}}\text{.}\)</li>
 <li id="li-23">If \(a_n\) is dense then, let<div class="displaymath">
 \begin{equation*}
@@ -792,7 +793,7 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 \delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}\text{,}
 \end{equation*}
 </div>
-<p>collectively this is known as <dfn class="terminology">Weyl's criterion</dfn>.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\).</h6>
+<p>collectively this is known as <dfn class="terminology">Weyl's criterion</dfn>.</p></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\).</h6>
 <aside class="aside-like" id="aside-4"><p id="p-85">Lecture 4 18/9/2018</p></aside><p id="p-86">\(1.\) means \(2.\) is true for the characteristic function of \(\lb b,c\rb\text{,}\) hence true for step functions (because everything is linear).</p>
 <p id="p-87">Recall that any \(f \in C\lb 0,1\rb)\) is the uniform limit of such functions.</p>
 <p id="p-88">Exercise: Choose one that is \(\epsilon\) close to \(f\) and finish the proof.</p></article><article class="case" id="case-2"><h6 class="heading">\(2.\implies 1.\).</h6>
@@ -865,7 +866,7 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 \end{equation*}
 </div>
 <p>is not equidistributed.</p>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
+<article class="exercise-like" id="exercise-2"><a knowl="" class="id-ref" refid="hk-exercise-2"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.32</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-102">Prove this. Hint : assume it was</p>
 <div class="displaymath">
@@ -908,11 +909,11 @@ D_N^*= \sup_{0\le c \le 1}\left\{ \left| \frac{\# \{n \lt N : a_n \in [0,c ]\}}{
 \begin{equation*}
 D_N^* \to 0 \iff D_N \to 0\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-8" id="proof-8"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-108">Exercise (hint squeeze).</p></article></div>
+</div></article><article class="hiddenproof" id="proof-8"><a knowl="" class="id-ref" refid="hk-proof-8"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-108">Exercise (hint squeeze).</p></article></div>
 <article class="theorem-like" id="lemma-2"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.35</span>
 </h6>
-<p id="p-109">\(a_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> \(\iff  D_N \to 0 \iff D_N^* \to 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-9" id="proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-110">Ommitted/exercise, 2.1.1 of Kuipers and Niederreiter.</p></article></div>
+<p id="p-109">\(a_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> \(\iff  D_N \to 0 \iff D_N^* \to 0\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-110">Ommitted/exercise, 2.1.1 of Kuipers and Niederreiter.</p></article></div>
 <p id="p-111">For \(\sqrt{n}\) now.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -956,7 +957,7 @@ S_N(\alpha) = \sum_{j=0}^{\lfloor \sqrt N \rfloor} \# \{ n : j + \alpha \le \sqr
 D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \right| \right\} = \sup_{0\le \alpha \le 1 } O_\alpha (1/\sqrt{N}) = O(1/\sqrt N)\text{.}
 \end{equation*}
 </div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
+<article class="exercise-like" id="exercise-3"><a knowl="" class="id-ref" refid="hk-exercise-3"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.37</span>
 </h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-114">Make the dependence on \(\alpha \) explicit and make the proof rigorous.</p></article></div></article><article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Application 5</span></h5>
 <aside class="aside-like" id="aside-5"><p id="p-115">Lecture 5 20/9/2018</p></aside><article class="theorem-like" id="proposition-2"><h6 class="heading">
@@ -967,7 +968,7 @@ D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \
 \{\log(p_n) \}
 \end{equation*}
 </div>
-<p>is not equidistributed.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-10" id="proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-117">Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
+<p>is not equidistributed.</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-117">Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 I_k = \min\{ n : p_n \gt e^k \}
@@ -1046,7 +1047,7 @@ P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in \RR\lb x\rb
 \{P(n)\}
 \end{equation*}
 </div>
-<p>is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> mod 1 iff there exists \(n_0 \in \lb n \rb\) s.t. \(a_{n_0} \not \in \QQ\text{.}\)</p></article><article class="theorem-like" id="lemma-3"><h6 class="heading">
+<p>is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> mod 1 iff there exists \(n_0 \in \{ 1,\ldots, n\}\) s.t. \(a_{n_0} \not \in \QQ\text{.}\)</p></article><article class="theorem-like" id="lem-weyl-diff"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.40</span> <span class="title">Weyl differencing</span>
 </h6>
 <p id="p-123">Let \(y_n  \in \CC\text{,}\) such that \(y_n = 0\) if \(n \lt 1\) or \(n \gt N\) then we would like to bound</p>
@@ -1055,12 +1056,12 @@ P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in \RR\lb x\rb
 \sum_m \sum_n y_n \overline y_m  = \sum_{m,n=1}^N = S_N \overline S_N = |S_N|^2\text{,}
 \end{equation*}
 </div>
-<p>Weyl differencing gives</p>
+<p><dfn class="terminology">Weyl differencing</dfn> gives</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{m=1}^N \sum_{n=1}^N y_n \overline y_m  = \underbrace{\sum_n |y_n| ^2}_{\text{diagonal contribution}}  + \underbrace{2 \Re \left( \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m} \overline y_m \right) }_{\text{off diagonal terms}}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-11" id="proof-11"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-11" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-124">Idea: Use the transformation</p>
+</div></article><article class="hiddenproof" id="proof-11"><a knowl="" class="id-ref" refid="hk-proof-11"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-11" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-124">Idea: Use the transformation</p>
 <div class="displaymath">
 \begin{equation*}
 n \mapsto n+ m
@@ -1108,7 +1109,7 @@ n = 1-N, \ldots, -1
 <article class="theorem-like" id="theorem-15"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.42</span> <span class="title">Weyl</span>
 </h6>
-<p id="p-126">Let \(|x_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha x_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-12" id="proof-12"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-127">Let \(\alpha \in  \lb 0,1)\text{,}\) let \(h \in \ZZ \smallsetminus \{ 0 \}\)</p>
+<p id="p-126">Let \(|x_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha x_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article><article class="hiddenproof" id="proof-12"><a knowl="" class="id-ref" refid="hk-proof-12"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-127">Let \(\alpha \in  \lb 0,1)\text{,}\) let \(h \in \ZZ \smallsetminus \{ 0 \}\)</p>
 <div class="displaymath">
 \begin{equation*}
 S_h(N,\alpha) = \frac 1N \sum_{n=1}^N e(hx_n\alpha)
@@ -1157,19 +1158,156 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 \end{equation*}
 </div>
 <p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a> we are done.</p></article></div>
-<article class="theorem-like" id="theorem-16"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">1.43</span> <span class="title">Van der Corput</span>
+<article class="theorem-like" id="lemma-4"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.43</span> <span class="title">Van der Corput</span>
 </h6>
 <p id="p-130">Let \(y_n  \in \CC\text{,}\) such that \(y_n = 0\) if \(n \lt 1\) or \(n \gt N\) then</p>
 <div class="displaymath">
 \begin{equation*}
-\forall h \in \ZZ_{\gt 0 }
+\forall H \in \ZZ_{\gt 0 }
 \end{equation*}
 </div>
 <p>we have</p>
 <div class="displaymath">
 \begin{equation*}
-\left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+1} \sum_{n=1}^H \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|\text{.}
+\left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+1} \sum_{h=1}^H \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-13"><a knowl="" class="id-ref" refid="hk-proof-13"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-13" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><aside class="aside-like" id="aside-6"><p id="p-131">Lecture 6 25/9/2018</p></aside><p id="p-132">Consider</p>
+<div class="displaymath">
+\begin{equation*}
+(H+ 1)^2 \left| \sum_{n=1}^N y_n\right|^2
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+(H+ 1)^2 \left| \sum_{n=1}^N y_n\right|^2 = \left| \sum_{h= 0  }^H \sum _{n=1}^N y+n\right |^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \left|  \sum_{h= 0}^H \sum _{n\in \ZZ} y_{n+h}\right|^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation}
+= \left|  \sum _{n\in \ZZ}\sum_{h= 0}^H  y_{n+h}\right|^2\label{eqn-vandercorput}\tag{1.1}
+\end{equation}
+</div>
+<p>note \(n\)-sum is nonzero for at most \(N+H\) terms \(1-H \le n \le N\) then Cauchy-Schwarz implies</p>
+<div class="displaymath">
+\begin{equation*}
+\le (N+ H) \sum_n  \left| \sum_{h=0}^H y_{n-h} \right|^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation}
+= (N+H) \sum_n \sum_{h_1 = 0}^H \sum_{h_2 = 0}^H  y_{n+h_1} \overline{y_{n + h_2}}\label{eqn-vandercorput2}\tag{1.2}
+\end{equation}
+</div>
+<p>let \(m = n + h_2\text{,}\)  \(l = h_1 - h_2\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+= (N+H) \sum_{-H \le l \le H} \sum_m \overline y_m y_{m-l} \underbrace{\left( \sum_{0\le h_1, h_2 \le H} 1 \right)}_{= I(H,l)}
+\end{equation*}
+</div>
+<p>note \(I(H,l) = H+1 - |l|\text{,}\) so</p>
+<div class="displaymath">
+\begin{equation*}
+= (N+H) \sum_{-H \le l \le H} H +  1 - |l | \sum_m \overline y_m y_{m-l}
+\end{equation*}
+</div>
+<p>then if \(l = 0\) we get the first term of the statement, \(l \ne 0\) the other.</p></article></div>
+<p id="p-133">What is the difference between this and <a knowl="./knowl/lem-weyl-diff.html" title="Lemma 1.40: Weyl differencing">Weyl differencing</a>? When \(H\) is large, not so much, but we can take \(H\) small now, shifting the weighting around. We change the balance to make one part shorter and the other longer.</p>
+<article class="theorem-like" id="thm-van-der-corput-diff"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.44</span> <span class="title">Van der Corput differencing</span>
+</h6>
+<p id="p-134">If for each \(h \in \ZZ_{\ge 1}\) the sequence \(b_h(n) = a_{n+h} - a_n\) then so is \(a_n\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-135">We'll use <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a> and the van der Corput lemma. Fix, \(N \in \ZZ_{\ge1}\) a \(H\le N\text{.}\) Then for any \(k \in \ZZ\smallsetminus\{0\}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \sum e( ka_n) \right|^2   \le \frac{ N+H}{H+ 1} N + 2 \frac{ N+H}{H+ 1}  \sum \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} e(b_h(n)k) \right|
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies \lim_{N \to \infty} \frac{1}{N^2} \left| \sum_{n=1}^N e(ka_n)\right|^2 \le \frac1{H+1}
+\end{equation*}
+</div>
+<p>since \(H\) is arbitrary</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{N \to \infty} \frac{1}{N^2} \left| \sum_{n=1}^N e(ka_n)\right|^2  = 0\text{.}
+\end{equation*}
+</div></article></div>
+<article class="hiddenproof" id="proof-15"><a knowl="" class="id-ref" refid="hk-proof-15"><h6 class="heading"><span class="title">Proof of Weyl's theorem</span></h6></a></article><div id="hk-proof-15" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-136">Let \(\deg P = d\) then, for \(d = 1\) we are done by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a>, for \(d \le D\) use van der Corput differencing. Note that  for fixed \(h\text{,}\) \(P(n+h) -P(n)\) is of lower degree.</p></article></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7</span> <span class="title">A different perspective (Ergodic)</span>
+</h3>
+<p id="p-137">Furstenberg (1981 book) gives a different proof that \(\{n ^2 \alpha\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p>
+<article class="paragraphs" id="paragraphs-12"><h5 class="heading"><span class="title">Ergodic theory 101</span></h5>
+<article class="definition-like" id="def-ergodic-measure"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.45</span> <span class="title">Ergodic measures</span>
+</h6>
+<p id="p-138">Let \(X\) be a locally compact space and \(H\) a non-compact group, \(H \acts X\text{.}\) \(\mu\) a probability measure on \(X\text{,}\)  \(H\)-invariant. We say that \(\mu\) is an  if any of the following equivalent conditions hold</p>
+<ol class="decimal">
+<li id="li-33">\(A \subseteq X\) and \(A \) is \(H\)-invariant (\(hA = A\) for all \(h \in H\)). Then<div class="displaymath">
+\begin{equation*}
+\mu(A) = 1 \text{ or } \mu (A) = 0\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-34">For \(f\) measurable \(\mu\) almost everywhere \(H\)-invariant<div class="displaymath">
+\begin{equation*}
+f(hx) = f(x)
+\end{equation*}
+</div>for almost all \(x\) then \(f\) is constant \(\mu\) almost everywhere.</li>
+<li id="li-35">\(\mu\) is an extreme point on the convex set of \(H\)-invariant probability measures.</li>
+</ol></article><article class="definition-like" id="def-uniq-ergodic"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.46</span> <span class="title">Uniquely ergodic</span>
+</h6>
+<p id="p-139">An action of a group \(H\) on a locally compact space \(X\) is <dfn class="terminology">uniquely ergodic</dfn> if  there is only one invariant probability measure on \(X\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.47</span>
+</h6>
+<p id="p-140">\(x\mapsto 5x\text{,}\) or \(x\mapsto \sqrt2 + x\) on \(T^1\) are ergodic, let's show that \(x\mapsto \sqrt 2 + x\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic">uniquely ergodic</a>.</p></article><article class="theorem-like" id="lemma-5"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.48</span>
+</h6>
+<p id="p-141">Let \(\alpha \in \RR\smallsetminus \QQ\) then \(T_\alpha \colon x  \to x+ \alpha\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic">uniquely ergodic</a>.</p></article><article class="hiddenproof" id="proof-16"><a knowl="" class="id-ref" refid="hk-proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-142">Let \(\mu\) be an invariant probability measure on \(\lb 0,1\rb\) the \(n\)th Fourier coefficient</p>
+<div class="displaymath">
+\begin{equation*}
+\hat \mu(n) =  \int e(nx) \diff \mu (x) = e(n\alpha) \int e(nx) \diff \mu (x)
+\end{equation*}
+</div>
+<p>so \(\hat \mu(n) = \delta(n)\text{.}\)</p></article></div>
+<article class="example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.49</span>
+</h6>
+<p id="p-143">For \(x\mapsto 5x\) \(f = \sum a_ne(nx) = \sum a_n e(5nx)\) so \(a_n = a_{5n}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\infty \gt \| f\|^2 = \|a_n\|^2  \implies a_n = 0 \forall  n \ne 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies f \equiv C \text{ a.e.}
+\end{equation*}
+</div></article><div class="displaymath" id="p-144">
+\begin{equation*}
+T_\alpha \colon T^2 \to T^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(x,y) \mapsto (x+\alpha, 2x+y + \alpha)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(n\alpha, n^2 \alpha)
 \end{equation*}
 </div></article></section></section></div></main>
 </div>

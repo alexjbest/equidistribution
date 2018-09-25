@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<aside class="aside-like"><p>Lecture 6 25/9/2018</p></aside><p>Consider</p>
+<div class="displaymath">
+\begin{equation*}
+(H+ 1)^2 \left| \sum_{n=1}^N y_n\right|^2
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+(H+ 1)^2 \left| \sum_{n=1}^N y_n\right|^2 = \left| \sum_{h= 0  }^H \sum _{n=1}^N y+n\right |^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \left|  \sum_{h= 0}^H \sum _{n\in \ZZ} y_{n+h}\right|^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation}
+= \left|  \sum _{n\in \ZZ}\sum_{h= 0}^H  y_{n+h}\right|^2\tag{1.1}
+\end{equation}
+</div>
+<p>note \(n\)-sum is nonzero for at most \(N+H\) terms \(1-H \le n \le N\) then Cauchy-Schwarz implies</p>
+<div class="displaymath">
+\begin{equation*}
+\le (N+ H) \sum_n  \left| \sum_{h=0}^H y_{n-h} \right|^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation}
+= (N+H) \sum_n \sum_{h_1 = 0}^H \sum_{h_2 = 0}^H  y_{n+h_1} \overline{y_{n + h_2}}\tag{1.2}
+\end{equation}
+</div>
+<p>let \(m = n + h_2\text{,}\)  \(l = h_1 - h_2\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+= (N+H) \sum_{-H \le l \le H} \sum_m \overline y_m y_{m-l} \underbrace{\left( \sum_{0\le h_1, h_2 \le H} 1 \right)}_{= I(H,l)}
+\end{equation*}
+</div>
+<p>note \(I(H,l) = H+1 - |l|\text{,}\) so</p>
+<div class="displaymath">
+\begin{equation*}
+= (N+H) \sum_{-H \le l \le H} H +  1 - |l | \sum_m \overline y_m y_{m-l}
+\end{equation*}
+</div>
+<p>then if \(l = 0\) we get the first term of the statement, \(l \ne 0\) the other.</p></article><span class="incontext"><a href="sec-equidistribution-intro.html#proof-13">in-context</a></span>
+</body>
+</html>

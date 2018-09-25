@@ -762,14 +762,14 @@ section#sec-equidistribution-intro
                 me P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in \RR\lb x\rb
                 | then
                 me \{P(n)\}
-                | is uniformly distributed mod 1 iff there exists #[m n_0 \in \lb n \rb] s.t. #[m a_{n_0} \not \in \QQ].
+                | is uniformly distributed mod 1 iff there exists #[m n_0 \in \{ 1,\ldots, n\}] s.t. #[m a_{n_0} \not \in \QQ].
 
-        lemma
+        lemma#lem-weyl-diff
             title Weyl differencing
             statement: p
                 | Let #[m y_n  \in \CC], such that #[m y_n = 0] if #[m n \lt 1] or #[m n \gt N] then we would like to bound
                 me \sum_m \sum_n y_n \overline y_m  = \sum_{m,n=1}^N = S_N \overline S_N = |S_N|^2
-                | , Weyl differencing gives
+                | , #[term Weyl differencing] gives
                 me \sum_{m=1}^N \sum_{n=1}^N y_n \overline y_m  = \underbrace{\sum_n |y_n| ^2}_{\text{diagonal contribution}}  + \underbrace{2 \Re \left( \sum_{n=1}^{N-1} \sum_{m=1}^{N-n} y_{n+m} \overline y_m \right) }_{\text{off diagonal terms}}
                 | .
             proof
@@ -834,11 +834,113 @@ section#sec-equidistribution-intro
                     | is finite for almost all #[m \alpha] and for any #[m h \ne 0].
                     | Then by Weyl's criterion we are done.
 
-        theorem
+        lemma
             title Van der Corput
             statement: p
                 | Let #[m y_n  \in \CC], such that #[m y_n = 0] if #[m n \lt 1] or #[m n \gt N] then
-                me \forall h \in \ZZ_{\gt 0 }
+                me \forall H \in \ZZ_{\gt 0 }
                 | we have
-                me \left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+1} \sum_{n=1}^H \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|
+                me \left| \sum_{n=1}^N y_n \right|^2 \le \frac{N+ H} {H+1 } \sum_{n=1}^N |y_n|^2 + \frac{2(N+H)}{H+1} \sum_{h=1}^H \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} y_{n+h} \overline y_n\right|
                 | .
+            proof
+                aside: p Lecture 6 25/9/2018
+                p
+                    | Consider
+                    me (H+ 1)^2 \left| \sum_{n=1}^N y_n\right|^2
+                    | then
+                    me (H+ 1)^2 \left| \sum_{n=1}^N y_n\right|^2 = \left| \sum_{h= 0  }^H \sum _{n=1}^N y+n\right |^2
+                    me = \left|  \sum_{h= 0}^H \sum _{n\in \ZZ} y_{n+h}\right|^2
+                    men#eqn-vandercorput = \left|  \sum _{n\in \ZZ}\sum_{h= 0}^H  y_{n+h}\right|^2
+                    | note #[m n]-sum is nonzero for at most #[m N+H] terms #[m 1-H \le n \le N] then Cauchy-Schwarz implies
+                    me #[xref(ref="eqn-vandercorput")/] \le (N+ H) \sum_n  \left| \sum_{h=0}^H y_{n-h} \right|^2
+                    men#eqn-vandercorput2 = (N+H) \sum_n \sum_{h_1 = 0}^H \sum_{h_2 = 0}^H  y_{n+h_1} \overline{y_{n + h_2}}
+                    | let #[m m = n + h_2],  #[m l = h_1 - h_2]. Then
+                    me #[xref(ref="eqn-vandercorput2")/]  = (N+H) \sum_{-H \le l \le H} \sum_m \overline y_m y_{m-l} \underbrace{\left( \sum_{0\le h_1, h_2 \le H} 1 \right)}_{= I(H,l)}
+                    | note #[m I(H,l) = H+1 - |l|], so
+                    me #[xref(ref="eqn-vandercorput2")/]  = (N+H) \sum_{-H \le l \le H} H +  1 - |l | \sum_m \overline y_m y_{m-l}
+                    | then if #[m l = 0] we get the first term of the statement, #[m l \ne 0] the other.
+                    // TODO this is broken
+
+        p
+            | What is the difference between this and Weyl differencing?
+            | When #[m H] is large, not so much, but we can take #[m H] small now, shifting the weighting around.
+            | We change the balance to make one part shorter and the other longer.
+
+        theorem#thm-van-der-corput-diff
+            title Van der Corput differencing
+            statement: p
+                | If for each #[m h \in \ZZ_{\ge 1}] the sequence #[m b_h(n) = a_{n+h} - a_n] then so is #[m a_n].
+            proof
+                p
+                    | We'll use Weyl's criterion and the van der Corput lemma.
+                    | Fix, #[m N \in \ZZ_{\ge1}] a #[m H\le N].
+                    | Then for any #[m k \in \ZZ\smallsetminus\{0\}]
+                    me \left| \sum e( ka_n) \right|^2   \le \frac{ N+H}{H+ 1} N + 2 \frac{ N+H}{H+ 1}  \sum \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} e(b_h(n)k) \right|
+                    me \implies \lim_{N \to \infty} \frac{1}{N^2} \left| \sum_{n=1}^N e(ka_n)\right|^2 \le \frac1{H+1}
+                    | since #[m H] is arbitrary
+                    me \lim_{N \to \infty} \frac{1}{N^2} \left| \sum_{n=1}^N e(ka_n)\right|^2  = 0
+                    | .
+
+        proof
+            title Proof of Weyl's theorem
+            p
+                | Let #[m \deg P = d] then, for #[m d = 1] we are done by Weyl's criterion, for #[m d \le D] use van der Corput differencing.
+                | Note that  for fixed #[m h], #[m P(n+h) -P(n)] is of lower degree.
+
+    subsection
+        title A different perspective (Ergodic)
+        // https://personalpages.manchester.ac.uk/staff/charles.walkden/ergodic-theory/ergodic_theory.pdf
+
+        p
+            | Furstenberg (1981 book) gives a different proof that #[m \{n ^2 \alpha\}] is uniformly distributed.
+        paragraphs
+            title Ergodic theory 101
+
+            definition#def-ergodic-measure
+                title Ergodic measures
+                statement: p
+                    | Let #[m X] be a locally compact space and #[m H] a non-compact group, #[m H \acts X].
+                    | #[m \mu] a probability measure on #[m X],  #[m H]-invariant.
+                    | We say that #[m \mu] is an #[title ergodic measure] if any of the following equivalent conditions hold
+                    ol
+                        li
+                            | #[m A \subseteq X] and #[m A ] is #[m H]-invariant (#[m hA = A] for all #[m h \in H]).
+                            | Then
+                            me \mu(A) = 1 \text{ or } \mu (A) = 0
+                            | .
+                        li
+                            | For #[m f] measurable #[m \mu] almost everywhere #[m H]-invariant
+                            me f(hx) = f(x)
+                            | for almost all #[m x] then #[m f] is constant #[m \mu] almost everywhere.
+                        li
+                            | #[m \mu] is an extreme point on the convex set of #[m H]-invariant probability measures.
+
+
+            definition#def-uniq-ergodic
+                title Uniquely ergodic
+                statement: p
+                    | An action of a group #[m H] on a locally compact space #[m X] is #[term uniquely ergodic] if  there is only one invariant probability measure on #[m X].
+
+
+            example
+                statement: p
+                    | #[m x\mapsto 5x], or #[m x\mapsto \sqrt2 + x] on #[m T^1] are ergodic, let's show that #[m x\mapsto \sqrt 2 + x] is uniquely ergodic.
+
+            lemma
+                statement: p
+                    | Let #[m \alpha \in \RR\smallsetminus \QQ] then #[m T_\alpha \colon x  \to x+ \alpha] is uniquely ergodic.
+                proof: p
+                    | Let #[m \mu] be an invariant probability measure on #[m \lb 0,1\rb] the #[m n]th Fourier coefficient
+                    me \hat \mu(n) =  \int e(nx) \diff \mu (x) = e(n\alpha) \int e(nx) \diff \mu (x)
+                    | so #[m \hat \mu(n) = \delta(n)].
+
+            example: statement: p
+                | For #[m x\mapsto 5x] #[m f = \sum a_ne(nx) = \sum a_n e(5nx)] so #[m a_n = a_{5n}]
+                me \infty \gt \| f\|^2 = \|a_n\|^2  \implies a_n = 0 \forall  n \ne 0
+                me \implies f \equiv C \text{ a.e.}
+
+            p
+                me T_\alpha \colon T^2 \to T^2
+                me (x,y) \mapsto (x+\alpha, 2x+y + \alpha)
+                me T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
+                me (n\alpha, n^2 \alpha)
