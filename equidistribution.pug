@@ -422,7 +422,7 @@ section#sec-equidistribution-intro
                     li
                         | #[m \alpha\in \RR\smallsetminus\QQ,\,a_n = \{n\alpha\}]. Yes
                     li
-                        | #[m \alpha\in \RR\smallsetminus\QQ,\,a_n = \{n^2\alpha + \}]. Yes
+                        | #[m \alpha\in \RR\smallsetminus\QQ,\,a_n = \{n^2\alpha\}]. Yes
                     li
                         | #[m a_n = \{\log(n)\}]. No
                     li
@@ -541,6 +541,7 @@ section#sec-equidistribution-intro
     subsection
         title Weyl's criterion (1916)
 
+        aside: p Lecture 4 18/9/2018
         theorem#thm-weyl-criterion
             title Weyl
             statement: p
@@ -561,7 +562,6 @@ section#sec-equidistribution-intro
             proof
                 proofcase
                     title  #[m 1.\implies 2.]
-                    aside: p Lecture 4 18/9/2018
                     p
                         | #[m 1.] means #[m 2.] is true for the characteristic function of #[m \lb b,c\rb], hence true for step functions (because everything is linear).
                     p
@@ -893,6 +893,7 @@ section#sec-equidistribution-intro
 
         p
             | Furstenberg (1981 book) gives a different proof that #[m \{n ^2 \alpha\}] is uniformly distributed.
+            //  Furstenberg, Harry. Recurrence in ergodic theory and combinatorial number theory. Vol. 10. Princeton University Press, 1981.
         paragraphs
             title Ergodic theory 101
 
@@ -901,7 +902,7 @@ section#sec-equidistribution-intro
                 statement: p
                     | Let #[m X] be a locally compact space and #[m H] a non-compact group, #[m H \acts X].
                     | #[m \mu] a probability measure on #[m X],  #[m H]-invariant.
-                    | We say that #[m \mu] is an #[title ergodic measure] if any of the following equivalent conditions hold
+                    | We say that #[m \mu] is an #[term ergodic measure] if any of the following equivalent conditions hold
                     ol
                         li
                             | #[m A \subseteq X] and #[m A ] is #[m H]-invariant (#[m hA = A] for all #[m h \in H]).
@@ -917,7 +918,7 @@ section#sec-equidistribution-intro
 
 
             definition#def-uniq-ergodic
-                title Uniquely ergodic
+                title Uniquely ergodic actions
                 statement: p
                     | An action of a group #[m H] on a locally compact space #[m X] is #[term uniquely ergodic] if  there is only one invariant probability measure on #[m X].
 
@@ -939,8 +940,123 @@ section#sec-equidistribution-intro
                 me \infty \gt \| f\|^2 = \|a_n\|^2  \implies a_n = 0 \forall  n \ne 0
                 me \implies f \equiv C \text{ a.e.}
 
-            p
+            //p
                 me T_\alpha \colon T^2 \to T^2
                 me (x,y) \mapsto (x+\alpha, 2x+y + \alpha)
                 me T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
                 me (n\alpha, n^2 \alpha)
+
+            aside: p Lecture 7 2/10/2018
+
+            definition#def-equidist
+                title Equidistribution
+                statement: p
+                    | A sequence of probability measures #[m \mu_n] on a locally compact space #[m X] is called #[m \mu]-#[term equidistributed] if they converge to #[m \mu] in the weak #[m \ast] topology.
+                    | I.e.
+                    me \forall f \in C_c(X),\, \int f\diff \mu_n \to \int f \diff \mu
+                    | .
+
+            remark
+                p
+                    | If we have a sqeuqnce #[m a_n] these define a sequence of measures
+                    me \mu_N = \frac 1N \sum_{n \le N} \delta( x - a_n)
+                    | if these are equidistributed then
+                    me \lim_{N \to \infty} \frac 1 N \sum_{n=1}^N f(a_n) = \int_X f(x) \diff \mu (x)
+                    |.
+
+            theorem
+                title Birkhoff ergodic theorem
+                statement: p
+                    | #[m (X, B, \mu, T)] a measure preserving system (as in the definition of ergodic) with #[m \mu] a probability measure.
+                    | Then for any #[m f \in L^1(X, \mu)]
+                    me \lim_{n\to  \infty} \frac 1n \sum_{i=0}^{n-1} f\circ T^i(x) = \bar f (x)
+                    | for some #[m \bar f \in L^1( X,\mu)] moreover
+                    me \int \bar f \diff \mu = \int f \diff \mu
+                    | and if #[m T] is ergodic then #[m \bar f (x) = \int f \diff \mu] almost everywhere.
+            remark
+                p
+                    | This does not help us!
+                p
+                    | But the following does:
+            theorem
+                statement: p
+                    | If #[m X] is compact and #[m H \cong \RR] is uniquely ergodic with the unique #[m H]-invariant measure #[m \mu] then the statement of Birkhoff holds for every #[m x \in X].
+                proof
+                    p Sketch
+                    p
+                        | For any  #[m x] consruct
+                        me \mu_L = \frac 1 L \int_0^L h_t x \diff t
+                        me \mu_L \to \mu, \, L\to \infty
+                        | in the weak #[m \ast] sense.
+
+            remark
+                title Funny side remark (Benford's law)
+                p
+                    | First digit of a set of observations are usually 1 (roughly 30#[percent/]).
+                p
+                    | Why?
+                    | Assumption, the process follows a power law, if #[m b^n] is the first digit of this is
+                    me \log_{10} b^n = n \log b
+                    | this is #[m k] iff #[m n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1].
+                    | if these are equidistributed then the probability of #[m k] is
+                    me \int_{\log_{10} k}^{\log_{10} k+1} 1 \diff x = \log(1 + 1/k)
+                    | .
+
+            theorem
+                statement: p
+                    | #[m \{n ^2 \alpha\} ] is equidistributed for #[m \alpha \in \RR\smallsetminus \QQ].
+                proof
+                    p Furstenberg
+                    p
+                        ol
+                            li
+                                | Construct a suitable dynamical system on #[m T^2] (2-torus), for which a specific orbit gives the sequence #[m \{n^2 \alpha \}].
+                            li
+                                | Will show that this is uniquely ergodic.
+
+                        me T \colon T^2 \to T^2
+                        me (x,y) \mapsto( x+\alpha, y + 2x + \alpha)
+                        me T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
+                        // TODO ??????????????????/ n^2
+                        | in particular the orbit of #[m (0,0)] is
+                        me T^n(0,0) = (n\alpha, n^2 \alpha)
+                        | so if we show that #[m T^n(0,0)] is equidistributed we are done.
+                    p
+                        | So we show that #[m X,T] is uniquely ergodic.
+                    p
+                        ol
+                            li Lebesgue is ergodic.
+                            li Only ergodic measure
+
+                        ol
+                            li
+                                me f\in L^2 (T^2, \diff m)
+                                | #[m T]-invariant
+                                me f(x,y) = \sum_{m,n} a_{m,n} e(mx+ ny)
+                                | #[m T]-invariance implies #[m a_{m,n} = e((m+n)\alpha) a_{m+2n,n}]
+                                | in particular
+                                me |a_{m,n} | = |a_{m+2n,n}|
+                                | so
+                                me a_{m,n} = 0
+                                | if #[m n \ne 0].
+                                | By Riemann-Lebesgue lemma.
+                                | So for #[m n=  0]
+                                me \sum a_{m,0} e(mx)
+                                | #[m T]-invariance implies #[m a_{m,0} = e(m\alpha) a_{m,0}] so #[m a_{m,0} = 0] for all #[m m \ne 0].
+                                | So #[m f] is constant almost everywhere.
+                            li
+                                p We use the following:
+                                p Claim:
+                                p
+                                    | #[m g \colon T^1 \to T^1] measurable, let #[m T_g \colon T^2 \to T^2]
+                                    me (x,y) \mapsto (x+\alpha, y+ g(\alpha))
+                                    | Then if the Lebesgue measure #[m m] is #[m T_g]-ergodic then it indeed is uniquely ergodic.
+                                p
+                                    | Proof: exercise.
+    subsection#subsec-duke
+        title Duke's theorem
+
+        paragraphs
+            title Recall
+            p
+                | #[xref(ref="thm-linnik,thm-duke")], we will prove these, essentially a more complicated application of Weyl's criterion.

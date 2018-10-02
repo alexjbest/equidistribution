@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Furstenberg</p>
+<ol class="decimal">
+<li>Construct a suitable dynamical system on \(T^2\) (2-torus), for which a specific orbit gives the sequence \(\{n^2 \alpha \}\text{.}\)</li>
+<li>Will show that this is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</li>
+</ol>
+<div class="displaymath">
+\begin{equation*}
+T \colon T^2 \to T^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(x,y) \mapsto( x+\alpha, y + 2x + \alpha)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
+\end{equation*}
+</div>
+<p>in particular the orbit of \((0,0)\) is</p>
+<div class="displaymath">
+\begin{equation*}
+T^n(0,0) = (n\alpha, n^2 \alpha)
+\end{equation*}
+</div>
+<p>so if we show that \(T^n(0,0)\) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> we are done.</p>
+<p>So we show that \(X,T\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p>
+<ol class="decimal">
+<li>Lebesgue is ergodic.</li>
+<li>Only <a knowl="./knowl/def-ergodic-measure.html" title="Definition 1.45: Ergodic measures">ergodic measure</a>
+</li>
+</ol>
+<ol class="decimal">
+<li>
+<div class="displaymath">
+\begin{equation*}
+f\in L^2 (T^2, \diff m)
+\end{equation*}
+</div>\(T\)-invariant<div class="displaymath">
+\begin{equation*}
+f(x,y) = \sum_{m,n} a_{m,n} e(mx+ ny)
+\end{equation*}
+</div>\(T\)-invariance implies \(a_{m,n} = e((m+n)\alpha) a_{m+2n,n}\) in particular<div class="displaymath">
+\begin{equation*}
+|a_{m,n} | = |a_{m+2n,n}|
+\end{equation*}
+</div>so<div class="displaymath">
+\begin{equation*}
+a_{m,n} = 0
+\end{equation*}
+</div>if \(n \ne 0\text{.}\) By Riemann-Lebesgue lemma. So for \(n=  0\)<div class="displaymath">
+\begin{equation*}
+\sum a_{m,0} e(mx)
+\end{equation*}
+</div>\(T\)-invariance implies \(a_{m,0} = e(m\alpha) a_{m,0}\) so \(a_{m,0} = 0\) for all \(m \ne 0\text{.}\) So \(f\) is constant almost everywhere.</li>
+<li>
+<p>We use the following:</p>
+<p>Claim:</p>
+<p>\(g \colon T^1 \to T^1\) measurable, let \(T_g \colon T^2 \to T^2\)</p>
+<div class="displaymath">
+\begin{equation*}
+(x,y) \mapsto (x+\alpha, y+ g(\alpha))
+\end{equation*}
+</div>
+<p>Then if the Lebesgue measure \(m\) is \(T_g\)-ergodic then it indeed is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p>
+<p>Proof: exercise.</p>
+</li>
+</ol></article><span class="incontext"><a href="sec-equidistribution-intro.html#proof-18">in-context</a></span>
+</body>
+</html>

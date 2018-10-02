@@ -266,6 +266,7 @@ MathJax.Hub.Config({
 <li><a href="sec-equidistribution-intro.html#subsection-5" data-scroll="subsection-5">Some applications of Weyl's criterion</a></li>
 <li><a href="sec-equidistribution-intro.html#subsection-6" data-scroll="subsection-6">Weyl differencing and the Van der Corput inequality</a></li>
 <li><a href="sec-equidistribution-intro.html#subsection-7" data-scroll="subsection-7">A different perspective (Ergodic)</a></li>
+<li><a href="sec-equidistribution-intro.html#subsec-duke" data-scroll="subsec-duke">Duke's theorem</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-equidistribution-intro"><h2 class="heading hide-type">
@@ -330,7 +331,7 @@ N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
 \frac{1}{\# \Omega_N} \sum_{x\in \Omega_N} f(x) \to \int_{S^2} f\diff \sigma
 \end{equation*}
 </div>
-<p>where \(\diff \sigma\) is the Lebesgue measure on \(S^2\text{.}\)</p></article><p id="p-18">This is saying that the points are equidistributed with respect to the Lebesgue measure.</p>
+<p>where \(\diff \sigma\) is the Lebesgue measure on \(S^2\text{.}\)</p></article><p id="p-18">This is saying that the points are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> with respect to the Lebesgue measure.</p>
 <p id="p-19">The last condition is a defect of the method, known as a Linnik condition.</p>
 <article class="remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.3</span>
@@ -601,7 +602,7 @@ q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ
 </h6>
 <ol id="p-73" class="decimal">
 <li id="li-11">\(\alpha\in \RR\smallsetminus\QQ,\,a_n = \{n\alpha\}\text{.}\) Yes</li>
-<li id="li-12">\(\alpha\in \RR\smallsetminus\QQ,\,a_n = \{n^2\alpha + \}\text{.}\) Yes</li>
+<li id="li-12">\(\alpha\in \RR\smallsetminus\QQ,\,a_n = \{n^2\alpha\}\text{.}\) Yes</li>
 <li id="li-13">\(a_n = \{\log(n)\}\text{.}\) No</li>
 <li id="li-14">\(a_n = \{n! e\}\text{.}\) No (not dense).</li>
 <li id="li-15">\(\{ \log (p_n)\}\text{.}\) No.</li>
@@ -610,16 +611,16 @@ q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ
 <li id="li-18">\(a_n = \{\log n!\}\text{.}\) Yes ?</li>
 <li id="li-19">\(a_n = \{\log \log n!\}\text{.}\) No</li>
 </ol>
-<p id="p-74">To begin let's show \(a_n = \{n!e\}\) is not equidistributed as it has only one limit point \(0\text{.}\)</p>
+<p id="p-74">To begin let's show \(a_n = \{n!e\}\) is not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> as it has only one limit point \(0\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 e = \sum_{n=1}^\infty \frac{1}{n!}
 \end{equation*}
 </div>
-<p>so \(n!e \in \ZZ + \frac{1}{n+1} + \frac{(n+1)(n+2)} + \cdots \le \frac{e}{n+1} \to 0\text{,}\) as \(n\to \infty\text{.}\) So its not dense, hence certainly not equidistributed.</p></article><article class="theorem-like" id="theorem-9"><h6 class="heading">
+<p>so \(n!e \in \ZZ + \frac{1}{n+1} + \frac{(n+1)(n+2)} + \cdots \le \frac{e}{n+1} \to 0\text{,}\) as \(n\to \infty\text{.}\) So its not dense, hence certainly not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><article class="theorem-like" id="theorem-9"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.24</span>
 </h6>
-<p id="p-75">The sequence \(a_n = \{ n\alpha\}\) is equidistributed.</p></article><article class="hiddenproof" id="proof-5"><a knowl="" class="id-ref" refid="hk-proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-76">Let \(\epsilon\gt 0\text{,}\) choose \(M \gt 0\) such that \(\frac1M\lt \epsilon\text{,}\) furthermore choose a \(\delta \lt \frac1M\text{.}\) Dirichlet implies there exists \(m \in \ZZ\) s.t. \(\| m\alpha\| = \delta\text{.}\)</p>
+<p id="p-75">The sequence \(a_n = \{ n\alpha\}\) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><article class="hiddenproof" id="proof-5"><a knowl="" class="id-ref" refid="hk-proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-76">Let \(\epsilon\gt 0\text{,}\) choose \(M \gt 0\) such that \(\frac1M\lt \epsilon\text{,}\) furthermore choose a \(\delta \lt \frac1M\text{.}\) Dirichlet implies there exists \(m \in \ZZ\) s.t. \(\| m\alpha\| = \delta\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 0\lt \delta \lt \frac1M \lt\epsilon
@@ -764,15 +765,15 @@ a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1, 0,\frac 14 ,\frac 24,\frac 3
 \begin{equation*}
 b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 \end{equation*}
-</div>by the example above this is equidistributed.</li>
+</div>by the example above this is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</li>
 </ol></article></div>
 <p id="p-83">What can we say about the space of <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> sequences? Is it closed under addition? No (\(a_n = -b_n\)). \(\{k a_n\}\) neither (\(a_n = \alpha n,\,\frac1\alpha a_n = n\)). \(a_nb_n\) doesn't work either, but if \(b_n\) converges then \(a_nb_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Weyl's criterion (1916)</span>
 </h3>
-<article class="theorem-like" id="thm-weyl-criterion"><h6 class="heading">
+<aside class="aside-like" id="aside-4"><p id="p-84">Lecture 4 18/9/2018</p></aside><article class="theorem-like" id="thm-weyl-criterion"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.28</span> <span class="title">Weyl</span>
 </h6>
-<p id="p-84">\(\{a_n\}_{n=1}^\infty \in \RR\) then TFAE:</p>
+<p id="p-85">\(\{a_n\}_{n=1}^\infty \in \RR\) then TFAE:</p>
 <ol class="decimal">
 <li id="li-24">\(\{a_n\}_{n=1}^\infty\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> mod \(1\text{.}\)</li>
 <li id="li-25">\(\forall f \in C(\lb 0,1\rb)\)<div class="displaymath">
@@ -794,7 +795,7 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 \end{equation*}
 </div>
 <p>collectively this is known as <dfn class="terminology">Weyl's criterion</dfn>.</p></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\).</h6>
-<aside class="aside-like" id="aside-4"><p id="p-85">Lecture 4 18/9/2018</p></aside><p id="p-86">\(1.\) means \(2.\) is true for the characteristic function of \(\lb b,c\rb\text{,}\) hence true for step functions (because everything is linear).</p>
+<p id="p-86">\(1.\) means \(2.\) is true for the characteristic function of \(\lb b,c\rb\text{,}\) hence true for step functions (because everything is linear).</p>
 <p id="p-87">Recall that any \(f \in C\lb 0,1\rb)\) is the uniform limit of such functions.</p>
 <p id="p-88">Exercise: Choose one that is \(\epsilon\) close to \(f\) and finish the proof.</p></article><article class="case" id="case-2"><h6 class="heading">\(2.\implies 1.\).</h6>
 <p id="p-89">Find \(f_1,f_2 \in C(\lb 0,1 \rb)\) such that \(f_1(x) \le \chi_{(b,c)}(x) \le f_2(x)\) s.t.</p>
@@ -855,7 +856,7 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 <article class="theorem-like" id="theorem-12"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.30</span> <span class="title">Koksma 1935</span>
 </h6>
-<p id="p-98">For almost every (Lebesgue) \(\beta\in \RR_{\gt 1}\text{,}\) \(\left\{\beta^n\right\}\) is equidistributed.</p></article><p id="p-99">Koksma was a Dutch student of Van der Corput.</p>
+<p id="p-98">For almost every (Lebesgue) \(\beta\in \RR_{\gt 1}\text{,}\) \(\left\{\beta^n\right\}\) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><p id="p-99">Koksma was a Dutch student of Van der Corput.</p>
 <article class="theorem-like" id="theorem-13"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.31</span> <span class="title">Weyl</span>
 </h6>
@@ -865,7 +866,7 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 \{\log(n) \}
 \end{equation*}
 </div>
-<p>is not equidistributed.</p>
+<p>is not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p>
 <article class="exercise-like" id="exercise-2"><a knowl="" class="id-ref" refid="hk-exercise-2"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.32</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-102">Prove this. Hint : assume it was</p>
@@ -968,7 +969,7 @@ D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \
 \{\log(p_n) \}
 \end{equation*}
 </div>
-<p>is not equidistributed.</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-117">Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
+<p>is not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-117">Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 I_k = \min\{ n : p_n \gt e^k \}
@@ -1247,7 +1248,7 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 <article class="definition-like" id="def-ergodic-measure"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">1.45</span> <span class="title">Ergodic measures</span>
 </h6>
-<p id="p-138">Let \(X\) be a locally compact space and \(H\) a non-compact group, \(H \acts X\text{.}\) \(\mu\) a probability measure on \(X\text{,}\)  \(H\)-invariant. We say that \(\mu\) is an  if any of the following equivalent conditions hold</p>
+<p id="p-138">Let \(X\) be a locally compact space and \(H\) a non-compact group, \(H \acts X\text{.}\) \(\mu\) a probability measure on \(X\text{,}\)  \(H\)-invariant. We say that \(\mu\) is an <dfn class="terminology">ergodic measure</dfn> if any of the following equivalent conditions hold</p>
 <ol class="decimal">
 <li id="li-33">\(A \subseteq X\) and \(A \) is \(H\)-invariant (\(hA = A\) for all \(h \in H\)). Then<div class="displaymath">
 \begin{equation*}
@@ -1262,15 +1263,15 @@ f(hx) = f(x)
 </div>for almost all \(x\) then \(f\) is constant \(\mu\) almost everywhere.</li>
 <li id="li-35">\(\mu\) is an extreme point on the convex set of \(H\)-invariant probability measures.</li>
 </ol></article><article class="definition-like" id="def-uniq-ergodic"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">1.46</span> <span class="title">Uniquely ergodic</span>
+<span class="type">Definition</span> <span class="codenumber">1.46</span> <span class="title">Uniquely ergodic actions</span>
 </h6>
 <p id="p-139">An action of a group \(H\) on a locally compact space \(X\) is <dfn class="terminology">uniquely ergodic</dfn> if  there is only one invariant probability measure on \(X\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">1.47</span>
 </h6>
-<p id="p-140">\(x\mapsto 5x\text{,}\) or \(x\mapsto \sqrt2 + x\) on \(T^1\) are ergodic, let's show that \(x\mapsto \sqrt 2 + x\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic">uniquely ergodic</a>.</p></article><article class="theorem-like" id="lemma-5"><h6 class="heading">
+<p id="p-140">\(x\mapsto 5x\text{,}\) or \(x\mapsto \sqrt2 + x\) on \(T^1\) are ergodic, let's show that \(x\mapsto \sqrt 2 + x\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p></article><article class="theorem-like" id="lemma-5"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.48</span>
 </h6>
-<p id="p-141">Let \(\alpha \in \RR\smallsetminus \QQ\) then \(T_\alpha \colon x  \to x+ \alpha\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic">uniquely ergodic</a>.</p></article><article class="hiddenproof" id="proof-16"><a knowl="" class="id-ref" refid="hk-proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-142">Let \(\mu\) be an invariant probability measure on \(\lb 0,1\rb\) the \(n\)th Fourier coefficient</p>
+<p id="p-141">Let \(\alpha \in \RR\smallsetminus \QQ\) then \(T_\alpha \colon x  \to x+ \alpha\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p></article><article class="hiddenproof" id="proof-16"><a knowl="" class="id-ref" refid="hk-proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-142">Let \(\mu\) be an invariant probability measure on \(\lb 0,1\rb\) the \(n\)th Fourier coefficient</p>
 <div class="displaymath">
 \begin{equation*}
 \hat \mu(n) =  \int e(nx) \diff \mu (x) = e(n\alpha) \int e(nx) \diff \mu (x)
@@ -1290,14 +1291,94 @@ f(hx) = f(x)
 \begin{equation*}
 \implies f \equiv C \text{ a.e.}
 \end{equation*}
-</div></article><div class="displaymath" id="p-144">
+</div></article><aside class="aside-like" id="aside-7"><p id="p-144">Lecture 7 2/10/2018</p></aside><article class="definition-like" id="def-equidist"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.50</span> <span class="title">Equidistribution</span>
+</h6>
+<p id="p-145">A sequence of probability measures \(\mu_n\) on a locally compact space \(X\) is called \(\mu\)-<dfn class="terminology">equidistributed</dfn> if they converge to \(\mu\) in the weak \(\ast\) topology. I.e.</p>
+<div class="displaymath">
 \begin{equation*}
-T_\alpha \colon T^2 \to T^2
+\forall f \in C_c(X),\, \int f\diff \mu_n \to \int f \diff \mu\text{.}
+\end{equation*}
+</div></article><article class="remark-like" id="remark-5"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.51</span>
+</h6>
+<p id="p-146">If we have a sqeuqnce \(a_n\) these define a sequence of measures</p>
+<div class="displaymath">
+\begin{equation*}
+\mu_N = \frac 1N \sum_{n \le N} \delta( x - a_n)
+\end{equation*}
+</div>
+<p>if these are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> then</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{N \to \infty} \frac 1 N \sum_{n=1}^N f(a_n) = \int_X f(x) \diff \mu (x)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-17"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.52</span> <span class="title">Birkhoff ergodic theorem</span>
+</h6>
+<p id="p-147">\((X, B, \mu, T)\) a measure preserving system (as in the definition of ergodic) with \(\mu\) a probability measure. Then for any \(f \in L^1(X, \mu)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\to  \infty} \frac 1n \sum_{i=0}^{n-1} f\circ T^i(x) = \bar f (x)
+\end{equation*}
+</div>
+<p>for some \(\bar f \in L^1( X,\mu)\) moreover</p>
+<div class="displaymath">
+\begin{equation*}
+\int \bar f \diff \mu = \int f \diff \mu
+\end{equation*}
+</div>
+<p>and if \(T\) is ergodic then \(\bar f (x) = \int f \diff \mu\) almost everywhere.</p></article><article class="remark-like" id="remark-6"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.53</span>
+</h6>
+<p id="p-148">This does not help us!</p>
+<p id="p-149">But the following does:</p></article><article class="theorem-like" id="theorem-18"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.54</span>
+</h6>
+<p id="p-150">If \(X\) is compact and \(H \cong \RR\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a> with the unique \(H\)-invariant measure \(\mu\) then the statement of Birkhoff holds for every \(x \in X\text{.}\)</p></article><article class="hiddenproof" id="proof-17"><a knowl="" class="id-ref" refid="hk-proof-17"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-17" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-151">Sketch</p>
+<p id="p-152">For any  \(x\) consruct</p>
+<div class="displaymath">
+\begin{equation*}
+\mu_L = \frac 1 L \int_0^L h_t x \diff t
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-(x,y) \mapsto (x+\alpha, 2x+y + \alpha)
+\mu_L \to \mu, \, L\to \infty
+\end{equation*}
+</div>
+<p>in the weak \(\ast\) sense.</p></article></div>
+<article class="remark-like" id="remark-7"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.55</span> <span class="title">Funny side remark (Benford's law)</span>
+</h6>
+<p id="p-153">First digit of a set of observations are usually 1 (roughly 30%).</p>
+<p id="p-154">Why? Assumption, the process follows a power law, if \(b^n\) is the first digit of this is</p>
+<div class="displaymath">
+\begin{equation*}
+\log_{10} b^n = n \log b
+\end{equation*}
+</div>
+<p>this is \(k\) iff \(n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1\text{.}\) if these are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> then the probability of \(k\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\log_{10} k}^{\log_{10} k+1} 1 \diff x = \log(1 + 1/k)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-19"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.56</span>
+</h6>
+<p id="p-155">\(\{n ^2 \alpha\} \) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> for \(\alpha \in \RR\smallsetminus \QQ\text{.}\)</p></article><article class="hiddenproof" id="proof-18"><a knowl="" class="id-ref" refid="hk-proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-156">Furstenberg</p>
+<ol id="p-157" class="decimal">
+<li id="li-36">Construct a suitable dynamical system on \(T^2\) (2-torus), for which a specific orbit gives the sequence \(\{n^2 \alpha \}\text{.}\)</li>
+<li id="li-37">Will show that this is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</li>
+</ol>
+<div class="displaymath">
+\begin{equation*}
+T \colon T^2 \to T^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(x,y) \mapsto( x+\alpha, y + 2x + \alpha)
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -1305,11 +1386,59 @@ T_\alpha \colon T^2 \to T^2
 T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
 \end{equation*}
 </div>
+<p>in particular the orbit of \((0,0)\) is</p>
 <div class="displaymath">
 \begin{equation*}
-(n\alpha, n^2 \alpha)
+T^n(0,0) = (n\alpha, n^2 \alpha)
 \end{equation*}
-</div></article></section></section></div></main>
+</div>
+<p>so if we show that \(T^n(0,0)\) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> we are done.</p>
+<p id="p-158">So we show that \(X,T\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p>
+<ol id="p-159" class="decimal">
+<li id="li-38">Lebesgue is ergodic.</li>
+<li id="li-39">Only <a knowl="./knowl/def-ergodic-measure.html" title="Definition 1.45: Ergodic measures">ergodic measure</a>
+</li>
+</ol>
+<ol class="decimal">
+<li id="li-40">
+<div class="displaymath">
+\begin{equation*}
+f\in L^2 (T^2, \diff m)
+\end{equation*}
+</div>\(T\)-invariant<div class="displaymath">
+\begin{equation*}
+f(x,y) = \sum_{m,n} a_{m,n} e(mx+ ny)
+\end{equation*}
+</div>\(T\)-invariance implies \(a_{m,n} = e((m+n)\alpha) a_{m+2n,n}\) in particular<div class="displaymath">
+\begin{equation*}
+|a_{m,n} | = |a_{m+2n,n}|
+\end{equation*}
+</div>so<div class="displaymath">
+\begin{equation*}
+a_{m,n} = 0
+\end{equation*}
+</div>if \(n \ne 0\text{.}\) By Riemann-Lebesgue lemma. So for \(n=  0\)<div class="displaymath">
+\begin{equation*}
+\sum a_{m,0} e(mx)
+\end{equation*}
+</div>\(T\)-invariance implies \(a_{m,0} = e(m\alpha) a_{m,0}\) so \(a_{m,0} = 0\) for all \(m \ne 0\text{.}\) So \(f\) is constant almost everywhere.</li>
+<li id="li-41">
+<p id="p-160">We use the following:</p>
+<p id="p-161">Claim:</p>
+<p id="p-162">\(g \colon T^1 \to T^1\) measurable, let \(T_g \colon T^2 \to T^2\)</p>
+<div class="displaymath">
+\begin{equation*}
+(x,y) \mapsto (x+\alpha, y+ g(\alpha))
+\end{equation*}
+</div>
+<p>Then if the Lebesgue measure \(m\) is \(T_g\)-ergodic then it indeed is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p>
+<p id="p-163">Proof: exercise.</p>
+</li>
+</ol></article></div></article></section><section class="subsection" id="subsec-duke"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.8</span> <span class="title">Duke's theorem</span>
+</h3>
+<a href="sec-equidistribution-intro.html#subsec-duke" class="permalink">¶</a><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">Recall</span></h5>
+<p id="p-164"><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">Theorem 1.2</a>, <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">Theorem 1.9</a>, we will prove these, essentially a more complicated application of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a>.</p></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
