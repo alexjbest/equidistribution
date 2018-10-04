@@ -336,7 +336,7 @@ N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
 <article class="remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.3</span>
 </h6>
-<p id="p-20">Linnik's proof is ergodic theoretic.</p></article><p id="p-21">After this came Duke in 1988, in the mean time, Weil conjectures were proved, Iwaniec gave bounds for Kloosterman sums. Duke was a graduate student of Sarnak at Courant. He gave a more direct proof of <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">Theorem 1.2</a> which does not have the \(\legendre{N}{p} = 1\) condition. His proof is based on the theory of (half integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.</p>
+<p id="p-20">Linnik's proof is ergodic theoretic.</p></article><p id="p-21">After this came Duke in 1988, in the mean time, Weil conjectures were proved, Iwaniec gave bounds for Kloosterman sums. Duke was a graduate student of Sarnak at Courant. He gave a more direct proof of <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> which does not have the \(\legendre{N}{p} = 1\) condition. His proof is based on the theory of (half integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.</p>
 <p id="p-22">Why do exponential sums enter the picture? We are trying to prove that we have a sum converging to an integral. Generally we work with a basis of functions first, we could try using fourier analysis, using harmonics as our basis, this is when exponential sums appear. That requires us to work out harmonics on the sphere (spherical harmonics) which leads to representation theory, which as the sphere is compact involves Weyl representations etc.</p>
 <p id="p-23">Duke also proved “the same” theorem over  modular surfaces. Instead of looking at expanding spheres we study expanding hyperboloids.</p>
 <article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Setup</span></h5>
@@ -771,7 +771,7 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 <span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Weyl's criterion (1916)</span>
 </h3>
 <aside class="aside-like" id="aside-4"><p id="p-84">Lecture 4 18/9/2018</p></aside><article class="theorem-like" id="thm-weyl-criterion"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">1.28</span> <span class="title">Weyl</span>
+<span class="type">Theorem</span> <span class="codenumber">1.28</span> <span class="title">Weyl's criterion</span>
 </h6>
 <p id="p-85">\(\{a_n\}_{n=1}^\infty \in \RR\) then TFAE:</p>
 <ol class="decimal">
@@ -843,7 +843,7 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 \lim_{N\to \infty} \frac1N S_N(0,\alpha) = 1
 \end{equation*}
 </div>
-<p>so by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a> \(\left\{ n\alpha \right\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Digression</span></h5>
+<p>so by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a> \(\left\{ n\alpha \right\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Digression</span></h5>
 <article class="theorem-like" id="theorem-11"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.29</span> <span class="title">Vinogradov 1937</span>
 </h6>
@@ -1158,7 +1158,7 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 \sum_{N=1}^\infty  |S_h(N^2 ,\alpha)|^2
 \end{equation*}
 </div>
-<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a> we are done.</p></article></div>
+<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a> we are done.</p></article></div>
 <article class="theorem-like" id="lemma-4"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.43</span> <span class="title">Van der Corput</span>
 </h6>
@@ -1223,7 +1223,7 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 <article class="theorem-like" id="thm-van-der-corput-diff"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.44</span> <span class="title">Van der Corput differencing</span>
 </h6>
-<p id="p-134">If for each \(h \in \ZZ_{\ge 1}\) the sequence \(b_h(n) = a_{n+h} - a_n\) then so is \(a_n\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-135">We'll use <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a> and the van der Corput lemma. Fix, \(N \in \ZZ_{\ge1}\) a \(H\le N\text{.}\) Then for any \(k \in \ZZ\smallsetminus\{0\}\)</p>
+<p id="p-134">If for each \(h \in \ZZ_{\ge 1}\) the sequence \(b_h(n) = a_{n+h} - a_n\) then so is \(a_n\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-135">We'll use <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a> and the van der Corput lemma. Fix, \(N \in \ZZ_{\ge1}\) a \(H\le N\text{.}\) Then for any \(k \in \ZZ\smallsetminus\{0\}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \left| \sum e( ka_n) \right|^2   \le \frac{ N+H}{H+ 1} N + 2 \frac{ N+H}{H+ 1}  \sum \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} e(b_h(n)k) \right|
@@ -1240,7 +1240,7 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 \lim_{N \to \infty} \frac{1}{N^2} \left| \sum_{n=1}^N e(ka_n)\right|^2  = 0\text{.}
 \end{equation*}
 </div></article></div>
-<article class="hiddenproof" id="proof-15"><a knowl="" class="id-ref" refid="hk-proof-15"><h6 class="heading"><span class="title">Proof of Weyl's theorem</span></h6></a></article><div id="hk-proof-15" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-136">Let \(\deg P = d\) then, for \(d = 1\) we are done by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a>, for \(d \le D\) use van der Corput differencing. Note that  for fixed \(h\text{,}\) \(P(n+h) -P(n)\) is of lower degree.</p></article></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<article class="hiddenproof" id="proof-15"><a knowl="" class="id-ref" refid="hk-proof-15"><h6 class="heading"><span class="title">Proof of Weyl's theorem</span></h6></a></article><div id="hk-proof-15" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-136">Let \(\deg P = d\) then, for \(d = 1\) we are done by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>, for \(d \le D\) use van der Corput differencing. Note that  for fixed \(h\text{,}\) \(P(n+h) -P(n)\) is of lower degree.</p></article></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.7</span> <span class="title">A different perspective (Ergodic)</span>
 </h3>
 <p id="p-137">Furstenberg (1981 book) gives a different proof that \(\{n ^2 \alpha\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p>
@@ -1355,7 +1355,7 @@ f(hx) = f(x)
 <p id="p-154">Why? Assumption, the process follows a power law, if \(b^n\) is the first digit of this is</p>
 <div class="displaymath">
 \begin{equation*}
-\log_{10} b^n = n \log b
+\log_{10} b^n = n \log_{10} b
 \end{equation*}
 </div>
 <p>this is \(k\) iff \(n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1 \rb\text{.}\) If these are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> then the probability of \(k\) is</p>
@@ -1438,7 +1438,183 @@ a_{m,n} = 0
 <span class="type">Subsection</span> <span class="codenumber">1.8</span> <span class="title">Duke's theorem</span>
 </h3>
 <a href="sec-equidistribution-intro.html#subsec-duke" class="permalink">¶</a><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">Recall</span></h5>
-<p id="p-164"><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">Theorem 1.2</a>, <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">Theorem 1.9</a>, we will prove these, essentially a more complicated application of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a>.</p></article></section></section></div></main>
+<aside class="aside-like" id="aside-8"><p id="p-164">Lecture 8 4/10/2018</p></aside><p id="p-165"><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">1.9</a>.</p>
+<p id="p-166">We will now prove this, not via Linnik's proof, but via an analogue of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>. Strategy:</p>
+<ol class="decimal">
+<li id="li-42">Weyl's criterion  \(\leadsto\) bounding exponential sums.</li>
+<li id="li-43">To bound these sums we will use automorphic methods.</li>
+</ol>
+<p id="p-167">We will begin with <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a>.</p>
+<p id="p-168">So we will be working on \(S^2\text{.}\) Recall <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">1.28</a> which was for \(\lb 0,1)\text{.}\) There we used exponentials, why? Because they are a dense, convenient basis, fourier theory.</p>
+<p id="p-169">To replace this on the sphere \(S^2\) we use the <em class="emphasis">spherical harmonics</em>, these are homogeneous harmonic polynomials. Analogous with the \(S^1\) case.</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \frac{x+iy}{|x+iy|}\right)^m = e(m\theta)
+\end{equation*}
+</div>
+<p>the same spherical harmonic construction works for \(S^n\text{.}\)</p>
+<p id="p-170">We will show</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\# \Omega_n} \sum_{x\in \Omega_n} P(x) \to 0
+\end{equation*}
+</div>
+<p>for \(\deg P(x)  \gt 0\text{.}\) i.e.</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{\alpha \in \ZZ^3,|\alpha|^2 = n} P\left(\frac\alpha{|\alpha|}\right) = o( r_3(n))\label{eqn-spherical-harmonic-bd}\tag{1.3}
+\end{equation}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(n) =  \# \{ a^2 + b^2 + c^2 = n: a,b,c\in \ZZ\}\text{.}
+\end{equation*}
+</div></article><article class="paragraphs" id="paragraphs-14"><h5 class="heading"><span class="title">Connection to automorphic forms</span></h5>
+<p id="p-171">\(\theta\) functions, \(P\) spherical harmonics as before.</p>
+<article class="definition-like" id="definition-7"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.57</span>
+</h6>
+<div class="displaymath" id="p-172">
+\begin{equation*}
+\theta_P(z) = \sum_{\alpha \in \ZZ^3} P(\alpha) e ( |\alpha|^2 z)
+\end{equation*}
+</div>
+<p>for \(z\in \HH\) this converges.</p>
+<div class="displaymath">
+\begin{equation*}
+\theta_P(z) = \sum_{n=0}^\infty r_3(n,P) e(nz)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_3(n,P) =\sum_{|\alpha|^2 = n} P (\alpha)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="fact-1"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">1.58</span>
+</h6>
+<ol id="p-173" class="decimal">
+<li id="li-44">This is a modular form of weight \(\frac 32 +  \deg P\) for \(\Gamma_0(4)\text{.}\)</li>
+<li id="li-45">It is a cusp form if \(\deg P \gt 0\text{.}\)</li>
+</ol></article><article class="remark-like" id="observation-1"><h6 class="heading">
+<span class="type">Observation</span> <span class="codenumber">1.59</span>
+</h6>
+<p id="p-174">If \(\deg P \not  \equiv 0 \pmod 2\) this function is \(0\text{.}\)</p></article><p id="p-175">To show  <a knowl="./knowl/eqn-spherical-harmonic-bd.html" title="Equation 1.3">(1.3)</a>:</p>
+<ol class="decimal">
+<li id="li-46">Show that<div class="displaymath">
+\begin{equation*}
+r_3(n) \gg_\epsilon n^{1/2 - \epsilon}
+\end{equation*}
+</div>(Gauss-Siegel)</li>
+<li id="li-47">Show that<div class="displaymath">
+\begin{equation*}
+r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
+\end{equation*}
+</div>for some \(\delta \gt 0\text{.}\)</li>
+</ol>
+<p>Why?</p>
+<div class="displaymath" id="p-176">
+\begin{equation*}
+\sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) = n^{-\deg(P)/2} \sum_{|\alpha|^2 = n} P(\alpha)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= n^{-\deg(P)/2} r_3(n,P)
+\end{equation*}
+</div>
+<p>note:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac k2 - \frac14 - \delta = \frac 12 + \frac{\deg(P)}{2} - \delta\text{.}
+\end{equation*}
+</div>
+<p id="p-177">So if \(r_3(n,P) \ll n^{(1+\deg(P))/2 - \delta}\) which implies</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) \ll n^{\frac 12 - \delta}\text{.}
+\end{equation*}
+</div>
+<p id="p-178">If we knew a half integral weight Ramanujan conjecture:</p>
+<div class="displaymath">
+\begin{equation*}
+f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
+\end{equation*}
+</div>
+<p>for squarefree \(n\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_f(n) = O(n^{(k-1)/2 +\epsilon})\text{.}
+\end{equation*}
+</div></article><article class="paragraphs" id="paragraphs-15"><h5 class="heading"><span class="title">Digression (\(\theta\)-functions)</span></h5>
+<p id="p-179">Recall: Integral weight modular forms</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma = \SL_2(\ZZ) = \Gamma(1)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_\infty = \left\{ \begin{pmatrix} 1\amp n \\ 0 \amp 1\end{pmatrix} : n \in \ZZ\right\}
+\end{equation*}
+</div>
+<p>In general \(\Gamma\) congruence subgroup \(\Gamma(N) \subseteq \Gamma \subseteq \Gamma(1)\) for some \(N\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f\colon \HH \to \CC
+\end{equation*}
+</div>
+<p>is called a modular form of weight \(k\) for \(\Gamma\) if \(f\) is holomorphic everywhere, including at the cusps.</p>
+<div class="displaymath">
+\begin{equation*}
+f(\gamma z) =  (cz+ d)^k f(z) \,\forall \gamma \in \Gamma\text{.}
+\end{equation*}
+</div>
+<p>If \(f (z) = \sum _{n=1}^\infty a_nq^n\) then \(f\) is cuspidal, the space of such is \(S_k(\Gamma)\) where S stands for the German Spitzenform. Spitze means cusp, kinda like a pointy spit?</p>
+<article class="example-like" id="example-8"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.60</span>
+</h6>
+<div class="displaymath" id="p-180">
+\begin{equation*}
+\Delta(q) = q\prod_{n=1}^\infty (1-q^n)^{24}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+E_k(z)= \sum_{(c,d) = 1} \frac{1}{(cz +d)^{2k}}
+\end{equation*}
+</div></article><article class="theorem-like" id="conjecture-1"><h6 class="heading">
+<span class="type">Conjecture</span> <span class="codenumber">1.61</span> <span class="title">Ramanujan (here theorem of Deligne)</span>
+</h6>
+<p id="p-181">\(f\in S_k(\Gamma)\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = O_z( n^{(k-1)/2 + \epsilon}) \,\forall \epsilon \gt 0\text{.}
+\end{equation*}
+</div></article><p id="p-182">Classically</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(z) = \sum_{m\in \ZZ} e^{i \pi m^2z}
+\end{equation*}
+</div>
+<p>converges absolutely on \(z\in \HH\)</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(z + 2) =\widetilde \theta(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(-1/z ) = \sqrt{-iz} \widetilde \theta(z)
+\end{equation*}
+</div>
+<p>in general for \(\gamma \in \Gamma_0(4)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(\gamma z ) = j(\gamma ; z) \widetilde \theta(z)
+\end{equation*}
+</div>
+<p>where \(j(\gamma;  z) = (c/d) \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  -1 \(d\equiv 3 \pmod 4\) sign of Gauss sum. \((c/d)\) is  a sibling of Legendre form</p></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];

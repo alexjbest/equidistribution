@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Digression (\(\theta\)-functions)</span></h5>
+<p>Recall: Integral weight modular forms</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma = \SL_2(\ZZ) = \Gamma(1)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_\infty = \left\{ \begin{pmatrix} 1\amp n \\ 0 \amp 1\end{pmatrix} : n \in \ZZ\right\}
+\end{equation*}
+</div>
+<p>In general \(\Gamma\) congruence subgroup \(\Gamma(N) \subseteq \Gamma \subseteq \Gamma(1)\) for some \(N\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f\colon \HH \to \CC
+\end{equation*}
+</div>
+<p>is called a modular form of weight \(k\) for \(\Gamma\) if \(f\) is holomorphic everywhere, including at the cusps.</p>
+<div class="displaymath">
+\begin{equation*}
+f(\gamma z) =  (cz+ d)^k f(z) \,\forall \gamma \in \Gamma\text{.}
+\end{equation*}
+</div>
+<p>If \(f (z) = \sum _{n=1}^\infty a_nq^n\) then \(f\) is cuspidal, the space of such is \(S_k(\Gamma)\) where S stands for the German Spitzenform. Spitze means cusp, kinda like a pointy spit?</p>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.60</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\Delta(q) = q\prod_{n=1}^\infty (1-q^n)^{24}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+E_k(z)= \sum_{(c,d) = 1} \frac{1}{(cz +d)^{2k}}
+\end{equation*}
+</div></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Conjecture</span> <span class="codenumber">1.61</span> <span class="title">Ramanujan (here theorem of Deligne)</span>
+</h6>
+<p>\(f\in S_k(\Gamma)\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = O_z( n^{(k-1)/2 + \epsilon}) \,\forall \epsilon \gt 0\text{.}
+\end{equation*}
+</div></article><p>Classically</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(z) = \sum_{m\in \ZZ} e^{i \pi m^2z}
+\end{equation*}
+</div>
+<p>converges absolutely on \(z\in \HH\)</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(z + 2) =\widetilde \theta(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(-1/z ) = \sqrt{-iz} \widetilde \theta(z)
+\end{equation*}
+</div>
+<p>in general for \(\gamma \in \Gamma_0(4)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(\gamma z ) = j(\gamma ; z) \widetilde \theta(z)
+\end{equation*}
+</div>
+<p>where \(j(\gamma;  z) = (c/d) \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  -1 \(d\equiv 3 \pmod 4\) sign of Gauss sum. \((c/d)\) is  a sibling of Legendre form</p></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-15">in-context</a></span>
+</body>
+</html>

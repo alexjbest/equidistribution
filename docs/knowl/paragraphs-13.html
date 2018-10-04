@@ -12,6 +12,38 @@
 </head>
 <body>
 <article class="paragraphs"><h5 class="heading"><span class="title">Recall</span></h5>
-<p><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">Theorem 1.2</a>, <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">Theorem 1.9</a>, we will prove these, essentially a more complicated application of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl">Weyl's criterion</a>.</p></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-13">in-context</a></span>
+<aside class="aside-like"><p>Lecture 8 4/10/2018</p></aside><p><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">1.9</a>.</p>
+<p>We will now prove this, not via Linnik's proof, but via an analogue of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>. Strategy:</p>
+<ol class="decimal">
+<li>Weyl's criterion  \(\leadsto\) bounding exponential sums.</li>
+<li>To bound these sums we will use automorphic methods.</li>
+</ol>
+<p>We will begin with <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a>.</p>
+<p>So we will be working on \(S^2\text{.}\) Recall <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">1.28</a> which was for \(\lb 0,1)\text{.}\) There we used exponentials, why? Because they are a dense, convenient basis, fourier theory.</p>
+<p>To replace this on the sphere \(S^2\) we use the <em class="emphasis">spherical harmonics</em>, these are homogeneous harmonic polynomials. Analogous with the \(S^1\) case.</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \frac{x+iy}{|x+iy|}\right)^m = e(m\theta)
+\end{equation*}
+</div>
+<p>the same spherical harmonic construction works for \(S^n\text{.}\)</p>
+<p>We will show</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\# \Omega_n} \sum_{x\in \Omega_n} P(x) \to 0
+\end{equation*}
+</div>
+<p>for \(\deg P(x)  \gt 0\text{.}\) i.e.</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{\alpha \in \ZZ^3,|\alpha|^2 = n} P\left(\frac\alpha{|\alpha|}\right) = o( r_3(n))\tag{1.3}
+\end{equation}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(n) =  \# \{ a^2 + b^2 + c^2 = n: a,b,c\in \ZZ\}\text{.}
+\end{equation*}
+</div></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-13">in-context</a></span>
 </body>
 </html>

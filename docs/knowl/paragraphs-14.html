@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Connection to automorphic forms</span></h5>
+<p>\(\theta\) functions, \(P\) spherical harmonics as before.</p>
+<article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.57</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\theta_P(z) = \sum_{\alpha \in \ZZ^3} P(\alpha) e ( |\alpha|^2 z)
+\end{equation*}
+</div>
+<p>for \(z\in \HH\) this converges.</p>
+<div class="displaymath">
+\begin{equation*}
+\theta_P(z) = \sum_{n=0}^\infty r_3(n,P) e(nz)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_3(n,P) =\sum_{|\alpha|^2 = n} P (\alpha)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">1.58</span>
+</h6>
+<ol class="decimal">
+<li>This is a modular form of weight \(\frac 32 +  \deg P\) for \(\Gamma_0(4)\text{.}\)</li>
+<li>It is a cusp form if \(\deg P \gt 0\text{.}\)</li>
+</ol></article><article class="remark-like"><h6 class="heading">
+<span class="type">Observation</span> <span class="codenumber">1.59</span>
+</h6>
+<p>If \(\deg P \not  \equiv 0 \pmod 2\) this function is \(0\text{.}\)</p></article><p>To show  <a knowl="./knowl/eqn-spherical-harmonic-bd.html" title="Equation 1.3">(1.3)</a>:</p>
+<ol class="decimal">
+<li>Show that<div class="displaymath">
+\begin{equation*}
+r_3(n) \gg_\epsilon n^{1/2 - \epsilon}
+\end{equation*}
+</div>(Gauss-Siegel)</li>
+<li>Show that<div class="displaymath">
+\begin{equation*}
+r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
+\end{equation*}
+</div>for some \(\delta \gt 0\text{.}\)</li>
+</ol>
+<p>Why?</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) = n^{-\deg(P)/2} \sum_{|\alpha|^2 = n} P(\alpha)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= n^{-\deg(P)/2} r_3(n,P)
+\end{equation*}
+</div>
+<p>note:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac k2 - \frac14 - \delta = \frac 12 + \frac{\deg(P)}{2} - \delta\text{.}
+\end{equation*}
+</div>
+<p>So if \(r_3(n,P) \ll n^{(1+\deg(P))/2 - \delta}\) which implies</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) \ll n^{\frac 12 - \delta}\text{.}
+\end{equation*}
+</div>
+<p>If we knew a half integral weight Ramanujan conjecture:</p>
+<div class="displaymath">
+\begin{equation*}
+f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
+\end{equation*}
+</div>
+<p>for squarefree \(n\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_f(n) = O(n^{(k-1)/2 +\epsilon})\text{.}
+\end{equation*}
+</div></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-14">in-context</a></span>
+</body>
+</html>

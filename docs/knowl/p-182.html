@@ -12,25 +12,30 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Take</p>
+<p>Classically</p>
 <div class="displaymath">
 \begin{equation*}
-f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
+\widetilde \theta(z) = \sum_{m\in \ZZ} e^{i \pi m^2z}
 \end{equation*}
 </div>
-<p>Fatou implies</p>
+<p>converges absolutely on \(z\in \HH\)</p>
 <div class="displaymath">
 \begin{equation*}
-\int_0^1 \sum_{n=1}^\infty |S_h(N^2,\alpha)|^2 \diff \alpha \le \sum_{N=1}^\infty \int_0^1 |S_h(N^2,\alpha)|^2\diff \alpha \lt \infty
+\widetilde \theta(z + 2) =\widetilde \theta(z)
 \end{equation*}
 </div>
-<p>so</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{N=1}^\infty  |S_h(N^2 ,\alpha)|^2
+\widetilde \theta(-1/z ) = \sqrt{-iz} \widetilde \theta(z)
 \end{equation*}
 </div>
-<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a> we are done.</p>
-<span class="incontext"><a href="sec-equidistribution-intro.html#p-129">in-context</a></span>
+<p>in general for \(\gamma \in \Gamma_0(4)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \theta(\gamma z ) = j(\gamma ; z) \widetilde \theta(z)
+\end{equation*}
+</div>
+<p>where \(j(\gamma;  z) = (c/d) \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  -1 \(d\equiv 3 \pmod 4\) sign of Gauss sum. \((c/d)\) is  a sibling of Legendre form</p>
+<span class="incontext"><a href="sec-equidistribution-intro.html#p-182">in-context</a></span>
 </body>
 </html>

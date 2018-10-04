@@ -543,7 +543,7 @@ section#sec-equidistribution-intro
 
         aside: p Lecture 4 18/9/2018
         theorem#thm-weyl-criterion
-            title Weyl
+            title Weyl's criterion
             statement: p
                 | #[m \{a_n\}_{n=1}^\infty \in \RR] then TFAE:
                 ol
@@ -996,7 +996,7 @@ section#sec-equidistribution-intro
                 p
                     | Why?
                     | Assumption, the process follows a power law, if #[m b^n] is the first digit of this is
-                    me \log_{10} b^n = n \log b
+                    me \log_{10} b^n = n \log_{10} b
                     | this is #[m k] iff #[m n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1 \rb].
                     | If these are equidistributed then the probability of #[m k] is
                     me \int_{\log_{10} k}^{\log_{10} k+1} 1 \diff x = \log(1 + 1/k)
@@ -1057,5 +1057,125 @@ section#sec-equidistribution-intro
 
         paragraphs
             title Recall
+
+            aside: p Lecture 8 4/10/2018
             p
-                | #[xref(ref="thm-linnik,thm-duke")], we will prove these, essentially a more complicated application of Weyl's criterion.
+                | #[xref(ref="thm-linnik")/] #[xref(ref="thm-duke")/].
+            p
+                | We will now prove this, not via Linnik's proof, but via an analogue of Weyl's criterion.
+                | Strategy:
+                ol
+                    li
+                        | Weyl's criterion  #[m \leadsto] bounding exponential sums.
+                    li
+                        | To bound these sums we will use automorphic methods.
+            p
+                | We will begin with
+                | #[xref(ref="thm-linnik")/].
+            p
+                | So we will be working on #[m S^2].
+                | Recall #[xref(ref="thm-weyl-criterion")/] which was for #[m \lb 0,1)].
+                | There we used exponentials, why?
+                | Because they are a dense, convenient basis, fourier theory.
+            p
+                | To replace this on the sphere #[m S^2] we use the #[em spherical harmonics], these are homogeneous harmonic polynomials.
+                | Analogous with the #[m S^1] case.
+                me \left( \frac{x+iy}{|x+iy|}\right)^m = e(m\theta)
+                | the same spherical harmonic construction works for #[m S^n].
+            p
+                | We will show
+                me \frac{1}{\# \Omega_n} \sum_{x\in \Omega_n} P(x) \to 0
+                | for #[m \deg P(x)  \gt 0].
+                | i.e.
+                men#eqn-spherical-harmonic-bd \sum_{\alpha \in \ZZ^3,|\alpha|^2 = n} P\left(\frac\alpha{|\alpha|}\right) = o( r_3(n))
+                | where
+                me r_3(n) =  \# \{ a^2 + b^2 + c^2 = n: a,b,c\in \ZZ\}
+                | .
+        paragraphs
+            title Connection to automorphic forms
+            p
+                | #[m \theta] functions, #[m P] spherical harmonics as before.
+            definition
+                statement: p
+                    me \theta_P(z) = \sum_{\alpha \in \ZZ^3} P(\alpha) e ( |\alpha|^2 z)
+                    | for #[m z\in \HH] this converges.
+                    me \theta_P(z) = \sum_{n=0}^\infty r_3(n,P) e(nz)
+                    me r_3(n,P) =\sum_{|\alpha|^2 = n} P (\alpha)
+                    | .
+            fact
+                statement: p
+                    ol
+                        li
+                            | This is a modular form of weight #[m \frac 32 +  \deg P] for #[m \Gamma_0(4)].
+                        li
+                            | It is a cusp form if #[m \deg P \gt 0].
+            observation
+                p
+                    | If #[m \deg P \not  \equiv 0 \pmod 2] this function is #[m 0].
+            p
+                | To show  #[xref(ref="eqn-spherical-harmonic-bd")/]:
+                ol
+                    li
+                        | Show that
+                        me r_3(n) \gg_\epsilon n^{1/2 - \epsilon}
+                        | (Gauss-Siegel)
+                    li
+                        | Show that
+                        me r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
+                        | for some #[m \delta \gt 0].
+                | Why?
+            p
+                me \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) = n^{-\deg(P)/2} \sum_{|\alpha|^2 = n} P(\alpha)
+                me = n^{-\deg(P)/2} r_3(n,P)
+                | note:
+                me \frac k2 - \frac14 - \delta = \frac 12 + \frac{\deg(P)}{2} - \delta
+                | .
+            p
+                | So if #[m r_3(n,P) \ll n^{(1+\deg(P))/2 - \delta}] which implies
+                me  \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) \ll n^{\frac 12 - \delta}
+                |.
+
+            p
+                |  If we knew a half integral weight Ramanujan conjecture:
+                me f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
+                | for squarefree #[m n]
+                me a_f(n) = O(n^{(k-1)/2 +\epsilon})
+                |.
+
+        paragraphs
+            title Digression (#[m \theta]-functions)
+
+            p
+                | Recall:
+                | Integral weight modular forms
+                me \Gamma = \SL_2(\ZZ) = \Gamma(1)
+                me \Gamma_\infty = \left\{ \begin{pmatrix} 1\amp n \\ 0 \amp 1\end{pmatrix} : n \in \ZZ\right\}
+                | In general #[m \Gamma] congruence subgroup #[m \Gamma(N) \subseteq \Gamma \subseteq \Gamma(1)] for some #[m N].
+                me f\colon \HH \to \CC
+                | is called a modular form of weight #[m k] for #[m \Gamma] if #[m f] is holomorphic everywhere, including at the cusps.
+                me f(\gamma z) =  (cz+ d)^k f(z) \,\forall \gamma \in \Gamma
+                | . If #[m f (z) = \sum _{n=1}^\infty a_nq^n] then #[m f] is cuspidal, the space of such is #[m S_k(\Gamma)] where S stands for the German Spitzenform.
+                | Spitze means cusp, kinda like a pointy spit?
+            example
+                statement: p
+                    me \Delta(q) = q\prod_{n=1}^\infty (1-q^n)^{24}
+                    me E_k(z)= \sum_{(c,d) = 1} \frac{1}{(cz +d)^{2k}}
+
+            conjecture
+                title Ramanujan (here theorem of Deligne)
+                statement: p
+                    | #[m f\in S_k(\Gamma)]
+                    me a_n = O_z( n^{(k-1)/2 + \epsilon}) \,\forall \epsilon \gt 0
+                    | .
+            p
+                | Classically
+                me \widetilde \theta(z) = \sum_{m\in \ZZ} e^{i \pi m^2z}
+                | converges absolutely on #[m z\in \HH]
+                me \widetilde \theta(z + 2) =\widetilde \theta(z)
+                me \widetilde \theta(-1/z ) = \sqrt{-iz} \widetilde \theta(z)
+                | in general for #[m \gamma \in \Gamma_0(4)]
+                me \widetilde \theta(\gamma z ) = j(\gamma ; z) \widetilde \theta(z)
+                | where #[m j(\gamma;  z) = (c/d) \epsilon_d^{-1} (cz+d)^{1/2}]
+                | where #[m \epsilon_d = 1] if #[m d\equiv 1 \pmod 4],  -1 #[m d\equiv 3 \pmod 4] sign of Gauss sum.
+
+                | #[m (c/d)] is  a sibling of Legendre form 
