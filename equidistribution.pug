@@ -35,7 +35,7 @@ section#sec-equidistribution-intro
                 li
                     | spectral theory
                 li
-                    | modular forms of half integral weight.
+                    | modular forms of half-integral weight.
                 li
                     | harmonic analysis
                 li
@@ -71,7 +71,7 @@ section#sec-equidistribution-intro
                 | this is where the number theory comes, we are looking at representability of numbers #[m n] by this ternary quadratic form.
             p
                 | Various methods exist for studying this for varying #[m n], quadratic reciprocity for #[m n=2], circle method/Vinogradov for #[m n=4].
-                | #[m n=3] is the cut off, here half integral weight modular forms are relevant.
+                | #[m n=3] is the cut off, here half-integral weight modular forms are relevant.
 
             p
                 | Set
@@ -109,7 +109,7 @@ section#sec-equidistribution-intro
             | Duke was a graduate student of Sarnak at Courant.
 
             | He gave a more direct proof of #[xref(ref="thm-linnik")/] which does not have the #[m \legendre{N}{p} = 1] condition.
-            | His proof is based on the theory of (half integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.
+            | His proof is based on the theory of (half-integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.
 
         p
             | Why do exponential sums enter the picture?
@@ -1136,7 +1136,7 @@ section#sec-equidistribution-intro
                 |.
 
             p
-                |  If we knew a half integral weight Ramanujan conjecture:
+                |  If we knew a half-integral weight Ramanujan conjecture:
                 me f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
                 | for squarefree #[m n]
                 me a_f(n) = O(n^{(k-1)/2 +\epsilon})
@@ -1179,3 +1179,146 @@ section#sec-equidistribution-intro
                 | where #[m \epsilon_d = 1] if #[m d\equiv 1 \pmod 4],  -1 #[m d\equiv 3 \pmod 4] sign of Gauss sum.
 
                 | #[m \legendre cd] is  a sibling of Legendre form.
+
+        aside: p Lecture 9 11/10/2018
+
+        p
+            | Recall: #[m P] spherical harmonic degree #[m l ].
+            | Aim to show:
+            me \sum_{|x|^2 = n} P\left(  x \right) = o( r_3(n))
+            |where
+            me r_3(n) =  \# \{ a^2 + b^2 + c^2 = n: a,b,c\in \ZZ\}
+            | .
+        p
+            | Took
+            me \theta(z; P) = \sum_{n\in \ZZ} r(n; P) e(nz)
+            | . A modular form of weight #[m 3/2 + l] for #[m \Gamma_0 (4)].
+            | Cusp form if #[m l \gt 0].
+        p
+            | The strategy is then to show
+            me r_3(n)  \gg n^{1/2- \epsilon}\,\forall \epsilon \gt 0
+            me r_3(n)  \ll n^{k/2 -1/4 - \delta}\,\text{ for some }\delta \gt 0
+            |.
+
+        definition#def-half-integral-mfs
+            title Half-integral weight modular forms
+            statement: p
+                | Let #[m N \equiv 0 \pmod 4].
+                | A modular form of #[term half-integral] weight #[m k \in \frac 12 + \ZZ_{\ge 0}].
+                | For #[m \Gamma_0(N)] is a holomorphic function on #[m \HH] s.t.
+                ol
+                    li: me f(\gamma z ) = j(\gamma;  z)^{2k} f(z)
+                    li #[m f] is holomorphic at the cusps
+                | if #[m \chi\begin{pmatrix}a\amp b \\c \amp d \end{pmatrix} = \chi (d)], #[m  f(\gamma z)  = \chi(d) j(\gamma ; z)^{2k} f(z)] gives the space #[m M_k(\Gamma_0(N), \chi)].
+                // TODO check
+
+        p
+            | Where do these things come from?
+
+        p
+            | A construction due to Schoenberg 1939, Pfetzer 1953, Shimura 1973 is as follows:
+        p
+            | #[m A] an #[m n \times n] positive definite integral matrix, #[m N \in \ZZ] s.t. #[m N A\inv] is integral, #[m P] a spherical harmonic relative to #[m A] i.e. for #[m P] homogeneous of degree #[m v].
+            me \sum_{i,j} \tilde a_{ij} \frac{\partial ^2 P}{\partial x_ix_j} = 0
+            me [a_{ij}] = A \inv
+        definition
+            statement: p
+                | Let #[m h\in \ZZ^n], set
+                me \tilde \theta_P (z,h,N) = \sum_{m \equiv h \pmod N} P(m) e\left(  \frac{(m^\transpose A m)z}{2N^2} \right)
+                | .
+        fact
+            title Poisson summation
+            p
+                me \tilde \theta_P (\gamma z, h, N) = e \left( \frac{ab(h^\transpose Ah) }{2N^2}     \right)\left( \frac{\det A}{d} \right) \left( \frac{2c}{d}\right)^n \epsilon_d^{-n} (cz+d)^{k/2} \tilde\theta_P(z; ah, N)
+                me \gamma = \begin{pmatrix}a\amp b \\ c \amp d\end{pmatrix} \in \SL_2(\ZZ) : b \equiv 0 \pmod 2,c\equiv 0 \pmod{2N}
+                me k = n +2v
+
+        example
+            statement: p
+                | #[m n = 1, N = 1] #[m P(m) = m^v] #[m v= 0,1]
+                me \tilde \theta_P(z) = \sum_{m\in \ZZ} m^v e(m^2z/2)
+                | for #[m v=0] this is classical #[m \theta] for #[m v = 1] cusp form on #[m \Gamma_0(8)] of weight #[m 3/2], we could also twist by a character mod 4.
+        example
+            statement: p
+                | #[m A = I_{n \times n}] #[m P] spherical harmonic of degree #[m v]
+                me \tilde \theta_P(z; 0, 1) = \sum _{m \in \ZZ^n} P(m) e(|m|^2 z/2)
+                | set #[m z=2z]
+                me \theta_P(z) = \sum_{m\in \ZZ} P(m) e(|m|^2 z)
+                | .
+        note
+            p
+                me \theta_P (z) \in S_k(\Gamma_0(4))
+                me k = \frac h2 + v,\,v \gt 0
+                me \theta_P (z)\in M_{h/2}(\Gamma_0(4))
+                | not cuspidal.
+        example
+            statement: p
+                | #[m A = 4\times 4] integral positive definite
+                me Q = Q_A(x),\, x^\transpose A x
+                me r_Q(n) = \# \{ x \in \ZZ^4:Q(x) = n\}
+                me \theta_Q(z) = \sum_{n=0}^\infty r_Q(n) e(nz) \in M_2(\Gamma_0(N))
+                | for some #[m N = 4\det(A)].
+
+        paragraphs
+            title Half-integral weight Ramanujan conjecture (Metaplectic)
+
+            p
+                | Naively we would like to mimic the integral case and say
+                me a_f(n) = O(n^{(k-1)/2 + \epsilon})
+                | where #[m f\in S_k(\Gamma)].
+            p
+                | But this is not true as stated here!:
+
+            example
+                statement: p
+                    | Let
+                    me \theta(z;  \chi) = \sum_{m\in \ZZ} m \chi(m) e(m^2 z)
+                    | for odd #[m \chi] this is a cusp form in #[m S_k(\Gamma, \chi)].
+                    | For #[m k=3/2], let #[m f =\theta] and
+                    me a_f(m^2) \sim m\chi(m) \implies a_f(n) = O(\sqrt{n})
+                    | for #[m n] square.
+                    | But #[m (k -1)/2= 1/4] but  #[m O(\sqrt n)] is not #[m O(n^{1/4 + \epsilon})] for any #[m \epsilon \ge 1/4].
+
+            p
+                | So we avoid these or stick to squarefree #[m n].
+
+            conjecture#conj-half-integral-ramanujan
+                title Half-integral weight Ramanujan conjecture
+                statement: p
+                    me a_f(n) = O(n^{(k-1)/2 + \epsilon})
+                    | for all #[m n] square-free #[m f\in S_k(\Gamma, \chi)].
+
+            p
+                | Why this exponent?
+                | For integral weight:
+                | Representation theory gives #[m a_f(m)]'s  which correspond to Hecke eigenvalues which under Langlands are tempered for #[m \GL_N].
+
+            p
+                | Digression:
+            proposition
+                title Hecke bound
+                statement: p
+                    | #[m f \in S_k(\Gamma)] then #[m a_f(n) = O(n^{k/2})].
+                proof: p
+                    | #[m y = \Im(z), y(\gamma z) = |cz+d| ^{-2} y] so
+                    me F(z) = y^{k/2}  |f(z)|
+                    | Invariant on #[m \Gamma] bounded at the cusps #[m |F(z)| \lt M].
+                    | So
+                    me \int_0^1 f(z) e(nx) = e^{-2 \pi i ny }a_f(n)
+                    me \le \int_0^1 y^{-k/2} M = O(y^{-k/2})
+                    | so #[m a_f(n) = O(y^{-k/2} e^{2\pi i n y})] with #[m y = 1/n].
+
+            p
+                | Another digression:
+            p
+                | What is the distribution of rational points on #[m S^2]?
+                me \{x_1^2 + x_2^2 + x_3^2 = 1: x_i \in \QQ\}
+                me \iff r_3(n^2)
+            proposition
+                title Hurwitz
+                statement: p
+                    | A generating function for this is given by
+                    me \sum_{n =1}^\infty \frac{r_3(n^2)}{n^s} = 6(1-2^{1-s}) \frac{\overbrace{\zeta(s) \zeta(1-s)}^{=\sum \sigma(n)/n^s}}{L\left(s, \legendre{-1}{\cdot}\right)}
+            exercise
+                statement: p
+                    | Prove this!

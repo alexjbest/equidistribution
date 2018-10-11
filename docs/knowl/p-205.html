@@ -12,18 +12,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>If we knew a <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 1.62: Half-integral weight modular forms">half-integral</a> weight Ramanujan conjecture:</p>
+<p>\(y = \Im(z), y(\gamma z) = |cz+d| ^{-2} y\) so</p>
 <div class="displaymath">
 \begin{equation*}
-f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
+F(z) = y^{k/2}  |f(z)|
 \end{equation*}
 </div>
-<p>for squarefree \(n\)</p>
+<p>Invariant on \(\Gamma\) bounded at the cusps \(|F(z)| \lt M\text{.}\) So</p>
 <div class="displaymath">
 \begin{equation*}
-a_f(n) = O(n^{(k-1)/2 +\epsilon})\text{.}
+\int_0^1 f(z) e(nx) = e^{-2 \pi i ny }a_f(n)
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec-equidistribution-intro.html#p-178">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+\le \int_0^1 y^{-k/2} M = O(y^{-k/2})
+\end{equation*}
+</div>
+<p>so \(a_f(n) = O(y^{-k/2} e^{2\pi i n y})\) with \(y = 1/n\text{.}\)</p>
+<span class="incontext"><a href="sec-equidistribution-intro.html#p-205">in-context</a></span>
 </body>
 </html>

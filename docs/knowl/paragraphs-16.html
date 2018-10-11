@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Half-integral weight Ramanujan conjecture (Metaplectic)</span></h5>
+<p>Naively we would like to mimic the integral case and say</p>
+<div class="displaymath">
+\begin{equation*}
+a_f(n) = O(n^{(k-1)/2 + \epsilon})
+\end{equation*}
+</div>
+<p>where \(f\in S_k(\Gamma)\text{.}\)</p>
+<p>But this is not true as stated here!:</p>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.69</span>
+</h6>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+\theta(z;  \chi) = \sum_{m\in \ZZ} m \chi(m) e(m^2 z)
+\end{equation*}
+</div>
+<p>for odd \(\chi\) this is a cusp form in \(S_k(\Gamma, \chi)\text{.}\) For \(k=3/2\text{,}\) let \(f =\theta\) and</p>
+<div class="displaymath">
+\begin{equation*}
+a_f(m^2) \sim m\chi(m) \implies a_f(n) = O(\sqrt{n})
+\end{equation*}
+</div>
+<p>for \(n\) square. But \((k -1)/2= 1/4\) but  \(O(\sqrt n)\) is not \(O(n^{1/4 + \epsilon})\) for any \(\epsilon \ge 1/4\text{.}\)</p></article><p>So we avoid these or stick to squarefree \(n\text{.}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Conjecture</span> <span class="codenumber">1.70</span> <span class="title">Half-integral weight Ramanujan conjecture</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+a_f(n) = O(n^{(k-1)/2 + \epsilon})
+\end{equation*}
+</div>
+<p>for all \(n\) square-free \(f\in S_k(\Gamma, \chi)\text{.}\)</p></article><p>Why this exponent? For integral weight: Representation theory gives \(a_f(m)\)'s  which correspond to Hecke eigenvalues which under Langlands are tempered for \(\GL_N\text{.}\)</p>
+<p>Digression:</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">1.71</span> <span class="title">Hecke bound</span>
+</h6>
+<p>\(f \in S_k(\Gamma)\) then \(a_f(n) = O(n^{k/2})\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-19-hidden.html" title="Proof 1.71.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>Another digression:</p>
+<p>What is the distribution of rational points on \(S^2\text{?}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\{x_1^2 + x_2^2 + x_3^2 = 1: x_i \in \QQ\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\iff r_3(n^2)
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">1.72</span> <span class="title">Hurwitz</span>
+</h6>
+<p>A generating function for this is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n =1}^\infty \frac{r_3(n^2)}{n^s} = 6(1-2^{1-s}) \frac{\overbrace{\zeta(s) \zeta(1-s)}^{=\sum \sigma(n)/n^s}}{L(s, \legendre{-1}{\cdot})}
+\end{equation*}
+</div></article><article class="exercise-like"><a knowl="./knowl/exercise-4-hidden.html" title="Exercise 1.73"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.73</span>
+</h6></a></article></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-16">in-context</a></span>
+</body>
+</html>

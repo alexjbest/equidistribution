@@ -287,7 +287,7 @@ MathJax.Hub.Config({
 <li id="li-2">lattice points and hyperbolic geometry</li>
 <li id="li-3">modular forms</li>
 <li id="li-4">spectral theory</li>
-<li id="li-5">modular forms of half integral weight.</li>
+<li id="li-5">modular forms of <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 1.62: Half-integral weight modular forms">half-integral</a> weight.</li>
 <li id="li-6">harmonic analysis</li>
 <li id="li-7">Kuznetsov formula</li>
 <li id="li-8">Other topics!</li>
@@ -305,7 +305,7 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p>this is where the number theory comes, we are looking at representability of numbers \(n\) by this ternary quadratic form.</p>
-<p id="p-12">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogradov for \(n=4\text{.}\) \(n=3\) is the cut off, here half integral weight modular forms are relevant.</p>
+<p id="p-12">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogradov for \(n=4\text{.}\) \(n=3\) is the cut off, here <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 1.62: Half-integral weight modular forms">half-integral</a> weight modular forms are relevant.</p>
 <p id="p-13">Set</p>
 <div class="displaymath">
 \begin{equation*}
@@ -336,7 +336,7 @@ N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
 <article class="remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.3</span>
 </h6>
-<p id="p-20">Linnik's proof is ergodic theoretic.</p></article><p id="p-21">After this came Duke in 1988, in the mean time, Weil conjectures were proved, Iwaniec gave bounds for Kloosterman sums. Duke was a graduate student of Sarnak at Courant. He gave a more direct proof of <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> which does not have the \(\legendre{N}{p} = 1\) condition. His proof is based on the theory of (half integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.</p>
+<p id="p-20">Linnik's proof is ergodic theoretic.</p></article><p id="p-21">After this came Duke in 1988, in the mean time, Weil conjectures were proved, Iwaniec gave bounds for Kloosterman sums. Duke was a graduate student of Sarnak at Courant. He gave a more direct proof of <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> which does not have the \(\legendre{N}{p} = 1\) condition. His proof is based on the theory of (half-integral weight) modular forms, and a good bound Iwaniec on certain exponential sums.</p>
 <p id="p-22">Why do exponential sums enter the picture? We are trying to prove that we have a sum converging to an integral. Generally we work with a basis of functions first, we could try using fourier analysis, using harmonics as our basis, this is when exponential sums appear. That requires us to work out harmonics on the sphere (spherical harmonics) which leads to representation theory, which as the sphere is compact involves Weyl representations etc.</p>
 <p id="p-23">Duke also proved “the same” theorem over  modular surfaces. Instead of looking at expanding spheres we study expanding hyperboloids.</p>
 <article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Setup</span></h5>
@@ -1535,7 +1535,7 @@ r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
 \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) \ll n^{\frac 12 - \delta}\text{.}
 \end{equation*}
 </div>
-<p id="p-178">If we knew a half integral weight Ramanujan conjecture:</p>
+<p id="p-178">If we knew a <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 1.62: Half-integral weight modular forms">half-integral</a> weight Ramanujan conjecture:</p>
 <div class="displaymath">
 \begin{equation*}
 f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
@@ -1614,7 +1614,225 @@ a_n = O_z( n^{(k-1)/2 + \epsilon}) \,\forall \epsilon \gt 0\text{.}
 \widetilde \theta(\gamma z ) = j(\gamma ; z) \widetilde \theta(z)
 \end{equation*}
 </div>
-<p>where \(j(\gamma;  z) = \legendre cd \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  -1 \(d\equiv 3 \pmod 4\) sign of Gauss sum. \(\legendre cd\) is  a sibling of Legendre form.</p></article></section></section></div></main>
+<p>where \(j(\gamma;  z) = \legendre cd \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  -1 \(d\equiv 3 \pmod 4\) sign of Gauss sum. \(\legendre cd\) is  a sibling of Legendre form.</p></article><aside class="aside-like" id="aside-9"><p id="p-183">Lecture 9 11/10/2018</p></aside><p id="p-184">Recall: \(P\) spherical harmonic degree \(l \text{.}\) Aim to show:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{|x|^2 = n} P\left(  x \right) = o( r_3(n))
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(n) =  \# \{ a^2 + b^2 + c^2 = n: a,b,c\in \ZZ\}\text{.}
+\end{equation*}
+</div>
+<p id="p-185">Took</p>
+<div class="displaymath">
+\begin{equation*}
+\theta(z; P) = \sum_{n\in \ZZ} r(n; P) e(nz)\text{.}
+\end{equation*}
+</div>
+<p>A modular form of weight \(3/2 + l\) for \(\Gamma_0 (4)\text{.}\) Cusp form if \(l \gt 0\text{.}\)</p>
+<p id="p-186">The strategy is then to show</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(n)  \gg n^{1/2- \epsilon}\,\forall \epsilon \gt 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_3(n)  \ll n^{k/2 -1/4 - \delta}\,\text{ for some }\delta \gt 0\text{.}
+\end{equation*}
+</div>
+<article class="definition-like" id="def-half-integral-mfs"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.62</span> <span class="title">Half-integral weight modular forms</span>
+</h6>
+<p id="p-187">Let \(N \equiv 0 \pmod 4\text{.}\) A modular form of <dfn class="terminology">half-integral</dfn> weight \(k \in \frac 12 + \ZZ_{\ge 0}\text{.}\) For \(\Gamma_0(N)\) is a holomorphic function on \(\HH\) s.t.</p>
+<ol class="decimal">
+<li id="li-48"><div class="displaymath">
+\begin{equation*}
+f(\gamma z ) = j(\gamma;  z)^{2k} f(z)
+\end{equation*}
+</div></li>
+<li id="li-49">\(f\) is holomorphic at the cusps</li>
+</ol>
+<p>if \(\chi\begin{pmatrix}a\amp b \\c \amp d \end{pmatrix} = \chi (d)\text{,}\) \(f(\gamma z)  = \chi(d) j(\gamma ; z)^{2k} f(z)\) gives the space \(M_k(\Gamma_0(N), \chi)\text{.}\)</p></article><p id="p-188">Where do these things come from?</p>
+<p id="p-189">A construction due to Schoenberg 1939, Pfetzer 1953, Shimura 1973 is as follows:</p>
+<p id="p-190">\(A\) an \(n \times n\) positive definite integral matrix, \(N \in \ZZ\) s.t. \(N A\inv\) is integral, \(P\) a spherical harmonic relative to \(A\) i.e. for \(P\) homogeneous of degree \(v\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i,j} \tilde a_{ij} \frac{\partial ^2 P}{\partial x_ix_j} = 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+[a_{ij}] = A \inv
+\end{equation*}
+</div>
+<article class="definition-like" id="definition-9"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.63</span>
+</h6>
+<p id="p-191">Let \(h\in \ZZ^n\text{,}\) set</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde \theta_P (z,h,N) = \sum_{m \equiv h \pmod N} P(m) e\left(  \frac{(m^\transpose A m)z}{2N^2} \right)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="fact-2"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">1.64</span> <span class="title">Poisson summation</span>
+</h6>
+<div class="displaymath" id="p-192">
+\begin{equation*}
+\tilde \theta_P (\gamma z, h, N) = e \left( \frac{ab(h^\transpose Ah) }{2N^2}     \right)\left( \frac{\det A}{d} \right) \left( \frac{2c}{d}\right)^n \epsilon_d^{-n} (cz+d)^{k/2} \tilde\theta_P(z; ah, N)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\gamma = \begin{pmatrix}a\amp b \\ c \amp d\end{pmatrix} \in \SL_2(\ZZ) : b \equiv 0 \pmod 2,c\equiv 0 \pmod{2N}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+k = n +2v
+\end{equation*}
+</div></article><article class="example-like" id="example-9"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.65</span>
+</h6>
+<p id="p-193">\(n = 1, N = 1\) \(P(m) = m^v\) \(v= 0,1\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde \theta_P(z) = \sum_{m\in \ZZ} m^v e(m^2z/2)
+\end{equation*}
+</div>
+<p>for \(v=0\) this is classical \(\theta\) for \(v = 1\) cusp form on \(\Gamma_0(8)\) of weight \(3/2\text{,}\) we could also twist by a character mod 4.</p></article><article class="example-like" id="example-10"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.66</span>
+</h6>
+<p id="p-194">\(A = I_{n \times n}\) \(P\) spherical harmonic of degree \(v\)</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde \theta_P(z; 0, 1) = \sum _{m \in \ZZ^n} P(m) e(|m|^2 z/2)
+\end{equation*}
+</div>
+<p>set \(z=2z\)</p>
+<div class="displaymath">
+\begin{equation*}
+\theta_P(z) = \sum_{m\in \ZZ} P(m) e(|m|^2 z)\text{.}
+\end{equation*}
+</div></article><article class="remark-like" id="note-4"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.67</span>
+</h6>
+<div class="displaymath" id="p-195">
+\begin{equation*}
+\theta_P (z) \in S_k(\Gamma_0(4))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+k = \frac h2 + v,\,v \gt 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\theta_P (z)\in M_{h/2}(\Gamma_0(4))
+\end{equation*}
+</div>
+<p>not cuspidal.</p></article><article class="example-like" id="example-11"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.68</span>
+</h6>
+<p id="p-196">\(A = 4\times 4\) integral positive definite</p>
+<div class="displaymath">
+\begin{equation*}
+Q = Q_A(x),\, x^\transpose A x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_Q(n) = \# \{ x \in \ZZ^4:Q(x) = n\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\theta_Q(z) = \sum_{n=0}^\infty r_Q(n) e(nz) \in M_2(\Gamma_0(N))
+\end{equation*}
+</div>
+<p>for some \(N = 4\det(A)\text{.}\)</p></article><article class="paragraphs" id="paragraphs-16"><h5 class="heading"><span class="title">Half-integral weight Ramanujan conjecture (Metaplectic)</span></h5>
+<p id="p-197">Naively we would like to mimic the integral case and say</p>
+<div class="displaymath">
+\begin{equation*}
+a_f(n) = O(n^{(k-1)/2 + \epsilon})
+\end{equation*}
+</div>
+<p>where \(f\in S_k(\Gamma)\text{.}\)</p>
+<p id="p-198">But this is not true as stated here!:</p>
+<article class="example-like" id="example-12"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.69</span>
+</h6>
+<p id="p-199">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\theta(z;  \chi) = \sum_{m\in \ZZ} m \chi(m) e(m^2 z)
+\end{equation*}
+</div>
+<p>for odd \(\chi\) this is a cusp form in \(S_k(\Gamma, \chi)\text{.}\) For \(k=3/2\text{,}\) let \(f =\theta\) and</p>
+<div class="displaymath">
+\begin{equation*}
+a_f(m^2) \sim m\chi(m) \implies a_f(n) = O(\sqrt{n})
+\end{equation*}
+</div>
+<p>for \(n\) square. But \((k -1)/2= 1/4\) but  \(O(\sqrt n)\) is not \(O(n^{1/4 + \epsilon})\) for any \(\epsilon \ge 1/4\text{.}\)</p></article><p id="p-200">So we avoid these or stick to squarefree \(n\text{.}\)</p>
+<article class="theorem-like" id="conj-half-integral-ramanujan"><h6 class="heading">
+<span class="type">Conjecture</span> <span class="codenumber">1.70</span> <span class="title">Half-integral weight Ramanujan conjecture</span>
+</h6>
+<div class="displaymath" id="p-201">
+\begin{equation*}
+a_f(n) = O(n^{(k-1)/2 + \epsilon})
+\end{equation*}
+</div>
+<p>for all \(n\) square-free \(f\in S_k(\Gamma, \chi)\text{.}\)</p></article><p id="p-202">Why this exponent? For integral weight: Representation theory gives \(a_f(m)\)'s  which correspond to Hecke eigenvalues which under Langlands are tempered for \(\GL_N\text{.}\)</p>
+<p id="p-203">Digression:</p>
+<article class="theorem-like" id="proposition-3"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">1.71</span> <span class="title">Hecke bound</span>
+</h6>
+<p id="p-204">\(f \in S_k(\Gamma)\) then \(a_f(n) = O(n^{k/2})\text{.}\)</p></article><article class="hiddenproof" id="proof-19"><a knowl="" class="id-ref" refid="hk-proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-205">\(y = \Im(z), y(\gamma z) = |cz+d| ^{-2} y\) so</p>
+<div class="displaymath">
+\begin{equation*}
+F(z) = y^{k/2}  |f(z)|
+\end{equation*}
+</div>
+<p>Invariant on \(\Gamma\) bounded at the cusps \(|F(z)| \lt M\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 f(z) e(nx) = e^{-2 \pi i ny }a_f(n)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\le \int_0^1 y^{-k/2} M = O(y^{-k/2})
+\end{equation*}
+</div>
+<p>so \(a_f(n) = O(y^{-k/2} e^{2\pi i n y})\) with \(y = 1/n\text{.}\)</p></article></div>
+<p id="p-206">Another digression:</p>
+<p id="p-207">What is the distribution of rational points on \(S^2\text{?}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\{x_1^2 + x_2^2 + x_3^2 = 1: x_i \in \QQ\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\iff r_3(n^2)
+\end{equation*}
+</div>
+<article class="theorem-like" id="proposition-4"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">1.72</span> <span class="title">Hurwitz</span>
+</h6>
+<p id="p-208">A generating function for this is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n =1}^\infty \frac{r_3(n^2)}{n^s} = 6(1-2^{1-s}) \frac{\overbrace{\zeta(s) \zeta(1-s)}^{=\sum \sigma(n)/n^s}}{L(s, \legendre{-1}{\cdot})}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-4"><a knowl="" class="id-ref" refid="hk-exercise-4"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.73</span>
+</h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-209">Prove this!</p></article></div></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];

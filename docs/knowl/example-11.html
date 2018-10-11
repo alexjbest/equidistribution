@@ -11,19 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>If we knew a <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 1.62: Half-integral weight modular forms">half-integral</a> weight Ramanujan conjecture:</p>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.68</span>
+</h6>
+<p>\(A = 4\times 4\) integral positive definite</p>
 <div class="displaymath">
 \begin{equation*}
-f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
+Q = Q_A(x),\, x^\transpose A x
 \end{equation*}
 </div>
-<p>for squarefree \(n\)</p>
 <div class="displaymath">
 \begin{equation*}
-a_f(n) = O(n^{(k-1)/2 +\epsilon})\text{.}
+r_Q(n) = \# \{ x \in \ZZ^4:Q(x) = n\}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec-equidistribution-intro.html#p-178">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+\theta_Q(z) = \sum_{n=0}^\infty r_Q(n) e(nz) \in M_2(\Gamma_0(N))
+\end{equation*}
+</div>
+<p>for some \(N = 4\det(A)\text{.}\)</p></article><span class="incontext"><a href="sec-equidistribution-intro.html#example-11">in-context</a></span>
 </body>
 </html>
