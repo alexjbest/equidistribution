@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Detour: bounding Fourier coefficients</span></h5>
+<p>There are various approaches, such as Poincare series, Kloosterman sums, and bound these, to get a bound on the Fourier coefficient.</p>
+<p>If \(f\in S_{k_1} (N_1)\) we will write  a spanning set for \(S_{k_1}(N_1)\text{,}\) then bound fourier coefficients on each of these guys, which will suffice.</p>
+<p>Poincare series:</p>
+<p>If we were just looking for a modular form we might try Eisenstein series</p>
+<div class="displaymath">
+\begin{equation*}
+E_k(z) = \sum_{c,d} \frac{1}{(cz+d)^{2k}}
+\end{equation*}
+</div>
+<p>these are not cuspidal. But if we twist this  a little bit</p>
+<div class="displaymath">
+\begin{equation*}
+P_m(z; k) = \sum_{\gamma \in \Gamma_\infty \backslash \Gamma} j(\gamma;   z)^{-2k} e(m \gamma z)\text{.}
+\end{equation*}
+</div>
+<p>Where \(\Gamma_\infty = \left\{ \begin{pmatrix} 1\amp n \\ 0 \amp 1 \end{pmatrix}\right\}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+j(\gamma; z) = \left( \frac cd \right) \epsilon_d \inv (cz+d)^{1/2}
+\end{equation*}
+</div>
+<p>they converge absolutely for \(k \gt 2\text{.}\)</p>
+<p>Some properties:</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.77</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+P_m(\tau z; k) = (cz+d)^{2k}  P_m(z; k)
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-21-hidden.html" title="Proof 1.77.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">1.78</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+P_m(z) \in S_k(\Gamma)
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-22-hidden.html" title="Proof 1.78.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.79</span>
+</h6>
+<p>Let \(f(z) = \sum a_f(n) e(nz)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\pair{P_m(z; k) }{ f}_\mathrm{Pet} =\frac{\overline a_f(m) }{(4 \pi m)^{k-1}}\Gamma(k-1)\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-23-hidden.html" title="Proof 1.79.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-17">in-context</a></span>
+</body>
+</html>

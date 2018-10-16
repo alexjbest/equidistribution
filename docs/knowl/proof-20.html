@@ -11,31 +11,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Classically</p>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>(Sketch) expand the formula, take \(n=p\) an odd prime</p>
 <div class="displaymath">
 \begin{equation*}
-\widetilde \theta(z) = \sum_{m\in \ZZ} e^{i \pi m^2z}
+\zeta(s) \zeta(1-s) = \sum \frac{\sigma(n)}{n^s}
 \end{equation*}
 </div>
-<p>converges absolutely on \(z\in \HH\)</p>
+<p>(exercise)</p>
 <div class="displaymath">
 \begin{equation*}
-\widetilde \theta(z + 2) =\widetilde \theta(z)
+L(s, \chi_{-4})\inv = \prod_p(1- \frac{\chi_{-4}(p)}{p^s})
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\sum \frac{r_3(n^2)}{n^s} = \sum \frac{\sigma(m_1)}{m_1^s} \prod (1 - \chi_{-4}(m_p)/p^s) 6 (1-2^{1-s})
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\widetilde \theta(-1/z ) = \sqrt{-iz} \widetilde \theta(z)
+= \sum \frac{\sigma(m_1)}{m_1^s} \sum \mu(m_) \chi_{-4}(m_2)/m_2^s 6 (1-2^{1-s})
 \end{equation*}
 </div>
-<p>in general for \(\gamma \in \Gamma_0(4)\)</p>
+<p>so</p>
 <div class="displaymath">
 \begin{equation*}
-\widetilde \theta(\gamma z ) = j(\gamma ; z) \widetilde \theta(z)
+r_3(p^2) = (\sigma(p) - \chi_{-4}(p))6 \ge 6p
 \end{equation*}
-</div>
-<p>where \(j(\gamma;  z) = \legendre cd \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  \(-1\) if  \(d\equiv 3 \pmod 4\) sign of Gauss sum. \(\legendre cd\) is  a sibling of Legendre form.</p>
-<span class="incontext"><a href="sec-equidistribution-intro.html#p-182">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-equidistribution-intro.html#proof-20">in-context</a></span>
 </body>
 </html>
