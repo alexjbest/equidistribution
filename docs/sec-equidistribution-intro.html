@@ -2103,12 +2103,12 @@ m\gamma z  = m \frac{az+ b}{cz+d} = m \left( \frac ac - \frac{1}{c(cz+d)}\right)
 <p id="p-242">So our main integral is</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{c\gt 0 ,\,d\in \ZZ/c^\times} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{(cz+d)^k} e(m\frac ac - \frac{m}{c(cz+d)} -nz) \diff z
+\sum_{c\gt 0 ,\,d\in \ZZ/c^\times} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{(cz+d)^k} e\left(m\frac ac - \frac{m}{c(cz+d)} -nz\right) \diff z
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\sum_{c\gt 0 ,\,d\in \ZZ/c^\times,\,ad\equiv 1 \pmod c} \frac{e((ma+nd)/c)}{c^k} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{z^k} e( - (zn + \frac{m}{c^2z}) \diff z
+\sum_{c\gt 0 ,\,d\in \ZZ/c^\times,\,ad\equiv 1 \pmod c} \frac{e((ma+nd)/c)}{c^k} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{z^k} e\left( - \left(zn + \frac{m}{c^2z} \right)\right) \diff z
 \end{equation*}
 </div>
 <p id="p-243">Then use the following integral representation</p>
@@ -2130,7 +2130,7 @@ P_m(z) = \sum_{n=1}^\infty \hat P_m(n) e(nz)
 </div>
 <div class="displaymath">
 \begin{equation*}
-\hat P_m(n) = \left( \frac nm \right)^{(k-1)/2} \left\{ \delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N,\,c \gt 0} J_{k-1} \left( \frac {4\pi \sqrt{mn}}{c}  \frac{K(m,n; c)}{c} \right)\right\}
+\hat P_m(n) = \left( \frac nm \right)^{(k-1)/2} \left\{ \delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N,\,c \gt 0} J_{k-1} \left( \frac {4\pi \sqrt{mn}}{c} \right) \frac{K(m,n; c)}{c} \right\}
 \end{equation*}
 </div>
 <p id="p-245">Digression: Let \(\Gamma = \SL_2(\ZZ)\text{,}\) \(k= 12\) then \(S_k(\Gamma) = \langle \Delta \rangle\)</p>
@@ -2170,7 +2170,7 @@ P_m(z) = \frac{2\pi 10!}{(4\pi m )^{11}} \frac{\Delta(z)}{\| \Delta\|^2_{\mathrm
 <p id="p-249">For any  \(m,n \ge 1 \)</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{\Gamma(k-1)}{ ( 4\pi \sqrt{mn})^{k-1}} \sum_{f\text{ o.n. basis for }S_k(\Gamma)} \overline a_f(m) a_f(n) = \delta_{m,n} +  \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N,\,c \gt 0} J_{k-1} \left( \frac {4\pi \sqrt{mn}}{c}  \frac{K(m,n; c)}{c} \right)\text{.}
+\frac{\Gamma(k-1)}{ ( 4\pi \sqrt{mn})^{k-1}} \sum_{f\text{ o.n. basis for }S_k(\Gamma)} \overline a_f(m) a_f(n) = \delta_{m,n} +  \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N,\,c \gt 0} J_{k-1} \left( \frac {4\pi \sqrt{mn}}{c} \right)  \frac{K(m,n; c)}{c}\text{.}
 \end{equation*}
 </div></article><article class="hiddenproof" id="proof-26"><a knowl="" class="id-ref" refid="hk-proof-26"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-26" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-250">Let \(P_m(z) = \sum_f \pair{P_m(z)}{f}f\) then</p>
 <div class="displaymath">
