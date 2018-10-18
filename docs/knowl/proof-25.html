@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 P_m(z,k) e(-nz) \diff z = \int_0^1 \left( \sum_{\pm \Gamma_\infty \backslash \Gamma} j(\gamma ; z) ^{-2k} e(m\gamma z)\right) e(-nz) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \\int_0^1 \underbrace{j(1; z)^{-2k} e((m-n)z)}_{\delta_{m,n}} \diff z + \text{rest}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_0^1 j(1; z)^{-2k} e((m-n)) \diff z + \text{rest}
+\end{equation*}
+</div>
+<p>Note:</p>
+<div class="displaymath">
+\begin{equation*}
+e(\begin{pmatrix} 1\amp n \\ 0 \amp 1 \end{pmatrix} z) = e(z)\text{.}
+\end{equation*}
+</div>
+<p>So</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1\sum_{\Gamma_\infty\backslash \Gamma} j(\gamma; z)^{-2k} e(m \gamma z) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_0^1sum_{\Gamma_\infty\backslash \Gamma /\Gamma_\infty} \sum_{\gamma_\infty \in \Gamma_\infty} j(\gamma \gamma_\infty z)^{-2k} e(m\gamma \gamma_\infty z) e(-nz) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 \sum_{\Gamma_\infty\backslash \Gamma /\Gamma_\infty} \sum_{\alpha \in \ZZ} j(\gamma ; z+ \alpha )^{-2k} e(m\gamma (z + \alpha)) e(-nz) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 \sum_{\Gamma_\infty\backslash \Gamma /\Gamma_\infty} j(\gamma ; z)^{-2k} e(m\gamma z-nz) \diff z
+\end{equation*}
+</div>
+<p>Note:</p>
+<div class="displaymath">
+\begin{equation*}
+m\gamma z  = m \frac{az+ b}{cz+d} = m \left( \frac ac - \frac{1}{c(cz+d)}\right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\pm \Gamma_\infty \backslash \Gamma / \Gamma_\infty  =\{ (a,d,c) : c \gt 0 ,\,a,d \in (\ZZ/c)^\times,\,ad \equiv 1 \pmod c\}
+\end{equation*}
+</div>
+<p>So our main integral is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{c\gt 0 ,\,d\in \ZZ/c^\times} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{(cz+d)^k} e(m\frac ac - \frac{m}{c(cz+d)} -nz) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{c\gt 0 ,\,d\in \ZZ/c^\times,\,ad\equiv 1 \pmod c} \frac{e((ma+nd)/c)}{c^k} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{z^k} e( - (zn + \frac{m}{c^2z}) \diff z
+\end{equation*}
+</div>
+<p>Then use the following integral representation</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{-\infty + iA}^{\infty + iA} w^{-k} e^{-(\mu_1 w + \mu_2 m\inv)} \diff w
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= 2\pi \left(\frac {\mu_1}{\mu_2}\right)^{(k-1)/2} e^{i k \pi / 2} J_{k-1} (4 \pi \sqrt{\mu_1\mu_2})
+\end{equation*}
+</div></article><span class="incontext"><a href="sec-equidistribution-intro.html#proof-25">in-context</a></span>
+</body>
+</html>
