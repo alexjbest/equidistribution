@@ -12,13 +12,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>LHS is calculating a Fourier coefficient. i.e.</p>
 <div class="displaymath">
-\begin{align*}
-\int_0^1 P_m(z,k) e(-nz) \diff z \amp= \int_0^1 \left( \sum_{\pm \Gamma_\infty \backslash \Gamma} j(\gamma ; z) ^{-2k} e(m\gamma z)\right) e(-nz) \diff z\\
-\amp= \int_0^1 \underbrace{j(1; z)^{-2k} e((m-n)z)}_{\delta_{m,n}} \diff z + \text{rest}\\
-\amp= \int_0^1 j(1; z)^{-2k} e((m-n)) \diff z + \text{rest}
-\end{align*}
+\begin{equation*}
+h_{m,n} (\alpha) = \legendre{\alpha^2 - \overline m n }{p}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-equidistribution-intro.html#p-238">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+\text{LHS} = \hat h(2m)
+\end{equation*}
+</div>
+<p>the above two lemmas imply</p>
+<div class="displaymath">
+\begin{equation*}
+K(m,n ; p)
+\end{equation*}
+</div>
+<p>is the Fourier coefficient \(\hat h_{m,n}(m)\text{.}\)</p>
+<span class="incontext"><a href="sec-equidistribution-intro.html#p-268">in-context</a></span>
 </body>
 </html>

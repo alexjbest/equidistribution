@@ -98,6 +98,7 @@ MathJax.Hub.Config({
 
 \newcommand{\Ar}{\mathrm{Ar}}
 \newcommand{\dR}{\mathrm{dR}}
+\newcommand{\crys}{\mathrm{crys}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
 \newcommand{\Pet}{\mathrm{Pet}}
 
@@ -1926,9 +1927,9 @@ r_3(n^2, P) = \sum_{d|n} A_P(d)  \mu\left(\frac nd \right) \chi_{-4}\left(\frac 
 </div>
 <p>hence if \(A_P(d) \ll d^{l+1 -\delta}\) then we are done.</p></article><p id="p-220">The Hecke bound implies \(A_P(d) \ll d^{l +1}\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">Detour: bounding Fourier coefficients</span></h5>
-<p id="p-221">There are various approaches, such as Poincare series, Kloosterman sums, and bound these, to get a bound on the Fourier coefficient.</p>
+<p id="p-221">There are various approaches, such as Poincaré series, Kloosterman sums, and bound these, to get a bound on the Fourier coefficient.</p>
 <p id="p-222">If \(f\in S_{k_1} (N_1)\) we will write  a spanning set for \(S_{k_1}(N_1)\text{,}\) then bound fourier coefficients on each of these guys, which will suffice.</p>
-<p id="p-223">Poincare series:</p>
+<p id="p-223">Poincaré series:</p>
 <p id="p-224">If we were just looking for a modular form we might try Eisenstein series</p>
 <div class="displaymath">
 \begin{equation*}
@@ -2024,7 +2025,7 @@ P_m(z) \in S_k(\Gamma)
 </h6>
 <div class="displaymath" id="p-237">
 \begin{equation*}
-\pair{P_m(z,k)}{P_n(z,k)} = \left( \frac mn \right)^{(k-1)/2} \left(\delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N} J_{k=1} \left( \frac{2\pi \sqrt{mn}}{c} \right)\frac{K(m,n; c)}{c}\right)
+\pair{P_m(z,k)}{P_n(z,k)} = \left( \frac mn \right)^{(k-1)/2} \left(\delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N} J_{k-1} \left( \frac{2\pi \sqrt{mn}}{c} \right)\frac{K(m,n; c)}{c}\right)
 \end{equation*}
 </div>
 <p>where</p>
@@ -2048,19 +2049,11 @@ K(m,n; c) = \sum _{d\in (\ZZ/c)^\times } \left(\frac cd \right)^{2k} \epsilon_d^
 \delta_{m,n} = \begin{cases} 1 \amp m=n,\\ 0 \amp m\ne n\end{cases}\text{.}
 \end{equation*}
 </div></article><article class="hiddenproof" id="proof-25"><a knowl="" class="id-ref" refid="hk-proof-25"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-25" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-238">
-\begin{equation*}
-\int_0^1 P_m(z,k) e(-nz) \diff z = \int_0^1 \left( \sum_{\pm \Gamma_\infty \backslash \Gamma} j(\gamma ; z) ^{-2k} e(m\gamma z)\right) e(-nz) \diff z
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \\int_0^1 \underbrace{j(1; z)^{-2k} e((m-n)z)}_{\delta_{m,n}} \diff z + \text{rest}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \int_0^1 j(1; z)^{-2k} e((m-n)) \diff z + \text{rest}
-\end{equation*}
+\begin{align*}
+\int_0^1 P_m(z,k) e(-nz) \diff z \amp= \int_0^1 \left( \sum_{\pm \Gamma_\infty \backslash \Gamma} j(\gamma ; z) ^{-2k} e(m\gamma z)\right) e(-nz) \diff z\\
+\amp= \int_0^1 \underbrace{j(1; z)^{-2k} e((m-n)z)}_{\delta_{m,n}} \diff z + \text{rest}\\
+\amp= \int_0^1 j(1; z)^{-2k} e((m-n)) \diff z + \text{rest}
+\end{align*}
 </div>
 <p id="p-239">Note:</p>
 <div class="displaymath">
@@ -2160,7 +2153,7 @@ P_{m}(z; 12) \in S_{12} (1) = \langle \Delta\rangle
 <p>so</p>
 <div class="displaymath">
 \begin{equation*}
-P_m(z) = \frac{2\pi 10!}{(4\pi m )^{11}} \frac{\Delta(z)}{\| \Delta\|^2_{\mathrm{Pet}}} \tau(m)
+P_m(z) = \frac{2\pi 10!}{(4\pi m )^{11}} \frac{\Delta(z)}{\| \Delta\|^2_{\mathrm{Pet}}} \tau(m)\text{.}
 \end{equation*}
 </div>
 <p id="p-248">Another consequence:</p>
@@ -2183,7 +2176,195 @@ P_m(z) = \frac{2\pi 10!}{(4\pi m )^{11}} \frac{\Delta(z)}{\| \Delta\|^2_{\mathrm
 \begin{equation*}
 \pair{P_m(z)}{P_n(z)} = \frac{\Gamma(k-1)}{(4\pi m)^{k-1}} \left(\frac mn\right)^{(k-1)/2} \left\{ \cdots \right\}\text{.}
 \end{equation*}
-</div></article></div></section></section></div></main>
+</div></article></div>
+<aside class="aside-like" id="aside-12"><p id="p-251">Lecture 12 23/10/2018</p></aside><p id="p-252">Recall Shimura gave us</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty  \frac{r_3(n^2, P)}{n^s} = \frac{\sum_{n=1}^\infty \frac{A_P(n)}{n^s}}{L(s-l, \chi_{-4})}
+\end{equation*}
+</div>
+<p>where the numerators is the \(L\)-function of a modular form of weight \(2l + 2\) where \(l = \deg P\text{.}\)</p>
+<p id="p-253">We want to show \(A_P(n) \ll n^{1+l-\delta}\) for some \(\delta \gt 0\text{.}\)</p>
+<p id="p-254">Idea: Poincaré series span cusp forms, so its enough to bound Fourier coefficients of these.</p>
+<p id="p-255">We know</p>
+<div class="displaymath">
+\begin{equation*}
+\hat P_m(n) = \left(\frac nm \right)^{(k-1)/2} \left( \delta_{m,n} + 2 \pi i^{-k} \sum_{c \equiv 0 \pmod N,\, c \gt 0}\overbrace{\frac{K(m,n,c)}{c}}^{\sum_{x \pmod{^* c}} e((x m + \overline x n)/c)} J_{k-1} \left(\frac {4 \pi \sqrt{mn}}{c}\right) \right)\text{.}
+\end{equation*}
+</div>
+<p id="p-256">Try: Input 1:</p>
+<div class="displaymath">
+\begin{equation*}
+J_{k-1}(x) \ll \min\{x^{k-1},1/\sqrt{x}\}\text{.}
+\end{equation*}
+</div>
+<p id="p-257">Trivial input:</p>
+<div class="displaymath">
+\begin{equation*}
+| K(m, n; c) | \lt c\text{.}
+\end{equation*}
+</div>
+<p id="p-258">For</p>
+<div class="displaymath">
+\begin{equation*}
+c \gg \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \left( \frac{\sqrt{mn}}{c} \right)^{k-1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lt \left(\frac nm \right)^{(k-1)/2} \sum_{c \gg \sqrt{nm}} \frac{1}{c^{k-1}} (mn)^{(k-1)/2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lt n^{k-1} \frac{1}{\sqrt{mn}^{k-2}} = O(n^{k-1 - (k-2)/2})
+\end{equation*}
+</div>
+<p>for</p>
+<div class="displaymath">
+\begin{equation*}
+c \ll \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \frac{\sqrt c}{(mn)^{1/4}}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lt \left( \frac nm \right)^{(k-1)/2} \sum_{c\ll \sqrt{nm}} \frac{\sqrt{c}}{(mn)^{1/4}} = O (n^{k/2})\text{.}
+\end{equation*}
+</div>
+<p id="p-259">Note \(k/2 = l+1\text{:}\) So we are just short, we have \(O(n^{l+1})\) rather than \(O(n^{l+1-\delta})\) for all \(\delta \gt 0\text{,}\) just by using a stupid bound for \(K(m,n; c)\text{.}\)</p>
+<p id="p-260">More major input (Weil bound):</p>
+<div class="displaymath">
+\begin{equation*}
+|K(m,n \chi ) | \ll_\epsilon c^{1/2 +\epsilon}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies | \hat P_m(n) | = O(n^{k/2 - 1/4 + \epsilon})
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\forall \epsilon \lt \frac 14
+\end{equation*}
+</div>
+<p>this does the job.</p>
+<p id="p-261">So we have finished proving Linnik for \(n^2\text{,}\) it wasn't too bad, the major inputs were the Shimura correspondence.</p>
+<p id="p-262">When we move to the general case things will be totally different.</p>
+<article class="remark-like" id="remark-8"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.84</span>
+</h6>
+<p id="p-263">Weil bound comes from the Riemann hypothesis for curves over finite fields.</p></article><article class="theorem-like" id="lemma-8"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.85</span>
+</h6>
+<p id="p-264">Let \(p\) be an odd prime \(p\nmid mn\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{x \pmod{^* p},xy=1} e\left( \frac{xm + \overline yn}{p}\right)  = \sum_{x^2 - n \overline m = y^2 \pmod p}          e\left( \frac { 2mx}{p} \right)
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-27"><a knowl="" class="id-ref" refid="hk-proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-265">Reparameterise \(xy =1\text{,}\) \(x= a+b,y= a-b\text{.}\) Exercise.</p></article></div>
+<article class="theorem-like" id="lemma-9"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.86</span>
+</h6>
+<div class="displaymath" id="p-266">
+\begin{equation*}
+\sum_{x \pmod p} \legendre{x^2 - n \overline m}{p} e\left( \frac {2m x}{p}\right) = \sum_{x^2 - \overline m n y^2} e\left( \frac{2xm}{p}\right)\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-28"><a knowl="" class="id-ref" refid="hk-proof-28"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-28" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-267">
+\begin{equation*}
+\sum_{x \pmod p} \legendre{x^2 - n \overline m}{p} e\left( \frac {2m x}{p}\right) = \sum_{x\pmod p} \left(\legendre{x^2 - n \overline m}{p}  + 1 \right) e\left( \frac {2m x}{p}\right)\text{.}
+\end{equation*}
+</div></article></div>
+<article class="remark-like" id="note-5"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.87</span>
+</h6>
+<p id="p-268">LHS is calculating a Fourier coefficient. i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+h_{m,n} (\alpha) = \legendre{\alpha^2 - \overline m n }{p}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\text{LHS} = \hat h(2m)
+\end{equation*}
+</div>
+<p>the above two lemmas imply</p>
+<div class="displaymath">
+\begin{equation*}
+K(m,n ; p)
+\end{equation*}
+</div>
+<p>is the Fourier coefficient \(\hat h_{m,n}(m)\text{.}\)</p></article><p id="p-269">So</p>
+<div class="displaymath">
+\begin{equation*}
+h(\QQ(\sqrt{u^2 - 4\overline m n})) \sim L\left( 1, \legendre{u^2 - 4 \overline  m n}{\cdot} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\text{Selberg trace formula} \leftrightarrow_{\text{Fourier transform}} \text{Petersson trace formula}\text{.}
+\end{equation*}
+</div>
+<article class="remark-like" id="remark-9"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.88</span>
+</h6>
+<p id="p-270">In the non-square case we want \(|r_3(n,P)| \ll n^{k/2 - 1/4 - \delta}\text{.}\)</p></article><p id="p-271">This is because of the subtlety of the Shimura correspondence.</p>
+<p id="p-272">More precisely for \(n\) squarefree \(n^{k/2 - 1/4 - \delta}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\theta(z; P) \text{ weight } \frac 32 + \deg P = k
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_3(n ; P) \gg n^{1/2 - \delta}
+\end{equation*}
+</div>
+<p>want</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(n; P ) \ll n^{k/2 - 1/4 - \delta}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|}\right) = |n|^{-\deg P / 2} r_(n ,  P)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_3(n, P )  \lt n^{k/2 - 1/4 - \delta} = n^{3/4 + \deg P/2 - 1/4 - \delta}
+\end{equation*}
+</div>
+<p id="p-273">for \(n^2\)</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(n^2) \gg n
+\end{equation*}
+</div>
+<p>have Shimura</p>
+<div class="displaymath">
+\begin{equation*}
+\theta(z; P) \leadsto \text{weight }k
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+A_p(n^2)
+\end{equation*}
+</div>
+<p>are fourier coefficients of a weight \(2 \deg P  + 2\) form.</p>
+<article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">Back to \(r_3(n,P)\)</span></h5>
+<p id="p-274">\(n\)-squarefree, we don't  have Shimura, but we still have the Fourier expansion of \(P_m(z)\text{.}\)</p>
+<p id="p-275">Strategy: We will first exploit a certain form of these Kloosterman sums for \(\Delta\) squarefree, Salié sums. Major detail</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_c \frac{K(m, n ; c)}{c}
+\end{equation*}
+</div>
+<p>will bound these not individually, but by showing that the angles of these cancel. We show other equidistribution results from equidistribution of Kloosterman sums essentially.</p></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];

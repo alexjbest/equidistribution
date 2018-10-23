@@ -1387,13 +1387,13 @@ section#sec-equidistribution-intro
             title Detour: bounding Fourier coefficients
 
             p
-                | There are various approaches, such as Poincare series, Kloosterman sums, and bound these, to get a bound on the Fourier coefficient.
+                | There are various approaches, such as Poincaré series, Kloosterman sums, and bound these, to get a bound on the Fourier coefficient.
 
             p
                 | If #[m f\in S_{k_1} (N_1)] we will write  a spanning set for #[m S_{k_1}(N_1)], then bound fourier coefficients on each of these guys, which will suffice.
 
             p
-                | Poincare series:
+                | Poincaré series:
             p
                 | If we were just looking for a modular form we might try Eisenstein series
                 me E_k(z) = \sum_{c,d} \frac{1}{(cz+d)^{2k}}
@@ -1453,7 +1453,7 @@ section#sec-equidistribution-intro
 
         proposition
             statement: p
-                me \pair{P_m(z,k)}{P_n(z,k)} = \left( \frac mn \right)^{(k-1)/2} \left(\delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N} J_{k=1} \left( \frac{2\pi \sqrt{mn}}{c} \right)\frac{K(m,n; c)}{c}\right)
+                me \pair{P_m(z,k)}{P_n(z,k)} = \left( \frac mn \right)^{(k-1)/2} \left(\delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N} J_{k-1} \left( \frac{2\pi \sqrt{mn}}{c} \right)\frac{K(m,n; c)}{c}\right)
                 | where
                 me J_k \text{ is the Bessel function of the first kind}
                 me N\text{ s.t. } \Gamma = \Gamma_0(N)
@@ -1463,9 +1463,10 @@ section#sec-equidistribution-intro
 
             proof
                 p
-                    me \int_0^1 P_m(z,k) e(-nz) \diff z = \int_0^1 \left( \sum_{\pm \Gamma_\infty \backslash \Gamma} j(\gamma ; z) ^{-2k} e(m\gamma z)\right) e(-nz) \diff z
-                    me                                  = \\int_0^1 \underbrace{j(1; z)^{-2k} e((m-n)z)}_{\delta_{m,n}} \diff z + \text{rest}
-                    me                                  = \int_0^1 j(1; z)^{-2k} e((m-n)) \diff z + \text{rest}
+                    md
+                        mrow \int_0^1 P_m(z,k) e(-nz) \diff z \amp= \int_0^1 \left( \sum_{\pm \Gamma_\infty \backslash \Gamma} j(\gamma ; z) ^{-2k} e(m\gamma z)\right) e(-nz) \diff z
+                        mrow                                \amp= \int_0^1 \underbrace{j(1; z)^{-2k} e((m-n)z)}_{\delta_{m,n}} \diff z + \text{rest}
+                        mrow                                \amp= \int_0^1 j(1; z)^{-2k} e((m-n)) \diff z + \text{rest}
 
                 p
                     | Note:
@@ -1513,6 +1514,7 @@ section#sec-equidistribution-intro
             me \pair{P_m(z)}{\Delta} = \frac{\overline a_m}{(4\pi m )^{k-1}}  \Gamma(k-1)  = \frac{2 \pi \overline{\tau (m)}}{(4 \pi m)^{k-1}} \Gamma(k-1) = \frac{2\pi 10!}{(4\pi m )^{11}}
             | so
             me P_m(z) = \frac{2\pi 10!}{(4\pi m )^{11}} \frac{\Delta(z)}{\| \Delta\|^2_{\mathrm{Pet}}} \tau(m)
+            |.
 
         p
             | Another consequence:
@@ -1529,3 +1531,129 @@ section#sec-equidistribution-intro
                     | on the other hand
                     me \pair{P_m(z)}{P_n(z)} = \frac{\Gamma(k-1)}{(4\pi m)^{k-1}} \left(\frac mn\right)^{(k-1)/2} \left\{ \cdots \right\}
                     | .
+
+        aside: p Lecture 12 23/10/2018
+
+        p
+            | Recall Shimura gave us
+            me \sum_{n=1}^\infty  \frac{r_3(n^2, P)}{n^s} = \frac{\sum_{n=1}^\infty \frac{A_P(n)}{n^s}}{L(s-l, \chi_{-4})}
+            | where the numerators is the #[m L]-function of a modular form of weight #[m 2l + 2] where #[m l = \deg P].
+        p
+            | We want to show #[m A_P(n) \ll n^{1+l-\delta}] for some #[m \delta \gt 0].
+
+        p
+            | Idea:
+            | Poincaré series span cusp forms, so its enough to bound Fourier coefficients of these.
+
+        p
+            | We know
+            me \hat P_m(n) = \left(\frac nm \right)^{(k-1)/2} \left( \delta_{m,n} + 2 \pi i^{-k} \sum_{c \equiv 0 \pmod N,\, c \gt 0}\overbrace{\frac{K(m,n,c)}{c}}^{\sum_{x \pmod{^* c}} e((x m + \overline x n)/c)} J_{k-1} \left(\frac {4 \pi \sqrt{mn}}{c}\right) \right)
+            | .
+        p
+            | Try: Input 1:
+            me J_{k-1}(x) \ll \min\{x^{k-1},1/\sqrt{x}\}
+            | .
+        p
+            | Trivial input:
+            me | K(m, n; c) | \lt c
+            | .
+
+        p
+            | For
+            me c \gg \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \left( \frac{\sqrt{mn}}{c} \right)^{k-1}
+            me                  \lt \left(\frac nm \right)^{(k-1)/2} \sum_{c \gg \sqrt{nm}} \frac{1}{c^{k-1}} (mn)^{(k-1)/2}
+            me                           \lt n^{k-1} \frac{1}{\sqrt{mn}^{k-2}} = O(n^{k-1 - (k-2)/2})
+            | for
+            me c \ll \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \frac{\sqrt c}{(mn)^{1/4}}
+            me \lt \left( \frac nm \right)^{(k-1)/2} \sum_{c\ll \sqrt{nm}} \frac{\sqrt{c}}{(mn)^{1/4}} = O (n^{k/2})
+            | .
+
+        p
+            | Note #[m k/2 = l+1]:
+            | So we are just short, we have #[m O(n^{l+1})] rather than #[m O(n^{l+1-\delta})] for all #[m \delta \gt 0], just by using a stupid bound for #[m K(m,n; c)].
+
+        p
+            | More major input (Weil bound):
+            me |K(m,n \chi ) | \ll_\epsilon c^{1/2 +\epsilon}
+            me \implies | \hat P_m(n) | = O(n^{k/2 - 1/4 + \epsilon})
+            | so
+            me \forall \epsilon \lt \frac 14
+            | this does the job.
+        p
+            | So we have finished proving Linnik for #[m n^2], it wasn't too bad, the major inputs were the Shimura correspondence.
+        p
+            | When we move to the general case things will be totally different.
+
+        remark
+            p
+                | Weil bound comes from the Riemann hypothesis for curves over finite fields.
+
+        lemma
+            statement: p
+                | Let #[m  p] be an odd prime #[m p\nmid mn].
+                me \sum_{x \pmod{^* p},xy=1} e\left( \frac{xm + \overline yn}{p}\right)  = \sum_{x^2 - n \overline m = y^2 \pmod p}          e\left( \frac { 2mx}{p} \right)
+            proof
+                p
+                    | Reparameterise #[m xy =1], #[m x= a+b,y= a-b].
+                    | Exercise.
+
+        lemma
+            statement: p
+                me \sum_{x \pmod p} \legendre{x^2 - n \overline m}{p} e\left( \frac {2m x}{p}\right) = \sum_{x^2 - \overline m n y^2} e\left( \frac{2xm}{p}\right)
+                | .
+            proof: p
+                me \sum_{x \pmod p} \legendre{x^2 - n \overline m}{p} e\left( \frac {2m x}{p}\right) = \sum_{x\pmod p} \left(\legendre{x^2 - n \overline m}{p}  + 1 \right) e\left( \frac {2m x}{p}\right)
+                | .
+
+        note
+            p
+                | LHS is calculating a Fourier coefficient.
+                | i.e.
+                me h_{m,n} (\alpha) = \legendre{\alpha^2 - \overline m n }{p}
+                me \text{LHS} = \hat h(2m)
+                | the above two lemmas imply
+                me K(m,n ; p)
+                | is the Fourier coefficient #[m \hat h_{m,n}(m)].
+
+        p
+            |So
+            me h(\QQ(\sqrt{u^2 - 4\overline m n})) \sim L\left( 1, \legendre{u^2 - 4 \overline  m n}{\cdot} \right)
+            me \text{Selberg trace formula} \leftrightarrow_{\text{Fourier transform}} \text{Petersson trace formula}
+            |.
+
+
+        remark
+            p
+                | In the non-square case we want #[m |r_3(n,P)| \ll n^{k/2 - 1/4 - \delta}].
+        p
+            | This is because of the subtlety of the Shimura correspondence.
+        p
+            | More precisely for #[m n] squarefree #[m n^{k/2 - 1/4 - \delta}]
+            me \theta(z; P) \text{ weight } \frac 32 + \deg P = k
+            me r_3(n ; P) \gg n^{1/2 - \delta}
+            | want
+            me r_3(n; P ) \ll n^{k/2 - 1/4 - \delta}
+            me \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|}\right) = |n|^{-\deg P / 2} r_(n ,  P)
+            me r_3(n, P )  \lt n^{k/2 - 1/4 - \delta} = n^{3/4 + \deg P/2 - 1/4 - \delta}
+        p
+            | for #[m n^2]
+            me r_3(n^2) \gg n
+            | have Shimura
+            me \theta(z; P) \leadsto \text{weight }k
+            me A_p(n^2)
+            | are fourier coefficients of a weight #[m 2 \deg P  + 2] form.
+
+        paragraphs
+            title Back to #[m r_3(n,P)]
+            p
+                | #[m n]-squarefree, we don't  have Shimura, but we still have the Fourier expansion of #[m P_m(z)].
+
+            p
+                | Strategy:
+                | We will first exploit a certain form of these Kloosterman sums for #[m  \Delta] squarefree, Salié sums.
+                | Major detail
+                me \sum_c \frac{K(m, n ; c)}{c}
+                | will bound these not individually, but by showing that the angles of these cancel.
+                | We show other equidistribution results from equidistribution of Kloosterman sums essentially.
+
+
