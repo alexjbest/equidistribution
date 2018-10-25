@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<div class="displaymath">
+\begin{equation*}
+c_q(r) = \sum_{x\pmod{^* q }}e\left( \frac{xr}{q} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=\sum_{d|q} \sum_{a \pmod {^* q/d}} e\left( \frac{ar}{q/d}\right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=\sum_{d|q} c_{q/d} (r)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=\sum_{d|q} c_d(r)
+\end{equation*}
+</div>
+<p>let</p>
+<div class="displaymath">
+\begin{equation*}
+F(q)=\sum_{d|q} c_d(r)
+\end{equation*}
+</div>
+<p>then by Möbius inversion</p>
+<div class="displaymath">
+\begin{equation*}
+c_q(r)  = \sum_{d|q} \mu\left( \frac dq\right) F(d)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+F(d) = \sum_{x\pmod d} \left(\frac{xr}{d} \right) = \begin{cases} d \amp \text{ if } d|r,\\0 \amp \text{otw} \end{cases}
+\end{equation*}
+</div></article><span class="incontext"><a href="sec-equidistribution-intro.html#proof-30">in-context</a></span>
+</body>
+</html>

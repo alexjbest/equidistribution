@@ -1657,3 +1657,145 @@ section#sec-equidistribution-intro
                 | We show other equidistribution results from equidistribution of Kloosterman sums essentially.
 
 
+        aside: p Lecture 13 25/10/2018
+
+        paragraphs
+            title Main issue
+
+            p
+                me \sum_c \frac{K(m,n ; c)}{c} J_{k-1} \left(\frac{4\pi \sqrt{mn}}{c}\right)
+                | saw that bounding each individual #[m K(m, n; c)] falls short of what is needed.
+
+        paragraphs
+            title Detour (Salié sums)
+
+            p
+                | Recall for #[m  k = \frac 32 + l] the sums we are getting are
+                me K_k(m, n ; c) = \sum_{d \pmod{^* c}} \epsilon_d^{-2k} \left(\frac cd \right) e\left( \frac{ md + n \overline d}{d} \right)
+                | where
+                me \legendre{c}{d} \text{ Kronecker symbol}
+                me  \epsilon_d = \begin{cases} 1 \amp d \equiv1 \pmod 4,\\ i \amp d \equiv -1 \pmod 4\end{cases}
+            p
+                | It will turn out that these sums can be calculated in elementary terms.
+                | Analogy
+                me K_k(m, n ; c) \leftrightarrow K_k
+                | for #[m k \in \frac 12 + \ZZ], #[m J_k(x)] is expressible in terms of elementary functions, e.g.
+                me J_{1/2}(x) = \sqrt{\frac{2}{\pi x}} \cdot \sin(x)
+                me J_{3/2}(x) = \sqrt{\frac{2}{\pi}} \cdot\left(\frac{\sin(x)}{x^{3/2}} -\frac{\cos(x)}{\sqrt x}  \right)
+            p
+                | Calculation:
+                | Reductions:
+            lemma
+                statement: p
+                    | Let #[m c = rq] with #[m (r,q) = 1] and #[m 4\mid r],
+                    me K_k(m,n; c) = K_{ k- q + 1}(m \overline q, n \overline q ; r) S(m \overline r, n \overline r; q)
+                    | where
+                    me S(m, n; q) = \sum_{x \pmod{^* q}} \legendre{x}{q} e\left(\frac{mx + n \overline x}{q}\right)
+                    | is the Salié sum.
+            exercise
+                statement: p
+                    | Prove this.
+
+            lemma
+                statement: p
+                    | #[m q] prime
+                    ol
+                        li
+                            me S(m,n ; q)   = \legendre mn S(q, mn; q)
+                        li
+                            me S(1, m; q) = 0
+                            | unless #[m \legendre{m}{q} = 1].
+                        li
+                            me S(1, n^2; q) = \underbrace {\epsilon_q  \sqrt q}_{G(q)} \sum_{x^2 \equiv1 \pmod q} e\left(\frac{2xn}{q}\right)
+                proof
+                    p
+                        ol
+                            li
+                                me x = \overline m y
+                            li
+                                me x = m \overline y
+                            li
+                                me S(1, n^2; q) = \sum_{x\pmod{^* q}} \legendre{x}{q} e\left( \frac{x + n^2 \overline x}{q}\right)
+                                | recall DFT
+                                me f(u) = \frac 1q \sum_{\alpha \pmod q} \hat f(\alpha) e\left( \frac{\alpha u}{q}\right)
+                                me \hat f(\alpha) = \sum _{u\pmod q} f (u) e\left( \frac{-\alpha u}{q}\right)
+                                me = \sum_{q\pmod q} \sum _{x\pmod{^* q}} \legendre xq e \left( \frac{x + u^2 \overline x}{q} \right) e\left(\frac{-\alpha u}{q} \right)
+                                me  = \sum_{u \pmod q,x\pmod{^* q}} \legendre xq e\left(\frac xq\right) e\left( \frac{y^2 \overline x  - \alpha u}{q}\right)
+                                me  = \sum_{x\pmod{^* q}} \legendre xq e\left( \frac{x(1- \overline 4x^2)}{q}\right)\underbrace{ \sum_{u \pmod q} e\left(\frac{\overline x (u - 2\alpha x)^2}{q}\right)}_{\legendre xq G(q)}
+                                me G(q) \sum_{x \pmod{^* q}} e\left( \frac{ x (1 - \overline 4 \alpha^2)}{q}\right)
+                                | we need some more results to conclude!
+
+            lemma
+                statement: p
+                    | Let
+                    me c_q(r) = \sum_{x\pmod{^* q}} e\left( \frac{rx}{q}\right)
+                    | then
+                    me c_q(r) = \sum_{d|gcd(q,r)} \mu\left(\frac qd \right) d
+                    | .
+                proof: p
+                    me c_q(r) = \sum_{x\pmod{^* q }}e\left( \frac{xr}{q} \right)
+                    me =\sum_{d|q} \sum_{a \pmod {^* q/d}} e\left( \frac{ar}{q/d}\right)
+                    me =\sum_{d|q} c_{q/d} (r)
+                    me =\sum_{d|q} c_d(r)
+                    | let
+                    me F(q)=\sum_{d|q} c_d(r)
+                    | then by Möbius inversion
+                    me c_q(r)  = \sum_{d|q} \mu\left( \frac dq\right) F(d)
+                    me F(d) = \sum_{x\pmod d} \left(\frac{xr}{d} \right) = \begin{cases} d \amp \text{ if } d|r,\\0 \amp \text{otw} \end{cases}
+
+            note
+                p
+                    me c_q(r) = \mu \left( \frac{q}{\gcd(q,r)}\right) \frac{\phi (q)}{\phi(q/\gcd(q,r))}
+
+            p
+                | This lemma implies that in the proof above we have
+                me G(q) c_{q} (q-  \overline 4 \alpha^2) = G(q) \sum_{d|\gcd(q,(1-\overline 4 \alpha^2))} \mu \left(\frac qd \right) d
+                | so putting everything together
+                me f(u) = \frac 1q \sum_{\alpha \pmod q} \left( G(q) \sum_{d|\gcd(q,(1-\overline 4 \alpha^2))} \mu \left(\frac qd \right) d \right) e\left(\frac{\alpha u}{q} \right)
+                me      = \frac{G(q)}q \sum_{d|q} \sum_{\alpha \pmod q,\overline 4 \alpha^2 - 1 \equiv 0 \pmod d} d e\left(\frac{\alpha u}{q} \right)
+
+            lemma
+                statement: p
+                    me \sum_{\alpha \pmod q,\overline 4 \alpha^2 - 1 \equiv 0 \pmod d} e\left(\frac{\alpha u}{q} \right) = 0 \text{ if } d\ne q
+                proof: p
+                    | If #[m d \ne q] then #[m de = q], #[m e \ne 1], #[m \alpha = \alpha_1 + d\alpha_2]
+                    | so
+                    me \sum_\alpha = \sum_{\alpha_1,d,\overline 4 \alpha_1 ^2 = 1 \pmod d} e\left( \frac{\alpha_1 u}{q}\right)  \sum_{\alpha_2} e\left( \frac{\alpha_2 u}{q}\right) = 0
+                    | .
+
+            p
+                | This finishes the proof for Salié sums.
+
+            theorem
+                title Major theorem (Iwaniec '87)
+                statement: p
+                    | Use this calculation + Petersson formula + genus
+                    | Let #[m f\in S_k(N)] of weight #[m 2k \ge 1 ] and #[m 2k] odd.
+                    | Then for #[m n ] squarefree and #[m \forall \epsilon \gt 0]:
+                    me a_f(n) \ll_\epsilon n^{k/2 - 1/4 - 1/28 + \epsilon}
+                    | .
+
+            corollary
+                statement: p
+                    me r_3(n, P) \ll n^{k/2 - 1/4 - 1/28 + \epsilon}
+                    | for all #[m \deg(P) \gt 0].
+
+            p
+                | Final input:
+                | Lower bound (Gauss, Siegel):
+                | Gauss showed
+                me r_3(n) = \frac{24}{w(d)} h(d) \left( 1- \legendre d2 \right)
+                | where #[m h(d)] is the class number #[m \QQ(\sqrt{-n})] where #[m d = \disc (\QQ{-n})] and #[m w(d)] is the number of roots of unity in thisfield.
+            exercise
+                statement: p Show this
+
+            question
+                statement: p
+                    |  How large is #[m h(d)]?
+            p
+                | Euler, Siegel
+
+            theorem
+                statement: p
+                    me h(D) \gg_\epsilon |D|^{1/2 - \epsilon}
+                    me L(q,\chi_D)  \gg_\epsilon |D|^{-\epsilon}

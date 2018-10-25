@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Detour (Salié sums)</span></h5>
+<p>Recall for \(k = \frac 32 + l\) the sums we are getting are</p>
+<div class="displaymath">
+\begin{equation*}
+K_k(m, n ; c) = \sum_{d \pmod{^* c}} \epsilon_d^{-2k} \left(\frac cd \right) e\left( \frac{ md + n \overline d}{d} \right)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\legendre{c}{d} \text{ Kronecker symbol}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\epsilon_d = \begin{cases} 1 \amp d \equiv1 \pmod 4,\\ i \amp d \equiv -1 \pmod 4\end{cases}
+\end{equation*}
+</div>
+<p>It will turn out that these sums can be calculated in elementary terms. Analogy</p>
+<div class="displaymath">
+\begin{equation*}
+K_k(m, n ; c) \leftrightarrow K_k
+\end{equation*}
+</div>
+<p>for \(k \in \frac 12 + \ZZ\text{,}\) \(J_k(x)\) is expressible in terms of elementary functions, e.g.</p>
+<div class="displaymath">
+\begin{equation*}
+J_{1/2}(x) = \sqrt{\frac{2}{\pi x}} \cdot \sin(x)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+J_{3/2}(x) = \sqrt{\frac{2}{\pi}} \cdot\left(\frac{\sin(x)}{x^{3/2}} -\frac{\cos(x)}{\sqrt x}  \right)
+\end{equation*}
+</div>
+<p>Calculation: Reductions:</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.89</span>
+</h6>
+<p>Let \(c = rq\) with \((r,q) = 1\) and \(4\mid r\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+K_k(m,n; c) = K_{ k- q + 1}(m \overline q, n \overline q ; r) S(m \overline r, n \overline r; q)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+S(m, n; q) = \sum_{x \pmod{^* q}} \legendre{x}{q} e\left(\frac{mx + n \overline x}{q}\right)
+\end{equation*}
+</div>
+<p>is the Salié sum.</p></article><article class="exercise-like"><a knowl="./knowl/exercise-5-hidden.html" title="Exercise 1.90"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.90</span>
+</h6></a></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.91</span>
+</h6>
+<p>\(q\) prime</p>
+<ol class="decimal">
+<li><div class="displaymath">
+\begin{equation*}
+S(m,n ; q)   = \legendre mn S(q, mn; q)
+\end{equation*}
+</div></li>
+<li>
+<div class="displaymath">
+\begin{equation*}
+S(1, m; q) = 0
+\end{equation*}
+</div>unless \(\legendre{m}{q} = 1\text{.}\)</li>
+<li><div class="displaymath">
+\begin{equation*}
+S(1, n^2; q) = \underbrace {\epsilon_q  \sqrt q}_{G(q)} \sum_{x^2 \equiv1 \pmod q} e\left(\frac{2xn}{q}\right)
+\end{equation*}
+</div></li>
+</ol></article><article class="hiddenproof"><a knowl="./knowl/proof-29-hidden.html" title="Proof 1.91.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.92</span>
+</h6>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+c_q(r) = \sum_{x\pmod{^* q}} e\left( \frac{rx}{q}\right)
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+c_q(r) = \sum_{d|gcd(q,r)} \mu\left(\frac qd \right) d\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-30-hidden.html" title="Proof 1.92.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="remark-like"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">1.93</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+c_q(r) = \mu \left( \frac{q}{\gcd(q,r)}\right) \frac{\phi (q)}{\phi(q/\gcd(q,r))}
+\end{equation*}
+</div></article><p>This lemma implies that in the proof above we have</p>
+<div class="displaymath">
+\begin{equation*}
+G(q) c_{q} (q-  \overline 4 \alpha^2) = G(q) \sum_{d|\gcd(q,(1-\overline 4 \alpha^2))} \mu \left(\frac qd \right) d
+\end{equation*}
+</div>
+<p>so putting everything together</p>
+<div class="displaymath">
+\begin{equation*}
+f(u) = \frac 1q \sum_{\alpha \pmod q} \left( G(q) \sum_{d|\gcd(q,(1-\overline 4 \alpha^2))} \mu \left(\frac qd \right) d \right) e\left(\frac{\alpha u}{q} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{G(q)}q \sum_{d|q} \sum_{\alpha \pmod q,\overline 4 \alpha^2 - 1 \equiv 0 \pmod d} d e\left(\frac{\alpha u}{q} \right)
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.94</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\alpha \pmod q,\overline 4 \alpha^2 - 1 \equiv 0 \pmod d} e\left(\frac{\alpha u}{q} \right) = 0 \text{ if } d\ne q
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-31-hidden.html" title="Proof 1.94.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>This finishes the proof for Salié sums.</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.95</span> <span class="title">Major theorem (Iwaniec '87)</span>
+</h6>
+<p>Use this calculation + Petersson formula + genus Let \(f\in S_k(N)\) of weight \(2k \ge 1 \) and \(2k\) odd. Then for \(n \) squarefree and \(\forall \epsilon \gt 0\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_f(n) \ll_\epsilon n^{k/2 - 1/4 - 1/28 + \epsilon}\text{.}
+\end{equation*}
+</div></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Corollary</span> <span class="codenumber">1.96</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+r_3(n, P) \ll n^{k/2 - 1/4 - 1/28 + \epsilon}
+\end{equation*}
+</div>
+<p>for all \(\deg(P) \gt 0\text{.}\)</p></article><p>Final input: Lower bound (Gauss, Siegel): Gauss showed</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(n) = \frac{24}{w(d)} h(d) \left( 1- \legendre d2 \right)
+\end{equation*}
+</div>
+<p>where \(h(d)\) is the class number \(\QQ(\sqrt{-n})\) where \(d = \disc (\QQ{-n})\) and \(w(d)\) is the number of roots of unity in thisfield.</p>
+<article class="exercise-like"><a knowl="./knowl/exercise-6-hidden.html" title="Exercise 1.97"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.97</span>
+</h6></a></article><article class="example-like"><h6 class="heading">
+<span class="type">Question</span> <span class="codenumber">1.98</span>
+</h6>
+<p>How large is \(h(d)\text{?}\)</p></article><p>Euler, Siegel</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.99</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+h(D) \gg_\epsilon |D|^{1/2 - \epsilon}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+L(q,\chi_D)  \gg_\epsilon |D|^{-\epsilon}
+\end{equation*}
+</div></article></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-20">in-context</a></span>
+</body>
+</html>
