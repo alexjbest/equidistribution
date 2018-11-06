@@ -2004,7 +2004,7 @@ section#sec-duke
         me \frac{1}{|\Lambda_d|} \sum_{z_Q \in \Lambda_d} f(z_Q) \to \int_{\Gamma \backslash \HH} \diff \mu (z)
         | Siegel's theorem gives a lower bound
         me \frac{1}{|\Lambda_d|} \sum_{z_Q \in \Lambda_d} 1
-        | Subconvexity bound  on #[m L(\frac 12 + it, \chi_d)] and nonvanishing #[m \zeta(1 + 2i t)].
+        | Subconvexity bound  on #[m L(\frac 12 + it, \chi_d)] and non-vanishing #[m \zeta(1 + 2i t)].
         me \frac{1}{|\Lambda_d|} \sum_{z_Q \in \Lambda_d} E(z_Q, \frac 12  + it)
         | is
         me \frac{1}{|\Lambda_d|} \sum_{z_Q \in \Lambda_d} \phi(z_Q)
@@ -2099,27 +2099,109 @@ section#sec-linnik
     paragraphs
         title Problem
 
+        aside: p Lecture 16 6/11/2018
         p
             | Distribution of
-            me \mathscr H = \{ (x,y,z) \in \ZZ^3 : x^2 + y^2 + z^2 = d\}
+            me \mathscr H_d = \{ (x,y,z) \in \ZZ^3 : x^2 + y^2 + z^2 = d\}
             | as #[m d \to \infty].
         theorem
             title Linnik
             statement: p
-                | As #[m d \to \infty] squarefree #[m d \equiv \pm 1 \pmod 5]
-                me \left\{ \frac {x}{\sqrt d} : x \in \mathscr H \right\}
+                | As #[m d \to \infty] squarefree such that #[m d\not\equiv 7 \pmod 8],  #[m d \equiv \pm 1 \pmod 5]
+                me \left\{ \frac {x}{\sqrt d} : x \in \mathscr H_d \right\}
                 | is equidistributed w.r.t. the Lebesgue measure
                 me \red_\infty \colon \mathscr H_d \to S^2
                 me \frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
-                | #[m \Omega] nice.
+                | in the sense that
+                me \frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
+                | for any #[m \Omega] a reasonable subset of #[m S^2].
 
         p
-            | A variant
+            | The #[m \pm 1\pmod 5] condition comes from a splitting condition in #[m \QQ(\sqrt{d})] that we need to find an appropriate group action.
+
+        p
+            | We will rather focus on the following variant
         theorem
             title Linnik variant
             statement: p
-                me \mathscr H_d( q) = \{ x^2 + y^2 + z^3 = d \pmod q \}
-                | with #[m q] fixed #[m \gt 0] and #[m (q,30)  =1].
-                | As #[m d \to  \infty], #[m d] squarefree and #[m d \equiv \pm 1 \pmod 5].
-                | #[m \overline {\mathscr H}_d] becomes equidistributed in #[m \mathscr H_d(q)] w.r.t   measure.
+                me \overline{\mathscr H}_d = \{ (x,y,x) \pmod q : (x,y,z)\in \mathscr H_d\}
+                | with #[m q] fixed #[m \gt 0] and #[m (q,30)  =1] (non-essential).
+                | As #[m d \to  \infty], #[m d] squarefree such that #[m d \not \equiv 7 \pmod 8] and #[m d \equiv \pm 1 \pmod 5].
+                | #[m \overline {\mathscr H}_d(q)] becomes equidistributed in #[m \mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}] w.r.t counting measure, explicitly
                 me \frac{| \red\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
+                | as #[m d \to \infty].
+
+        p
+            | Actually we will prove something a little strange.
+
+        definition#def-deviation
+            title Deviation
+            statement
+                p
+                    | #[m \infty], let #[m \rho \gt 0], #[m x\in S^2] and consider the cap #[m \Omega(x,\rho)].
+                    me \operatorname{dev}_d(\Omega) = \frac {1}{\operatorname{Vol}(\Omega)} \frac{| \operatorname{red}\inv_\infty(\Omega)|}{|\mathscr H_d|} - 1
+                    | (we want to show this is #[m o(1)]).
+                p
+                    | #[m q], let #[m \bar x \in \mathscr H_d(q)] then
+                    me \operatorname{dev}_d(\bar x) = \frac {| \mathscr H_d(q)| | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|} - 1
+                    |.
+                    // TODO check here
+
+        theorem
+            statement: p
+                | Fix #[m \delta, \eta \gt 0] then for every
+                me \rho \ge d^{-1/4 + \eta}
+                me \frac 1q  \ge d^{-1/4 + \eta}
+                | #[m (q,30) = 1], then as #[m d\to \infty]
+                me \mu_{S^2}(x : \operatorname{dev}_d(\Omega(x, \rho)) \ge \delta) \to 0
+                me \frac{| \{ \bar x \in \mathscr H_d(q) : \operatorname{dev}_d(\bar x) \ge \delta \} |}{ |\mathscr H_d(q)|} \to 0
+                | .
+        p
+            | How?
+            | Sketch of the argument:
+        p
+            | Fix #[m \delta ,\eta \gt 0],
+            me B_\delta = \{ \bar x \in \mathscr H_q(d) : \operatorname{dev}_d(\bar x) \gt \delta \}
+            | and assume that
+            me  |B_\delta| \ge \eta |\mathscr H_d(q)|
+            | .
+        p
+            | Inputs
+            ol
+                li
+                    | There is an action of #[m H(d) = ] class group of #[m \QQ(\sqrt{-d})] on #[m \mathscr H_d(q)/ \specialorthogonal_3(\ZZ)].
+                    | As #[m d \equiv \pm 1 \pmod 5] so #[m (5) = \ideal p \bar{\ideal p}] in #[m \QQ(\sqrt{-d})]:
+                    | This gives us a well defined dynamical system by considering the action
+                    me \mathscr H_d(q) \ni  x \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
+                    | and in reverse
+                    me x_{-2} \to x_{-1} \to x  \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
+                    | call this chain #[m \gamma_X] and for any #[m l \gt 0 \in \ZZ]
+                    me \gamma_X^{(l)} = [x_{-l}, x_{-l + 1}, \ldots, x_{-1} ,  x,x_1, \ldots, x_l]
+                li
+                    | consider the average on
+                    me B_\delta = \gamma_X^{(l)} \cap B_\delta
+                    | .
+                    | On one hand the expected size of #[m \gamma_X^{(l)} \cap B_\delta] is
+                    me \frac{1}{|\mathscr H_d|} \sum_{x \in \mathscr H_d} | \gamma_X^{(l)} \cap B_\delta|
+                    | on the other hand the expectation is
+                    me \frac{(2l+ 1)}{|\mathscr H_d|} \operatorname{red}_q\inv (B_\delta)
+                    | .
+                    | i.e.
+                    me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l + 1} = \frac{| \operatorname{red}\inv_q(B_\delta)|}{|\mathscr H_d|}
+                li
+                    | Since we assume that the deviation set is large (#[m \operatorname{dev}_d(x)  \gt \delta]) this implies on average
+                    me \frac{| \gamma_X^{(l)} \cap B_\delta|}{2l+1}
+                    | is large,
+                    | gives a lower bound for this.
+                li
+                    | Then we count  #[m \gamma_X^{(l)}] in another way, action of #[m H(d)] on #[m \mathscr H_d] and on #[m \mathscr H_d(q)].
+                    | action of #[m \ideal p] induces a graph structure on #[m \mathscr H_d(q)].
+                    | Then #[m \gamma_X^{(l)}] is a path on #[m \mathscr H_d(q)] which is non-backtracking.
+                    | Count these:
+                    | Inputs: for #[m l \sim  \log(d)] the number of non-backtracking paths for which #[m |\gamma_X^{(l)} \cap B_\delta|/(2l+1)] is large is #[m \gg d^{1/2 + \epsilon}].
+                    | Count the total number of non-backtracking paths of length #[m 2l+1] for which
+                    me \left| \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l+1 } - \frac{|B_\delta|}{|\mathscr H_d(q)|} \right| \gt \delta\eta/2
+                    | There can not be too many of these.
+                    | This will give a contradiction.
+                    | Will take some work and depend on many things.
+

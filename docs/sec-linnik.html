@@ -99,6 +99,7 @@ MathJax.Hub.Config({
 \newcommand{\Ar}{\mathrm{Ar}}
 \newcommand{\dR}{\mathrm{dR}}
 \newcommand{\crys}{\mathrm{crys}}
+\newcommand{\cris}{\mathrm{cris}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
 \newcommand{\Pet}{\mathrm{Pet}}
 
@@ -237,6 +238,8 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\unitary}{U}
 \DeclareMathOperator{\specialunitary}{SU}
 \DeclareMathOperator{\Sym}{Sym}
+
+\DeclareMathOperator{\ch}{ch}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -275,23 +278,23 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Linnik's theorem</span>
 </h2>
 <a href="sec-linnik.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-351">We will mostly follow Ellenberg, Michel, Venkatesh. Linnik's ergodic method and the distribution of integer points on spheres.</p></section><article class="paragraphs" id="paragraphs-26"><h5 class="heading"><span class="title">Problem</span></h5>
-<p id="p-352">Distribution of</p>
+<aside class="aside-like" id="aside-16"><p id="p-352">Lecture 16 6/11/2018</p></aside><p id="p-353">Distribution of</p>
 <div class="displaymath">
 \begin{equation*}
-\mathscr H = \{ (x,y,z) \in \ZZ^3 : x^2 + y^2 + z^2 = d\}
+\mathscr H_d = \{ (x,y,z) \in \ZZ^3 : x^2 + y^2 + z^2 = d\}
 \end{equation*}
 </div>
 <p>as \(d \to \infty\text{.}\)</p>
 <article class="theorem-like" id="theorem-29"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.1</span> <span class="title">Linnik</span>
 </h6>
-<p id="p-353">As \(d \to \infty\) squarefree \(d \equiv \pm 1 \pmod 5\)</p>
+<p id="p-354">As \(d \to \infty\) squarefree such that \(d\not\equiv 7 \pmod 8\text{,}\)  \(d \equiv \pm 1 \pmod 5\)</p>
 <div class="displaymath">
 \begin{equation*}
-\left\{ \frac {x}{\sqrt d} : x \in \mathscr H \right\}
+\left\{ \frac {x}{\sqrt d} : x \in \mathscr H_d \right\}
 \end{equation*}
 </div>
-<p>is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> w.r.t. the Lebesgue measure</p>
+<p>is equidistributed w.r.t. the Lebesgue measure</p>
 <div class="displaymath">
 \begin{equation*}
 \red_\infty \colon \mathscr H_d \to S^2
@@ -302,21 +305,126 @@ MathJax.Hub.Config({
 \frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
 \end{equation*}
 </div>
-<p>\(\Omega\) nice.</p></article><p id="p-354">A variant</p>
+<p>in the sense that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
+\end{equation*}
+</div>
+<p>for any \(\Omega\) a reasonable subset of \(S^2\text{.}\)</p></article><p id="p-355">The \(\pm 1\pmod 5\) condition comes from a splitting condition in \(\QQ(\sqrt{d})\) that we need to find an appropriate group action.</p>
+<p id="p-356">We will rather focus on the following variant</p>
 <article class="theorem-like" id="theorem-30"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.2</span> <span class="title">Linnik variant</span>
 </h6>
-<div class="displaymath" id="p-355">
+<div class="displaymath" id="p-357">
 \begin{equation*}
-\mathscr H_d( q) = \{ x^2 + y^2 + z^3 = d \pmod q \}
+\overline{\mathscr H}_d = \{ (x,y,x) \pmod q : (x,y,z)\in \mathscr H_d\}
 \end{equation*}
 </div>
-<p>with \(q\) fixed \(\gt 0\) and \((q,30)  =1\text{.}\) As \(d \to  \infty\text{,}\) \(d\) squarefree and \(d \equiv \pm 1 \pmod 5\text{.}\) \(\overline {\mathscr H}_d\) becomes <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> in \(\mathscr H_d(q)\) w.r.t   measure.</p>
+<p>with \(q\) fixed \(\gt 0\) and \((q,30)  =1\) (non-essential). As \(d \to  \infty\text{,}\) \(d\) squarefree such that \(d \not \equiv 7 \pmod 8\) and \(d \equiv \pm 1 \pmod 5\text{.}\) \(\overline {\mathscr H}_d(q)\) becomes equidistributed in \(\mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}\) w.r.t counting measure, explicitly</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{| \red\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
 \end{equation*}
-</div></article></article></section></div></main>
+</div>
+<p>as \(d \to \infty\text{.}\)</p></article><p id="p-358">Actually we will prove something a little strange.</p>
+<article class="definition-like" id="def-deviation"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.3</span> <span class="title">Deviation</span>
+</h6>
+<p id="p-359">\(\infty\text{,}\) let \(\rho \gt 0\text{,}\) \(x\in S^2\) and consider the cap \(\Omega(x,\rho)\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\operatorname{dev}_d(\Omega) = \frac {1}{\operatorname{Vol}(\Omega)} \frac{| \operatorname{red}\inv_\infty(\Omega)|}{|\mathscr H_d|} - 1
+\end{equation*}
+</div>
+<p>(we want to show this is \(o(1)\)).</p>
+<p id="p-360">\(q\text{,}\) let \(\bar x \in \mathscr H_d(q)\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\operatorname{dev}_d(\bar x) = \frac {| \mathscr H_d(q)| | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|} - 1\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-31"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.4</span>
+</h6>
+<p id="p-361">Fix \(\delta, \eta \gt 0\) then for every</p>
+<div class="displaymath">
+\begin{equation*}
+\rho \ge d^{-1/4 + \eta}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac 1q  \ge d^{-1/4 + \eta}
+\end{equation*}
+</div>
+<p>\((q,30) = 1\text{,}\) then as \(d\to \infty\)</p>
+<div class="displaymath">
+\begin{equation*}
+\mu_{S^2}(x : \operatorname{dev}_d(\Omega(x, \rho)) \ge \delta) \to 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac{| \{ \bar x \in \mathscr H_d(q) : \operatorname{dev}_d(\bar x) \ge \delta \} |}{ |\mathscr H_d(q)|} \to 0\text{.}
+\end{equation*}
+</div></article><p id="p-362">How? Sketch of the argument:</p>
+<p id="p-363">Fix \(\delta ,\eta \gt 0\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+B_\delta = \{ \bar x \in \mathscr H_q(d) : \operatorname{dev}_d(\bar x) \gt \delta \}
+\end{equation*}
+</div>
+<p>and assume that</p>
+<div class="displaymath">
+\begin{equation*}
+|B_\delta| \ge \eta |\mathscr H_d(q)|\text{.}
+\end{equation*}
+</div>
+<p id="p-364">Inputs</p>
+<ol class="decimal">
+<li id="li-65">There is an action of \(H(d) = \) class group of \(\QQ(\sqrt{-d})\) on \(\mathscr H_d(q)/ \specialorthogonal_3(\ZZ)\text{.}\) As \(d \equiv \pm 1 \pmod 5\) so \((5) = \ideal p \bar{\ideal p}\) in \(\QQ(\sqrt{-d})\text{:}\) This gives us a well defined dynamical system by considering the action<div class="displaymath">
+\begin{equation*}
+\mathscr H_d(q) \ni  x \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
+\end{equation*}
+</div>and in reverse<div class="displaymath">
+\begin{equation*}
+x_{-2} \to x_{-1} \to x  \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
+\end{equation*}
+</div>call this chain \(\gamma_X\) and for any \(l \gt 0 \in \ZZ\)<div class="displaymath">
+\begin{equation*}
+\gamma_X^{(l)} = [x_{-l}, x_{-l + 1}, \ldots, x_{-1} ,  x,x_1, \ldots, x_l]
+\end{equation*}
+</div>
+</li>
+<li id="li-66">consider the average on<div class="displaymath">
+\begin{equation*}
+B_\delta = \gamma_X^{(l)} \cap B_\delta\text{.}
+\end{equation*}
+</div>On one hand the expected size of \(\gamma_X^{(l)} \cap B_\delta\) is<div class="displaymath">
+\begin{equation*}
+\frac{1}{|\mathscr H_d|} \sum_{x \in \mathscr H_d} | \gamma_X^{(l)} \cap B_\delta|
+\end{equation*}
+</div>on the other hand the expectation is<div class="displaymath">
+\begin{equation*}
+\frac{(2l+ 1)}{|\mathscr H_d|} \operatorname{red}_q\inv (B_\delta)\text{.}
+\end{equation*}
+</div>i.e.<div class="displaymath">
+\begin{equation*}
+\frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l + 1} = \frac{| \operatorname{red}\inv_q(B_\delta)|}{|\mathscr H_d|}
+\end{equation*}
+</div>
+</li>
+<li id="li-67">Since we assume that the deviation set is large (\(\operatorname{dev}_d(x)  \gt \delta\)) this implies on average<div class="displaymath">
+\begin{equation*}
+\frac{| \gamma_X^{(l)} \cap B_\delta|}{2l+1}
+\end{equation*}
+</div>is large, gives a lower bound for this.</li>
+<li id="li-68">Then we count  \(\gamma_X^{(l)}\) in another way, action of \(H(d)\) on \(\mathscr H_d\) and on \(\mathscr H_d(q)\text{.}\) action of \(\ideal p\) induces a graph structure on \(\mathscr H_d(q)\text{.}\) Then \(\gamma_X^{(l)}\) is a path on \(\mathscr H_d(q)\) which is non-backtracking. Count these: Inputs: for \(l \sim  \log(d)\) the number of non-backtracking paths for which \(|\gamma_X^{(l)} \cap B_\delta|/(2l+1)\) is large is \(\gg d^{1/2 + \epsilon}\text{.}\) Count the total number of non-backtracking paths of length \(2l+1\) for which<div class="displaymath">
+\begin{equation*}
+\left| \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l+1 } - \frac{|B_\delta|}{|\mathscr H_d(q)|} \right| \gt \delta\eta/2
+\end{equation*}
+</div>There can not be too many of these. This will give a contradiction. Will take some work and depend on many things.</li>
+</ol></article></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];

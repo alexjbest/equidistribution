@@ -99,6 +99,7 @@ MathJax.Hub.Config({
 \newcommand{\Ar}{\mathrm{Ar}}
 \newcommand{\dR}{\mathrm{dR}}
 \newcommand{\crys}{\mathrm{crys}}
+\newcommand{\cris}{\mathrm{cris}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
 \newcommand{\Pet}{\mathrm{Pet}}
 
@@ -237,6 +238,8 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\unitary}{U}
 \DeclareMathOperator{\specialunitary}{SU}
 \DeclareMathOperator{\Sym}{Sym}
+
+\DeclareMathOperator{\ch}{ch}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -276,7 +279,7 @@ MathJax.Hub.Config({
 </h2>
 <a href="sec-duke.html" class="permalink">¶</a><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">Recall</span></h5>
 <aside class="aside-like" id="aside-8"><p id="p-164">Lecture 8 4/10/2018</p></aside><p id="p-165"><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">1.9</a>.</p>
-<p id="p-166">We will now prove this, not via Linnik's proof, but via an analogue of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>. Strategy:</p>
+<p id="p-166">We will now prove this, not via Linnik's proof, but via an analogue of Weyl's criterion. Strategy:</p>
 <ol class="decimal">
 <li id="li-42">Weyl's criterion  \(\leadsto\) bounding exponential sums.</li>
 <li id="li-43">To bound these sums we will use automorphic methods.</li>
@@ -372,7 +375,7 @@ r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
 \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) \ll n^{\frac 12 - \delta}\text{.}
 \end{equation*}
 </div>
-<p id="p-178">If we knew a <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 2.6: Half-integral weight modular forms">half-integral</a> weight Ramanujan conjecture:</p>
+<p id="p-178">If we knew a half-integral weight Ramanujan conjecture:</p>
 <div class="displaymath">
 \begin{equation*}
 f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
@@ -1528,7 +1531,7 @@ h(\tilde n) \gg_\epsilon n^{1/2 - \epsilon}\text{.}
 \frac{1}{\sqrt n} \# \{ \alpha \in \ZZ^3 : |\alpha|^2 = n\}
 \end{equation*}
 </div>
-<p>gets <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> on \(S^3\) as \(n \to \infty\text{.}\)</p></article><p id="p-315">Recall this above was problem 1.</p>
+<p>gets equidistributed on \(S^3\) as \(n \to \infty\text{.}\)</p></article><p id="p-315">Recall this above was problem 1.</p>
 <article class="paragraphs" id="paragraphs-22"><h5 class="heading"><span class="title">Problem 2</span></h5>
 <p id="p-316">\(\Gamma = \SL_2(\ZZ)\)</p>
 <div class="displaymath">
@@ -1569,7 +1572,7 @@ L^2( \Gamma\backslash \HH) = \oint_\RR E( z, \frac 12 + iit) \diff \mu (t)
 \end{equation*}
 </div>
 <p>\(\phi_\lambda\) a Maass cusp form of eigenvalue \(\lambda\text{.}\)</p>
-<p id="p-321">Detour: <a knowl="./knowl/def-equidist-maass-form.html" title="Definition 2.52: Maass form">Maass forms</a> and Eisenstein series</p>
+<p id="p-321">Detour: Maass forms and Eisenstein series</p>
 <article class="definition-like" id="def-equidist-maass-form"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.52</span> <span class="title">Maass form</span>
 </h6>
@@ -1737,7 +1740,7 @@ L(\frac 12  + it, \chi_d   ) \ll_\epsilon | d|^{\frac 1{16} + \epsilon}
 \frac{1}{|\Lambda_d|} \sum_{z_Q \in \Lambda_d} 1
 \end{equation*}
 </div>
-<p>Subconvexity bound  on \(L(\frac 12 + it, \chi_d)\) and nonvanishing \(\zeta(1 + 2i t)\text{.}\)</p>
+<p>Subconvexity bound  on \(L(\frac 12 + it, \chi_d)\) and non-vanishing \(\zeta(1 + 2i t)\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{|\Lambda_d|} \sum_{z_Q \in \Lambda_d} E(z_Q, \frac 12  + it)

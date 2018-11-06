@@ -35,10 +35,10 @@ f(hx) = f(x)
 <p>An action of a group \(H\) on a locally compact space \(X\) is <dfn class="terminology">uniquely ergodic</dfn> if  there is only one invariant probability measure on \(X\text{.}\)</p></article><article class="example-like"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">1.47</span>
 </h6>
-<p>\(x\mapsto 5x\text{,}\) or \(x\mapsto \sqrt2 + x\) on \(T^1\) are ergodic, let's show that \(x\mapsto \sqrt 2 + x\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p></article><article class="theorem-like"><h6 class="heading">
+<p>\(x\mapsto 5x\text{,}\) or \(x\mapsto \sqrt2 + x\) on \(T^1\) are ergodic, let's show that \(x\mapsto \sqrt 2 + x\) is uniquely ergodic.</p></article><article class="theorem-like"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.48</span>
 </h6>
-<p>Let \(\alpha \in \RR\smallsetminus \QQ\) then \(T_\alpha \colon x  \to x+ \alpha\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p></article><article class="hiddenproof"><a knowl="./knowl/proof-16-hidden.html" title="Proof 1.48.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="example-like"><h6 class="heading">
+<p>Let \(\alpha \in \RR\smallsetminus \QQ\) then \(T_\alpha \colon x  \to x+ \alpha\) is uniquely ergodic.</p></article><article class="hiddenproof"><a knowl="./knowl/proof-16-hidden.html" title="Proof 1.48.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="example-like"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">1.49</span>
 </h6>
 <p>For \(x\mapsto 5x\) \(f = \sum a_ne(nx) = \sum a_n e(5nx)\) so \(a_n = a_{5n}\)</p>
@@ -68,7 +68,7 @@ f(hx) = f(x)
 \mu_N = \frac 1N \sum_{n \le N} \delta( x - a_n)
 \end{equation*}
 </div>
-<p>if these are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> then</p>
+<p>if these are equidistributed then</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{N \to \infty} \frac 1 N \sum_{n=1}^N f(a_n) = \int_X f(x) \diff \mu (x)\text{.}
@@ -95,7 +95,7 @@ f(hx) = f(x)
 <p>But the following does:</p></article><article class="theorem-like"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.54</span>
 </h6>
-<p>If \(X\) is compact and \(H \cong \RR\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a> with the unique \(H\)-invariant measure \(\mu\) then the statement of Birkhoff holds for every \(x \in X\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-17-hidden.html" title="Proof 1.54.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="remark-like"><h6 class="heading">
+<p>If \(X\) is compact and \(H \cong \RR\) is uniquely ergodic with the unique \(H\)-invariant measure \(\mu\) then the statement of Birkhoff holds for every \(x \in X\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-17-hidden.html" title="Proof 1.54.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="remark-like"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.55</span> <span class="title">Funny side remark (Benford's law)</span>
 </h6>
 <p>First digit of a set of observations are usually 1 (roughly 30%).</p>
@@ -105,7 +105,7 @@ f(hx) = f(x)
 \log_{10} b^n = n \log_{10} b
 \end{equation*}
 </div>
-<p>this is \(k\) iff \(n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1 \rb\text{.}\) If these are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> then the probability of \(k\) is</p>
+<p>this is \(k\) iff \(n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1 \rb\text{.}\) If these are equidistributed then the probability of \(k\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\log_{10} k}^{\log_{10} k+1} 1 \diff x = \log(1 + 1/k)\text{.}
@@ -113,6 +113,6 @@ f(hx) = f(x)
 </div></article><article class="theorem-like"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.56</span>
 </h6>
-<p>\(\{n ^2 \alpha\} \) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> for \(\alpha \in \RR\smallsetminus \QQ\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-18-hidden.html" title="Proof 1.56.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-12">in-context</a></span>
+<p>\(\{n ^2 \alpha\} \) is equidistributed for \(\alpha \in \RR\smallsetminus \QQ\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-18-hidden.html" title="Proof 1.56.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article></article><span class="incontext"><a href="sec-equidistribution-intro.html#paragraphs-12">in-context</a></span>
 </body>
 </html>
