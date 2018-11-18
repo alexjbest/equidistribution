@@ -11,164 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="paragraphs"><h5 class="heading"><span class="title">Duke's proof</span></h5>
-<ol class="decimal">
-<li>What to replace the exponential sums, i.e. the \(P\)'s?</li>
-<li>Follow the same strategy and bound the nontrivial sums from above (\(P \not \equiv 1\)), trivial sums from below (\(P \equiv 1\)).</li>
-</ol>
-<p>Recall \(\lb 0 ,1) \leadsto P = e(nx)\text{,}\) \(S^2 \leadsto P\) spherical harmonics, \(\Gamma \backslash \HH \leadsto\) automorphic forms \(E(z,s)\) or Maass cusp forms.</p>
-<p>Digression \(\Delta_{\text{hyp}} \acts \Gamma\backslash \HH\) fourier transform on \(\RR\) then \(f(x) = \int_{i\RR} \hat f(\alpha) e(\alpha x) \diff x\)</p>
+<article class="paragraphs"><h5 class="heading"><span class="title">Problem 2</span></h5>
+<p>\(\Gamma = \SL_2(\ZZ)\)</p>
 <div class="displaymath">
 \begin{equation*}
-S^1 \implies f(x) = \sum_{n\in \ZZ} \hat f (n) e(nx)
+\frac{1}{\# \Lambda_d} \sum_{z_Q \in \Lambda_d} f(z_Q) \to \int_{\Gamma \backslash \HH} f(z) \diff \mu (z)
 \end{equation*}
 </div>
-<p>i.e.</p>
+<p>where for \(Q = ax^2 + bxy + cy^2\text{,}\) positive definite.</p>
 <div class="displaymath">
 \begin{equation*}
-L^2( \Gamma\backslash \HH) = \oint_\RR E( z, \frac 12 + iit) \diff \mu (t)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\bigoplus \sum_\lambda \phi_\lambda
-\end{equation*}
-</div>
-<p>\(\phi_\lambda\) a Maass cusp form of eigenvalue \(\lambda\text{.}\)</p>
-<p>Detour: Maass forms and Eisenstein series</p>
-<article class="definition-like"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.52</span> <span class="title">Maass form</span>
-</h6>
-<p>\(f\colon \HH \to \CC\) is a <dfn class="terminology">Maass form</dfn> if \(\forall \gamma \in \Gamma = \SL_2(\ZZ)\text{.}\)</p>
-<div class="displaymath">
-\begin{equation*}
-f(\gamma z) = f(z)
-\end{equation*}
-</div>
-<p>\(f\) is an eigenfunction for</p>
-<div class="displaymath">
-\begin{equation*}
-\Delta_{\text{hyp}} = -y^2 \left( \frac{\partial^2}{\partial x^2 } \frac{\partial^2}{\partial y^2 }\right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-f(z) = O(y^N)
-\end{equation*}
-</div>
-<p>for some \(N\text{.}\)</p>
-<p>Cusp form if</p>
-<div class="displaymath">
-\begin{equation*}
-\int_0^1 f(x  + iy) \diff x = 0\text{.}
-\end{equation*}
-</div></article><article class="example-like"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.53</span> <span class="title">Eisenstein series</span>
-</h6>
-<div class="displaymath">
-\begin{equation*}
-E(z,s) = \sum_{(c,d)=1} \frac{y^s}{|cz+d|^{2s}}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{\gamma \in \Gamma_\infty\backslash \Gamma} \im(\gamma z)^s
-\end{equation*}
-</div></article><article class="theorem-like"><h6 class="heading">
-<span class="type">Fact</span> <span class="codenumber">2.54</span>
-</h6>
-<ol class="decimal">
-<li>\(E(z,s)\) converges for \(\Re(s) \gg1\text{.}\)</li>
-<li>Has analytic continuation to \(\CC\) in the \(s\)-variable.</li>
-<li>Has a simple pole at \(s =1\) which is a constant \(\Res_{s=1} E(z,s) = \frac 12\text{.}\)</li>
-<li>\(E(z,s) = E(z,1-s)\text{.}\)</li>
-<li>\(E(z,s) \sim y^\sigma\) where \(\sigma = \max \{ \Re(s), \Re(1-s)\}\text{.}\)</li>
-</ol></article><p>Back on track</p>
-<div class="displaymath">
-\begin{equation*}
-\sum_{|\alpha|^2 = n} P\left( \frac {\alpha}{|\alpha|}\right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\sum_{z_Q \in \Lambda_d} 1
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\sum_{z_Q \in \Lambda_d} E(z_Q, \frac 12 + it)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\sum_{z_Q \in \Lambda_d} \phi_\lambda(z_Q)
+z_Q =  \frac{-b + \sqrt{b^2 - 4ac}}{2a} \in \HH\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like"><h6 class="heading">
-<span class="type">Lemma</span> <span class="codenumber">2.55</span>
+<span class="type">Theorem</span> <span class="codenumber">2.52</span> <span class="title">Duke '88</span>
 </h6>
-<div class="displaymath">
-\begin{equation*}
-\zeta(2s) \sum_{z_Q \in \Lambda_d} E(z_Q, s)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\left( \frac {|d|}{4}\right)^{\frac s2} \underbrace{\zeta_{\QQ(\sqrt{d})}(s)}_{=\zeta(s) L(s, \chi_d)}
-\end{equation*}
-</div></article><article class="hiddenproof"><a knowl="./knowl/proof-32-hidden.html" title="Proof 2.55.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>This gives</p>
-<ol class="decimal">
-<li>
-<div class="displaymath">
-\begin{equation*}
-\sum_{z_Q} 1 \sum |d|^{1/2} L(1,\chi_d) \gg_\epsilon |d|^{1/2 - \epsilon}
-\end{equation*}
-</div>by Siegel.</li>
-<li>
-<div class="displaymath">
-\begin{equation*}
-\sum_{z_Q} E(z_Q, \frac 12 + it ) \sim \frac{|\zeta(\frac 12 + it) L( \frac 12  + it , \chi_d)|}{|\zeta(1 + 2 it)|} |d|^{\frac 14}
-\end{equation*}
-</div>want<div class="displaymath">
-\begin{equation*}
-L(\frac 12 + it, \chi_d) \ll |d|^{\frac 14 - 8}\text{.}
-\end{equation*}
-</div>
-</li>
-</ol>
-<p>We also need:</p>
-<article class="theorem-like"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.56</span> <span class="title">de la Vallée Poussin</span>
-</h6>
-<div class="displaymath">
-\begin{equation*}
-\zeta(1  + 2i t ) \gg \text{something} \gt 0
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-|\zeta(1+ 2it)| \gg \log(2 + 1 + 1 )\inv
-\end{equation*}
-</div></article><p>Phragmén-Lindelöf principle gives convexity bound on the \(d\)-aspect</p>
-<div class="displaymath">
-\begin{equation*}
-L(\frac 12  + it, \chi_d   ) \ll_\epsilon | d|^{\frac 14 + \epsilon}\text{.}
-\end{equation*}
-</div>
-<p>Subconvexity bound</p>
-<article class="theorem-like"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.57</span> <span class="title">Burgess</span>
-</h6>
-<div class="displaymath">
-\begin{equation*}
-L(\frac 12  + it, \chi_d   ) \ll_\epsilon | d|^{\frac 1{16} + \epsilon}
-\end{equation*}
-</div></article><p>What about</p>
-<div class="displaymath">
-\begin{equation*}
-\sum \phi_\lambda (z_Q)\text{?}
-\end{equation*}
-</div>
-<p>Harder even!</p></article><span class="incontext"><a href="sec-duke.html#paragraphs-23">in-context</a></span>
+<p>Problem 2 is true.</p></article></article><span class="incontext"><a href="sec-duke.html#paragraphs-23">in-context</a></span>
 </body>
 </html>

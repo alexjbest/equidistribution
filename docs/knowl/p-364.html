@@ -12,51 +12,30 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Inputs</p>
-<ol class="decimal">
-<li>There is an action of \(H(d) = \) class group of \(\QQ(\sqrt{-d})\) on \(\mathscr H_d(q)/ \specialorthogonal_3(\ZZ)\text{.}\) As \(d \equiv \pm 1 \pmod 5\) so \((5) = \ideal p \bar{\ideal p}\) in \(\QQ(\sqrt{-d})\text{:}\) This gives us a well defined dynamical system by considering the action<div class="displaymath">
+<p>As \(d \to \infty\) squarefree such that \(d\not\equiv 7 \pmod 8\text{,}\)  \(d \equiv \pm 1 \pmod 5\)</p>
+<div class="displaymath">
 \begin{equation*}
-\mathscr H_d(q) \ni  x \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
-\end{equation*}
-</div>and in reverse<div class="displaymath">
-\begin{equation*}
-x_{-2} \to x_{-1} \to x  \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
-\end{equation*}
-</div>call this chain \(\gamma_X\) and for any \(l \gt 0 \in \ZZ\)<div class="displaymath">
-\begin{equation*}
-\gamma_X^{(l)} = [x_{-l}, x_{-l + 1}, \ldots, x_{-1} ,  x,x_1, \ldots, x_l]
+\left\{ \frac {x}{\sqrt d} : x \in \mathscr H_d \right\}
 \end{equation*}
 </div>
-</li>
-<li>consider the average on<div class="displaymath">
+<p>is equidistributed w.r.t. the Lebesgue measure</p>
+<div class="displaymath">
 \begin{equation*}
-B_\delta = \gamma_X^{(l)} \cap B_\delta\text{.}
-\end{equation*}
-</div>On one hand the expected size of \(\gamma_X^{(l)} \cap B_\delta\) is<div class="displaymath">
-\begin{equation*}
-\frac{1}{|\mathscr H_d|} \sum_{x \in \mathscr H_d} | \gamma_X^{(l)} \cap B_\delta|
-\end{equation*}
-</div>on the other hand the expectation is<div class="displaymath">
-\begin{equation*}
-\frac{(2l+ 1)}{|\mathscr H_d|} \operatorname{red}_q\inv (B_\delta)\text{.}
-\end{equation*}
-</div>i.e.<div class="displaymath">
-\begin{equation*}
-\frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l + 1} = \frac{| \operatorname{red}\inv_q(B_\delta)|}{|\mathscr H_d|}
+\red_\infty \colon \mathscr H_d \to S^2
 \end{equation*}
 </div>
-</li>
-<li>Since we assume that the deviation set is large (\(\operatorname{dev}_d(x)  \gt \delta\)) this implies on average<div class="displaymath">
+<div class="displaymath">
 \begin{equation*}
-\frac{| \gamma_X^{(l)} \cap B_\delta|}{2l+1}
+\frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
 \end{equation*}
-</div>is large, gives a lower bound for this.</li>
-<li>Then we count  \(\gamma_X^{(l)}\) in another way, action of \(H(d)\) on \(\mathscr H_d\) and on \(\mathscr H_d(q)\text{.}\) action of \(\ideal p\) induces a graph structure on \(\mathscr H_d(q)\text{.}\) Then \(\gamma_X^{(l)}\) is a path on \(\mathscr H_d(q)\) which is non-backtracking. Count these: Inputs: for \(l \sim  \log(d)\) the number of non-backtracking paths for which \(|\gamma_X^{(l)} \cap B_\delta|/(2l+1)\) is large is \(\gg d^{1/2 + \epsilon}\text{.}\) Count the total number of non-backtracking paths of length \(2l+1\) for which<div class="displaymath">
+</div>
+<p>in the sense that</p>
+<div class="displaymath">
 \begin{equation*}
-\left| \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l+1 } - \frac{|B_\delta|}{|\mathscr H_d(q)|} \right| \gt \delta\eta/2
+\frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
 \end{equation*}
-</div>There can not be too many of these. This will give a contradiction. Will take some work and depend on many things.</li>
-</ol>
+</div>
+<p>for any \(\Omega\) a reasonable subset of \(S^2\text{.}\)</p>
 <span class="incontext"><a href="sec-linnik.html#p-364">in-context</a></span>
 </body>
 </html>

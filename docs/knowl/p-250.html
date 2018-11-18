@@ -12,16 +12,25 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(P_m(z) = \sum_f \pair{P_m(z)}{f}f\) then</p>
+<p>So</p>
 <div class="displaymath">
 \begin{equation*}
-\pair{P_m(z)}{P_n(z)} = \sum_f \overline {a_f(m)} a_f(n) \frac{\Gamma(k-1)^2}{(4 \pi m)^{k-1} (4\pi n )^{k-1}}
+\int_0^1\sum_{\Gamma_\infty\backslash \Gamma} j(\gamma; z)^{-2k} e(m \gamma z) \diff z
 \end{equation*}
 </div>
-<p>on the other hand</p>
 <div class="displaymath">
 \begin{equation*}
-\pair{P_m(z)}{P_n(z)} = \frac{\Gamma(k-1)}{(4\pi m)^{k-1}} \left(\frac mn\right)^{(k-1)/2} \left\{ \cdots \right\}\text{.}
+= \int_0^1sum_{\Gamma_\infty\backslash \Gamma /\Gamma_\infty} \sum_{\gamma_\infty \in \Gamma_\infty} j(\gamma \gamma_\infty z)^{-2k} e(m\gamma \gamma_\infty z) e(-nz) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 \sum_{\Gamma_\infty\backslash \Gamma /\Gamma_\infty} \sum_{\alpha \in \ZZ} j(\gamma ; z+ \alpha )^{-2k} e(m\gamma (z + \alpha)) e(-nz) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 \sum_{\Gamma_\infty\backslash \Gamma /\Gamma_\infty} j(\gamma ; z)^{-2k} e(m\gamma z-nz) \diff z
 \end{equation*}
 </div>
 <span class="incontext"><a href="sec-duke.html#p-250">in-context</a></span>

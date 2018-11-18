@@ -10,33 +10,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>(Sketch) expand the formula, take \(n=p\) an odd prime</p>
+<body><article class="hiddenproof"><p>Each \(p = a^2 + b^2\) with \(a\gt b \gt 0\) uniquely (Euler). Let \(z(p) = a+bi\text{.}\) For \(n\) odd \(n =  PQ\) and \(r_2(n) = 0\) unless \(Q = \square\text{.}\) In which case the solutions of \(n = z \bar z\) are</p>
 <div class="displaymath">
 \begin{equation*}
-\zeta(s) \zeta(1-s) = \sum \frac{\sigma(n)}{n^s}
+z = i^k \sqrt Q \prod_p z(p)^j \overline{z(p)}^{\alpha- j}
 \end{equation*}
 </div>
-<p>(exercise)</p>
+<p>where \(p^\alpha || P\text{,}\) \(k \in \ZZ/4\text{.}\) Thus</p>
 <div class="displaymath">
 \begin{equation*}
-L(s, \chi_{-4})\inv = \prod_p(1- \frac{\chi_{-4}(p)}{p^s})
+\rho(n) = \tau(p) \square (Q)\text{.}
 \end{equation*}
 </div>
-<p>so</p>
+<p>When \(\rho(ab) = 0\) every term on the right vanishes. For \(Q(ab) \ne \square\) so</p>
 <div class="displaymath">
 \begin{equation*}
-\sum \frac{r_3(n^2)}{n^s} = \sum \frac{\sigma(m_1)}{m_1^s} \prod (1 - \chi_{-4}(m_p)/p^s) 6 (1-2^{1-s})
+Q\left( \frac ad \right),\,Q\left( \frac bd \right)
+\end{equation*}
+</div>
+<p>cannot both be squares.</p>
+<p>When \(\rho(ab) \ne 0\) we have \(Q(ab) = m^2\) for some\(m\text{.}\) There is exactly one squarefree \(\gamma\) dividing \(m\) and \(g\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+Q\left(\frac a\gamma \right),\, Q\left(\frac b\gamma \right)
+\end{equation*}
+</div>
+<p>are squares. The term</p>
+<div class="displaymath">
+\begin{equation*}
+w(d) \rho(a/d) \rho(b/d)
+\end{equation*}
+</div>
+<p>is nonzero just when  \(\alpha = \gamma\delta\) where \(\delta\) is squarefree and \(\delta|P(g)\) so the sum reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_\delta \mu(\sigma) \tau(P(a/\gamma\delta)) \tau(P(b/\gamma\delta))
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \sum \frac{\sigma(m_1)}{m_1^s} \sum \mu(m_) \chi_{-4}(m_2)/m_2^s 6 (1-2^{1-s})
+= \sum_\delta \mu(\delta) \tau(P(a)/\delta) \tau(P(b)/\delta)
 \end{equation*}
 </div>
-<p>so</p>
+<p>but</p>
 <div class="displaymath">
 \begin{equation*}
-r_3(p^2) = (\sigma(p) - \chi_{-4}(p))6 \ge 6p
+\sum_{d|r,d|s} \mu(d) \tau(r/d) \tau(r/s) = \tau(rs)
 \end{equation*}
-</div></article></body>
+</div>
+<p>by multiplicativity of \(\tau\) this reduces to the case where \(r = \pi^k,s= \pi^l\) for prime \(\pi\) but \(1+ k + l =  (1+k)(1+l) - kl\text{.}\) Here now \(r=P(a), s=P(b),\gcd(r,s) = P(g)\text{.}\) So the sum over \(\delta\) equals</p>
+<div class="displaymath">
+\begin{equation*}
+\tau(P(a)P(b)) = \tau(P(ab)) \square (Q(ab)) = \rho(ab)
+\end{equation*}
+</div>
+<p>as desired.</p></article></body>
 </html>

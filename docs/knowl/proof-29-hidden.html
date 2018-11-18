@@ -10,51 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><ol class="decimal">
-<li><div class="displaymath">
+<body><article class="hiddenproof"><div class="displaymath">
 \begin{equation*}
-x = \overline m y
+\sum_{x \pmod p} \legendre{x^2 - n \overline m}{p} e\left( \frac {2m x}{p}\right) = \sum_{x\pmod p} \left(\legendre{x^2 - n \overline m}{p}  + 1 \right) e\left( \frac {2m x}{p}\right)\text{.}
 \end{equation*}
-</div></li>
-<li><div class="displaymath">
-\begin{equation*}
-x = m \overline y
-\end{equation*}
-</div></li>
-<li>
-<div class="displaymath">
-\begin{equation*}
-S(1, n^2; q) = \sum_{x\pmod{^* q}} \legendre{x}{q} e\left( \frac{x + n^2 \overline x}{q}\right)
-\end{equation*}
-</div>recall DFT<div class="displaymath">
-\begin{equation*}
-f(u) = \frac 1q \sum_{\alpha \pmod q} \hat f(\alpha) e\left( \frac{\alpha u}{q}\right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\hat f(\alpha) = \sum _{u\pmod q} f (u) e\left( \frac{-\alpha u}{q}\right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{q\pmod q} \sum _{x\pmod{^* q}} \legendre xq e \left( \frac{x + u^2 \overline x}{q} \right) e\left(\frac{-\alpha u}{q} \right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{u \pmod q,x\pmod{^* q}} \legendre xq e\left(\frac xq\right) e\left( \frac{y^2 \overline x  - \alpha u}{q}\right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{x\pmod{^* q}} \legendre xq e\left( \frac{x(1- \overline 4x^2)}{q}\right)\underbrace{ \sum_{u \pmod q} e\left(\frac{\overline x (u - 2\alpha x)^2}{q}\right)}_{\legendre xq G(q)}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-G(q) \sum_{x \pmod{^* q}} e\left( \frac{ x (1 - \overline 4 \alpha^2)}{q}\right)
-\end{equation*}
-</div>we need some more results to conclude!</li>
-</ol></article></body>
+</div></article></body>
 </html>

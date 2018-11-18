@@ -12,13 +12,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Recall:</p>
+<p>Using this we find</p>
 <div class="displaymath">
 \begin{equation*}
-\theta_P(z) = \sum r_3(n; P) e(nz) \in S_{3/2 + l} (\Gamma_0(4))
+r_3(n^2) = 6 \sum_{d|N} w(d) S \left(\frac Nd\right)
 \end{equation*}
 </div>
-<p>is a weight \(3/2 +l\) form if \(l=  \deg P\text{.}\)</p>
+<p>where for odd \(n\)</p>
+<div class="displaymath">
+\begin{equation*}
+S(n)  = \sum_{a+b = 2n,\,a,b\,\text{odd}} \rho(a) \rho(b)
+\end{equation*}
+</div>
+<p>but</p>
+<div class="displaymath">
+\begin{equation*}
+S(n) = \frac{1}{16}\#(2n =  \underbrace{w^2 + x^2}_{\text{odd}}+ \underbrace{y^2 + z^2}_{\text{odd}})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{1}{4}\#(2n =  4w^2 + 4x^2+y^2 + z^2)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sigma(n)
+\end{equation*}
+</div>
+<p>by Jacobi.</p>
 <span class="incontext"><a href="sec-duke.html#p-217">in-context</a></span>
 </body>
 </html>

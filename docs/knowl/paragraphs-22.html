@@ -11,22 +11,63 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="paragraphs"><h5 class="heading"><span class="title">Problem 2</span></h5>
-<p>\(\Gamma = \SL_2(\ZZ)\)</p>
+<article class="paragraphs"><h5 class="heading"><span class="title">\(P \equiv 1\)</span></h5>
 <div class="displaymath">
 \begin{equation*}
-\frac{1}{\# \Lambda_d} \sum_{z_Q \in \Lambda_d} f(z_Q) \to \int_{\Gamma \backslash \HH} f(z) \diff \mu (z)
+r_3(n ) = \sum_{|\alpha|^2= n }1
 \end{equation*}
 </div>
-<p>where for \(Q = ax^2 + bxy + cy^2\text{,}\) positive definite.</p>
-<div class="displaymath">
-\begin{equation*}
-z_Q =  \frac{-b + \sqrt{b^2 - 4ac}}{2a} \in \HH\text{.}
-\end{equation*}
-</div>
+<p>(with no local obstructions, i.e. \(n \) squarefree and \(n \not \equiv  7 \pmod 8\)).</p>
 <article class="theorem-like"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.51</span> <span class="title">Duke '88</span>
+<span class="type">Theorem</span> <span class="codenumber">2.45</span> <span class="title">Gauss</span>
 </h6>
-<p>Problem 2 is true.</p></article></article><span class="incontext"><a href="sec-duke.html#paragraphs-22">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+r_3(n) = \frac{24 h(\tilde n)}{w(\tilde n)} \left(1 - \legendre {\tilde n}{2} \right)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde n = \disc(\QQ(\sqrt{-n}))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+w(\tilde n) = \# \text{roots of 1 in }\QQ(\sqrt{-n})
+\end{equation*}
+</div></article><article class="remark-like"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.46</span>
+</h6>
+<p>\(\tilde n \sim n\) as we are squarefree so off by at most  a factor of 4. Then \(r_3(n) \sim h(\tilde n)\)</p></article><article class="exercise-like"><a knowl="./knowl/exercise-7-hidden.html" title="Exercise 2.47"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2.47</span>
+</h6></a></article><p>We now wish to demonstrate a lower bound on \(h(\tilde n)\text{.}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.48</span> <span class="title">Siegel '35</span>
+</h6>
+<p>\(\forall \epsilon \gt 0\) have</p>
+<div class="displaymath">
+\begin{equation*}
+L(1, \chi_d)  \gg_\epsilon |d|^{-\epsilon}\text{.}
+\end{equation*}
+</div></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Corollary</span> <span class="codenumber">2.49</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+h(\tilde n) \gg_\epsilon n^{1/2 - \epsilon}\text{.}
+\end{equation*}
+</div></article><article class="exercise-like"><a knowl="./knowl/exercise-8-hidden.html" title="Exercise 2.50"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2.50</span>
+</h6></a></article><article class="remark-like"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">2.51</span>
+</h6>
+<p>The constant in Siegel's theorem is ineffective, meaning one cannot actually calculate it (without proving there are no Landau-Siegel zeroes).</p></article><p>Finally Siegel + Iwaniec implies</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\sqrt n} \# \{ \alpha \in \ZZ^3 : |\alpha|^2 = n\}
+\end{equation*}
+</div>
+<p>gets equidistributed on \(S^3\) as \(n \to \infty\text{.}\)</p></article><span class="incontext"><a href="sec-duke.html#paragraphs-22">in-context</a></span>
 </body>
 </html>

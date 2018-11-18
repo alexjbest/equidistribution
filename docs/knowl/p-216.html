@@ -12,12 +12,42 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Then</p>
+<p>When \(\rho(ab) \ne 0\) we have \(Q(ab) = m^2\) for some\(m\text{.}\) There is exactly one squarefree \(\gamma\) dividing \(m\) and \(g\) such that</p>
 <div class="displaymath">
 \begin{equation*}
-F(z) \in S_{2\lambda}(N_1, \chi^2)\text{.}
+Q\left(\frac a\gamma \right),\, Q\left(\frac b\gamma \right)
 \end{equation*}
 </div>
+<p>are squares. The term</p>
+<div class="displaymath">
+\begin{equation*}
+w(d) \rho(a/d) \rho(b/d)
+\end{equation*}
+</div>
+<p>is nonzero just when  \(\alpha = \gamma\delta\) where \(\delta\) is squarefree and \(\delta|P(g)\) so the sum reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_\delta \mu(\sigma) \tau(P(a/\gamma\delta)) \tau(P(b/\gamma\delta))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_\delta \mu(\delta) \tau(P(a)/\delta) \tau(P(b)/\delta)
+\end{equation*}
+</div>
+<p>but</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{d|r,d|s} \mu(d) \tau(r/d) \tau(r/s) = \tau(rs)
+\end{equation*}
+</div>
+<p>by multiplicativity of \(\tau\) this reduces to the case where \(r = \pi^k,s= \pi^l\) for prime \(\pi\) but \(1+ k + l =  (1+k)(1+l) - kl\text{.}\) Here now \(r=P(a), s=P(b),\gcd(r,s) = P(g)\text{.}\) So the sum over \(\delta\) equals</p>
+<div class="displaymath">
+\begin{equation*}
+\tau(P(a)P(b)) = \tau(P(ab)) \square (Q(ab)) = \rho(ab)
+\end{equation*}
+</div>
+<p>as desired.</p>
 <span class="incontext"><a href="sec-duke.html#p-216">in-context</a></span>
 </body>
 </html>
