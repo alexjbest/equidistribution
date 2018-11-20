@@ -11,18 +11,92 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="paragraphs"><h5 class="heading"><span class="title">Basic construction</span></h5>
-<p>Let \(\mathscr A_5 = \{M_1^\pm, M_2^\pm, M_3^\pm\}\) starting with a solution \(x\in \mathscr H_d\) one gets two matrices \(\omega_1, \omega_{-1} \in\mathscr A_5\)</p>
+<article class="paragraphs"><h5 class="heading"><span class="title">The action of \(H(d)\)</span></h5>
+<p>Start with \(x = (a,b,c) \in \mathscr H_d\text{.}\) This gives rise to an embedding</p>
 <div class="displaymath">
 \begin{equation*}
-x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarrow{\omega_{-1}} x \xrightarrow{\omega_{1}}x_1 \xrightarrow{\omega_{2}}x_2 \xrightarrow{\omega_{3}} x_3
+\iota_x \colon \QQ(\sqrt{-d}) \hookrightarrow B
 \end{equation*}
 </div>
-<p>where \(w_1\) comes from \(P\) and \(w_{-1}\) from \(\bar P\text{.}\)</p>
-<p>This construction gives a well-defined (up to flip) path starting with a solution \(x \in \mathscr H_d\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sqrt{-d} \mapsto  x + ai + bj + ck
+\end{equation*}
+</div>
+<p>note \(x^2 = -d\text{.}\)</p>
+<p>Let \(K= \QQ(\sqrt{-d})\) \(\iota_x\) is integral ion the sense that if</p>
+<div class="displaymath">
+\begin{equation*}
+\ints_x = B(\ZZ) \cap \QQ \lb x \rb
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+\iota\inv (\ints_x) = \ints_K\text{.}
+\end{equation*}
+</div>
+<article class="exercise-like"><a knowl="./knowl/exercise-12-hidden.html" title="Exercise 3.16"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3.16</span>
+</h6></a></article><p>\(I \in H(d) \leadsto y= y(x,I)\)</p>
+<p>Consider \(B(\ZZ) \iota_x(I) = B(\ZZ) q\) for some \(q\in B(\QQ)\text{.}\) Since \(B(\ZZ)\) is a PID.</p>
+<p>Then \(y = q xq\inv\in \mathscr H_d\)</p>
 <article class="remark-like"><h6 class="heading">
-<span class="type">Remark</span> <span class="codenumber">3.7</span>
+<span class="type">Note</span> <span class="codenumber">3.17</span>
 </h6>
-<p>These chains are periodic.</p></article></article><span class="incontext"><a href="sec-linnik.html#paragraphs-30">in-context</a></span>
+<ol class="decimal">
+<li><div class="displaymath">
+\begin{equation*}
+y^2 = -d
+\end{equation*}
+</div></li>
+<li>If we take \(\lambda I\) for \(\lambda \in K^\times\text{,}\) \(y(x, \lambda I) = y(x, I)\) so we get a well defined construction \(H(d)\text{.}\)</li>
+<li>\(q\) is defined up to conjugation by \(B(\ZZ)^\times\text{.}\)</li>
+</ol></article><p>To sum up:</p>
+<p>For any \(x \in \mathscr H_d\) we have a well defined map</p>
+<div class="displaymath">
+\begin{equation*}
+\Cl(d) \to \widetilde{\mathscr H}_d^\times
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+I \mapsto y(x,I)\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Claim</span> <span class="codenumber">3.18</span>
+</h6>
+<p>This map makes \(\widetilde{\mathscr H}_d^\times\) a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> over \(\Cl(d)\text{.}\)</p></article><p>Let \(x,y \in \mathscr H_d\text{.}\)</p>
+<p>Construct an ideal \(\Lambda_{x\mapsto y}\) s.t. \(y(x,\Lambda_{x\mapsto y}) = y\text{.}\)</p>
+<article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.19</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\Lambda_{x\mapsto y} = \{ \lambda \in B(\ZZ) : x \lambda =  \lambda y \}\text{.}
+\end{equation*}
+</div></article><p>\(x, y \in \mathscr H_d\) Witt's theorem implies there exists \(q \in PB^\times(\QQ) = \specialorthogonal_3(\QQ)\) s.t.</p>
+<ul class="disc">
+<li><div class="displaymath">
+\begin{equation*}
+y = q\inv x q
+\end{equation*}
+</div></li>
+<li><div class="displaymath">
+\begin{equation*}
+\Lambda_{x\mapsto y} = B(\ZZ) \cap \QQ [x] q
+\end{equation*}
+</div></li>
+</ul>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Note</span> <span class="codenumber">3.20</span>
+</h6>
+<p>\(\Lambda_{x\mapsto y} \) is locally free and rank 1</p>
+<div class="displaymath">
+\begin{equation*}
+\implies [\Lambda_{x \mapsto y}] \in \Pic(\ints_x)  \simeq \Pic(\ints_K) \simeq \Cl(d)\text{.}
+\end{equation*}
+</div></article></article><span class="incontext"><a href="sec-linnik.html#paragraphs-30">in-context</a></span>
 </body>
 </html>

@@ -48,7 +48,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\require{mathrsfs}
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\require{mathrsfs}\require{mathtools}
 \newenvironment{smallermatrix}[1]
 {\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
 \array{#1}}
@@ -298,7 +298,7 @@ MathJax.Hub.Config({
 <li id="li-2">lattice points and hyperbolic geometry</li>
 <li id="li-3">modular forms</li>
 <li id="li-4">spectral theory</li>
-<li id="li-5">modular forms of half-integral weight.</li>
+<li id="li-5">modular forms of <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 2.6: Half-integral weight modular forms">half-integral</a> weight.</li>
 <li id="li-6">harmonic analysis</li>
 <li id="li-7">Kuznetsov formula</li>
 <li id="li-8">Other topics!</li>
@@ -316,7 +316,7 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p>this is where the number theory comes, we are looking at representability of numbers \(n\) by this ternary quadratic form.</p>
-<p id="p-12">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogradov for \(n=4\text{.}\) \(n=3\) is the cut off, here half-integral weight modular forms are relevant.</p>
+<p id="p-12">Various methods exist for studying this for varying \(n\text{,}\) quadratic reciprocity for \(n=2\text{,}\) circle method/Vinogradov for \(n=4\text{.}\) \(n=3\) is the cut off, here <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 2.6: Half-integral weight modular forms">half-integral</a> weight modular forms are relevant.</p>
 <p id="p-13">Set</p>
 <div class="displaymath">
 \begin{equation*}
@@ -342,7 +342,7 @@ N = x_1^2 + x_2^2+ x_3^2,\,x_i \in \ZZ \iff N \ne 4^a(8b+7)\text{,}
 \frac{1}{\# \Omega_N} \sum_{x\in \Omega_N} f(x) \to \int_{S^2} f\diff \sigma
 \end{equation*}
 </div>
-<p>where \(\diff \sigma\) is the Lebesgue measure on \(S^2\text{.}\)</p></article><p id="p-18">This is saying that the points are equidistributed with respect to the Lebesgue measure.</p>
+<p>where \(\diff \sigma\) is the Lebesgue measure on \(S^2\text{.}\)</p></article><p id="p-18">This is saying that the points are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> with respect to the Lebesgue measure.</p>
 <p id="p-19">The last condition is a defect of the method, known as a Linnik condition.</p>
 <article class="remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">1.3</span>
@@ -449,7 +449,7 @@ z_{\gamma Q }  =\gamma z_Q\text{.}
 <span class="type">Example</span> <span class="codenumber">1.11</span>
 </h6>
 <p id="p-43">If \(\alpha = \sqrt 2\) so \(\{\alpha\}  \approx 0.4142?...\) \(\{\alpha2\}  \approx 0.8284?...\) \(\{\alpha3\}  \approx 0.24264...\) \(\{\alpha4\}  \approx 0.656854..\text{.}\) These spread out densely, but there is a difference between density and equidistribution. In this example, equidistribution says that the proportion of time the sequence spends in each interval \((a,b)\) is \(b -a\text{.}\)</p></article><p id="p-44">So questions are: is \(\{n\alpha\}\) dense?</p>
-<p id="p-45">Is \(\{n \alpha\}\) uniformly distributed (equidistributed with respect to the standard measure)?</p>
+<p id="p-45">Is \(\{n \alpha\}\) <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> (equidistributed with respect to the standard measure)?</p>
 <p id="p-46">The answer to both questions is yes.</p>
 <article class="theorem-like" id="theorem-4"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.12</span> <span class="title">Kronecker</span>
@@ -591,7 +591,7 @@ q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ
 \end{equation*}
 </div>
 <p>(Fill in the gaps here).</p></article></div>
-<p id="p-67">Now let's define what is means to be uniformly distributed.</p>
+<p id="p-67">Now let's define what is means to be <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p>
 <article class="definition-like" id="def-unif-dist"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">1.22</span> <span class="title">Uniformly distributed sequence</span>
 </h6>
@@ -622,16 +622,16 @@ q^n f\left(\frac pq\right)  \in \ZZ \smallsetminus\{0\}\,\forall \frac pq\in \QQ
 <li id="li-18">\(a_n = \{\log n!\}\text{.}\) Yes ?</li>
 <li id="li-19">\(a_n = \{\log \log n!\}\text{.}\) No</li>
 </ol>
-<p id="p-74">To begin let's show \(a_n = \{n!e\}\) is not equidistributed as it has only one limit point \(0\text{.}\)</p>
+<p id="p-74">To begin let's show \(a_n = \{n!e\}\) is not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> as it has only one limit point \(0\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 e = \sum_{n=1}^\infty \frac{1}{n!}
 \end{equation*}
 </div>
-<p>so \(n!e \in \ZZ + \frac{1}{n+1} + \frac{(n+1)(n+2)} + \cdots \le \frac{e}{n+1} \to 0\text{,}\) as \(n\to \infty\text{.}\) So its not dense, hence certainly not equidistributed.</p></article><article class="theorem-like" id="theorem-9"><h6 class="heading">
+<p>so \(n!e \in \ZZ + \frac{1}{n+1} + \frac{(n+1)(n+2)} + \cdots \le \frac{e}{n+1} \to 0\text{,}\) as \(n\to \infty\text{.}\) So its not dense, hence certainly not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><article class="theorem-like" id="theorem-9"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.24</span>
 </h6>
-<p id="p-75">The sequence \(a_n = \{ n\alpha\}\) is equidistributed.</p></article><article class="hiddenproof" id="proof-5"><a knowl="" class="id-ref" refid="hk-proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-76">Let \(\epsilon\gt 0\text{,}\) choose \(M \gt 0\) such that \(\frac1M\lt \epsilon\text{,}\) furthermore choose a \(\delta \lt \frac1M\text{.}\) Dirichlet implies there exists \(m \in \ZZ\) s.t. \(\| m\alpha\| = \delta\text{.}\)</p>
+<p id="p-75">The sequence \(a_n = \{ n\alpha\}\) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><article class="hiddenproof" id="proof-5"><a knowl="" class="id-ref" refid="hk-proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-76">Let \(\epsilon\gt 0\text{,}\) choose \(M \gt 0\) such that \(\frac1M\lt \epsilon\text{,}\) furthermore choose a \(\delta \lt \frac1M\text{.}\) Dirichlet implies there exists \(m \in \ZZ\) s.t. \(\| m\alpha\| = \delta\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 0\lt \delta \lt \frac1M \lt\epsilon
@@ -768,17 +768,17 @@ a_m = 0,1, 0,\frac 12 , 1, 0,\frac 13 ,\frac 23, 1, 0,\frac 14 ,\frac 24,\frac 3
 <span class="type">Proposition</span> <span class="codenumber">1.27</span>
 </h6>
 <ol id="p-81" class="decimal">
-<li id="li-20">Any sequence has a rearrangement that is not uniformly distributed.</li>
-<li id="li-21">Any dense sequence has a rearrangement that is uniformly distributed.</li>
+<li id="li-20">Any sequence has a rearrangement that is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
+<li id="li-21">Any dense sequence has a rearrangement that is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</li>
 </ol></article><article class="hiddenproof" id="proof-6"><a knowl="" class="id-ref" refid="hk-proof-6"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-6" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-82" class="decimal">
 <li id="li-22">If not sense we are done already. Otherwise let \(I_1 = \lb 0, \frac 12) ,I_2 = \lb\frac 12, 1\rb\) Let \(X = \{a_n \in I_1\}, Y = \{a_n \in I_2\}\text{,}\) so both sets are infinite. Let \(b_n  = x_1, \ldots, x_{10^{10}}, y_1, x_{10^{10} + 1}, \ldots, x_{20^{20}},\ldots\) so \(\# \{n:b_n  \in \lb4/5,1\rb \}  \sim \frac{N}{10^{10}}\text{.}\)</li>
 <li id="li-23">If \(a_n\) is dense then, let<div class="displaymath">
 \begin{equation*}
 b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 \end{equation*}
-</div>by the example above this is equidistributed.</li>
+</div>by the example above this is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</li>
 </ol></article></div>
-<p id="p-83">What can we say about the space of uniformly distributed sequences? Is it closed under addition? No (\(a_n = -b_n\)). \(\{k a_n\}\) neither (\(a_n = \alpha n,\,\frac1\alpha a_n = n\)). \(a_nb_n\) doesn't work either, but if \(b_n\) converges then \(a_nb_n\) is uniformly distributed.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<p id="p-83">What can we say about the space of <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> sequences? Is it closed under addition? No (\(a_n = -b_n\)). \(\{k a_n\}\) neither (\(a_n = \alpha n,\,\frac1\alpha a_n = n\)). \(a_nb_n\) doesn't work either, but if \(b_n\) converges then \(a_nb_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Weyl's criterion (1916)</span>
 </h3>
 <aside class="aside-like" id="aside-4"><p id="p-84">Lecture 4 18/9/2018</p></aside><article class="theorem-like" id="thm-weyl-criterion"><h6 class="heading">
@@ -786,7 +786,7 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 </h6>
 <p id="p-85">\(\{a_n\}_{n=1}^\infty \in \RR\) then TFAE:</p>
 <ol class="decimal">
-<li id="li-24">\(\{a_n\}_{n=1}^\infty\) is uniformly distributed mod \(1\text{.}\)</li>
+<li id="li-24">\(\{a_n\}_{n=1}^\infty\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> mod \(1\text{.}\)</li>
 <li id="li-25">\(\forall f \in C(\lb 0,1\rb)\)<div class="displaymath">
 \begin{equation*}
 \lim_{N\to \infty} \frac 1N \sum_{n=1}^N f(\{a_n\}) = \int _0^1 f \diff x\text{.}
@@ -836,7 +836,7 @@ f_n(x) - \epsilon \le f(x) \le f_n(x) + \epsilon\text{.}
 <span class="type">Subsection</span> <span class="codenumber">1.5</span> <span class="title">Some applications of Weyl's criterion</span>
 </h3>
 <article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Application 1</span></h5>
-<p id="p-94">\(\{n \alpha \}\) is uniformly distributed iff \(\alpha \in \RR\smallsetminus \QQ\text{.}\) Let</p>
+<p id="p-94">\(\{n \alpha \}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> iff \(\alpha \in \RR\smallsetminus \QQ\text{.}\) Let</p>
 <div class="displaymath">
 \begin{equation*}
 S_N(h,\alpha) = \sum_{n=0}^N e(h\alpha n)
@@ -854,11 +854,11 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 \lim_{N\to \infty} \frac1N S_N(0,\alpha) = 1
 \end{equation*}
 </div>
-<p>so by Weyl's criterion \(\left\{ n\alpha \right\}\) is uniformly distributed if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Digression</span></h5>
+<p>so by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a> \(\left\{ n\alpha \right\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> if \(\alpha \not \in \QQ\text{.}\)</p></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Digression</span></h5>
 <article class="theorem-like" id="theorem-11"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.29</span> <span class="title">Vinogradov 1937</span>
 </h6>
-<p id="p-95">\(\{ \alpha p_n\} \) is uniformly distributed iff \(\alpha \not \in \QQ\text{.}\)</p></article><p id="p-96">He actually showed weak Goldbach conjecture, Every (sufficiently large) <em class="emphasis">odd</em> integer is a sum of 3 primes. No bound by Vinogradov, Borozdin gave a large bound, Helfgott brought it down to reality.</p></article><article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Application 2</span></h5>
+<p id="p-95">\(\{ \alpha p_n\} \) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> iff \(\alpha \not \in \QQ\text{.}\)</p></article><p id="p-96">He actually showed weak Goldbach conjecture, Every (sufficiently large) <em class="emphasis">odd</em> integer is a sum of 3 primes. No bound by Vinogradov, Borozdin gave a large bound, Helfgott brought it down to reality.</p></article><article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Application 2</span></h5>
 <div class="displaymath" id="p-97">
 \begin{equation*}
 \{\beta^n \}
@@ -867,17 +867,17 @@ S_N(h,\alpha) = \frac{e((N+1) h\alpha) - 1}{e(h\alpha)  - 1}\text{.}
 <article class="theorem-like" id="theorem-12"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.30</span> <span class="title">Koksma 1935</span>
 </h6>
-<p id="p-98">For almost every (Lebesgue) \(\beta\in \RR_{\gt 1}\text{,}\) \(\left\{\beta^n\right\}\) is equidistributed.</p></article><p id="p-99">Koksma was a Dutch student of Van der Corput.</p>
+<p id="p-98">For almost every (Lebesgue) \(\beta\in \RR_{\gt 1}\text{,}\) \(\left\{\beta^n\right\}\) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><p id="p-99">Koksma was a Dutch student of Van der Corput.</p>
 <article class="theorem-like" id="theorem-13"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.31</span> <span class="title">Weyl</span>
 </h6>
-<p id="p-100">Let \(|a_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha a_n\) is not uniformly distributed has Lebesgue measure 0.</p></article></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Application 3</span></h5>
+<p id="p-100">Let \(|a_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha a_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Application 3</span></h5>
 <div class="displaymath" id="p-101">
 \begin{equation*}
 \{\log(n) \}
 \end{equation*}
 </div>
-<p>is not equidistributed.</p>
+<p>is not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p>
 <article class="exercise-like" id="exercise-2"><a knowl="" class="id-ref" refid="hk-exercise-2"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.32</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-102">Prove this. Hint : assume it was</p>
@@ -925,7 +925,7 @@ D_N^* \to 0 \iff D_N \to 0\text{.}
 <article class="theorem-like" id="lemma-2"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.35</span>
 </h6>
-<p id="p-109">\(a_n\) is uniformly distributed \(\iff  D_N \to 0 \iff D_N^* \to 0\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-110">Ommitted/exercise, 2.1.1 of Kuipers and Niederreiter.</p></article></div>
+<p id="p-109">\(a_n\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> \(\iff  D_N \to 0 \iff D_N^* \to 0\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-110">Ommitted/exercise, 2.1.1 of Kuipers and Niederreiter.</p></article></div>
 <p id="p-111">For \(\sqrt{n}\) now.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -980,7 +980,7 @@ D_N^* = \sum_{0\le \alpha \le  1} \left\{ \left| \frac{S_N(\alpha)}{N} -\alpha \
 \{\log(p_n) \}
 \end{equation*}
 </div>
-<p>is not equidistributed.</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-117">Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
+<p>is not <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a>.</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-117">Assume otherwise, let \(k \in \ZZ_{\gt0}\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 I_k = \min\{ n : p_n \gt e^k \}
@@ -1008,7 +1008,7 @@ S_{k-1/2} = \sum_{n \lt I_{k-1/2}} \chi_{\lb 0,1/2\rb} ( \{\log (p_n) \} )
 \end{equation*}
 </div>
 <p id="p-119">Note that \(S_k = S_{k-1/2}\text{.}\)</p>
-<p id="p-120">If uniformly distributed</p>
+<p id="p-120">If <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a></p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{k\to \infty} \frac{S_k}{I_k} = \lim_{k\to \infty} \frac{S_{k-1/2}}{I_{k-1/2}} = L
@@ -1059,7 +1059,7 @@ P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in \RR\lb x\rb
 \{P(n)\}
 \end{equation*}
 </div>
-<p>is uniformly distributed mod 1 iff there exists \(n_0 \in \{ 1,\ldots, n\}\) s.t. \(a_{n_0} \not \in \QQ\text{.}\)</p></article><article class="theorem-like" id="lem-weyl-diff"><h6 class="heading">
+<p>is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> mod 1 iff there exists \(n_0 \in \{ 1,\ldots, n\}\) s.t. \(a_{n_0} \not \in \QQ\text{.}\)</p></article><article class="theorem-like" id="lem-weyl-diff"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.40</span> <span class="title">Weyl differencing</span>
 </h6>
 <p id="p-123">Let \(y_n  \in \CC\text{,}\) such that \(y_n = 0\) if \(n \lt 1\) or \(n \gt N\) then we would like to bound</p>
@@ -1121,7 +1121,7 @@ n = 1-N, \ldots, -1
 <article class="theorem-like" id="theorem-15"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.42</span> <span class="title">Weyl</span>
 </h6>
-<p id="p-126">Let \(|x_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha x_n\) is not uniformly distributed has Lebesgue measure 0.</p></article><article class="hiddenproof" id="proof-12"><a knowl="" class="id-ref" refid="hk-proof-12"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-127">Let \(\alpha \in  \lb 0,1)\text{,}\) let \(h \in \ZZ \smallsetminus \{ 0 \}\)</p>
+<p id="p-126">Let \(|x_n| \to \infty\) be a sequence of distinct integers, the set of \(\alpha \in \RR\) such that \(\alpha x_n\) is not <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a> has Lebesgue measure 0.</p></article><article class="hiddenproof" id="proof-12"><a knowl="" class="id-ref" refid="hk-proof-12"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-127">Let \(\alpha \in  \lb 0,1)\text{,}\) let \(h \in \ZZ \smallsetminus \{ 0 \}\)</p>
 <div class="displaymath">
 \begin{equation*}
 S_h(N,\alpha) = \frac 1N \sum_{n=1}^N e(hx_n\alpha)
@@ -1169,7 +1169,7 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 \sum_{N=1}^\infty  |S_h(N^2 ,\alpha)|^2
 \end{equation*}
 </div>
-<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by Weyl's criterion we are done.</p></article></div>
+<p>is finite for almost all \(\alpha\) and for any \(h \ne 0\text{.}\) Then by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a> we are done.</p></article></div>
 <article class="theorem-like" id="lemma-4"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.43</span> <span class="title">Van der Corput</span>
 </h6>
@@ -1230,11 +1230,11 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 \end{equation*}
 </div>
 <p>then if \(l = 0\) we get the first term of the statement, \(l \ne 0\) the other.</p></article></div>
-<p id="p-133">What is the difference between this and Weyl differencing? When \(H\) is large, not so much, but we can take \(H\) small now, shifting the weighting around. We change the balance to make one part shorter and the other longer.</p>
+<p id="p-133">What is the difference between this and <a knowl="./knowl/lem-weyl-diff.html" title="Lemma 1.40: Weyl differencing">Weyl differencing</a>? When \(H\) is large, not so much, but we can take \(H\) small now, shifting the weighting around. We change the balance to make one part shorter and the other longer.</p>
 <article class="theorem-like" id="thm-van-der-corput-diff"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.44</span> <span class="title">Van der Corput differencing</span>
 </h6>
-<p id="p-134">If for each \(h \in \ZZ_{\ge 1}\) the sequence \(b_h(n) = a_{n+h} - a_n\) then so is \(a_n\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-135">We'll use Weyl's criterion and the van der Corput lemma. Fix, \(N \in \ZZ_{\ge1}\) a \(H\le N\text{.}\) Then for any \(k \in \ZZ\smallsetminus\{0\}\)</p>
+<p id="p-134">If for each \(h \in \ZZ_{\ge 1}\) the sequence \(b_h(n) = a_{n+h} - a_n\) then so is \(a_n\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-135">We'll use <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a> and the van der Corput lemma. Fix, \(N \in \ZZ_{\ge1}\) a \(H\le N\text{.}\) Then for any \(k \in \ZZ\smallsetminus\{0\}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \left| \sum e( ka_n) \right|^2   \le \frac{ N+H}{H+ 1} N + 2 \frac{ N+H}{H+ 1}  \sum \left(1 - \frac h{H+1} \right) \left| \sum_{n=1}^{N-h} e(b_h(n)k) \right|
@@ -1251,10 +1251,10 @@ f_n(\alpha) = \sum_{N=1}^{n} | S_h (N^2,\alpha)|^2
 \lim_{N \to \infty} \frac{1}{N^2} \left| \sum_{n=1}^N e(ka_n)\right|^2  = 0\text{.}
 \end{equation*}
 </div></article></div>
-<article class="hiddenproof" id="proof-15"><a knowl="" class="id-ref" refid="hk-proof-15"><h6 class="heading"><span class="title">Proof of Weyl's theorem</span></h6></a></article><div id="hk-proof-15" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-136">Let \(\deg P = d\) then, for \(d = 1\) we are done by Weyl's criterion, for \(d \le D\) use van der Corput differencing. Note that  for fixed \(h\text{,}\) \(P(n+h) -P(n)\) is of lower degree.</p></article></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<article class="hiddenproof" id="proof-15"><a knowl="" class="id-ref" refid="hk-proof-15"><h6 class="heading"><span class="title">Proof of Weyl's theorem</span></h6></a></article><div id="hk-proof-15" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-136">Let \(\deg P = d\) then, for \(d = 1\) we are done by <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>, for \(d \le D\) use van der Corput differencing. Note that  for fixed \(h\text{,}\) \(P(n+h) -P(n)\) is of lower degree.</p></article></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.7</span> <span class="title">A different perspective (Ergodic)</span>
 </h3>
-<p id="p-137">Furstenberg (1981 book) gives a different proof that \(\{n ^2 \alpha\}\) is uniformly distributed.</p>
+<p id="p-137">Furstenberg (1981 book) gives a different proof that \(\{n ^2 \alpha\}\) is <a knowl="./knowl/def-unif-dist.html" title="Definition 1.22: Uniformly distributed sequence">uniformly distributed</a>.</p>
 <article class="paragraphs" id="paragraphs-12"><h5 class="heading"><span class="title">Ergodic theory 101</span></h5>
 <article class="definition-like" id="def-ergodic-measure"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">1.45</span> <span class="title">Ergodic measures</span>
@@ -1279,10 +1279,10 @@ f(hx) = f(x)
 <p id="p-139">An action of a group \(H\) on a locally compact space \(X\) is <dfn class="terminology">uniquely ergodic</dfn> if  there is only one invariant probability measure on \(X\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">1.47</span>
 </h6>
-<p id="p-140">\(x\mapsto 5x\text{,}\) or \(x\mapsto \sqrt2 + x\) on \(T^1\) are ergodic, let's show that \(x\mapsto \sqrt 2 + x\) is uniquely ergodic.</p></article><article class="theorem-like" id="lemma-5"><h6 class="heading">
+<p id="p-140">\(x\mapsto 5x\text{,}\) or \(x\mapsto \sqrt2 + x\) on \(T^1\) are ergodic, let's show that \(x\mapsto \sqrt 2 + x\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p></article><article class="theorem-like" id="lemma-5"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">1.48</span>
 </h6>
-<p id="p-141">Let \(\alpha \in \RR\smallsetminus \QQ\) then \(T_\alpha \colon x  \to x+ \alpha\) is uniquely ergodic.</p></article><article class="hiddenproof" id="proof-16"><a knowl="" class="id-ref" refid="hk-proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-142">Let \(\mu\) be an invariant probability measure on \(\lb 0,1\rb\) the \(n\)th Fourier coefficient</p>
+<p id="p-141">Let \(\alpha \in \RR\smallsetminus \QQ\) then \(T_\alpha \colon x  \to x+ \alpha\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p></article><article class="hiddenproof" id="proof-16"><a knowl="" class="id-ref" refid="hk-proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-142">Let \(\mu\) be an invariant probability measure on \(\lb 0,1\rb\) the \(n\)th Fourier coefficient</p>
 <div class="displaymath">
 \begin{equation*}
 \hat \mu(n) =  \int e(nx) \diff \mu (x) = e(n\alpha) \int e(nx) \diff \mu (x)
@@ -1319,7 +1319,7 @@ f(hx) = f(x)
 \mu_N = \frac 1N \sum_{n \le N} \delta( x - a_n)
 \end{equation*}
 </div>
-<p>if these are equidistributed then</p>
+<p>if these are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> then</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{N \to \infty} \frac 1 N \sum_{n=1}^N f(a_n) = \int_X f(x) \diff \mu (x)\text{.}
@@ -1346,7 +1346,7 @@ f(hx) = f(x)
 <p id="p-149">But the following does:</p></article><article class="theorem-like" id="theorem-18"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.54</span>
 </h6>
-<p id="p-150">If \(X\) is compact and \(H \cong \RR\) is uniquely ergodic with the unique \(H\)-invariant measure \(\mu\) then the statement of Birkhoff holds for every \(x \in X\text{.}\)</p></article><article class="hiddenproof" id="proof-17"><a knowl="" class="id-ref" refid="hk-proof-17"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-17" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-151">Sketch</p>
+<p id="p-150">If \(X\) is compact and \(H \cong \RR\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a> with the unique \(H\)-invariant measure \(\mu\) then the statement of Birkhoff holds for every \(x \in X\text{.}\)</p></article><article class="hiddenproof" id="proof-17"><a knowl="" class="id-ref" refid="hk-proof-17"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-17" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-151">Sketch</p>
 <p id="p-152">For any  \(x\) construct</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1369,7 +1369,7 @@ f(hx) = f(x)
 \log_{10} b^n = n \log_{10} b
 \end{equation*}
 </div>
-<p>this is \(k\) iff \(n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1 \rb\text{.}\) If these are equidistributed then the probability of \(k\) is</p>
+<p>this is \(k\) iff \(n \log_{10} b \in \lb \log_{10} k , \log_{10} k + 1 \rb\text{.}\) If these are <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> then the probability of \(k\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\log_{10} k}^{\log_{10} k+1} 1 \diff x = \log(1 + 1/k)\text{.}
@@ -1377,10 +1377,10 @@ f(hx) = f(x)
 </div></article><article class="theorem-like" id="theorem-19"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">1.56</span>
 </h6>
-<p id="p-155">\(\{n ^2 \alpha\} \) is equidistributed for \(\alpha \in \RR\smallsetminus \QQ\text{.}\)</p></article><article class="hiddenproof" id="proof-18"><a knowl="" class="id-ref" refid="hk-proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-156">Furstenberg</p>
+<p id="p-155">\(\{n ^2 \alpha\} \) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> for \(\alpha \in \RR\smallsetminus \QQ\text{.}\)</p></article><article class="hiddenproof" id="proof-18"><a knowl="" class="id-ref" refid="hk-proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-156">Furstenberg</p>
 <ol id="p-157" class="decimal">
 <li id="li-36">Construct a suitable dynamical system on \(T^2\) (2-torus), for which a specific orbit gives the sequence \(\{n^2 \alpha \}\text{.}\)</li>
-<li id="li-37">Will show that this is uniquely ergodic.</li>
+<li id="li-37">Will show that this is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</li>
 </ol>
 <div class="displaymath">
 \begin{equation*}
@@ -1403,11 +1403,12 @@ T^n_\alpha(x,y) = (x+n\alpha, y+ 2nx + n^2 \alpha)
 T^n(0,0) = (n\alpha, n^2 \alpha)
 \end{equation*}
 </div>
-<p>so if we show that \(T^n(0,0)\) is equidistributed we are done.</p>
-<p id="p-158">So we show that \(X,T\) is uniquely ergodic.</p>
+<p>so if we show that \(T^n(0,0)\) is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> we are done.</p>
+<p id="p-158">So we show that \(X,T\) is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p>
 <ol id="p-159" class="decimal">
 <li id="li-38">Lebesgue is ergodic.</li>
-<li id="li-39">Only ergodic measure</li>
+<li id="li-39">Only <a knowl="./knowl/def-ergodic-measure.html" title="Definition 1.45: Ergodic measures">ergodic measure</a>
+</li>
 </ol>
 <ol class="decimal">
 <li id="li-40">
@@ -1441,7 +1442,7 @@ a_{m,n} = 0
 (x,y) \mapsto (x+\alpha, y+ g(\alpha))
 \end{equation*}
 </div>
-<p>Then if the Lebesgue measure \(m\) is \(T_g\)-ergodic then it indeed is uniquely ergodic.</p>
+<p>Then if the Lebesgue measure \(m\) is \(T_g\)-ergodic then it indeed is <a knowl="./knowl/def-uniq-ergodic.html" title="Definition 1.46: Uniquely ergodic actions">uniquely ergodic</a>.</p>
 <p id="p-163">Proof: exercise.</p>
 </li>
 </ol></article></div></article></section></section></div></main>

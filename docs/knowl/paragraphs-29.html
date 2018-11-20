@@ -11,45 +11,91 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="paragraphs"><h5 class="heading"><span class="title">Explicit realization</span></h5>
+<article class="paragraphs"><h5 class="heading"><span class="title">Digression: Hamilton Quaternions</span></h5>
 <div class="displaymath">
 \begin{equation*}
-P \in \Cl(d)
+B  = \{ u  + ia  + jb + kc : u,a,b,c \in \RR\}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\leadsto M_P \in \specialorthogonal(3)
+\bar x =  u - ia - j b - kc
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-x\in \mathscr H_d \implies Px = M_P x
+N(x) = x\bar x = u^2 + a^2 + b^2 + c^2
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-x = \begin{pmatrix} a\\b\\c \end{pmatrix}
-\end{equation*}
-</div>
-<p>Let</p>
-<div class="displaymath">
-\begin{equation*}
-P \bar P = (5)
-\end{equation*}
-</div>
-<p>because of the assumption on \(d\text{.}\)</p>
-<p>\(P\) action, let \(x\in\mathscr H_d\text{.}\)</p>
-<div class="displaymath">
-\begin{equation*}
-N(P) = 5\leadsto q \in B(\ZZ)
+\trace (x) = x + \bar x =  2u
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-N(q) = 5 \implies 5 \in \{1\pm2i, 1\pm2j,1\pm2k\}B^\times(\ZZ)
+B^{(0)} \{ x\in B : \trace (x) =  0\}
 \end{equation*}
 </div>
-<p>two of these will give you the action of \(P, \bar P\text{.}\)</p></article><span class="incontext"><a href="sec-linnik.html#paragraphs-29">in-context</a></span>
+<p>Note</p>
+<div class="displaymath">
+\begin{equation*}
+N(x) =a^2 + b^2 + c^2 \text{ if } x \in  B^{(0)}\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+B^\times  = \text{units} ,\, B^1 = \{ x \in B : N(x)= 1\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+PB^\times = B^\times/ Z(B^\times)
+\end{equation*}
+</div>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">3.12</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+B^\times \acts B^{(0)}
+\end{equation*}
+</div>
+<p>via conjugation.</p></article><article class="exercise-like"><a knowl="./knowl/exercise-10-hidden.html" title="Exercise 3.13"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3.13</span>
+</h6></a></article><article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.14</span> <span class="title">Hurwitz quaternions</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+B(\ZZ) = \ZZ[ i ,j, \frac{i+j+ k}{2} ]
+\end{equation*}
+</div></article><p>The Lipschitz quaternions are</p>
+<div class="displaymath">
+\begin{equation*}
+\ZZ[ i ,j, k]\text{.}
+\end{equation*}
+</div>
+<ol class="decimal">
+<li>\(B(\ZZ)\) is a maximal order</li>
+<li>\(B(\ZZ)\) is a Euclidean domain</li>
+<li>Lipschitz quaternions are not a Euclidean domain</li>
+</ol>
+<article class="exercise-like"><a knowl="./knowl/exercise-11-hidden.html" title="Exercise 3.15"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3.15</span>
+</h6></a></article><p><a knowl="./knowl/item-hurwitz-quat-euc-dom.html" title="Item 2">2</a> implies \(B(\ZZ)\) is a PID</p>
+<div class="displaymath">
+\begin{equation*}
+(\QQ^3, a^2+ b^2+  c^2) \simeq (B^{(0)}, N)
+\end{equation*}
+</div>
+<p>as metric spaces</p>
+<p>The image of</p>
+<div class="displaymath">
+\begin{equation*}
+B^\times(\ZZ) \to \specialorthogonal_3(\ZZ)
+\end{equation*}
+</div>
+<p>is \(\specialorthogonal_3^+(\ZZ)\text{.}\)</p></article><span class="incontext"><a href="sec-linnik.html#paragraphs-29">in-context</a></span>
 </body>
 </html>

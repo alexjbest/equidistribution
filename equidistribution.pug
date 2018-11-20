@@ -1197,7 +1197,7 @@ section#sec-duke
     p
         | The strategy is then to show
         me r_3(n)  \gg n^{1/2- \epsilon}\,\forall \epsilon \gt 0
-        me r_3(n)  \ll n^{k/2 -1/4 - \delta}\,\text{ for some }\delta \gt 0
+        me r_3(n)  \ll n^{k/2 -1/4 - \delta}\,\text{ for some}\,\delta \gt 0
         |.
 
     definition#def-half-integral-mfs
@@ -1324,10 +1324,10 @@ section#sec-duke
             | Prove this!
 
     paragraphs
-        title David Freid's proof of Hurwitz on #[m r_3(n^2)]
+        title David Fried's proof of Hurwitz on #[m r_3(n^2)]
 
         p
-            | Without proof Hurwitz state
+            | Without proof Hurwitz stated
             me r_3(N^2) =  6 P \prod_{q|Q} ( q^a + 2q^{a-1} + \cdots + 2q + q)
             | where #[m N = 2^k PQ] and each prime factor of #[m P] is #[m \equiv 1 \pmod 4] and each prime factor of #[m Q] is #[m \equiv -1 \pmod 4] and
             me q^a || Q
@@ -2189,7 +2189,7 @@ section#sec-duke
 section#sec-linnik
     title Linnik's theorem
 
-    introduction: p
+    p
         | We will mostly follow Ellenberg, Michel, Venkatesh.
         | Linnik's ergodic method and the distribution of integer points on spheres.
 
@@ -2302,106 +2302,307 @@ section#sec-linnik
                     | This will give a contradiction.
                     | Will take some work and depend on many things.
 
-        aside: p Lecture 17 8/11/2018
+    aside: p Lecture 17 8/11/2018
 
-        paragraphs
-            title Class group actions
+    paragraphs
+        title Class group actions
 
+        p
+            me \mathscr H_d  = \{ (x,y,z ) \in \ZZ^2:  x^2 + y^2+  z^2 = d \}
+
+        p
+            | Aim:
+            ol
+                li
+                    | #[m \widetilde {\mathscr H}_d^*] is a principal homogeneous space  for #[m H(d) = \Cl(\QQ(\sqrt{-d}))].
+                li
+                    | Describe the action explicitly.
+
+        definition#def-prin-homog-sp
+            title Principal homogeneous spaces
+            statement: p
+                | Let #[m G] be a group, #[m X \ne \emptyset] a set.
+                | #[m X] is a #[term principal homogeneous space] for #[m G]
+                | if
+                me G\acts X
+                | in a transitive, free manner.
+                | #[m X] is also called a #[m G]-#[term torsor].
+
+        remark: p
+            | Of #[m G] is non-abelian we have notions of a left-torsor and right-torsor.
+
+        example: statement: p: ul
+            li #[m G] is a #[m G]-torsor
+            li #[m G= V] a #[m n]-dimensional vector space then #[m \aff^n]  is a #[m G]-torsor
+            li #[m G = \mu_n] then #[m X(2) =  \{ x \in \CC: x^n = 2\}]
+
+        note
             p
-                me \mathscr H_d  = \{ (x,y,z ) \in \ZZ^2:  x^2 + y^2+  z^2 = d \}
+                me \specialorthogonal_3 (\ZZ)\acts \mathscr H_d
+                me v = \begin{pmatrix} x \\ y \\  z \end{pmatrix}\in \mathscr H_d,\,\gamma \in \specialorthogonal_3 (\ZZ) \leadsto \gamma v \in \mathscr H_d
+                | .
 
-            p
-                | Aim:
+        exercise
+            statement: p
                 ol
                     li
-                        | #[m \widetilde {\mathscr H}_d^*] is a principal homogeneous space  for #[m H(d) = \Cl(\QQ(\sqrt{-d}))].
-        aside: p Lecture 18 13/11/2018
+                        me \# \specialorthogonal_3(\ZZ) =  24
+                    li
+                        | #[m \specialorthogonal_3(\ZZ)] has a  subgroup #[m \specialorthogonal_3^+(\ZZ)] of index 2 acting via even permutations.
+
+        definition
+            statement: p
+                me \widetilde{\mathscr H}_d = \specialorthogonal_3(\ZZ) \backslash \mathscr H_d
+                me \widetilde{\mathscr H}_d (q) = \specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q)
+                me \widetilde S^2 = \specialorthogonal_3 (\ZZ) \backslash S^2
+                me.
+                    \widetilde{\mathscr H}_d^*  =
+                    \begin{cases}
+                    \specialorthogonal_3^+(\ZZ) \backslash \mathscr H_d ,\amp d \equiv 1,2 \pmod 4 \\
+                    \specialorthogonal_3(\ZZ) \backslash \mathscr H_d ,\amp d \equiv 3 \pmod 4
+                    \end{cases}
 
         p
-            |Summary #[m \widetilde {\mathscr H_d}^*] is a principal homogeneous space for #[m \Cl_d], the class group of #[m \QQ(\sqrt{-d})].
+            | For all practical purposes we can basically assume that  #[m d \equiv 3 \pmod 4].
 
-        p
-            | How?
-            | #[m x\in\mathscr H_d] defined
-            me \QQ(\sqrt{-d}) \xhookrightarrow i B(\QQ)
-            me \sqrt{-d} \mapsto x
-            | any #[m I \in \Cl(d) \leadsto B(\ZZ) i(I) = B(\ZZ) q] for some #[m q].
-        p
-            me B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
-            me y=  q\inv x q
-            me I x=  y
-            me [ \Lambda_{x\mapsto y}]
-            |inverse of this construction
-            me \specialorthogonal(3, \QQ) \simeq PB^\times (\QQ)
         proposition
             statement: p
-                | #[m \widetilde { \mathscr H_d}^*] is a principal homogeneous space for #[m \Cl(d)].
-                me \widetilde { \mathscr H_d} =  \widetilde { \mathscr H_d}^*
-                | if #[m d \equiv 3 \pmod 4].
+                | #[m \widetilde{\mathscr H}_d^* ] is a principal homogeneous space for #[m H(d)].
+                | Idea: Venkov 1922: Use quaternion algebras.
 
-                | The stabiliser of any point in #[m \widetilde { \mathscr H_d}] is the order 2 subgroup generated by ?????????.
-                me \implies |\mathscr H_d | = 24 |h(d)| \text{\,if\,} d \equiv 3 \pmod4
-                me          |\mathscr H_d | = 12 |h(d)| \text{\,if\,} d \equiv 1,2 \pmod4
-            proof: p
-                | Requires checking everything works as intended, it is local.
+    paragraphs
+        title Digression: Hamilton Quaternions
 
-        paragraphs
-            title Explicit realization
+        p
+            me B  = \{ u  + ia  + jb + kc : u,a,b,c \in \RR\}
+            me \bar x =  u - ia - j b - kc
+            me N(x) = x\bar x = u^2 + a^2 + b^2 + c^2
+            me \trace (x) = x + \bar x =  2u
+            me B^{(0)} \{ x\in B : \trace (x) =  0\}
+        p
+            | Note
+            me N(x) =a^2 + b^2 + c^2 \text{ if } x \in  B^{(0)}
+            |.
+        p
+            me B^\times  = \text{units} ,\, B^1 = \{ x \in B : N(x)= 1\}
+            me PB^\times = B^\times/ Z(B^\times)
 
+        remark
             p
-                me P \in \Cl(d)
-                me \leadsto M_P \in \specialorthogonal(3)
+                me B^\times \acts B^{(0)}
+                | via conjugation.
 
-                me x\in \mathscr H_d \implies Px = M_P x
-                me x = \begin{pmatrix} a\\b\\c \end{pmatrix}
-            p
-                |Let
-                me P \bar P = (5)
-                | because of the assumption on #[m d].
-
-            p
-                | #[m P] action, let #[m x\in\mathscr H_d].
-                me N(P) = 5\leadsto q \in B(\ZZ)
-                me N(q) = 5 \implies 5 \in \{1\pm2i, 1\pm2j,1\pm2k\}B^\times(\ZZ)
-                | two of these will give you the action of #[m P, \bar P].
-
-        example
+        exercise
             statement: p
-                | #[m q] will act by #[m q\inv x q] acting on #[m B^{(0)}], enough to check the action on #[m i,j,k].
-                | Say
-                me q  = 1+2i,\bar q = (1-2i)/5
-                me \bar q j q = \frac{(1-2i)}{5} j (1+2i)
-                me = \frac{j- 2k}{5} 1+2i
-                me j-2k - 2k - 2j????????
-        paragraphs
-            title Basic construction
-            p
-                | Let #[m \mathscr A_5 = \{M_1^\pm, M_2^\pm, M_3^\pm\}] starting with a solution #[m x\in \mathscr H_d] one gets two matrices #[m \omega_1, \omega_{-1} \in\mathscr A_5]
-                me x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarrow{\omega_{-1}} x \xrightarrow{\omega_{1}}x_1 \xrightarrow{\omega_{2}}x_2 \xrightarrow{\omega_{3}} x_3
-                | where #[m w_1] comes from #[m P] and #[m w_{-1}] from #[m \bar P].
+                me  1 \to Z(B^\times) \to B^\times \to PB^\times \simeq \specialorthogonal_3 (\QQ)  \to 1
 
-            p
-                | This construction gives a well-defined (up to flip) path starting with a solution #[m x \in \mathscr H_d].
+        definition
+            title Hurwitz quaternions
+            statement: p
+                me B(\ZZ) = \ZZ[ i ,j, \frac{i+j+ k}{2} ]
+        p
+            | The Lipschitz quaternions are
+            me \ZZ[ i ,j, k]
+            |.
+        p
+            ol
+                li
+                    | #[m B(\ZZ)] is a maximal order
+                li#item-hurwitz-quat-euc-dom
+                    | #[m B(\ZZ)] is a Euclidean domain
+                li
+                    | Lipschitz quaternions are not a Euclidean domain
+        exercise
+            statement: p
+                ol
+                    li
+                        | Show these properties.
+                    li
+                        | Show #[m \Cl(\ZZ\lb i, j, k \rb)   =2].
+        p
+            | #[xref(ref="item-hurwitz-quat-euc-dom")/] implies #[m B(\ZZ)] is a PID
 
-            remark
-                statement: p
-                    | These chains are periodic.
-        paragraphs
-            title Back to proof
-            p
-                | Idea: if #[m x\in\mathscr H_d] then #[m x] and these paths are well defined mod #[m p].
+            me (\QQ^3, a^2+ b^2+  c^2) \simeq (B^{(0)}, N)
+            | as metric spaces
+        p
+            | The image of
+            me B^\times(\ZZ) \to \specialorthogonal_3(\ZZ)
+            | is #[m \specialorthogonal_3^+(\ZZ)].
 
+    paragraphs
+        title The action of #[m H(d)]
+
+
+        p
+            | Start with #[m x = (a,b,c) \in \mathscr H_d].
+            | This gives rise to an embedding
+            me \iota_x \colon \QQ(\sqrt{-d}) \hookrightarrow B
+            me \sqrt{-d} \mapsto  x + ai + bj + ck
+            | note #[m x^2 = -d].
+
+        p
+            | Let #[m K= \QQ(\sqrt{-d})]
+            | #[m \iota_x] is integral ion the sense that if
+            me \ints_x = B(\ZZ) \cap \QQ \lb x \rb
+            | then
+            me \iota\inv (\ints_x) = \ints_K
+            | .
+
+        exercise: statement: p Prove this
+
+
+        p
+            | #[m I \in H(d) \leadsto y= y(x,I)]
+        p
+            | Consider #[m B(\ZZ) \iota_x(I) = B(\ZZ) q] for some #[m q\in B(\QQ)].
+            | Since #[m B(\ZZ)] is a PID.
+        p
+            | Then #[m y = q xq\inv\in \mathscr H_d]
+
+        note
             p
-                |We are aiming for
-            proposition
-                statement: p
-                    | Let #[m \Sigma(d,l,q)] denote
-                    me \#\{(x,x') \in \mathscr H_d\times \mathscr H_d : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \text{ in } \mathscr H_d\}
-                    | where
-                    me \gamma_x^{(l)}\in \mathscr H_d(q)
-                    | is the chain cut at #[m \lb -l,\rb] and then reduced mod #[m q].
-                    | Then
-                    me \sigma (l,d,q)  \ll_\epsilon |\mathscr H_d| + d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
-                proof: p
-                    | Next time, Linnik's lemma #[m \#\{xy = d\} \le d^\epsilon]
-                    | One more input.
+                ol
+                    li: me y^2 = -d
+                    li
+                        | If we take #[m \lambda I] for #[m \lambda \in K^\times], #[m y(x, \lambda I) = y(x, I)]
+                        | so we get a well defined construction #[m H(d)].
+                    li
+                        | #[m q] is defined up to conjugation by #[m B(\ZZ)^\times].
+
+        p
+            | To sum up:
+        p
+            | For any #[m x \in \mathscr H_d] we have a well defined map
+            me \Cl(d) \to \widetilde{\mathscr H}_d^\times
+            me I \mapsto y(x,I)
+            | .
+
+        claim
+            statement: p
+                | This map makes #[m \widetilde{\mathscr H}_d^\times] a principal homogeneous space over #[m \Cl(d)].
+        p
+            | Let #[m x,y \in \mathscr H_d].
+
+        p
+            | Construct an ideal #[m \Lambda_{x\mapsto y}] s.t. #[m y(x,\Lambda_{x\mapsto y}) = y].
+
+        definition
+            statement: p
+                me \Lambda_{x\mapsto y} = \{ \lambda \in B(\ZZ) : x \lambda =  \lambda y \}
+                | .
+
+        p
+            | #[m x, y \in \mathscr H_d]
+            | Witt's theorem implies there exists #[m q \in PB^\times(\QQ) = \specialorthogonal_3(\QQ)] s.t.
+            ul
+                li: me y = q\inv x q
+                li: me \Lambda_{x\mapsto y} = B(\ZZ) \cap \QQ [x] q
+
+        note: p
+            | #[m \Lambda_{x\mapsto y} ] is locally free and rank 1
+            me \implies [\Lambda_{x \mapsto y}] \in \Pic(\ints_x)  \simeq \Pic(\ints_K) \simeq \Cl(d)
+            | .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    aside: p Lecture 18 13/11/2018
+
+    p
+        |Summary #[m \widetilde {\mathscr H_d}^*] is a principal homogeneous space for #[m \Cl_d], the class group of #[m \QQ(\sqrt{-d})].
+
+    p
+        | How?
+        | #[m x\in\mathscr H_d] defined
+        me \QQ(\sqrt{-d}) \xhookrightarrow i B(\QQ)
+        me \sqrt{-d} \mapsto x
+        | any #[m I \in \Cl(d) \leadsto B(\ZZ) i(I) = B(\ZZ) q] for some #[m q].
+    p
+        me B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
+        me y=  q\inv x q
+        me I x=  y
+        me [ \Lambda_{x\mapsto y}]
+        |inverse of this construction
+        me \specialorthogonal(3, \QQ) \simeq PB^\times (\QQ)
+    proposition
+        statement: p
+            | #[m \widetilde { \mathscr H_d}^*] is a principal homogeneous space for #[m \Cl(d)].
+            me \widetilde { \mathscr H_d} =  \widetilde { \mathscr H_d}^*
+            | if #[m d \equiv 3 \pmod 4].
+
+            | The stabiliser of any point in #[m \widetilde { \mathscr H_d}] is the order 2 subgroup generated by #[m \ideal p | (2)].
+            me \implies |\mathscr H_d | = 24 |h(d)| \text{\,if\,} d \equiv 3 \pmod4
+            me          |\mathscr H_d | = 12 |h(d)| \text{\,if\,} d \equiv 1,2 \pmod4
+        proof: p
+            | Requires checking everything works as intended, it is local.
+
+    paragraphs
+        title Explicit realization
+
+        p
+            me P \in \Cl(d)
+            me \leadsto M_P \in \specialorthogonal(3)
+
+            me x\in \mathscr H_d \implies Px = M_P x
+            me x = \begin{pmatrix} a\\b\\c \end{pmatrix}
+        p
+            |Let
+            me P \bar P = (5)
+            | because of the assumption on #[m d].
+
+        p
+            | #[m P] action, let #[m x\in\mathscr H_d].
+            me N(P) = 5\leadsto q \in B(\ZZ)
+            me N(q) = 5 \implies 5 \in \{1\pm2i, 1\pm2j,1\pm2k\}B^\times(\ZZ)
+            | two of these will give you the action of #[m P, \bar P].
+
+    example
+        statement: p
+            | #[m q] will act by #[m q\inv x q] acting on #[m B^{(0)}], enough to check the action on #[m i,j,k].
+            | Say
+            me q  = 1+2i,\bar q = (1-2i)/5
+            me \bar q j q = \frac{(1-2i)}{5} j (1+2i)
+            me = \frac{j- 2k}{5} 1+2i
+            me j-2k - 2k - 2j????????
+    paragraphs
+        title Basic construction
+        p
+            | Let #[m \mathscr A_5 = \{M_1^\pm, M_2^\pm, M_3^\pm\}] starting with a solution #[m x\in \mathscr H_d] one gets two matrices #[m \omega_1, \omega_{-1} \in\mathscr A_5]
+            me x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarrow{\omega_{-1}} x \xrightarrow{\omega_{1}}x_1 \xrightarrow{\omega_{2}}x_2 \xrightarrow{\omega_{3}} x_3
+            | where #[m w_1] comes from #[m P] and #[m w_{-1}] from #[m \bar P].
+
+        p
+            | This construction gives a well-defined (up to flip) path starting with a solution #[m x \in \mathscr H_d].
+
+        remark
+            p
+                | These chains are periodic.
+    paragraphs
+        title Back to proof
+        p
+            | Idea: if #[m x\in\mathscr H_d] then #[m x] and these paths are well defined mod #[m p].
+
+        p
+            |We are aiming for
+        proposition
+            statement: p
+                | Let #[m \Sigma(d,l,q)] denote
+                me \#\{(x,x') \in \mathscr H_d\times \mathscr H_d : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \text{ in } \mathscr H_d\}
+                | where
+                me \gamma_x^{(l)}\in \mathscr H_d(q)
+                | is the chain cut at #[m \lb -l,\rb] and then reduced mod #[m q].
+                | Then
+                me \sigma (l,d,q)  \ll_\epsilon |\mathscr H_d| + d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
+            proof: p
+                | Next time, Linnik's lemma #[m \#\{xy = d\} \le d^\epsilon]
+                | One more input.

@@ -48,7 +48,7 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\require{mathrsfs}
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\require{mathrsfs}\require{mathtools}
 \newenvironment{smallermatrix}[1]
 {\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
 \array{#1}}
@@ -287,7 +287,7 @@ MathJax.Hub.Config({
 </h2>
 <a href="sec-duke.html" class="permalink">¶</a><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">Recall</span></h5>
 <aside class="aside-like" id="aside-8"><p id="p-164">Lecture 8 4/10/2018</p></aside><p id="p-165"><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">1.9</a>.</p>
-<p id="p-166">We will now prove this, not via Linnik's proof, but via an analogue of Weyl's criterion. Strategy:</p>
+<p id="p-166">We will now prove this, not via Linnik's proof, but via an analogue of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>. Strategy:</p>
 <ol class="decimal">
 <li id="li-42">Weyl's criterion  \(\leadsto\) bounding exponential sums.</li>
 <li id="li-43">To bound these sums we will use automorphic methods.</li>
@@ -383,7 +383,7 @@ r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
 \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) \ll n^{\frac 12 - \delta}\text{.}
 \end{equation*}
 </div>
-<p id="p-178">If we knew a half-integral weight Ramanujan conjecture:</p>
+<p id="p-178">If we knew a <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 2.6: Half-integral weight modular forms">half-integral</a> weight Ramanujan conjecture:</p>
 <div class="displaymath">
 \begin{equation*}
 f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
@@ -489,7 +489,7 @@ r_3(n)  \gg n^{1/2- \epsilon}\,\forall \epsilon \gt 0
 </div>
 <div class="displaymath">
 \begin{equation*}
-r_3(n)  \ll n^{k/2 -1/4 - \delta}\,\text{ for some }\delta \gt 0\text{.}
+r_3(n)  \ll n^{k/2 -1/4 - \delta}\,\text{ for some}\,\delta \gt 0\text{.}
 \end{equation*}
 </div>
 <article class="definition-like" id="def-half-integral-mfs"><h6 class="heading">
@@ -680,8 +680,8 @@ F(z) = y^{k/2}  |f(z)|
 </div></article><article class="exercise-like" id="exercise-4"><a knowl="" class="id-ref" refid="hk-exercise-4"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.17</span>
 </h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-209">Prove this!</p></article></div>
-<article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">David Freid's proof of Hurwitz on \(r_3(n^2)\)</span></h5>
-<p id="p-210">Without proof Hurwitz state</p>
+<article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">David Fried's proof of Hurwitz on \(r_3(n^2)\)</span></h5>
+<p id="p-210">Without proof Hurwitz stated</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(N^2) =  6 P \prod_{q|Q} ( q^a + 2q^{a-1} + \cdots + 2q + q)
@@ -1733,7 +1733,7 @@ h(\tilde n) \gg_\epsilon n^{1/2 - \epsilon}\text{.}
 \frac{1}{\sqrt n} \# \{ \alpha \in \ZZ^3 : |\alpha|^2 = n\}
 \end{equation*}
 </div>
-<p>gets equidistributed on \(S^3\) as \(n \to \infty\text{.}\)</p></article><p id="p-325">Recall this above was problem 1.</p>
+<p>gets <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> on \(S^3\) as \(n \to \infty\text{.}\)</p></article><p id="p-325">Recall this above was problem 1.</p>
 <article class="paragraphs" id="paragraphs-23"><h5 class="heading"><span class="title">Problem 2</span></h5>
 <p id="p-326">\(\Gamma = \SL_2(\ZZ)\)</p>
 <div class="displaymath">
@@ -1774,7 +1774,7 @@ L^2( \Gamma\backslash \HH) = \oint_\RR E( z, \frac 12 + iit) \diff \mu (t)
 \end{equation*}
 </div>
 <p>\(\phi_\lambda\) a Maass cusp form of eigenvalue \(\lambda\text{.}\)</p>
-<p id="p-331">Detour: Maass forms and Eisenstein series</p>
+<p id="p-331">Detour: <a knowl="./knowl/def-equidist-maass-form.html" title="Definition 2.53: Maass form">Maass forms</a> and Eisenstein series</p>
 <article class="definition-like" id="def-equidist-maass-form"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.53</span> <span class="title">Maass form</span>
 </h6>
