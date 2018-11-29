@@ -2207,10 +2207,10 @@ section#sec-linnik
                 | As #[m d \to \infty] squarefree such that #[m d\not\equiv 7 \pmod 8],  #[m d \equiv \pm 1 \pmod 5]
                 me \left\{ \frac {x}{\sqrt d} : x \in \mathscr H_d \right\}
                 | is equidistributed w.r.t. the Lebesgue measure
-                me \red_\infty \colon \mathscr H_d \to S^2
-                me \frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
+                me \operatorname{red}_\infty \colon \mathscr H_d \to S^2
+                me \frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
                 | in the sense that
-                me \frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
+                me \frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
                 | for any #[m \Omega] a reasonable subset of #[m S^2].
 
         p
@@ -2224,8 +2224,8 @@ section#sec-linnik
                 me \overline{\mathscr H}_d = \{ (x,y,x) \pmod q : (x,y,z)\in \mathscr H_d\}
                 | with #[m q] fixed #[m \gt 0] and #[m (q,30)  =1] (non-essential).
                 | As #[m d \to  \infty], #[m d] squarefree such that #[m d \not \equiv 7 \pmod 8] and #[m d \equiv \pm 1 \pmod 5].
-                | #[m \overline {\mathscr H}_d(q)] becomes equidistributed in #[m \mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}] w.r.t counting measure, explicitly
-                me \frac{| \red\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
+                | #[m \overline {\mathscr H}_d(q)] becomes equidistributed in #[m \mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}] w.r.t. counting measure, explicitly
+                me \frac{| \operatorname{red}\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
                 | as #[m d \to \infty].
 
         p
@@ -2275,7 +2275,7 @@ section#sec-linnik
                     | call this chain #[m \gamma_X] and for any #[m l \gt 0 \in \ZZ]
                     me \gamma_X^{(l)} = [x_{-l}, x_{-l + 1}, \ldots, x_{-1} ,  x,x_1, \ldots, x_l]
                 li
-                    | consider the average on
+                    | Consider the average on
                     me B_\delta = \gamma_X^{(l)} \cap B_\delta
                     | .
                     | On one hand the expected size of #[m \gamma_X^{(l)} \cap B_\delta] is
@@ -2378,7 +2378,7 @@ section#sec-linnik
             me \bar x =  u - ia - j b - kc
             me N(x) = x\bar x = u^2 + a^2 + b^2 + c^2
             me \trace (x) = x + \bar x =  2u
-            me B^{(0)} \{ x\in B : \trace (x) =  0\}
+            me B^{(0)} = \{ x\in B : \trace (x) =  0\}
         p
             | Note
             me N(x) =a^2 + b^2 + c^2 \text{ if } x \in  B^{(0)}
@@ -2519,7 +2519,7 @@ section#sec-linnik
     aside: p Lecture 18 13/11/2018
 
     p
-        |Summary #[m \widetilde {\mathscr H_d}^*] is a principal homogeneous space for #[m \Cl_d], the class group of #[m \QQ(\sqrt{-d})].
+        |Summary #[m \widetilde {\mathscr H_d}^*] is a principal homogeneous space for #[m \Cl(d)], the class group of #[m \QQ(\sqrt{-d})].
 
     p
         | How?
@@ -2528,7 +2528,7 @@ section#sec-linnik
         me \sqrt{-d} \mapsto x
         | any #[m I \in \Cl(d) \leadsto B(\ZZ) i(I) = B(\ZZ) q] for some #[m q].
     p
-        me B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
+        me B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ, \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
         me y=  q\inv x q
         me I x=  y
         me [ \Lambda_{x\mapsto y}]
@@ -2600,9 +2600,153 @@ section#sec-linnik
                 me \#\{(x,x') \in \mathscr H_d\times \mathscr H_d : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \text{ in } \mathscr H_d\}
                 | where
                 me \gamma_x^{(l)}\in \mathscr H_d(q)
-                | is the chain cut at #[m \lb -l,\rb] and then reduced mod #[m q].
+                | is the chain cut at #[m \lb -l,l\rb] and then reduced mod #[m q].
                 | Then
                 me \sigma (l,d,q)  \ll_\epsilon |\mathscr H_d| + d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
             proof: p
-                | Next time, Linnik's lemma #[m \#\{xy = d\} \le d^\epsilon]
+                | Next time, Linnik's lemma #[m \#\{xy = d\} \le d^\epsilon].
                 | One more input.
+
+    aside: p Lecture 19 27/11/2018
+    p
+        | Missed!!
+
+    aside: p Lecture 20 29/11/2018
+
+    theorem
+        title Linnik
+        statement: p
+            | Fix #[m \nu, \delta\gt 0] and let #[m q \le d^{\frac 14 - \nu}], #[m (q,30) = 1].
+            | Then the fraction of #[m \bar x \in \mathscr H_d(q)] for which
+            me |\operatorname{dev}_d(\bar x)| \gt \delta
+            | tends to 0 as #[m d \to \infty] through #[m d \equiv \mp 1 \pmod 5].
+
+    p
+        | Recall #[xref(ref="def-deviation")/].
+
+    p
+        | Last time
+    proposition
+        statement: p
+            | Let
+            me \Sigma(d,l,q) = \# \{ (x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} =\gamma_{x'}^{(l)}\}
+            | then
+            me \Sigma(d,l,q) \ll_\epsilon| \mathscr H_d | +  d^\epsilon \left(1+  \frac{d}{q^2 5^{2l}}\right)
+            | .
+
+    proof
+        title Proof of theorem
+        p
+            | Let
+            me B_\delta = \{ \bar x\in \mathscr H_d (q) : \operatorname{dev}_d(\bar x)  \gt \delta\}
+            | and assume that
+            me B_\delta  \ge \eta | \mathscr H_d(q)|
+            | for some #[m \eta  \gt 0].
+        p
+            | Observe that
+            me \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d }  |\gamma_x^{(l)} \cap B_\delta | =  (2l+ 1)  \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
+            | or
+            men \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d } \frac{ |\gamma_x^{(l)} \cap B_\delta | }{  (2l+ 1)} =   \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
+        p
+            | Choose an  #[m l] s.t.
+            me \frac 15 |\mathscr H_d| \le q^2 5^{2l} \le 5 |\mathscr H_d|
+            | note that we can indeed choose such an #[m l].
+
+        p
+            | By definition every #[m \bar x \in B_\delta] satisfies
+            me \operatorname{dev}_d(\bar x) \gt \delta
+            | implies
+            me \frac{ |\operatorname{red}_q\inv(\bar x)|}{ |\mathscr H_d|/|\mathscr H_d(q)|} \gt 1 + \delta
+            | .
+
+        p
+            me | \operatorname{red}_q \inv(B_\delta)|  \ge \frac{ |B_\delta | |\mathscr H_d| }{ |\mathscr H_d(q)|} (1+\delta)
+            | so
+            me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|}(1+\delta)
+            | by the assumption that
+            me B_\delta  \ge \eta | \mathscr H_d(q)|
+            | we have this is
+            me \ge \frac{|B_\delta|}{|\mathscr H_d(q)|}+\eta\delta
+            | .
+        p
+            | Let
+            me \Phi = \left\{ x\in \mathscr H_d : \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right\}
+        p
+            | Note that
+            me \mathscr H_d  =  \Phi \sqcup \Phi^c
+            me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}  =  \frac{1}{|\mathscr H_d|} \left( \sum_{x\in \Phi } \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{\le 1} + \sum_{x\in \Phi^c} \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{ \le  \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2}  }  \right)
+            me \le\frac{1}{|\mathscr H_d|} \left( |\Phi | + \overbrace{| \Phi^c|}^{=|\mathscr H_d| - |\Phi|} \left( \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right)\right)
+            men#eqn-phi-bd-linnik-pf \implies |\Phi| \ge  \frac{\eta \delta }{2} | \mathscr H_d|
+            |.
+        p
+            | Now we count the number of marked non-backtracking paths on #[m \mathscr H_d(q)]  of length #[m 2l+1] (write #[m MNBP(\mathscr H_d(q))]) satisfying
+            me \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q) | } +   \frac{\delta \eta}{2}
+            | .
+        p
+            | By #[xref(ref="eqn-phi-bd-linnik-pf")/] we have #[m \eta \delta |\mathscr H_d|/2] of these paths #[q upstairs].
+        p
+            | Recall Siegel implies
+            me d^{\frac 12 - \epsilon} \lt | \mathscr H_d| \lt d^{\frac 12 + \epsilon}
+            | so upstairs we have #[m \gg_\epsilon \frac{\eta \delta }{2} d^{\frac 12 - \epsilon }] paths.
+
+        p
+            | Claim 1:
+            | The previous proposition implies not mant of these paths give the same path mod #[m q]
+            me MNBP(\mathscr H_d(q)) \gg_{\epsilon,\delta \eta} d^{\frac 12 - \epsilon}
+            | .
+        p
+            | On the other hand the total number of marked non-backtracking paths on
+            me \mathscr H_d(q)
+            | is
+            me | \mathscr H_d(q)| 6 \cdot 5^{2l -1}
+            | also observe that #[m |\mathscr H_d(q)| \ll q^2]
+            | so  the total number #[m \sim q^2 5^{2l} \ll d^{1/2  + \epsilon}]
+            me \frac 15 |\mathscr H_d| \lt q^2 5^{2l} \lt 5 |\mathscr H_d|
+
+        p
+            | Final input is a Chernoff type bound.
+    proposition
+        statement: p
+            | Fix #[m \eta, \epsilon \gt 0] for any subset
+            me B \subseteq \mathscr H_d(q)
+            | s.t.
+            me | B | \ge  \eta | \mathscr H_d(q)|
+            | the fraction of non-backtracking paths of length #[m 2l + 1] satisfying
+            me \left| \frac{| \gamma \cap B|}{2l + 1 } - \frac{|B | }{|\mathscr H_d(q)|}  \right| \ge \epsilon
+            | is
+            me \ll_{\epsilon,\eta} e^{-cl}
+            | for some #[m c =c(\epsilon, \eta) \gt 0].
+
+    p
+        | Claim 2: This proposition implies that the fraction
+        me MNBP(\mathscr H_d(q)) \ll d^{\frac 12 - \tau}
+        | for some #[m \tau \gt 0].
+        | Then
+        me \gg_\epsilon d^{\frac 12 - \epsilon}
+        me \ll_\epsilon d^{\frac 12 - \tau}
+        | give a contradiction.
+
+    p
+        | We now check some claims made above.
+
+    claim
+        title Claim 1
+        statement: p
+            | Bound on #[m \#\{(x,x') : \gamma_x ^{(l) } =  \gamma_{x'}^{(l)}\}]
+            | gives a bound on the number of distinct paths.
+        proof: p
+            me \#\{ (a,a')  \in A^2 : a  \equiv a' \pmod q\} = \sum n_{a_i}
+            | gives a lower bound on #[m A \pmod q].
+
+            | To show this note that the
+            me | A(q)| = | A |  - \sum_{i=1}^{|A|} \frac{n_{a_i} - 1}{n_{a_i}}  - \sum_{i=1}^{|A|} \frac 1{n_{a_i}}
+            | where #[m n_{a_i} = \# \{ a \in A : a \equiv a_i \pmod q\}].
+
+
+
+    claim
+        title Claim 2
+        statement: p
+            | Follows from two points
+            me d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
+            me q \lt d^{\frac 14 - \nu}

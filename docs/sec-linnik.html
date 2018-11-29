@@ -46,6 +46,12 @@ MathJax.Hub.Config({
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\require{mathrsfs}\require{mathtools}
@@ -306,18 +312,18 @@ MathJax.Hub.Config({
 <p>is <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> w.r.t. the Lebesgue measure</p>
 <div class="displaymath">
 \begin{equation*}
-\red_\infty \colon \mathscr H_d \to S^2
+\operatorname{red}_\infty \colon \mathscr H_d \to S^2
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
+\frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
 \end{equation*}
 </div>
 <p>in the sense that</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{|\red_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
+\frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
 \end{equation*}
 </div>
 <p>for any \(\Omega\) a reasonable subset of \(S^2\text{.}\)</p></article><p id="p-365">The \(\pm 1\pmod 5\) condition comes from a splitting condition in \(\QQ(\sqrt{d})\) that we need to find an appropriate group action.</p>
@@ -330,10 +336,10 @@ MathJax.Hub.Config({
 \overline{\mathscr H}_d = \{ (x,y,x) \pmod q : (x,y,z)\in \mathscr H_d\}
 \end{equation*}
 </div>
-<p>with \(q\) fixed \(\gt 0\) and \((q,30)  =1\) (non-essential). As \(d \to  \infty\text{,}\) \(d\) squarefree such that \(d \not \equiv 7 \pmod 8\) and \(d \equiv \pm 1 \pmod 5\text{.}\) \(\overline {\mathscr H}_d(q)\) becomes <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> in \(\mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}\) w.r.t counting measure, explicitly</p>
+<p>with \(q\) fixed \(\gt 0\) and \((q,30)  =1\) (non-essential). As \(d \to  \infty\text{,}\) \(d\) squarefree such that \(d \not \equiv 7 \pmod 8\) and \(d \equiv \pm 1 \pmod 5\text{.}\) \(\overline {\mathscr H}_d(q)\) becomes <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> in \(\mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}\) w.r.t. counting measure, explicitly</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{| \red\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
+\frac{| \operatorname{red}\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
 \end{equation*}
 </div>
 <p>as \(d \to \infty\text{.}\)</p></article><p id="p-368">Actually we will prove something a little strange.</p>
@@ -405,7 +411,7 @@ x_{-2} \to x_{-1} \to x  \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
 \end{equation*}
 </div>
 </li>
-<li id="li-66">consider the average on<div class="displaymath">
+<li id="li-66">Consider the average on<div class="displaymath">
 \begin{equation*}
 B_\delta = \gamma_X^{(l)} \cap B_\delta\text{.}
 \end{equation*}
@@ -540,7 +546,7 @@ N(x) = x\bar x = u^2 + a^2 + b^2 + c^2
 </div>
 <div class="displaymath">
 \begin{equation*}
-B^{(0)} \{ x\in B : \trace (x) =  0\}
+B^{(0)} = \{ x\in B : \trace (x) =  0\}
 \end{equation*}
 </div>
 <p id="p-387">Note</p>
@@ -698,7 +704,7 @@ y = q\inv x q
 \begin{equation*}
 \implies [\Lambda_{x \mapsto y}] \in \Pic(\ints_x)  \simeq \Pic(\ints_K) \simeq \Cl(d)\text{.}
 \end{equation*}
-</div></article></article><aside class="aside-like" id="aside-18"><p id="p-412">Lecture 18 13/11/2018</p></aside><p id="p-413">Summary \(\widetilde {\mathscr H_d}^*\) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(\Cl_d\text{,}\) the class group of \(\QQ(\sqrt{-d})\text{.}\)</p>
+</div></article></article><aside class="aside-like" id="aside-18"><p id="p-412">Lecture 18 13/11/2018</p></aside><p id="p-413">Summary \(\widetilde {\mathscr H_d}^*\) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(\Cl(d)\text{,}\) the class group of \(\QQ(\sqrt{-d})\text{.}\)</p>
 <p id="p-414">How? \(x\in\mathscr H_d\) defined</p>
 <div class="displaymath">
 \begin{equation*}
@@ -713,7 +719,7 @@ y = q\inv x q
 <p>any \(I \in \Cl(d) \leadsto B(\ZZ) i(I) = B(\ZZ) q\) for some \(q\text{.}\)</p>
 <div class="displaymath" id="p-415">
 \begin{equation*}
-B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
+B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ, \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -849,12 +855,245 @@ x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarr
 \gamma_x^{(l)}\in \mathscr H_d(q)
 \end{equation*}
 </div>
-<p>is the chain cut at \(\lb -l,\rb\) and then reduced mod \(q\text{.}\) Then</p>
+<p>is the chain cut at \(\lb -l,l\rb\) and then reduced mod \(q\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma (l,d,q)  \ll_\epsilon |\mathscr H_d| + d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-36"><a knowl="" class="id-ref" refid="hk-proof-36"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-36" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-428">Next time, Linnik's lemma \(\#\{xy = d\} \le d^\epsilon\) One more input.</p></article></div></article></section></div></main>
+</div></article><article class="hiddenproof" id="proof-36"><a knowl="" class="id-ref" refid="hk-proof-36"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-36" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-428">Next time, Linnik's lemma \(\#\{xy = d\} \le d^\epsilon\text{.}\) One more input.</p></article></div></article><aside class="aside-like" id="aside-19"><p id="p-429">Lecture 19 27/11/2018</p></aside><p id="p-430">Missed!!</p>
+<aside class="aside-like" id="aside-20"><p id="p-431">Lecture 20 29/11/2018</p></aside><article class="theorem-like" id="theorem-32"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.25</span> <span class="title">Linnik</span>
+</h6>
+<p id="p-432">Fix \(\nu, \delta\gt 0\) and let \(q \le d^{\frac 14 - \nu}\text{,}\) \((q,30) = 1\text{.}\) Then the fraction of \(\bar x \in \mathscr H_d(q)\) for which</p>
+<div class="displaymath">
+\begin{equation*}
+|\operatorname{dev}_d(\bar x)| \gt \delta
+\end{equation*}
+</div>
+<p>tends to 0 as \(d \to \infty\) through \(d \equiv \mp 1 \pmod 5\text{.}\)</p></article><p id="p-433">Recall <a knowl="./knowl/def-deviation.html" title="Definition 3.3: Deviation">3.3</a>.</p>
+<p id="p-434">Last time</p>
+<article class="theorem-like" id="proposition-10"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.26</span>
+</h6>
+<p id="p-435">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\Sigma(d,l,q) = \# \{ (x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} =\gamma_{x'}^{(l)}\}
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+\Sigma(d,l,q) \ll_\epsilon| \mathscr H_d | +  d^\epsilon \left(1+  \frac{d}{q^2 5^{2l}}\right)\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-37"><a knowl="" class="id-ref" refid="hk-proof-37"><h6 class="heading"><span class="title">Proof of theorem</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-436">Let</p>
+<div class="displaymath">
+\begin{equation*}
+B_\delta = \{ \bar x\in \mathscr H_d (q) : \operatorname{dev}_d(\bar x)  \gt \delta\}
+\end{equation*}
+</div>
+<p>and assume that</p>
+<div class="displaymath">
+\begin{equation*}
+B_\delta  \ge \eta | \mathscr H_d(q)|
+\end{equation*}
+</div>
+<p>for some \(\eta  \gt 0\text{.}\)</p>
+<p id="p-437">Observe that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d }  |\gamma_x^{(l)} \cap B_\delta | =  (2l+ 1)  \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
+\end{equation*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{equation}
+\frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d } \frac{ |\gamma_x^{(l)} \cap B_\delta | }{  (2l+ 1)} =   \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}\tag{3.1}
+\end{equation}
+</div>
+<p id="p-438">Choose an  \(l\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\frac 15 |\mathscr H_d| \le q^2 5^{2l} \le 5 |\mathscr H_d|
+\end{equation*}
+</div>
+<p>note that we can indeed choose such an \(l\text{.}\)</p>
+<p id="p-439">By definition every \(\bar x \in B_\delta\) satisfies</p>
+<div class="displaymath">
+\begin{equation*}
+\operatorname{dev}_d(\bar x) \gt \delta
+\end{equation*}
+</div>
+<p>implies</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{ |\operatorname{red}_q\inv(\bar x)|}{ |\mathscr H_d|/|\mathscr H_d(q)|} \gt 1 + \delta\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-440">
+\begin{equation*}
+| \operatorname{red}_q \inv(B_\delta)|  \ge \frac{ |B_\delta | |\mathscr H_d| }{ |\mathscr H_d(q)|} (1+\delta)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|}(1+\delta)
+\end{equation*}
+</div>
+<p>by the assumption that</p>
+<div class="displaymath">
+\begin{equation*}
+B_\delta  \ge \eta | \mathscr H_d(q)|
+\end{equation*}
+</div>
+<p>we have this is</p>
+<div class="displaymath">
+\begin{equation*}
+\ge \frac{|B_\delta|}{|\mathscr H_d(q)|}+\eta\delta\text{.}
+\end{equation*}
+</div>
+<p id="p-441">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi = \left\{ x\in \mathscr H_d : \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right\}
+\end{equation*}
+</div>
+<p id="p-442">Note that</p>
+<div class="displaymath">
+\begin{equation*}
+\mathscr H_d  =  \Phi \sqcup \Phi^c
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}  =  \frac{1}{|\mathscr H_d|} \left( \sum_{x\in \Phi } \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{\le 1} + \sum_{x\in \Phi^c} \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{ \le  \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2}  }  \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\le\frac{1}{|\mathscr H_d|} \left( |\Phi | + \overbrace{| \Phi^c|}^{=|\mathscr H_d| - |\Phi|} \left( \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right)\right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation}
+\implies |\Phi| \ge  \frac{\eta \delta }{2} | \mathscr H_d|\text{.}\label{eqn-phi-bd-linnik-pf}\tag{3.2}
+\end{equation}
+</div>
+<p id="p-443">Now we count the number of marked non-backtracking paths on \(\mathscr H_d(q)\)  of length \(2l+1\) (write \(MNBP(\mathscr H_d(q))\)) satisfying</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q) | } +   \frac{\delta \eta}{2}\text{.}
+\end{equation*}
+</div>
+<p id="p-444">By <a knowl="./knowl/eqn-phi-bd-linnik-pf.html" title="Equation 3.2">(3.2)</a> we have \(\eta \delta |\mathscr H_d|/2\) of these paths “upstairs”.</p>
+<p id="p-445">Recall Siegel implies</p>
+<div class="displaymath">
+\begin{equation*}
+d^{\frac 12 - \epsilon} \lt | \mathscr H_d| \lt d^{\frac 12 + \epsilon}
+\end{equation*}
+</div>
+<p>so upstairs we have \(\gg_\epsilon \frac{\eta \delta }{2} d^{\frac 12 - \epsilon }\) paths.</p>
+<p id="p-446">Claim 1: The previous proposition implies not mant of these paths give the same path mod \(q\)</p>
+<div class="displaymath">
+\begin{equation*}
+MNBP(\mathscr H_d(q)) \gg_{\epsilon,\delta \eta} d^{\frac 12 - \epsilon}\text{.}
+\end{equation*}
+</div>
+<p id="p-447">On the other hand the total number of marked non-backtracking paths on</p>
+<div class="displaymath">
+\begin{equation*}
+\mathscr H_d(q)
+\end{equation*}
+</div>
+<p>is</p>
+<div class="displaymath">
+\begin{equation*}
+| \mathscr H_d(q)| 6 \cdot 5^{2l -1}
+\end{equation*}
+</div>
+<p>also observe that \(|\mathscr H_d(q)| \ll q^2\) so  the total number \(\sim q^2 5^{2l} \ll d^{1/2  + \epsilon}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac 15 |\mathscr H_d| \lt q^2 5^{2l} \lt 5 |\mathscr H_d|
+\end{equation*}
+</div>
+<p id="p-448">Final input is a Chernoff type bound.</p></article></div>
+<article class="theorem-like" id="proposition-11"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.27</span>
+</h6>
+<p id="p-449">Fix \(\eta, \epsilon \gt 0\) for any subset</p>
+<div class="displaymath">
+\begin{equation*}
+B \subseteq \mathscr H_d(q)
+\end{equation*}
+</div>
+<p>s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+| B | \ge  \eta | \mathscr H_d(q)|
+\end{equation*}
+</div>
+<p>the fraction of non-backtracking paths of length \(2l + 1\) satisfying</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \frac{| \gamma \cap B|}{2l + 1 } - \frac{|B | }{|\mathscr H_d(q)|}  \right| \ge \epsilon
+\end{equation*}
+</div>
+<p>is</p>
+<div class="displaymath">
+\begin{equation*}
+\ll_{\epsilon,\eta} e^{-cl}
+\end{equation*}
+</div>
+<p>for some \(c =c(\epsilon, \eta) \gt 0\text{.}\)</p></article><p id="p-450">Claim 2: This proposition implies that the fraction</p>
+<div class="displaymath">
+\begin{equation*}
+MNBP(\mathscr H_d(q)) \ll d^{\frac 12 - \tau}
+\end{equation*}
+</div>
+<p>for some \(\tau \gt 0\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\gg_\epsilon d^{\frac 12 - \epsilon}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\ll_\epsilon d^{\frac 12 - \tau}
+\end{equation*}
+</div>
+<p>give a contradiction.</p>
+<p id="p-451">We now check some claims made above.</p>
+<article class="theorem-like" id="claim-2"><h6 class="heading">
+<span class="type">Claim</span> <span class="codenumber">3.28</span> <span class="title">Claim 1</span>
+</h6>
+<p id="p-452">Bound on \(\#\{(x,x') : \gamma_x ^{(l) } =  \gamma_{x'}^{(l)}\}\) gives a bound on the number of distinct paths.</p></article><article class="hiddenproof" id="proof-38"><a knowl="" class="id-ref" refid="hk-proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-453">
+\begin{equation*}
+\#\{ (a,a')  \in A^2 : a  \equiv a' \pmod q\} = \sum n_{a_i}
+\end{equation*}
+</div>
+<p>gives a lower bound on \(A \pmod q\text{.}\) To show this note that the</p>
+<div class="displaymath">
+\begin{equation*}
+| A(q)| = | A |  - \sum_{i=1}^{|A|} \frac{n_{a_i} - 1}{n_{a_i}}  - \sum_{i=1}^{|A|} \frac 1{n_{a_i}}
+\end{equation*}
+</div>
+<p>where \(n_{a_i} = \# \{ a \in A : a \equiv a_i \pmod q\}\text{.}\)</p></article></div>
+<article class="theorem-like" id="claim-3"><h6 class="heading">
+<span class="type">Claim</span> <span class="codenumber">3.29</span> <span class="title">Claim 2</span>
+</h6>
+<p id="p-454">Follows from two points</p>
+<div class="displaymath">
+\begin{equation*}
+d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+q \lt d^{\frac 14 - \nu}
+\end{equation*}
+</div></article></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
@@ -866,6 +1105,7 @@ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-</script><!--End: Google code-->
+</script><!--End: Google code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
 </body>
 </html>

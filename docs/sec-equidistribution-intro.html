@@ -46,6 +46,12 @@ MathJax.Hub.Config({
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\require{mathrsfs}\require{mathtools}
@@ -805,18 +811,18 @@ b_{n,i} = a_m \text{ s.t. } \frac{i-1}{n} \lt a_m \lt \frac in
 \delta_m = \begin{cases} 0 \amp m \ne 0 \\ 1 \amp m = 0 \end{cases}\text{,}
 \end{equation*}
 </div>
-<p>collectively this is known as <dfn class="terminology">Weyl's criterion</dfn>.</p></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\).</h6>
+<p>collectively this is known as <dfn class="terminology">Weyl's criterion</dfn>.</p></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading">\(1.\implies 2.\). </h6>
 <p id="p-86">\(1.\) means \(2.\) is true for the characteristic function of \(\lb b,c\rb\text{,}\) hence true for step functions (because everything is linear).</p>
 <p id="p-87">Recall that any \(f \in C\lb 0,1\rb)\) is the uniform limit of such functions.</p>
-<p id="p-88">Exercise: Choose one that is \(\epsilon\) close to \(f\) and finish the proof.</p></article><article class="case" id="case-2"><h6 class="heading">\(2.\implies 1.\).</h6>
+<p id="p-88">Exercise: Choose one that is \(\epsilon\) close to \(f\) and finish the proof.</p></article><article class="case" id="case-2"><h6 class="heading">\(2.\implies 1.\). </h6>
 <p id="p-89">Find \(f_1,f_2 \in C(\lb 0,1 \rb)\) such that \(f_1(x) \le \chi_{(b,c)}(x) \le f_2(x)\) s.t.</p>
 <div class="displaymath">
 \begin{equation*}
 \int f_1 - \chi_{(b,c)}) \le \epsilon
 \end{equation*}
 </div>
-<p>Exercise, finish this proof.</p></article><article class="case" id="case-3"><h6 class="heading">\(2.\implies 3.\).</h6>
-<p id="p-90">Obvious.</p></article><article class="case" id="case-4"><h6 class="heading">\(3.\implies 2.\).</h6>
+<p>Exercise, finish this proof.</p></article><article class="case" id="case-3"><h6 class="heading">\(2.\implies 3.\). </h6>
+<p id="p-90">Obvious.</p></article><article class="case" id="case-4"><h6 class="heading">\(3.\implies 2.\). </h6>
 <p id="p-91">Recall Fejér's theorem that \(f\in C\lb 0,1 \rb)\) is the uniform limit of its fourier series. Pick an \(n \in \NN\) s.t.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1457,6 +1463,7 @@ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-</script><!--End: Google code-->
+</script><!--End: Google code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
 </body>
 </html>
