@@ -12,14 +12,36 @@
 </head>
 <body>
 <article class="theorem-like"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">3.25</span> <span class="title">Linnik</span>
+<span class="type">Theorem</span> <span class="codenumber">3.28</span> <span class="title">Gordon Pell 1949</span>
 </h6>
-<p>Fix \(\nu, \delta\gt 0\) and let \(q \le d^{\frac 14 - \nu}\text{,}\) \((q,30) = 1\text{.}\) Then the fraction of \(\bar x \in \mathscr H_d(q)\) for which</p>
+<p>Let</p>
 <div class="displaymath">
 \begin{equation*}
-|\operatorname{dev}_d(\bar x)| \gt \delta
+r(a,b,c) = \{ \text{reps. of } ax^2 + bxy + cy^2 \text{ by } x^2 + y^2 + z^2\}
 \end{equation*}
 </div>
-<p>tends to 0 as \(d \to \infty\) through \(d \equiv \mp 1 \pmod 5\text{.}\)</p></article><span class="incontext"><a href="sec-linnik.html#theorem-32">in-context</a></span>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+r(a,b,c) = 24 \cdot 2^\nu \prod_{p| 2(b^2 - 4ac)} r_p(a,b,c)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\nu = \#\text{primes dividing } b^2 - 4ac
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_p(a,b,c) = O(1) \text{ unless } p^2 | \gcd(a,b,c)
+\end{equation*}
+</div>
+<p>for us \(r(d,2e,d)\text{,}\) \(b^2 - 4ac = 4(e^2 - d^2)\) and</p>
+<div class="displaymath">
+\begin{equation*}
+r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
+\end{equation*}
+</div></article><span class="incontext"><a href="sec-linnik.html#theorem-32">in-context</a></span>
 </body>
 </html>

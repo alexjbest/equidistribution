@@ -2609,7 +2609,131 @@ section#sec-linnik
 
     aside: p Lecture 19 27/11/2018
     p
-        | Missed!!
+        | In #[m \QQ(\sqrt d)] we have #[m (5) = \ideal p \bar{ \ideal p}]
+        me x \in \mathscr H_d = \{(x_1,x_2,x_3) : x_1^2 + x_2^2 + x_3^2 = d\}
+        | there are 6 matrices #[m \mathcal A = \{A^\pm, B^\pm, C^\pm\}], #[m A,B,C \in \GL_2(\ZZ)],
+        | reduction of these #[m \pmod q \acts \mathscr H_d(q)].
+    p
+        | This induces a graph structure on #[m \mathscr H_d(q)], (multiple edges between vertices are allowed).
+        me \mathscr H_d \to \mathscr H_d(q)
+        me [\ldots, x_{-1}, x_0, x_1, \ldots] \to \text{path in graph}
+        | for #[m l \in \NN],
+        me \gamma_x^{(l)} \subseteq \mathscr H_d(q)
+        | .
+    paragraphs
+        title Linnik's basic lemma
+
+        p
+            | Generalisatiion of the following
+            me r(d) = \sum_{a| d} 1 \le d^\epsilon\,\forall \epsilon
+            | .
+
+        proposition
+            title Linnik
+            statement: p
+                | Fix #[m d], let #[m c\in \ZZ], s.t. #[m |c| \lt d].
+                | Then #[m \forall \epsilon \gt 0],
+                me \#\{ (x_1,x_2) \in\mathscr H_d^2 : x_1\cdot x_2 = e\} \ll_\epsilon d^\epsilon
+                | .
+            proof
+                p
+                    | Short detour on representations of quadratic forms by other quadratic forms.
+
+        definition
+            statement: p
+                | Let #[m (Q, \ZZ^m)], #[m (R, \ZZ^n)], #[m m\ge n] be nondegenerate quadratic forms.
+                | Then #[m Q] is said to represent #[m R] if there exists a  #[m \ZZ]-linear map
+                me \iota\colon \ZZ^n \to \ZZ^m
+                | s.t.
+                me Q(\iota(x)) = R(x)\,\forall x\in \ZZ^n
+                | .
+
+        example
+            statement: p
+                me Q(x,y) = x \cdot y
+                me R(x) = d x^2
+                | then let
+                me \iota\colon \ZZ \to \ZZ^2
+                me x \mapsto (ax,bx) \text{ where } ab =d
+                | then
+                me Q(\iota(x)) = R(x)
+                | .
+
+        p
+            | Let #[m x_1, x_2 \in \mathscr H_d] s.t. #[m x_1\cdot x_2 =e].
+            me x_1=(a_1,b_1,c_1)\, x_2=(a_2,b_2,c_2)
+            |consider
+            me \iota \colon \ZZ^2 \to \ZZ^3
+            me (u,v) \mapsto (u a_1 + v a_2, u b_1 + u b_2, u c_1 + v c_2) = u x_1 + v x_2
+            | let #[m Q(a,b,c) = a^2  + b^2 + c^2].
+            me Q(\iota(u,v)) = (u a_1 + v a_1)^2 + (u b_1 + v b_2)^2 + (u c_1 + v c_2)^2
+            me = du^2 + 2euv + dv^2
+            me = R_{d,e} (u,v)
+            | .
+        p
+            | So the number of representations of #[m R] by #[m Q/ \specialorthogonal_3(\ZZ)] bounds number of solutions #[m x_1 x_2 = e].
+
+        theorem
+            title Gordon Pell 1949
+            statement: p
+                | Let
+                me r(a,b,c) = \{ \text{reps. of } ax^2 + bxy + cy^2 \text{ by } x^2 + y^2 + z^2\}
+                | then
+                me r(a,b,c) = 24 \cdot 2^\nu \prod_{p| 2(b^2 - 4ac)} r_p(a,b,c)
+                |  where
+                me \nu = \#\text{primes dividing } b^2 - 4ac
+                me r_p(a,b,c) = O(1) \text{ unless } p^2 | \gcd(a,b,c)
+                | for us #[m r(d,2e,d)], #[m b^2 - 4ac = 4(e^2 - d^2)] and
+                me r(d,2e,d) \ll_\epsilon d^\epsilon
+                | .
+
+        exercise
+            statement: p
+                | Show this (recall #[m d] is a fundamental discriminant).
+
+        lemma
+            title Shadowing lemma
+            statement: p
+                | Let
+                me [x_{-l},\ldots, x_0, x_1 ,\ldots, x_l], [x'_{-l},\ldots, x'_0, x'_1 ,\ldots, x'_l]
+                | be two marked paths in #[m \mathscr H_d].
+
+                | Then these paths have the same reduction mod #[m q] iff #[m x_0 = \pm x_0' \pmod{q5^l}].
+
+        theorem
+            statement: p
+                me \Sigma (d,l,q) = \#\{(x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \in \mathscr H_d(q)\}
+                me \implies \Sigma (d,l,q) \ll_\epsilon \# \mathscr H_d  + d^\epsilon ( 1+ \frac{d}{q^2 5^{2l}}) \,\forall \epsilon \gt 0
+                |.
+            proof
+                p
+                    me \gamma_x^{(l)} = \gamma_{x'}^{(l)} \implies x = \pm x' \pmod{q5^l} \text{(by the Shadowing lemma)}
+                    me \implies (x+x') ( x+ x') \equiv 0 \pmod{q^2 5^{2l}}
+                    | or
+                    me \implies (x-x') ( x- x') \equiv 0 \pmod{q^2 5^{2l}}
+                    | .
+                p
+                    me \implies \Sigma(d,l,q) \ll 2\#\{(x,x') : x\ne x',\, x\cdot x' = d \pmod{q^2 5^{2l}}\}
+                    | recall
+                    me \sum_{|e| \lt d,\,e = d \pmod{q^2 5^{2l}} } \{(x,x') : x\cdot x' = e\} \ll_\epsilon d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
+                    |.
+
+    paragraphs
+        title Proof of the equidistribution statement
+
+        p
+            | Recall:
+            me \operatorname{dev}_d(\bar x) = \frac { | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|/| \mathscr H_d(q)|} - 1
+            me \operatorname{dev}_d(\bar x) \to 0\text{ as } d \to \infty,\,d \equiv \pm 1 \pmod 5\,\, d\text{ fund. disc.}
+            | .
+
+        proof
+            title Sketch of proof
+            p
+                | Assume #[m B_\delta = \{ \bar x : \operatorname{dev}_d)\bar x) \\gt \delta\}].
+                | Lower bound by counting the number of paths that lie in #[m \operatorname{red}\inv_q(B_\delta)].
+                | Upper bound by the expansion property of #[m \mathscr H_d(q)].
+
 
     aside: p Lecture 20 29/11/2018
 

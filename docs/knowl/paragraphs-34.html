@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Linnik's basic lemma</span></h5>
+<p>Generalisatiion of the following</p>
+<div class="displaymath">
+\begin{equation*}
+r(d) = \sum_{a| d} 1 \le d^\epsilon\,\forall \epsilon\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.25</span> <span class="title">Linnik</span>
+</h6>
+<p>Fix \(d\text{,}\) let \(c\in \ZZ\text{,}\) s.t. \(|c| \lt d\text{.}\) Then \(\forall \epsilon \gt 0\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\#\{ (x_1,x_2) \in\mathscr H_d^2 : x_1\cdot x_2 = e\} \ll_\epsilon d^\epsilon\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-37-hidden.html" title="Proof 3.25.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.26</span>
+</h6>
+<p>Let \((Q, \ZZ^m)\text{,}\) \((R, \ZZ^n)\text{,}\) \(m\ge n\) be nondegenerate quadratic forms. Then \(Q\) is said to represent \(R\) if there exists a  \(\ZZ\)-linear map</p>
+<div class="displaymath">
+\begin{equation*}
+\iota\colon \ZZ^n \to \ZZ^m
+\end{equation*}
+</div>
+<p>s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+Q(\iota(x)) = R(x)\,\forall x\in \ZZ^n\text{.}
+\end{equation*}
+</div></article><article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.27</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+Q(x,y) = x \cdot y
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+R(x) = d x^2
+\end{equation*}
+</div>
+<p>then let</p>
+<div class="displaymath">
+\begin{equation*}
+\iota\colon \ZZ \to \ZZ^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x \mapsto (ax,bx) \text{ where } ab =d
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+Q(\iota(x)) = R(x)\text{.}
+\end{equation*}
+</div></article><p>Let \(x_1, x_2 \in \mathscr H_d\) s.t. \(x_1\cdot x_2 =e\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+x_1=(a_1,b_1,c_1)\, x_2=(a_2,b_2,c_2)
+\end{equation*}
+</div>
+<p>consider</p>
+<div class="displaymath">
+\begin{equation*}
+\iota \colon \ZZ^2 \to \ZZ^3
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(u,v) \mapsto (u a_1 + v a_2, u b_1 + u b_2, u c_1 + v c_2) = u x_1 + v x_2
+\end{equation*}
+</div>
+<p>let \(Q(a,b,c) = a^2  + b^2 + c^2\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+Q(\iota(u,v)) = (u a_1 + v a_1)^2 + (u b_1 + v b_2)^2 + (u c_1 + v c_2)^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= du^2 + 2euv + dv^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= R_{d,e} (u,v)\text{.}
+\end{equation*}
+</div>
+<p>So the number of representations of \(R\) by \(Q/ \specialorthogonal_3(\ZZ)\) bounds number of solutions \(x_1 x_2 = e\text{.}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.28</span> <span class="title">Gordon Pell 1949</span>
+</h6>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+r(a,b,c) = \{ \text{reps. of } ax^2 + bxy + cy^2 \text{ by } x^2 + y^2 + z^2\}
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+r(a,b,c) = 24 \cdot 2^\nu \prod_{p| 2(b^2 - 4ac)} r_p(a,b,c)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\nu = \#\text{primes dividing } b^2 - 4ac
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_p(a,b,c) = O(1) \text{ unless } p^2 | \gcd(a,b,c)
+\end{equation*}
+</div>
+<p>for us \(r(d,2e,d)\text{,}\) \(b^2 - 4ac = 4(e^2 - d^2)\) and</p>
+<div class="displaymath">
+\begin{equation*}
+r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
+\end{equation*}
+</div></article><article class="exercise-like"><a knowl="./knowl/exercise-13-hidden.html" title="Exercise 3.29"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3.29</span>
+</h6></a></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">3.30</span> <span class="title">Shadowing lemma</span>
+</h6>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+[x_{-l},\ldots, x_0, x_1 ,\ldots, x_l], [x'_{-l},\ldots, x'_0, x'_1 ,\ldots, x'_l]
+\end{equation*}
+</div>
+<p>be two marked paths in \(\mathscr H_d\text{.}\) Then these paths have the same reduction mod \(q\) iff \(x_0 = \pm x_0' \pmod{q5^l}\text{.}\)</p></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.31</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\Sigma (d,l,q) = \#\{(x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \in \mathscr H_d(q)\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies \Sigma (d,l,q) \ll_\epsilon \# \mathscr H_d  + d^\epsilon ( 1+ \frac{d}{q^2 5^{2l}}) \,\forall \epsilon \gt 0\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-38-hidden.html" title="Proof 3.31.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article></article><span class="incontext"><a href="sec-linnik.html#paragraphs-34">in-context</a></span>
+</body>
+</html>
