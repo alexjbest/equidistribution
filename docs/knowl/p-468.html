@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,7 +12,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Bound on \(\#\{(x,x') : \gamma_x ^{(l) } =  \gamma_{x'}^{(l)}\}\) gives a bound on the number of distinct paths.</p>
+<div class="displaymath">
+\begin{equation*}
+\#\{ (a,a')  \in A^2 : a  \equiv a' \pmod q\} = \sum n_{a_i}
+\end{equation*}
+</div>
+<p>gives a lower bound on \(A \pmod q\text{.}\) To show this note that the</p>
+<div class="displaymath">
+\begin{equation*}
+| A(q)| = | A |  - \sum_{i=1}^{|A|} \frac{n_{a_i} - 1}{n_{a_i}}  - \sum_{i=1}^{|A|} \frac 1{n_{a_i}}
+\end{equation*}
+</div>
+<p>where \(n_{a_i} = \# \{ a \in A : a \equiv a_i \pmod q\}\text{.}\)</p>
 <span class="incontext"><a href="sec-linnik.html#p-468">in-context</a></span>
 </body>
 </html>

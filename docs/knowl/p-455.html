@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,16 +12,27 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>By definition every \(\bar x \in B_\delta\) satisfies</p>
 <div class="displaymath">
 \begin{equation*}
-\operatorname{dev}_d(\bar x) \gt \delta
+| \operatorname{red}_q \inv(B_\delta)|  \ge \frac{ |B_\delta | |\mathscr H_d| }{ |\mathscr H_d(q)|} (1+\delta)
 \end{equation*}
 </div>
-<p>implies</p>
+<p>so</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{ |\operatorname{red}_q\inv(\bar x)|}{ |\mathscr H_d|/|\mathscr H_d(q)|} \gt 1 + \delta\text{.}
+\frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|}(1+\delta)
+\end{equation*}
+</div>
+<p>by the assumption that</p>
+<div class="displaymath">
+\begin{equation*}
+B_\delta  \ge \eta | \mathscr H_d(q)|
+\end{equation*}
+</div>
+<p>we have this is</p>
+<div class="displaymath">
+\begin{equation*}
+\ge \frac{|B_\delta|}{|\mathscr H_d(q)|}+\eta\delta\text{.}
 \end{equation*}
 </div>
 <span class="incontext"><a href="sec-linnik.html#p-455">in-context</a></span>

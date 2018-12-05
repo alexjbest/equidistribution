@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,7 +12,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Note \(k/2 = l+1\text{:}\) So we are just short, we have \(O(n^{l+1})\) rather than \(O(n^{l+1-\delta})\) for all \(\delta \gt 0\text{,}\) just by using a stupid bound for \(K(m,n; c)\text{.}\)</p>
+<p>More major input (Weil bound):</p>
+<div class="displaymath">
+\begin{equation*}
+|K(m,n \chi ) | \ll_\epsilon c^{1/2 +\epsilon}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies | \hat P_m(n) | = O(n^{k/2 - 1/4 + \epsilon})
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\forall \epsilon \lt \frac 14
+\end{equation*}
+</div>
+<p>this does the job.</p>
 <span class="incontext"><a href="sec-duke.html#p-269">in-context</a></span>
 </body>
 </html>

@@ -982,7 +982,7 @@ section#sec-equidistribution-intro
                 statement: p
                     | If #[m X] is compact and #[m H \cong \RR] is uniquely ergodic with the unique #[m H]-invariant measure #[m \mu] then the statement of Birkhoff holds for every #[m x \in X].
                 proof
-                    p Sketch
+                    title Proof (sketch)
                     p
                         | For any  #[m x] construct
                         me \mu_L = \frac 1 L \int_0^L h_t x \diff t
@@ -1429,8 +1429,9 @@ section#sec-duke
                 me r_3(n^2) \gg n
                 | .
         proof
+            title Proof (sketch)
             p
-                |(Sketch) expand the formula, take #[m n=p] an odd prime
+                |Expand the formula, take #[m n=p] an odd prime
                 me \zeta(s) \zeta(1-s) = \sum \frac{\sigma(n)}{n^s}
                 | (exercise)
                 me L(s, \chi_{-4})\inv = \prod_p(1- \frac{\chi_{-4}(p)}{p^s})
@@ -2170,8 +2171,8 @@ section#sec-duke
             me \zeta( \frac 12 + it )  = O_\epsilon(( 1+ |t|)^{1/4 + \epsilon})
             | .
         proof
+            title Proof (sketch)
             p
-                | (Sketch)
                 me |\zeta(1+ \epsilon + it)| \le \zeta(1+ \epsilon ) \le c_{\epsilon \gt 0}
                 | .
             p
@@ -2624,7 +2625,7 @@ section#sec-linnik
         title Linnik's basic lemma
 
         p
-            | Generalisatiion of the following
+            | Generalisation of the following
             me r(d) = \sum_{a| d} 1 \le d^\epsilon\,\forall \epsilon
             | .
 
@@ -2803,7 +2804,7 @@ section#sec-linnik
             men#eqn-phi-bd-linnik-pf \implies |\Phi| \ge  \frac{\eta \delta }{2} | \mathscr H_d|
             |.
         p
-            | Now we count the number of marked non-backtracking paths on #[m \mathscr H_d(q)]  of length #[m 2l+1] (write #[m MNBP(\mathscr H_d(q))]) satisfying
+            | Now we count the number of marked non-backtracking paths on #[m \mathscr H_d(q)]  of length #[m 2l+1] (write #[m MNBP(\mathscr H_d(q))] for this quantity), which in addition satisfy
             me \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q) | } +   \frac{\delta \eta}{2}
             | .
         p
@@ -2874,3 +2875,136 @@ section#sec-linnik
             | Follows from two points
             me d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
             me q \lt d^{\frac 14 - \nu}
+
+    subsection
+        title The adelic picture
+
+        aside: p Lecture 21 4/12/2018
+
+        p
+            | Notation: #[m \adeles] is the ring of adeles of #[m \QQ]
+            me \prod_p' \QQ_p
+            me \adeles_f = \prod_{p \text{ finite}}' \QQ_p
+            | so that
+            me \adeles = \RR \times \adeles_f
+            | .
+            me \widetilde \ZZ \colon \varprojlim_n \ZZ/n = \prod \ZZ_p
+            |.
+
+        p
+            me \widehat \ZZ \subseteq \adeles_f
+            | maximal compact.
+
+        paragraphs
+            title The genus of a quadratic space
+
+            p
+                | For us,
+                me L\subseteq \QQ^3
+                | a lattice, then
+                me \GL_3(\adeles_f) \ni g = \prod g_p
+                me g\cdot L = \{ \alpha \subseteq \QQ^3 : \alpha_p = g_p L_p \,\forall p\}
+                me \operatorname{genus}_{\specialorthogonal_3} (\mathcal L_p) = \specialorthogonal_3(\adeles_f) \mathcal L_0
+                me \mathcal L_0 = \ZZ^3,\,a^2+b^2 + c^2
+                | .
+
+            proposition
+                statement: p
+                    | There is one #[m \specialorthogonal_3(\QQ)] orbit of #[m \mathcal L_0].
+                    | i.e.
+                    me \specialorthogonal_3(\adeles_f) = \specialorthogonal_3(\QQ) \specialorthogonal_3(\widehat\ZZ)
+                proof
+                    p
+                        | Based on quaternions having class number 1.
+
+            p
+                | More definitions:
+                me P = \{ (\mathcal L, x) : \mathcal L \in \operatorname{genus}_{\specialorthogonal_3} (\mathcal L_0), x \in \mathcal L,\, x \cdot x = d\}
+                me P_{(q)} = \{ (\mathcal L, \bar x) : \mathcal L \in \operatorname{genus}_{\specialorthogonal_3} (\mathcal L_0), \bar x \in \mathcal L/q\mathcal L,\, \bar x \cdot \bar x = d \pmod q\}
+                me \widetilde{\mathscr H_d} \simeq \specialorthogonal_3 (\QQ) \backslash P
+                me K_f [q] = \ker(\specialorthogonal_3(\widehat \ZZ) \to \specialorthogonal_3(\ZZ/q\ZZ))
+                me K'_f [q] = \{ g \in \specialorthogonal_3(\widehat \ZZ) : g \bar x_q = \bar x_q\}
+                | we fix a base point #[m \bar x_q \in \mathscr H_d(q)].
+                | Then
+                me \widetilde{\mathscr H_d}(q) \simeq \specialorthogonal_3 (\QQ) \backslash P_{(q)} \simeq  \specialorthogonal_3 (\QQ) \backslash \specialorthogonal_3(\adeles_f) / K_f'[q]
+                | here we are heavily using the exceptional isomorphism
+                me \specialorthogonal_3 \simeq \PGL_2
+                | .
+
+            claim
+                statement: p
+                    me \specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q) \simeq \specialorthogonal_3(\QQ) \backslash P_{(q)}
+                proof
+                    title Proof sketch
+                    p
+                        me \specialorthogonal_3(\QQ) \acts P_{(q)} \text{ diagonally}
+                        me \specialorthogonal_3(\adeles_f) = \specialorthogonal_3(\QQ) \specialorthogonal_3(\widehat \ZZ)
+                        | every orbit has a representation #[m \simeq (\mathcal L_0, \bar x),\,\bar x \in \mathscr H_d(q)].
+                    p
+                        me (\mathcal L_0, \bar x) \simeq (\mathcal L_0, \bar x')
+                        me \iff
+                        me \exists \gamma  \in \underbrace{\specialorthogonal_3(\widehat \ZZ)  \cap \specialorthogonal_3(\QQ)}_{\specialorthogonal_3(\ZZ)}
+
+            claim
+                statement: p
+                    me \specialorthogonal_3(\QQ) \backslash P_{(q)} \simeq \specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q) / K'_f[q]
+                proof
+                    title Proof sketch
+                    p
+                        | Observe
+                        me \specialorthogonal_3(\adeles_f) \acts P_{(q)}
+                        | via
+                        me \mathcal L \otimes \widehat \ZZ/ q\mathcal L \otimes \widehat \ZZ
+                    p
+                        | This action is transitive, i.e.
+                        me P_{(q)} = \specialorthogonal_3(\adeles_f) [ \mathcal L_0, \bar x_q]
+
+            remark
+                p
+                    me \specialorthogonal_3(\ZZ) \backslash S^3 \simeq \specialorthogonal_3(\QQ)\backslash  \specialorthogonal_3(\adeles)/ K_\infty \specialorthogonal_3(\widehat \ZZ)
+
+            p
+                | What about
+                me \specialorthogonal_3(\ZZ) \backslash \mathscr H_d\text ?
+
+                | Fix another base point #[m x_0\in \mathscr H_d]
+                me \specialorthogonal_3(\ZZ) \backslash \mathscr H_d \simeq \specialorthogonal_{x_0} (\QQ) \backslash \specialorthogonal_{x_0} (\adeles_f)/ \specialorthogonal_{x_0}(\widehat \ZZ)
+                | where #[m \specialorthogonal_{x_0}] is the stabiliser of #[m x_0].
+                me.
+                    \xymatrix{
+                    \mathscr H_d \acts \text{ class gp.} \ar[d] \\
+                    \mathscr H_d(a) \acts \specialorthogonal_3(\adeles_f)
+                    }
+
+            p
+                | More concretely
+                me \specialorthogonal_{x_0} : \QQ^3 \simeq  B^{(0)} (\QQ)
+                me \specialorthogonal_3 \simeq PB^\times
+                me \specialorthogonal_{x_0} \simeq PB^\times_{x_0} \simeq \langle a + b x_0 \rangle / Z
+                me \simeq \Res_{K/\QQ} \mathbf G_m / \mathbf G_m
+                | where #[m K = \QQ(\sqrt{-d})].
+
+            p
+                | Recall
+                me K^\times \backslash \adeles_{K,f}^\times / \widehat \ints_K^\times \simeq \Pic(\ints_K)
+
+        paragraphs
+            title The graph structure on #[m \mathscr H_d(q)]
+
+            p
+                | #[m \specialorthogonal_3(\adeles_f)] is a large group, but so is #[m K_f' \lb q\rb ].
+                | What is indeed true is
+                me \mathscr H_d(q) \cong \Gamma_{(3,q)}   \specialorthogonal_3(\QQ_5) / K_5
+                |analogous to
+                me \mathbf H = \specialorthogonal_2 \backslash \SL_2(\RR)/ \SL_2(\ZZ)
+                | .
+            p
+                | Where
+                me  \Gamma_{(3,q)} PB^\times(\QQ) \cap PB^\times(\QQ_5) K_f[3,q]
+                me K_{f} [3,q] = K_f[3] \cap K_f'[q] \subseteq K_f'[q]
+            p
+                | Now
+                me \PGL_2(\QQ_5) / \PGL_2(\ZZ_5)
+                | is a Bruhat-Tits tree, a 6-regular tree.
+
+

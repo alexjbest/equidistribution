@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,42 +12,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>When \(\rho(ab) \ne 0\) we have \(Q(ab) = m^2\) for some\(m\text{.}\) There is exactly one squarefree \(\gamma\) dividing \(m\) and \(g\) such that</p>
+<p>Using this we find</p>
 <div class="displaymath">
 \begin{equation*}
-Q\left(\frac a\gamma \right),\, Q\left(\frac b\gamma \right)
+r_3(n^2) = 6 \sum_{d|N} w(d) S \left(\frac Nd\right)
 \end{equation*}
 </div>
-<p>are squares. The term</p>
+<p>where for odd \(n\)</p>
 <div class="displaymath">
 \begin{equation*}
-w(d) \rho(a/d) \rho(b/d)
-\end{equation*}
-</div>
-<p>is nonzero just when  \(\alpha = \gamma\delta\) where \(\delta\) is squarefree and \(\delta|P(g)\) so the sum reduces to</p>
-<div class="displaymath">
-\begin{equation*}
-\sum_\delta \mu(\sigma) \tau(P(a/\gamma\delta)) \tau(P(b/\gamma\delta))
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_\delta \mu(\delta) \tau(P(a)/\delta) \tau(P(b)/\delta)
+S(n)  = \sum_{a+b = 2n,\,a,b\,\text{odd}} \rho(a) \rho(b)
 \end{equation*}
 </div>
 <p>but</p>
 <div class="displaymath">
 \begin{equation*}
-\sum_{d|r,d|s} \mu(d) \tau(r/d) \tau(r/s) = \tau(rs)
+S(n) = \frac{1}{16}\#(2n =  \underbrace{w^2 + x^2}_{\text{odd}}+ \underbrace{y^2 + z^2}_{\text{odd}})
 \end{equation*}
 </div>
-<p>by multiplicativity of \(\tau\) this reduces to the case where \(r = \pi^k,s= \pi^l\) for prime \(\pi\) but \(1+ k + l =  (1+k)(1+l) - kl\text{.}\) Here now \(r=P(a), s=P(b),\gcd(r,s) = P(g)\text{.}\) So the sum over \(\delta\) equals</p>
 <div class="displaymath">
 \begin{equation*}
-\tau(P(a)P(b)) = \tau(P(ab)) \square (Q(ab)) = \rho(ab)
+= \frac{1}{4}\#(2n =  4w^2 + 4x^2+y^2 + z^2)
 \end{equation*}
 </div>
-<p>as desired.</p>
+<div class="displaymath">
+\begin{equation*}
+= \sigma(n)
+\end{equation*}
+</div>
+<p>by Jacobi.</p>
 <span class="incontext"><a href="sec-duke.html#p-216">in-context</a></span>
 </body>
 </html>

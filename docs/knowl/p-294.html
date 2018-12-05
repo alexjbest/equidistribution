@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,53 +12,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<ol class="decimal">
-<li><div class="displaymath">
-\begin{equation*}
-x = \overline m y
-\end{equation*}
-</div></li>
-<li><div class="displaymath">
-\begin{equation*}
-x = m \overline y
-\end{equation*}
-</div></li>
-<li>
+<p>Let</p>
 <div class="displaymath">
 \begin{equation*}
-S(1, n^2; q) = \sum_{x\pmod{^* q}} \legendre{x}{q} e\left( \frac{x + n^2 \overline x}{q}\right)
-\end{equation*}
-</div>recall DFT<div class="displaymath">
-\begin{equation*}
-f(u) = \frac 1q \sum_{\alpha \pmod q} \hat f(\alpha) e\left( \frac{\alpha u}{q}\right)
+c_q(r) = \sum_{x\pmod{^* q}} e\left( \frac{rx}{q}\right)
 \end{equation*}
 </div>
+<p>then</p>
 <div class="displaymath">
 \begin{equation*}
-\hat f(\alpha) = \sum _{u\pmod q} f (u) e\left( \frac{-\alpha u}{q}\right)
+c_q(r) = \sum_{d|gcd(q,r)} \mu\left(\frac qd \right) d\text{.}
 \end{equation*}
 </div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{q\pmod q} \sum _{x\pmod{^* q}} \legendre xq e \left( \frac{x + u^2 \overline x}{q} \right) e\left(\frac{-\alpha u}{q} \right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{u \pmod q,x\pmod{^* q}} \legendre xq e\left(\frac xq\right) e\left( \frac{y^2 \overline x  - \alpha u}{q}\right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{x\pmod{^* q}} \legendre xq e\left( \frac{x(1- \overline 4x^2)}{q}\right)\underbrace{ \sum_{u \pmod q} e\left(\frac{\overline x (u - 2\alpha x)^2}{q}\right)}_{\legendre xq G(q)}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-G(q) \sum_{x \pmod{^* q}} e\left( \frac{ x (1 - \overline 4 \alpha^2)}{q}\right)
-\end{equation*}
-</div>we need some more results to conclude!</li>
-</ol>
 <span class="incontext"><a href="sec-duke.html#p-294">in-context</a></span>
 </body>
 </html>

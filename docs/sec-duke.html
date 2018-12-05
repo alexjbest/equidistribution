@@ -2,7 +2,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -286,28 +286,29 @@ var login_required = false;
 <li><a href="sec-equidistribution-intro.html#subsection-7" data-scroll="subsection-7">A different perspective (Ergodic)</a></li>
 </ul>
 <h2 class="link active"><a href="sec-duke.html" data-scroll="sec-duke"><span class="codenumber">2</span> <span class="title">Duke's theorem</span></a></h2>
-<h2 class="link"><a href="sec-linnik.html" data-scroll="sec-linnik"><span class="codenumber">3</span> <span class="title">Linnik's theorem</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link"><a href="sec-linnik.html" data-scroll="sec-linnik"><span class="codenumber">3</span> <span class="title">Linnik's theorem</span></a></h2>
+<ul><li><a href="sec-linnik.html#subsection-8" data-scroll="subsection-8">The adelic picture</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-duke"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Duke's theorem</span>
 </h2>
 <a href="sec-duke.html" class="permalink">¶</a><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">Recall</span></h5>
-<aside class="aside-like" id="aside-8"><p id="p-164">Lecture 8 4/10/2018</p></aside><p id="p-165"><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">1.9</a>.</p>
-<p id="p-166">We will now prove this, not via Linnik's proof, but via an analogue of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>. Strategy:</p>
+<aside class="aside-like" id="aside-8"><p id="p-163">Lecture 8 4/10/2018</p></aside><p id="p-164"><a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a> <a knowl="./knowl/thm-duke.html" title="Theorem 1.9: Duke">1.9</a>.</p>
+<p id="p-165">We will now prove this, not via Linnik's proof, but via an analogue of <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">Weyl's criterion</a>. Strategy:</p>
 <ol class="decimal">
 <li id="li-42">Weyl's criterion  \(\leadsto\) bounding exponential sums.</li>
 <li id="li-43">To bound these sums we will use automorphic methods.</li>
 </ol>
-<p id="p-167">We will begin with <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a>.</p>
-<p id="p-168">So we will be working on \(S^2\text{.}\) Recall <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">1.28</a> which was for \(\lb 0,1)\text{.}\) There we used exponentials, why? Because they are a dense, convenient basis, fourier theory.</p>
-<p id="p-169">To replace this on the sphere \(S^2\) we use the <em class="emphasis">spherical harmonics</em>, these are homogeneous harmonic polynomials. Analogous with the \(S^1\) case.</p>
+<p id="p-166">We will begin with <a knowl="./knowl/thm-linnik.html" title="Theorem 1.2: Linnik">1.2</a>.</p>
+<p id="p-167">So we will be working on \(S^2\text{.}\) Recall <a knowl="./knowl/thm-weyl-criterion.html" title="Theorem 1.28: Weyl's criterion">1.28</a> which was for \(\lb 0,1)\text{.}\) There we used exponentials, why? Because they are a dense, convenient basis, fourier theory.</p>
+<p id="p-168">To replace this on the sphere \(S^2\) we use the <em class="emphasis">spherical harmonics</em>, these are homogeneous harmonic polynomials. Analogous with the \(S^1\) case.</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \frac{x+iy}{|x+iy|}\right)^m = e(m\theta)
 \end{equation*}
 </div>
 <p>the same spherical harmonic construction works for \(S^n\text{.}\)</p>
-<p id="p-170">We will show</p>
+<p id="p-169">We will show</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{\# \Omega_n} \sum_{x\in \Omega_n} P(x) \to 0
@@ -325,11 +326,11 @@ var login_required = false;
 r_3(n) =  \# \{ a^2 + b^2 + c^2 = n: a,b,c\in \ZZ\}\text{.}
 \end{equation*}
 </div></article><article class="paragraphs" id="paragraphs-14"><h5 class="heading"><span class="title">Connection to automorphic forms</span></h5>
-<p id="p-171">\(\theta\) functions, \(P\) spherical harmonics as before.</p>
+<p id="p-170">\(\theta\) functions, \(P\) spherical harmonics as before.</p>
 <article class="definition-like" id="definition-7"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.1</span>
 </h6>
-<div class="displaymath" id="p-172">
+<div class="displaymath" id="p-171">
 \begin{equation*}
 \theta_P(z) = \sum_{\alpha \in \ZZ^3} P(\alpha) e ( |\alpha|^2 z)
 \end{equation*}
@@ -347,13 +348,13 @@ r_3(n,P) =\sum_{|\alpha|^2 = n} P (\alpha)\text{.}
 </div></article><article class="theorem-like" id="fact-1"><h6 class="heading">
 <span class="type">Fact</span> <span class="codenumber">2.2</span>
 </h6>
-<ol id="p-173" class="decimal">
+<ol id="p-172" class="decimal">
 <li id="li-44">This is a modular form of weight \(\frac 32 +  \deg P\) for \(\Gamma_0(4)\text{.}\)</li>
 <li id="li-45">It is a cusp form if \(\deg P \gt 0\text{.}\)</li>
 </ol></article><article class="remark-like" id="observation-1"><h6 class="heading">
 <span class="type">Observation</span> <span class="codenumber">2.3</span>
 </h6>
-<p id="p-174">If \(\deg P \not  \equiv 0 \pmod 2\) this function is \(0\text{.}\)</p></article><p id="p-175">To show  <a knowl="./knowl/eqn-spherical-harmonic-bd.html" title="Equation 2.1">(2.1)</a>:</p>
+<p id="p-173">If \(\deg P \not  \equiv 0 \pmod 2\) this function is \(0\text{.}\)</p></article><p id="p-174">To show  <a knowl="./knowl/eqn-spherical-harmonic-bd.html" title="Equation 2.1">(2.1)</a>:</p>
 <ol class="decimal">
 <li id="li-46">Show that<div class="displaymath">
 \begin{equation*}
@@ -367,7 +368,7 @@ r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
 </div>for some \(\delta \gt 0\text{.}\)</li>
 </ol>
 <p>Why?</p>
-<div class="displaymath" id="p-176">
+<div class="displaymath" id="p-175">
 \begin{equation*}
 \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) = n^{-\deg(P)/2} \sum_{|\alpha|^2 = n} P(\alpha)
 \end{equation*}
@@ -383,13 +384,13 @@ r_3(n,P) \ll_\delta n^{k/2 - 1/4 - \delta}
 \frac k2 - \frac14 - \delta = \frac 12 + \frac{\deg(P)}{2} - \delta\text{.}
 \end{equation*}
 </div>
-<p id="p-177">So if \(r_3(n,P) \ll n^{(1+\deg(P))/2 - \delta}\) which implies</p>
+<p id="p-176">So if \(r_3(n,P) \ll n^{(1+\deg(P))/2 - \delta}\) which implies</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{|\alpha|^2 = n} P\left( \frac{\alpha}{|\alpha|} \right) \ll n^{\frac 12 - \delta}\text{.}
 \end{equation*}
 </div>
-<p id="p-178">If we knew a <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 2.6: Half-integral weight modular forms">half-integral</a> weight Ramanujan conjecture:</p>
+<p id="p-177">If we knew a <a knowl="./knowl/def-half-integral-mfs.html" title="Definition 2.6: Half-integral weight modular forms">half-integral</a> weight Ramanujan conjecture:</p>
 <div class="displaymath">
 \begin{equation*}
 f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
@@ -401,7 +402,7 @@ f \in S_k(N) ,\, k \in \frac 12 + \ZZ_{\gt 0}
 a_f(n) = O(n^{(k-1)/2 +\epsilon})\text{.}
 \end{equation*}
 </div></article><article class="paragraphs" id="paragraphs-15"><h5 class="heading"><span class="title">Digression (\(\theta\)-functions)</span></h5>
-<p id="p-179">Recall: Integral weight modular forms</p>
+<p id="p-178">Recall: Integral weight modular forms</p>
 <div class="displaymath">
 \begin{equation*}
 \Gamma = \SL_2(\ZZ) = \Gamma(1)
@@ -428,7 +429,7 @@ f(\gamma z) =  (cz+ d)^k f(z) \,\forall \gamma \in \Gamma\text{.}
 <article class="example-like" id="example-8"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.4</span>
 </h6>
-<div class="displaymath" id="p-180">
+<div class="displaymath" id="p-179">
 \begin{equation*}
 \Delta(q) = q\prod_{n=1}^\infty (1-q^n)^{24}
 \end{equation*}
@@ -440,12 +441,12 @@ E_k(z)= \sum_{(c,d) = 1} \frac{1}{(cz +d)^{2k}}
 </div></article><article class="theorem-like" id="conjecture-1"><h6 class="heading">
 <span class="type">Conjecture</span> <span class="codenumber">2.5</span> <span class="title">Ramanujan (here theorem of Deligne)</span>
 </h6>
-<p id="p-181">\(f\in S_k(\Gamma)\)</p>
+<p id="p-180">\(f\in S_k(\Gamma)\)</p>
 <div class="displaymath">
 \begin{equation*}
 a_n = O_z( n^{(k-1)/2 + \epsilon}) \,\forall \epsilon \gt 0\text{.}
 \end{equation*}
-</div></article><p id="p-182">Classically</p>
+</div></article><p id="p-181">Classically</p>
 <div class="displaymath">
 \begin{equation*}
 \widetilde \theta(z) = \sum_{m\in \ZZ} e^{i \pi m^2z}
@@ -468,7 +469,7 @@ a_n = O_z( n^{(k-1)/2 + \epsilon}) \,\forall \epsilon \gt 0\text{.}
 \widetilde \theta(\gamma z ) = j(\gamma ; z) \widetilde \theta(z)
 \end{equation*}
 </div>
-<p>where \(j(\gamma;  z) = \legendre cd \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  \(-1\) if  \(d\equiv 3 \pmod 4\) sign of Gauss sum. \(\legendre cd\) is  a sibling of Legendre form.</p></article><aside class="aside-like" id="aside-9"><p id="p-183">Lecture 9 11/10/2018</p></aside><p id="p-184">Recall: \(P\) spherical harmonic degree \(l \text{.}\) Aim to show:</p>
+<p>where \(j(\gamma;  z) = \legendre cd \epsilon_d^{-1} (cz+d)^{1/2}\) where \(\epsilon_d = 1\) if \(d\equiv 1 \pmod 4\text{,}\)  \(-1\) if  \(d\equiv 3 \pmod 4\) sign of Gauss sum. \(\legendre cd\) is  a sibling of Legendre form.</p></article><aside class="aside-like" id="aside-9"><p id="p-182">Lecture 9 11/10/2018</p></aside><p id="p-183">Recall: \(P\) spherical harmonic degree \(l \text{.}\) Aim to show:</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{|x|^2 = n} P\left(  x \right) = o( r_3(n))
@@ -480,14 +481,14 @@ a_n = O_z( n^{(k-1)/2 + \epsilon}) \,\forall \epsilon \gt 0\text{.}
 r_3(n) =  \# \{ a^2 + b^2 + c^2 = n: a,b,c\in \ZZ\}\text{.}
 \end{equation*}
 </div>
-<p id="p-185">Took</p>
+<p id="p-184">Took</p>
 <div class="displaymath">
 \begin{equation*}
 \theta(z; P) = \sum_{n\in \ZZ} r(n; P) e(nz)\text{.}
 \end{equation*}
 </div>
 <p>A modular form of weight \(3/2 + l\) for \(\Gamma_0 (4)\text{.}\) Cusp form if \(l \gt 0\text{.}\)</p>
-<p id="p-186">The strategy is then to show</p>
+<p id="p-185">The strategy is then to show</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(n)  \gg n^{1/2- \epsilon}\,\forall \epsilon \gt 0
@@ -501,7 +502,7 @@ r_3(n)  \ll n^{k/2 -1/4 - \delta}\,\text{ for some}\,\delta \gt 0\text{.}
 <article class="definition-like" id="def-half-integral-mfs"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.6</span> <span class="title">Half-integral weight modular forms</span>
 </h6>
-<p id="p-187">Let \(N \equiv 0 \pmod 4\text{.}\) A modular form of <dfn class="terminology">half-integral</dfn> weight \(k \in \frac 12 + \ZZ_{\ge 0}\text{.}\) For \(\Gamma_0(N)\) is a holomorphic function on \(\HH\) s.t.</p>
+<p id="p-186">Let \(N \equiv 0 \pmod 4\text{.}\) A modular form of <dfn class="terminology">half-integral</dfn> weight \(k \in \frac 12 + \ZZ_{\ge 0}\text{.}\) For \(\Gamma_0(N)\) is a holomorphic function on \(\HH\) s.t.</p>
 <ol class="decimal">
 <li id="li-48"><div class="displaymath">
 \begin{equation*}
@@ -510,9 +511,9 @@ f(\gamma z ) = j(\gamma;  z)^{2k} f(z)
 </div></li>
 <li id="li-49">\(f\) is holomorphic at the cusps</li>
 </ol>
-<p>if \(\chi\begin{pmatrix}a\amp b \\c \amp d \end{pmatrix} = \chi (d)\text{,}\) \(f(\gamma z)  = \chi(d) j(\gamma ; z)^{2k} f(z)\) gives the space \(M_k(\Gamma_0(N), \chi)\text{.}\)</p></article><p id="p-188">Where do these things come from?</p>
-<p id="p-189">A construction due to Schoenberg 1939, Pfetzer 1953, Shimura 1973 is as follows:</p>
-<p id="p-190">\(A\) an \(n \times n\) positive definite integral matrix, \(N \in \ZZ\) s.t. \(N A\inv\) is integral, \(P\) a spherical harmonic relative to \(A\) i.e. for \(P\) homogeneous of degree \(v\text{.}\)</p>
+<p>if \(\chi\begin{pmatrix}a\amp b \\c \amp d \end{pmatrix} = \chi (d)\text{,}\) \(f(\gamma z)  = \chi(d) j(\gamma ; z)^{2k} f(z)\) gives the space \(M_k(\Gamma_0(N), \chi)\text{.}\)</p></article><p id="p-187">Where do these things come from?</p>
+<p id="p-188">A construction due to Schoenberg 1939, Pfetzer 1953, Shimura 1973 is as follows:</p>
+<p id="p-189">\(A\) an \(n \times n\) positive definite integral matrix, \(N \in \ZZ\) s.t. \(N A\inv\) is integral, \(P\) a spherical harmonic relative to \(A\) i.e. for \(P\) homogeneous of degree \(v\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{i,j} \tilde a_{ij} \frac{\partial ^2 P}{\partial x_ix_j} = 0
@@ -526,7 +527,7 @@ f(\gamma z ) = j(\gamma;  z)^{2k} f(z)
 <article class="definition-like" id="definition-9"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.7</span>
 </h6>
-<p id="p-191">Let \(h\in \ZZ^n\text{,}\) set</p>
+<p id="p-190">Let \(h\in \ZZ^n\text{,}\) set</p>
 <div class="displaymath">
 \begin{equation*}
 \tilde \theta_P (z,h,N) = \sum_{m \equiv h \pmod N} P(m) e\left(  \frac{(m^\transpose A m)z}{2N^2} \right)\text{.}
@@ -534,7 +535,7 @@ f(\gamma z ) = j(\gamma;  z)^{2k} f(z)
 </div></article><article class="theorem-like" id="fact-2"><h6 class="heading">
 <span class="type">Fact</span> <span class="codenumber">2.8</span> <span class="title">Poisson summation</span>
 </h6>
-<div class="displaymath" id="p-192">
+<div class="displaymath" id="p-191">
 \begin{equation*}
 \tilde \theta_P (\gamma z, h, N) = e \left( \frac{ab(h^\transpose Ah) }{2N^2}     \right)\left( \frac{\det A}{d} \right) \left( \frac{2c}{d}\right)^n \epsilon_d^{-n} (cz+d)^{k/2} \tilde\theta_P(z; ah, N)
 \end{equation*}
@@ -551,7 +552,7 @@ k = n +2v
 </div></article><article class="example-like" id="example-9"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.9</span>
 </h6>
-<p id="p-193">\(n = 1, N = 1\) \(P(m) = m^v\) \(v= 0,1\)</p>
+<p id="p-192">\(n = 1, N = 1\) \(P(m) = m^v\) \(v= 0,1\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tilde \theta_P(z) = \sum_{m\in \ZZ} m^v e(m^2z/2)
@@ -560,7 +561,7 @@ k = n +2v
 <p>for \(v=0\) this is classical \(\theta\) for \(v = 1\) cusp form on \(\Gamma_0(8)\) of weight \(3/2\text{,}\) we could also twist by a character mod 4.</p></article><article class="example-like" id="example-10"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.10</span>
 </h6>
-<p id="p-194">\(A = I_{n \times n}\) \(P\) spherical harmonic of degree \(v\)</p>
+<p id="p-193">\(A = I_{n \times n}\) \(P\) spherical harmonic of degree \(v\)</p>
 <div class="displaymath">
 \begin{equation*}
 \tilde \theta_P(z; 0, 1) = \sum _{m \in \ZZ^n} P(m) e(|m|^2 z/2)
@@ -574,7 +575,7 @@ k = n +2v
 </div></article><article class="remark-like" id="note-4"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">2.11</span>
 </h6>
-<div class="displaymath" id="p-195">
+<div class="displaymath" id="p-194">
 \begin{equation*}
 \theta_P (z) \in S_k(\Gamma_0(4))
 \end{equation*}
@@ -592,7 +593,7 @@ k = \frac h2 + v,\,v \gt 0
 <p>not cuspidal.</p></article><article class="example-like" id="example-11"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.12</span>
 </h6>
-<p id="p-196">\(A = 4\times 4\) integral positive definite</p>
+<p id="p-195">\(A = 4\times 4\) integral positive definite</p>
 <div class="displaymath">
 \begin{equation*}
 Q = Q_A(x),\, x^\transpose A x
@@ -609,18 +610,18 @@ r_Q(n) = \# \{ x \in \ZZ^4:Q(x) = n\}
 \end{equation*}
 </div>
 <p>for some \(N = 4\det(A)\text{.}\)</p></article><article class="paragraphs" id="paragraphs-16"><h5 class="heading"><span class="title">Half-integral weight Ramanujan conjecture (Metaplectic)</span></h5>
-<p id="p-197">Naively we would like to mimic the integral case and say</p>
+<p id="p-196">Naively we would like to mimic the integral case and say</p>
 <div class="displaymath">
 \begin{equation*}
 a_f(n) = O(n^{(k-1)/2 + \epsilon})
 \end{equation*}
 </div>
 <p>where \(f\in S_k(\Gamma)\text{.}\)</p>
-<p id="p-198">But this is not true as stated here!:</p>
+<p id="p-197">But this is not true as stated here!:</p>
 <article class="example-like" id="example-12"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.13</span>
 </h6>
-<p id="p-199">Let</p>
+<p id="p-198">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \theta(z;  \chi) = \sum_{m\in \ZZ} m \chi(m) e(m^2 z)
@@ -632,21 +633,21 @@ a_f(n) = O(n^{(k-1)/2 + \epsilon})
 a_f(m^2) \sim m\chi(m) \implies a_f(n) = O(\sqrt{n})
 \end{equation*}
 </div>
-<p>for \(n\) square. But \((k -1)/2= 1/4\) but  \(O(\sqrt n)\) is not \(O(n^{1/4 + \epsilon})\) for any \(\epsilon \ge 1/4\text{.}\)</p></article><p id="p-200">So we avoid these or stick to squarefree \(n\text{.}\)</p>
+<p>for \(n\) square. But \((k -1)/2= 1/4\) but  \(O(\sqrt n)\) is not \(O(n^{1/4 + \epsilon})\) for any \(\epsilon \ge 1/4\text{.}\)</p></article><p id="p-199">So we avoid these or stick to squarefree \(n\text{.}\)</p>
 <article class="theorem-like" id="conj-half-integral-ramanujan"><h6 class="heading">
 <span class="type">Conjecture</span> <span class="codenumber">2.14</span> <span class="title">Half-integral weight Ramanujan conjecture</span>
 </h6>
-<div class="displaymath" id="p-201">
+<div class="displaymath" id="p-200">
 \begin{equation*}
 a_f(n) = O(n^{(k-1)/2 + \epsilon})
 \end{equation*}
 </div>
-<p>for all \(n\) square-free \(f\in S_k(\Gamma, \chi)\text{.}\)</p></article><p id="p-202">Why this exponent? For integral weight: Representation theory gives \(a_f(m)\)'s  which correspond to Hecke eigenvalues which under Langlands are tempered for \(\GL_N\text{.}\)</p>
-<p id="p-203">Digression:</p>
+<p>for all \(n\) square-free \(f\in S_k(\Gamma, \chi)\text{.}\)</p></article><p id="p-201">Why this exponent? For integral weight: Representation theory gives \(a_f(m)\)'s  which correspond to Hecke eigenvalues which under Langlands are tempered for \(\GL_N\text{.}\)</p>
+<p id="p-202">Digression:</p>
 <article class="theorem-like" id="proposition-3"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">2.15</span> <span class="title">Hecke bound</span>
 </h6>
-<p id="p-204">\(f \in S_k(\Gamma)\) then \(a_f(n) = O(n^{k/2})\text{.}\)</p></article><article class="hiddenproof" id="proof-19"><a knowl="" class="id-ref" refid="hk-proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-205">\(y = \Im(z), y(\gamma z) = |cz+d| ^{-2} y\) so</p>
+<p id="p-203">\(f \in S_k(\Gamma)\) then \(a_f(n) = O(n^{k/2})\text{.}\)</p></article><article class="hiddenproof" id="proof-19"><a knowl="" class="id-ref" refid="hk-proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-204">\(y = \Im(z), y(\gamma z) = |cz+d| ^{-2} y\) so</p>
 <div class="displaymath">
 \begin{equation*}
 F(z) = y^{k/2}  |f(z)|
@@ -663,8 +664,8 @@ F(z) = y^{k/2}  |f(z)|
 \le \int_0^1 y^{-k/2} M = O(y^{-k/2})
 \end{equation*}
 </div>
-<p>so \(a_f(n) = O(y^{-k/2} e^{2\pi i n y})\) with \(y = 1/n\text{.}\)</p></article></div></article><p id="p-206">Another digression:</p>
-<p id="p-207">What is the distribution of rational points on \(S^2\text{?}\)</p>
+<p>so \(a_f(n) = O(y^{-k/2} e^{2\pi i n y})\) with \(y = 1/n\text{.}\)</p></article></div></article><p id="p-205">Another digression:</p>
+<p id="p-206">What is the distribution of rational points on \(S^2\text{?}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \{x_1^2 + x_2^2 + x_3^2 = 1: x_i \in \QQ\}
@@ -678,16 +679,16 @@ F(z) = y^{k/2}  |f(z)|
 <article class="theorem-like" id="proposition-4"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">2.16</span> <span class="title">Hurwitz</span>
 </h6>
-<p id="p-208">A generating function for this is given by</p>
+<p id="p-207">A generating function for this is given by</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n =1}^\infty \frac{r_3(n^2)}{n^s} = 6(1-2^{1-s}) \frac{\overbrace{\zeta(s) \zeta(1-s)}^{=\sum \sigma(n)/n^s}}{L\left(s, \legendre{-1}{\cdot}\right)}
 \end{equation*}
 </div></article><article class="exercise-like" id="exercise-4"><a knowl="" class="id-ref" refid="hk-exercise-4"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.17</span>
-</h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-209">Prove this!</p></article></div>
+</h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-208">Prove this!</p></article></div>
 <article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">David Fried's proof of Hurwitz on \(r_3(n^2)\)</span></h5>
-<p id="p-210">Without proof Hurwitz stated</p>
+<p id="p-209">Without proof Hurwitz stated</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(N^2) =  6 P \prod_{q|Q} ( q^a + 2q^{a-1} + \cdots + 2q + q)
@@ -706,7 +707,7 @@ r_5(N^2)\text{,}
 \end{equation*}
 </div>
 <p>here is such a proof:</p>
-<p id="p-211">We denote \(P =  P(N), Q = Q(N)\) We may suppose \(k = 0\) since</p>
+<p id="p-210">We denote \(P =  P(N), Q = Q(N)\) We may suppose \(k = 0\) since</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(4n) =  r_3(n)
@@ -747,16 +748,16 @@ r_3(N^2) = 6 \sum_{a+b = 2N,\,a,b\,\text{odd}}\rho (ab)\text{.}
 w(n) = \mu(P)|\mu(Q)|
 \end{equation*}
 </div>
-<p id="p-212">The multiplicativity of \(\rho\) generalises as follows:</p>
+<p id="p-211">The multiplicativity of \(\rho\) generalises as follows:</p>
 <article class="theorem-like" id="lemma-6"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.18</span>
 </h6>
-<p id="p-213">If \(a,b\) are odd with \(g=  \gcd(a,b)\) then</p>
+<p id="p-212">If \(a,b\) are odd with \(g=  \gcd(a,b)\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \rho(ab) = \sum_{d|g} w(d) \rho\left(\frac ad \right)  \rho\left(\frac bd \right)
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-20"><a knowl="" class="id-ref" refid="hk-proof-20"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-20" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-214">Each \(p = a^2 + b^2\) with \(a\gt b \gt 0\) uniquely (Euler). Let \(z(p) = a+bi\text{.}\) For \(n\) odd \(n =  PQ\) and \(r_2(n) = 0\) unless \(Q = \square\text{.}\) In which case the solutions of \(n = z \bar z\) are</p>
+</div></article><article class="hiddenproof" id="proof-20"><a knowl="" class="id-ref" refid="hk-proof-20"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-20" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-213">Each \(p = a^2 + b^2\) with \(a\gt b \gt 0\) uniquely (Euler). Let \(z(p) = a+bi\text{.}\) For \(n\) odd \(n =  PQ\) and \(r_2(n) = 0\) unless \(Q = \square\text{.}\) In which case the solutions of \(n = z \bar z\) are</p>
 <div class="displaymath">
 \begin{equation*}
 z = i^k \sqrt Q \prod_p z(p)^j \overline{z(p)}^{\alpha- j}
@@ -768,14 +769,14 @@ z = i^k \sqrt Q \prod_p z(p)^j \overline{z(p)}^{\alpha- j}
 \rho(n) = \tau(p) \square (Q)\text{.}
 \end{equation*}
 </div>
-<p id="p-215">When \(\rho(ab) = 0\) every term on the right vanishes. For \(Q(ab) \ne \square\) so</p>
+<p id="p-214">When \(\rho(ab) = 0\) every term on the right vanishes. For \(Q(ab) \ne \square\) so</p>
 <div class="displaymath">
 \begin{equation*}
 Q\left( \frac ad \right),\,Q\left( \frac bd \right)
 \end{equation*}
 </div>
 <p>cannot both be squares.</p>
-<p id="p-216">When \(\rho(ab) \ne 0\) we have \(Q(ab) = m^2\) for some\(m\text{.}\) There is exactly one squarefree \(\gamma\) dividing \(m\) and \(g\) such that</p>
+<p id="p-215">When \(\rho(ab) \ne 0\) we have \(Q(ab) = m^2\) for some\(m\text{.}\) There is exactly one squarefree \(\gamma\) dividing \(m\) and \(g\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 Q\left(\frac a\gamma \right),\, Q\left(\frac b\gamma \right)
@@ -811,7 +812,7 @@ w(d) \rho(a/d) \rho(b/d)
 \end{equation*}
 </div>
 <p>as desired.</p></article></div>
-<p id="p-217">Using this we find</p>
+<p id="p-216">Using this we find</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(n^2) = 6 \sum_{d|N} w(d) S \left(\frac Nd\right)
@@ -840,7 +841,7 @@ S(n) = \frac{1}{16}\#(2n =  \underbrace{w^2 + x^2}_{\text{odd}}+ \underbrace{y^2
 \end{equation*}
 </div>
 <p>by Jacobi.</p>
-<p id="p-218">So</p>
+<p id="p-217">So</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(N^2)=  6\sum_{d|N} w(d) \sigma\left(\frac Nd\right)
@@ -852,7 +853,7 @@ r_3(N^2)=  6\sum_{d|N} w(d) \sigma\left(\frac Nd\right)
 \end{equation*}
 </div>
 <p>where \(\ast\) denotes Dirichlet convolution.</p>
-<p id="p-219">Pasing to Dirichlet series</p>
+<p id="p-218">Pasing to Dirichlet series</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{N\text{ odd}} \frac{ r_3 (N^2)} {N^s} = 6 \sum _{d\text{ odd}} \frac{w(d)}{d^s } \sum _{m\text{ odd}} \frac{\sigma(m)}{m^s }
@@ -880,15 +881,15 @@ r_3(N^2) = 6 \prod_{p^a||N} p^a \prod_{q^a||N} (q^a + 2q^{a-1} + \cdots 2q + 2)
 \sum_{n=1}\infty \frac{r_3(n^2)}{n^s} = 6 L(s, \legendre{-4}{\cdot}) \inv \zeta(s) \zeta_{\text{odd}}(s-1)
 \end{equation*}
 </div>
-<p>as in Duke.</p></article><aside class="aside-like" id="aside-10"><p id="p-220">Lecture 10 16/10/2018</p></aside><article class="theorem-like" id="corollary-2"><h6 class="heading">
+<p>as in Duke.</p></article><aside class="aside-like" id="aside-10"><p id="p-219">Lecture 10 16/10/2018</p></aside><article class="theorem-like" id="corollary-2"><h6 class="heading">
 <span class="type">Corollary</span> <span class="codenumber">2.19</span>
 </h6>
-<p id="p-221">This shows</p>
+<p id="p-220">This shows</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(n^2) \gg n\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-21"><a knowl="" class="id-ref" refid="hk-proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-222">(Sketch) expand the formula, take \(n=p\) an odd prime</p>
+</div></article><article class="hiddenproof" id="proof-21"><a knowl="" class="id-ref" refid="hk-proof-21"><h6 class="heading"><span class="title">Proof (sketch)</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-221">Expand the formula, take \(n=p\) an odd prime</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(s) \zeta(1-s) = \sum \frac{\sigma(n)}{n^s}
@@ -917,11 +918,11 @@ L(s, \chi_{-4})\inv = \prod_p(1- \frac{\chi_{-4}(p)}{p^s})
 r_3(p^2) = (\sigma(p) - \chi_{-4}(p))6 \ge 6p
 \end{equation*}
 </div></article></div>
-<p id="p-223">The next big breakthrough came much later, showing something similar for \(r_3(n, P)\text{,}\) but now we hope to see cancellation.</p>
+<p id="p-222">The next big breakthrough came much later, showing something similar for \(r_3(n, P)\text{,}\) but now we hope to see cancellation.</p>
 <article class="theorem-like" id="theorem-20"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.20</span> <span class="title">Shimura '71</span>
 </h6>
-<p id="p-224">Let</p>
+<p id="p-223">Let</p>
 <div class="displaymath">
 \begin{equation*}
 f \in S_{k/2}(N,\chi)
@@ -934,7 +935,7 @@ f(z) = \sum_{n=1}^\infty a_f(n) e(nz)\text{,}
 \end{equation*}
 </div>
 <p>assume \(f\) is a common eigenfunction for all \(T_{p^2}\text{.}\)</p>
-<p id="p-225">Let \(\widetilde \chi(m) = \chi(m) \chi_{-4}(m)\) and \(\lambda  = (k-1)/2\text{.}\) Set</p>
+<p id="p-224">Let \(\widetilde \chi(m) = \chi(m) \chi_{-4}(m)\) and \(\lambda  = (k-1)/2\text{.}\) Set</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n=1}^\infty \frac{A(n)}{n^s} = L(s+1 - \lambda , \widetilde \chi) \cdot \left( \sum_{m=1}^\infty   \frac{a_f(m^2)}{m^s}        \right)
@@ -945,19 +946,19 @@ f(z) = \sum_{n=1}^\infty a_f(n) e(nz)\text{,}
 F(z) = \sum_{n=1}^\infty A(n) e(nz)\text{.}
 \end{equation*}
 </div>
-<p id="p-226">Then</p>
+<p id="p-225">Then</p>
 <div class="displaymath">
 \begin{equation*}
 F(z) \in S_{2\lambda}(N_1, \chi^2)\text{.}
 \end{equation*}
-</div></article><p id="p-227">Recall:</p>
+</div></article><p id="p-226">Recall:</p>
 <div class="displaymath">
 \begin{equation*}
 \theta_P(z) = \sum r_3(n; P) e(nz) \in S_{3/2 + l} (\Gamma_0(4))
 \end{equation*}
 </div>
 <p>is a weight \(3/2 +l\) form if \(l=  \deg P\text{.}\)</p>
-<p id="p-228">Shimura gives us</p>
+<p id="p-227">Shimura gives us</p>
 <div class="displaymath">
 \begin{equation*}
 F_P(z) \in S_{2l+2}(\Gamma_0(2))
@@ -967,17 +968,17 @@ F_P(z) \in S_{2l+2}(\Gamma_0(2))
 <article class="theorem-like" id="corollary-3"><h6 class="heading">
 <span class="type">Corollary</span> <span class="codenumber">2.21</span>
 </h6>
-<div class="displaymath" id="p-229">
+<div class="displaymath" id="p-228">
 \begin{equation*}
 r_3(n^2, P) = \sum_{d|n} A_P(d)  \mu\left(\frac nd \right) \chi_{-4}\left(\frac nd\right) \left(\frac nd\right)^l
 \end{equation*}
 </div>
-<p>hence if \(A_P(d) \ll d^{l+1 -\delta}\) then we are done.</p></article><p id="p-230">The Hecke bound implies \(A_P(d) \ll d^{l +1}\text{.}\)</p>
+<p>hence if \(A_P(d) \ll d^{l+1 -\delta}\) then we are done.</p></article><p id="p-229">The Hecke bound implies \(A_P(d) \ll d^{l +1}\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">Detour: bounding Fourier coefficients</span></h5>
-<p id="p-231">There are various approaches, such as Poincaré series, Kloosterman sums, and bound these, to get a bound on the Fourier coefficient.</p>
-<p id="p-232">If \(f\in S_{k_1} (N_1)\) we will write  a spanning set for \(S_{k_1}(N_1)\text{,}\) then bound fourier coefficients on each of these guys, which will suffice.</p>
-<p id="p-233">Poincaré series:</p>
-<p id="p-234">If we were just looking for a modular form we might try Eisenstein series</p>
+<p id="p-230">There are various approaches, such as Poincaré series, Kloosterman sums, and bound these, to get a bound on the Fourier coefficient.</p>
+<p id="p-231">If \(f\in S_{k_1} (N_1)\) we will write  a spanning set for \(S_{k_1}(N_1)\text{,}\) then bound fourier coefficients on each of these guys, which will suffice.</p>
+<p id="p-232">Poincaré series:</p>
+<p id="p-233">If we were just looking for a modular form we might try Eisenstein series</p>
 <div class="displaymath">
 \begin{equation*}
 E_k(z) = \sum_{c,d} \frac{1}{(cz+d)^{2k}}
@@ -989,22 +990,22 @@ E_k(z) = \sum_{c,d} \frac{1}{(cz+d)^{2k}}
 P_m(z; k) = \sum_{\gamma \in \Gamma_\infty \backslash \Gamma} j(\gamma;   z)^{-2k} e(m \gamma z)\text{.}
 \end{equation*}
 </div>
-<p id="p-235">Where \(\Gamma_\infty = \left\{ \begin{pmatrix} 1\amp n \\ 0 \amp 1 \end{pmatrix}\right\}\text{.}\)</p>
+<p id="p-234">Where \(\Gamma_\infty = \left\{ \begin{pmatrix} 1\amp n \\ 0 \amp 1 \end{pmatrix}\right\}\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 j(\gamma; z) = \left( \frac cd \right) \epsilon_d \inv (cz+d)^{1/2}
 \end{equation*}
 </div>
 <p>they converge absolutely for \(k \gt 2\text{.}\)</p>
-<p id="p-236">Some properties:</p>
+<p id="p-235">Some properties:</p>
 <article class="theorem-like" id="lemma-7"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.22</span>
 </h6>
-<div class="displaymath" id="p-237">
+<div class="displaymath" id="p-236">
 \begin{equation*}
 P_m(\tau z; k) = (cz+d)^{2k}  P_m(z; k)
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-22"><a knowl="" class="id-ref" refid="hk-proof-22"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-22" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-238">Exercise, \(j\) satisifes a cocycle relation</p>
+</div></article><article class="hiddenproof" id="proof-22"><a knowl="" class="id-ref" refid="hk-proof-22"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-22" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-237">Exercise, \(j\) satisifes a cocycle relation</p>
 <div class="displaymath">
 \begin{equation*}
 j(\gamma ; \tau z) j(\tau; z)  = j(\gamma \tau; z)\text{.}
@@ -1013,20 +1014,20 @@ j(\gamma ; \tau z) j(\tau; z)  = j(\gamma \tau; z)\text{.}
 <article class="theorem-like" id="proposition-5"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">2.23</span>
 </h6>
-<div class="displaymath" id="p-239">
+<div class="displaymath" id="p-238">
 \begin{equation*}
 P_m(z) \in S_k(\Gamma)
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-23"><a knowl="" class="id-ref" refid="hk-proof-23"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-23" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-240">To follow.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-23"><a knowl="" class="id-ref" refid="hk-proof-23"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-23" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-239">To follow.</p></article></div>
 <article class="theorem-like" id="lemma-8"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.24</span>
 </h6>
-<p id="p-241">Let \(f(z) = \sum a_f(n) e(nz)\)</p>
+<p id="p-240">Let \(f(z) = \sum a_f(n) e(nz)\)</p>
 <div class="displaymath">
 \begin{equation*}
 \pair{P_m(z; k) }{ f}_\mathrm{Pet} =\frac{\overline a_f(m) }{(4 \pi m)^{k-1}}\Gamma(k-1)\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-24"><a knowl="" class="id-ref" refid="hk-proof-24"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-24" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-242">
+</div></article><article class="hiddenproof" id="proof-24"><a knowl="" class="id-ref" refid="hk-proof-24"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-24" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-241">
 \begin{equation*}
 \pair{P_m(z; k) }{f}_{\mathrm{Pet}} = \int_{\Gamma \backslash \HH} P_m(z; k) \overline f(z) y^k  \frac{\diff x \diff y }{y^2}
 \end{equation*}
@@ -1060,17 +1061,17 @@ P_m(z) \in S_k(\Gamma)
 \begin{equation*}
 = \frac{\overline a_f(m) }{(4 \pi m)^{k-1}}\Gamma(k-1)
 \end{equation*}
-</div></article></div></article><aside class="aside-like" id="aside-11"><p id="p-243">Lecture 11 18/10/2018</p></aside><article class="theorem-like" id="corollary-4"><h6 class="heading">
+</div></article></div></article><aside class="aside-like" id="aside-11"><p id="p-242">Lecture 11 18/10/2018</p></aside><article class="theorem-like" id="corollary-4"><h6 class="heading">
 <span class="type">Corollary</span> <span class="codenumber">2.25</span>
 </h6>
-<p id="p-244">\(P_m(z; k)\) span \(S_k(\Gamma)\) as \(m\) varies through integers.</p></article><article class="hiddenproof" id="proof-25"><a knowl="" class="id-ref" refid="hk-proof-25"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-25" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-245">If \(f \perp P_m(z, k)\) for all \(m\) then \(f=  0\text{.}\)</p></article></div>
+<p id="p-243">\(P_m(z; k)\) span \(S_k(\Gamma)\) as \(m\) varies through integers.</p></article><article class="hiddenproof" id="proof-25"><a knowl="" class="id-ref" refid="hk-proof-25"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-25" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-244">If \(f \perp P_m(z, k)\) for all \(m\) then \(f=  0\text{.}\)</p></article></div>
 <article class="remark-like" id="observation-2"><h6 class="heading">
 <span class="type">Observation</span> <span class="codenumber">2.26</span>
 </h6>
-<p id="p-246">The corollary implies that bounding fourier coefficients of \(f\in S_k(\Gamma)\) is equivalent to bounding fourier coefficients of \(P_m(z,k)\text{.}\)</p></article><article class="theorem-like" id="proposition-6"><h6 class="heading">
+<p id="p-245">The corollary implies that bounding fourier coefficients of \(f\in S_k(\Gamma)\) is equivalent to bounding fourier coefficients of \(P_m(z,k)\text{.}\)</p></article><article class="theorem-like" id="proposition-6"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">2.27</span>
 </h6>
-<div class="displaymath" id="p-247">
+<div class="displaymath" id="p-246">
 \begin{equation*}
 \pair{P_m(z,k)}{P_n(z,k)} = \left( \frac mn \right)^{(k-1)/2} \left(\delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N} J_{k-1} \left( \frac{2\pi \sqrt{mn}}{c} \right)\frac{K(m,n; c)}{c}\right)
 \end{equation*}
@@ -1095,20 +1096,20 @@ K(m,n; c) = \sum _{d\in (\ZZ/c)^\times } \left(\frac cd \right)^{2k} \epsilon_d^
 \begin{equation*}
 \delta_{m,n} = \begin{cases} 1 \amp m=n,\\ 0 \amp m\ne n\end{cases}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-26"><a knowl="" class="id-ref" refid="hk-proof-26"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-26" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-248">
+</div></article><article class="hiddenproof" id="proof-26"><a knowl="" class="id-ref" refid="hk-proof-26"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-26" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-247">
 \begin{align*}
 \int_0^1 P_m(z,k) e(-nz) \diff z \amp= \int_0^1 \left( \sum_{\pm \Gamma_\infty \backslash \Gamma} j(\gamma ; z) ^{-2k} e(m\gamma z)\right) e(-nz) \diff z\\
 \amp= \int_0^1 \underbrace{j(1; z)^{-2k} e((m-n)z)}_{\delta_{m,n}} \diff z + \text{rest}\\
 \amp= \int_0^1 j(1; z)^{-2k} e((m-n)) \diff z + \text{rest}
 \end{align*}
 </div>
-<p id="p-249">Note:</p>
+<p id="p-248">Note:</p>
 <div class="displaymath">
 \begin{equation*}
 e(\begin{pmatrix} 1\amp n \\ 0 \amp 1 \end{pmatrix} z) = e(z)\text{.}
 \end{equation*}
 </div>
-<p id="p-250">So</p>
+<p id="p-249">So</p>
 <div class="displaymath">
 \begin{equation*}
 \int_0^1\sum_{\Gamma_\infty\backslash \Gamma} j(\gamma; z)^{-2k} e(m \gamma z) \diff z
@@ -1129,7 +1130,7 @@ e(\begin{pmatrix} 1\amp n \\ 0 \amp 1 \end{pmatrix} z) = e(z)\text{.}
 \int_0^1 \sum_{\Gamma_\infty\backslash \Gamma /\Gamma_\infty} j(\gamma ; z)^{-2k} e(m\gamma z-nz) \diff z
 \end{equation*}
 </div>
-<p id="p-251">Note:</p>
+<p id="p-250">Note:</p>
 <div class="displaymath">
 \begin{equation*}
 m\gamma z  = m \frac{az+ b}{cz+d} = m \left( \frac ac - \frac{1}{c(cz+d)}\right)
@@ -1140,7 +1141,7 @@ m\gamma z  = m \frac{az+ b}{cz+d} = m \left( \frac ac - \frac{1}{c(cz+d)}\right)
 \pm \Gamma_\infty \backslash \Gamma / \Gamma_\infty  =\{ (a,d,c) : c \gt 0 ,\,a,d \in (\ZZ/c)^\times,\,ad \equiv 1 \pmod c\}
 \end{equation*}
 </div>
-<p id="p-252">So our main integral is</p>
+<p id="p-251">So our main integral is</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{c\gt 0 ,\,d\in \ZZ/c^\times} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{(cz+d)^k} e\left(m\frac ac - \frac{m}{c(cz+d)} -nz\right) \diff z
@@ -1151,7 +1152,7 @@ m\gamma z  = m \frac{az+ b}{cz+d} = m \left( \frac ac - \frac{1}{c(cz+d)}\right)
 \sum_{c\gt 0 ,\,d\in \ZZ/c^\times,\,ad\equiv 1 \pmod c} \frac{e((ma+nd)/c)}{c^k} \epsilon_d^{-2k} \left(\frac cd \right)^{2k}   \int_{-\infty}^\infty \frac{1}{z^k} e\left( - \left(zn + \frac{m}{c^2z} \right)\right) \diff z
 \end{equation*}
 </div>
-<p id="p-253">Then use the following integral representation</p>
+<p id="p-252">Then use the following integral representation</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{-\infty + iA}^{\infty + iA} w^{-k} e^{-(\mu_1 w + \mu_2 m\inv)} \diff w
@@ -1162,7 +1163,7 @@ m\gamma z  = m \frac{az+ b}{cz+d} = m \left( \frac ac - \frac{1}{c(cz+d)}\right)
 = 2\pi \left(\frac {\mu_1}{\mu_2}\right)^{(k-1)/2} e^{i k \pi / 2} J_{k-1} (4 \pi \sqrt{\mu_1\mu_2})
 \end{equation*}
 </div></article></div>
-<p id="p-254">To recap:</p>
+<p id="p-253">To recap:</p>
 <div class="displaymath">
 \begin{equation*}
 P_m(z) = \sum_{n=1}^\infty \hat P_m(n) e(nz)
@@ -1173,14 +1174,14 @@ P_m(z) = \sum_{n=1}^\infty \hat P_m(n) e(nz)
 \hat P_m(n) = \left( \frac nm \right)^{(k-1)/2} \left\{ \delta_{m,n} + \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N,\,c \gt 0} J_{k-1} \left( \frac {4\pi \sqrt{mn}}{c} \right) \frac{K(m,n; c)}{c} \right\}
 \end{equation*}
 </div>
-<p id="p-255">Digression: Let \(\Gamma = \SL_2(\ZZ)\text{,}\) \(k= 12\) then \(S_k(\Gamma) = \langle \Delta \rangle\)</p>
+<p id="p-254">Digression: Let \(\Gamma = \SL_2(\ZZ)\text{,}\) \(k= 12\) then \(S_k(\Gamma) = \langle \Delta \rangle\)</p>
 <div class="displaymath">
 \begin{equation*}
 \Delta(z) = (2\pi)^{12} \sum_{n=1}^\infty \tau(n) e(nz)\text{.}
 \end{equation*}
 </div>
-<p id="p-256">As \(\Delta = \eta^{24}\) we have \(\tau(n) \in \ZZ\text{.}\)</p>
-<p id="p-257">As</p>
+<p id="p-255">As \(\Delta = \eta^{24}\) we have \(\tau(n) \in \ZZ\text{.}\)</p>
+<p id="p-256">As</p>
 <div class="displaymath">
 \begin{equation*}
 P_{m}(z; 12) \in S_{12} (1) = \langle \Delta\rangle
@@ -1203,16 +1204,16 @@ P_{m}(z; 12) \in S_{12} (1) = \langle \Delta\rangle
 P_m(z) = \frac{2\pi 10!}{(4\pi m )^{11}} \frac{\Delta(z)}{\| \Delta\|^2_{\mathrm{Pet}}} \tau(m)\text{.}
 \end{equation*}
 </div>
-<p id="p-258">Another consequence:</p>
+<p id="p-257">Another consequence:</p>
 <article class="theorem-like" id="theorem-21"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.28</span> <span class="title">Petersson trace formula</span>
 </h6>
-<p id="p-259">For any  \(m,n \ge 1 \)</p>
+<p id="p-258">For any  \(m,n \ge 1 \)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\Gamma(k-1)}{ ( 4\pi \sqrt{mn})^{k-1}} \sum_{f\text{ o.n. basis for }S_k(\Gamma)} \overline a_f(m) a_f(n) = \delta_{m,n} +  \frac{2\pi}{i^k} \sum_{c\equiv 0 \pmod N,\,c \gt 0} J_{k-1} \left( \frac {4\pi \sqrt{mn}}{c} \right)  \frac{K(m,n; c)}{c}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-27"><a knowl="" class="id-ref" refid="hk-proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-260">Let \(P_m(z) = \sum_f \pair{P_m(z)}{f}f\) then</p>
+</div></article><article class="hiddenproof" id="proof-27"><a knowl="" class="id-ref" refid="hk-proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-259">Let \(P_m(z) = \sum_f \pair{P_m(z)}{f}f\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \pair{P_m(z)}{P_n(z)} = \sum_f \overline {a_f(m)} a_f(n) \frac{\Gamma(k-1)^2}{(4 \pi m)^{k-1} (4\pi n )^{k-1}}
@@ -1224,34 +1225,34 @@ P_m(z) = \frac{2\pi 10!}{(4\pi m )^{11}} \frac{\Delta(z)}{\| \Delta\|^2_{\mathrm
 \pair{P_m(z)}{P_n(z)} = \frac{\Gamma(k-1)}{(4\pi m)^{k-1}} \left(\frac mn\right)^{(k-1)/2} \left\{ \cdots \right\}\text{.}
 \end{equation*}
 </div></article></div>
-<aside class="aside-like" id="aside-12"><p id="p-261">Lecture 12 23/10/2018</p></aside><p id="p-262">Recall Shimura gave us</p>
+<aside class="aside-like" id="aside-12"><p id="p-260">Lecture 12 23/10/2018</p></aside><p id="p-261">Recall Shimura gave us</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n=1}^\infty  \frac{r_3(n^2, P)}{n^s} = \frac{\sum_{n=1}^\infty \frac{A_P(n)}{n^s}}{L(s-l, \chi_{-4})}
 \end{equation*}
 </div>
 <p>where the numerators is the \(L\)-function of a modular form of weight \(2l + 2\) where \(l = \deg P\text{.}\)</p>
-<p id="p-263">We want to show \(A_P(n) \ll n^{1+l-\delta}\) for some \(\delta \gt 0\text{.}\)</p>
-<p id="p-264">Idea: Poincaré series span cusp forms, so its enough to bound Fourier coefficients of these.</p>
-<p id="p-265">We know</p>
+<p id="p-262">We want to show \(A_P(n) \ll n^{1+l-\delta}\) for some \(\delta \gt 0\text{.}\)</p>
+<p id="p-263">Idea: Poincaré series span cusp forms, so its enough to bound Fourier coefficients of these.</p>
+<p id="p-264">We know</p>
 <div class="displaymath">
 \begin{equation*}
 \hat P_m(n) = \left(\frac nm \right)^{(k-1)/2} \left( \delta_{m,n} + 2 \pi i^{-k} \sum_{c \equiv 0 \pmod N,\, c \gt 0}\overbrace{\frac{K(m,n,c)}{c}}^{\sum_{x \pmod{^* c}} e((x m + \overline x n)/c)} J_{k-1} \left(\frac {4 \pi \sqrt{mn}}{c}\right) \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-266">Try: Input 1:</p>
+<p id="p-265">Try: Input 1:</p>
 <div class="displaymath">
 \begin{equation*}
 J_{k-1}(x) \ll \min\{x^{k-1},1/\sqrt{x}\}\text{.}
 \end{equation*}
 </div>
-<p id="p-267">Trivial input:</p>
+<p id="p-266">Trivial input:</p>
 <div class="displaymath">
 \begin{equation*}
 | K(m, n; c) | \lt c\text{.}
 \end{equation*}
 </div>
-<p id="p-268">For</p>
+<p id="p-267">For</p>
 <div class="displaymath">
 \begin{equation*}
 c \gg \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \left( \frac{\sqrt{mn}}{c} \right)^{k-1}
@@ -1278,8 +1279,8 @@ c \ll \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \f
 \lt \left( \frac nm \right)^{(k-1)/2} \sum_{c\ll \sqrt{nm}} \frac{\sqrt{c}}{(mn)^{1/4}} = O (n^{k/2})\text{.}
 \end{equation*}
 </div>
-<p id="p-269">Note \(k/2 = l+1\text{:}\) So we are just short, we have \(O(n^{l+1})\) rather than \(O(n^{l+1-\delta})\) for all \(\delta \gt 0\text{,}\) just by using a stupid bound for \(K(m,n; c)\text{.}\)</p>
-<p id="p-270">More major input (Weil bound):</p>
+<p id="p-268">Note \(k/2 = l+1\text{:}\) So we are just short, we have \(O(n^{l+1})\) rather than \(O(n^{l+1-\delta})\) for all \(\delta \gt 0\text{,}\) just by using a stupid bound for \(K(m,n; c)\text{.}\)</p>
+<p id="p-269">More major input (Weil bound):</p>
 <div class="displaymath">
 \begin{equation*}
 |K(m,n \chi ) | \ll_\epsilon c^{1/2 +\epsilon}
@@ -1297,28 +1298,28 @@ c \ll \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \f
 \end{equation*}
 </div>
 <p>this does the job.</p>
-<p id="p-271">So we have finished proving Linnik for \(n^2\text{,}\) it wasn't too bad, the major inputs were the Shimura correspondence.</p>
-<p id="p-272">When we move to the general case things will be totally different.</p>
+<p id="p-270">So we have finished proving Linnik for \(n^2\text{,}\) it wasn't too bad, the major inputs were the Shimura correspondence.</p>
+<p id="p-271">When we move to the general case things will be totally different.</p>
 <article class="remark-like" id="remark-8"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">2.29</span>
 </h6>
-<p id="p-273">Weil bound comes from the Riemann hypothesis for curves over finite fields.</p></article><article class="theorem-like" id="lemma-9"><h6 class="heading">
+<p id="p-272">Weil bound comes from the Riemann hypothesis for curves over finite fields.</p></article><article class="theorem-like" id="lemma-9"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.30</span>
 </h6>
-<p id="p-274">Let \(p\) be an odd prime \(p\nmid mn\text{.}\)</p>
+<p id="p-273">Let \(p\) be an odd prime \(p\nmid mn\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{x \pmod{^* p},xy=1} e\left( \frac{xm + \overline yn}{p}\right)  = \sum_{x^2 - n \overline m = y^2 \pmod p}          e\left( \frac { 2mx}{p} \right)
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-28"><a knowl="" class="id-ref" refid="hk-proof-28"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-28" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-275">Reparameterise \(xy =1\text{,}\) \(x= a+b,y= a-b\text{.}\) Exercise.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-28"><a knowl="" class="id-ref" refid="hk-proof-28"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-28" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-274">Reparameterise \(xy =1\text{,}\) \(x= a+b,y= a-b\text{.}\) Exercise.</p></article></div>
 <article class="theorem-like" id="lemma-10"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.31</span>
 </h6>
-<div class="displaymath" id="p-276">
+<div class="displaymath" id="p-275">
 \begin{equation*}
 \sum_{x \pmod p} \legendre{x^2 - n \overline m}{p} e\left( \frac {2m x}{p}\right) = \sum_{x^2 - \overline m n y^2} e\left( \frac{2xm}{p}\right)\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-29"><a knowl="" class="id-ref" refid="hk-proof-29"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-29" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-277">
+</div></article><article class="hiddenproof" id="proof-29"><a knowl="" class="id-ref" refid="hk-proof-29"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-29" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-276">
 \begin{equation*}
 \sum_{x \pmod p} \legendre{x^2 - n \overline m}{p} e\left( \frac {2m x}{p}\right) = \sum_{x\pmod p} \left(\legendre{x^2 - n \overline m}{p}  + 1 \right) e\left( \frac {2m x}{p}\right)\text{.}
 \end{equation*}
@@ -1326,7 +1327,7 @@ c \ll \sqrt{mn} \leadsto J_{k-1}\left( \frac{4 \pi \sqrt{mn}}{c} \right) \sim \f
 <article class="remark-like" id="note-5"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">2.32</span>
 </h6>
-<p id="p-278">LHS is calculating a Fourier coefficient. i.e.</p>
+<p id="p-277">LHS is calculating a Fourier coefficient. i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 h_{m,n} (\alpha) = \legendre{\alpha^2 - \overline m n }{p}
@@ -1343,7 +1344,7 @@ h_{m,n} (\alpha) = \legendre{\alpha^2 - \overline m n }{p}
 K(m,n ; p)
 \end{equation*}
 </div>
-<p>is the Fourier coefficient \(\hat h_{m,n}(m)\text{.}\)</p></article><p id="p-279">So</p>
+<p>is the Fourier coefficient \(\hat h_{m,n}(m)\text{.}\)</p></article><p id="p-278">So</p>
 <div class="displaymath">
 \begin{equation*}
 h(\QQ(\sqrt{u^2 - 4\overline m n})) \sim L\left( 1, \legendre{u^2 - 4 \overline  m n}{\cdot} \right)
@@ -1357,8 +1358,8 @@ h(\QQ(\sqrt{u^2 - 4\overline m n})) \sim L\left( 1, \legendre{u^2 - 4 \overline 
 <article class="remark-like" id="remark-9"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">2.33</span>
 </h6>
-<p id="p-280">In the non-square case we want \(|r_3(n,P)| \ll n^{k/2 - 1/4 - \delta}\text{.}\)</p></article><p id="p-281">This is because of the subtlety of the Shimura correspondence.</p>
-<p id="p-282">More precisely for \(n\) squarefree \(n^{k/2 - 1/4 - \delta}\)</p>
+<p id="p-279">In the non-square case we want \(|r_3(n,P)| \ll n^{k/2 - 1/4 - \delta}\text{.}\)</p></article><p id="p-280">This is because of the subtlety of the Shimura correspondence.</p>
+<p id="p-281">More precisely for \(n\) squarefree \(n^{k/2 - 1/4 - \delta}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \theta(z; P) \text{ weight } \frac 32 + \deg P = k
@@ -1385,7 +1386,7 @@ r_3(n; P ) \ll n^{k/2 - 1/4 - \delta}
 r_3(n, P )  \lt n^{k/2 - 1/4 - \delta} = n^{3/4 + \deg P/2 - 1/4 - \delta}
 \end{equation*}
 </div>
-<p id="p-283">for \(n^2\)</p>
+<p id="p-282">for \(n^2\)</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(n^2) \gg n
@@ -1404,21 +1405,21 @@ A_p(n^2)
 </div>
 <p>are fourier coefficients of a weight \(2 \deg P  + 2\) form.</p>
 <article class="paragraphs" id="paragraphs-19"><h5 class="heading"><span class="title">Back to \(r_3(n,P)\)</span></h5>
-<p id="p-284">\(n\)-squarefree, we don't  have Shimura, but we still have the Fourier expansion of \(P_m(z)\text{.}\)</p>
-<p id="p-285">Strategy: We will first exploit a certain form of these Kloosterman sums for \(\Delta\) squarefree, Salié sums. Major detail</p>
+<p id="p-283">\(n\)-squarefree, we don't  have Shimura, but we still have the Fourier expansion of \(P_m(z)\text{.}\)</p>
+<p id="p-284">Strategy: We will first exploit a certain form of these Kloosterman sums for \(\Delta\) squarefree, Salié sums. Major detail</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_c \frac{K(m, n ; c)}{c}
 \end{equation*}
 </div>
-<p>will bound these not individually, but by showing that the angles of these cancel. We show other equidistribution results from equidistribution of Kloosterman sums essentially.</p></article><aside class="aside-like" id="aside-13"><p id="p-286">Lecture 13 25/10/2018</p></aside><article class="paragraphs" id="paragraphs-20"><h5 class="heading"><span class="title">Main issue</span></h5>
-<div class="displaymath" id="p-287">
+<p>will bound these not individually, but by showing that the angles of these cancel. We show other equidistribution results from equidistribution of Kloosterman sums essentially.</p></article><aside class="aside-like" id="aside-13"><p id="p-285">Lecture 13 25/10/2018</p></aside><article class="paragraphs" id="paragraphs-20"><h5 class="heading"><span class="title">Main issue</span></h5>
+<div class="displaymath" id="p-286">
 \begin{equation*}
 \sum_c \frac{K(m,n ; c)}{c} J_{k-1} \left(\frac{4\pi \sqrt{mn}}{c}\right)
 \end{equation*}
 </div>
 <p>saw that bounding each individual \(K(m, n; c)\) falls short of what is needed.</p></article><article class="paragraphs" id="paragraphs-21"><h5 class="heading"><span class="title">Detour (Salié sums)</span></h5>
-<p id="p-288">Recall for \(k = \frac 32 + l\) the sums we are getting are</p>
+<p id="p-287">Recall for \(k = \frac 32 + l\) the sums we are getting are</p>
 <div class="displaymath">
 \begin{equation*}
 K_k(m, n ; c) = \sum_{d \pmod{^* c}} \epsilon_d^{-2k} \left(\frac cd \right) e\left( \frac{ md + n \overline d}{d} \right)
@@ -1435,7 +1436,7 @@ K_k(m, n ; c) = \sum_{d \pmod{^* c}} \epsilon_d^{-2k} \left(\frac cd \right) e\l
 \epsilon_d = \begin{cases} 1 \amp d \equiv1 \pmod 4,\\ i \amp d \equiv -1 \pmod 4\end{cases}
 \end{equation*}
 </div>
-<p id="p-289">It will turn out that these sums can be calculated in elementary terms. Analogy</p>
+<p id="p-288">It will turn out that these sums can be calculated in elementary terms. Analogy</p>
 <div class="displaymath">
 \begin{equation*}
 K_k(m, n ; c) \leftrightarrow K_k
@@ -1452,11 +1453,11 @@ J_{1/2}(x) = \sqrt{\frac{2}{\pi x}} \cdot \sin(x)
 J_{3/2}(x) = \sqrt{\frac{2}{\pi}} \cdot\left(\frac{\sin(x)}{x^{3/2}} -\frac{\cos(x)}{\sqrt x}  \right)
 \end{equation*}
 </div>
-<p id="p-290">Calculation: Reductions:</p>
+<p id="p-289">Calculation: Reductions:</p>
 <article class="theorem-like" id="lemma-11"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.34</span>
 </h6>
-<p id="p-291">Let \(c = rq\) with \((r,q) = 1\) and \(4\mid r\text{,}\)</p>
+<p id="p-290">Let \(c = rq\) with \((r,q) = 1\) and \(4\mid r\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 K_k(m,n; c) = K_{ k- q + 1}(m \overline q, n \overline q ; r) S(m \overline r, n \overline r; q)
@@ -1470,11 +1471,11 @@ S(m, n; q) = \sum_{x \pmod{^* q}} \legendre{x}{q} e\left(\frac{mx + n \overline 
 </div>
 <p>is the Salié sum.</p></article><article class="exercise-like" id="exercise-5"><a knowl="" class="id-ref" refid="hk-exercise-5"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.35</span>
-</h6></a></article><div id="hk-exercise-5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-292">Prove this.</p></article></div>
+</h6></a></article><div id="hk-exercise-5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-291">Prove this.</p></article></div>
 <article class="theorem-like" id="lemma-12"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.36</span>
 </h6>
-<p id="p-293">\(q\) prime</p>
+<p id="p-292">\(q\) prime</p>
 <ol class="decimal">
 <li id="li-50"><div class="displaymath">
 \begin{equation*}
@@ -1492,7 +1493,7 @@ S(1, m; q) = 0
 S(1, n^2; q) = \underbrace {\epsilon_q  \sqrt q}_{G(q)} \sum_{x^2 \equiv1 \pmod q} e\left(\frac{2xn}{q}\right)
 \end{equation*}
 </div></li>
-</ol></article><article class="hiddenproof" id="proof-30"><a knowl="" class="id-ref" refid="hk-proof-30"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-30" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-294" class="decimal">
+</ol></article><article class="hiddenproof" id="proof-30"><a knowl="" class="id-ref" refid="hk-proof-30"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-30" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-293" class="decimal">
 <li id="li-53"><div class="displaymath">
 \begin{equation*}
 x = \overline m y
@@ -1542,7 +1543,7 @@ G(q) \sum_{x \pmod{^* q}} e\left( \frac{ x (1 - \overline 4 \alpha^2)}{q}\right)
 <article class="theorem-like" id="lemma-13"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.37</span>
 </h6>
-<p id="p-295">Let</p>
+<p id="p-294">Let</p>
 <div class="displaymath">
 \begin{equation*}
 c_q(r) = \sum_{x\pmod{^* q}} e\left( \frac{rx}{q}\right)
@@ -1553,7 +1554,7 @@ c_q(r) = \sum_{x\pmod{^* q}} e\left( \frac{rx}{q}\right)
 \begin{equation*}
 c_q(r) = \sum_{d|gcd(q,r)} \mu\left(\frac qd \right) d\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-31"><a knowl="" class="id-ref" refid="hk-proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-296">
+</div></article><article class="hiddenproof" id="proof-31"><a knowl="" class="id-ref" refid="hk-proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-295">
 \begin{equation*}
 c_q(r) = \sum_{x\pmod{^* q }}e\left( \frac{xr}{q} \right)
 \end{equation*}
@@ -1593,11 +1594,11 @@ F(d) = \sum_{x\pmod d} \left(\frac{xr}{d} \right) = \begin{cases} d \amp \text{ 
 <article class="remark-like" id="note-6"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">2.38</span>
 </h6>
-<div class="displaymath" id="p-297">
+<div class="displaymath" id="p-296">
 \begin{equation*}
 c_q(r) = \mu \left( \frac{q}{\gcd(q,r)}\right) \frac{\phi (q)}{\phi(q/\gcd(q,r))}
 \end{equation*}
-</div></article><p id="p-298">This lemma implies that in the proof above we have</p>
+</div></article><p id="p-297">This lemma implies that in the proof above we have</p>
 <div class="displaymath">
 \begin{equation*}
 G(q) c_{q} (q-  \overline 4 \alpha^2) = G(q) \sum_{d|\gcd(q,(1-\overline 4 \alpha^2))} \mu \left(\frac qd \right) d
@@ -1617,21 +1618,21 @@ f(u) = \frac 1q \sum_{\alpha \pmod q} \left( G(q) \sum_{d|\gcd(q,(1-\overline 4 
 <article class="theorem-like" id="lemma-14"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.39</span>
 </h6>
-<div class="displaymath" id="p-299">
+<div class="displaymath" id="p-298">
 \begin{equation*}
 \sum_{\alpha \pmod q,\overline 4 \alpha^2 - 1 \equiv 0 \pmod d} e\left(\frac{\alpha u}{q} \right) = 0 \text{ if } d\ne q
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-32"><a knowl="" class="id-ref" refid="hk-proof-32"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-32" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-300">If \(d \ne q\) then \(de = q\text{,}\) \(e \ne 1\text{,}\) \(\alpha = \alpha_1 + d\alpha_2\) so</p>
+</div></article><article class="hiddenproof" id="proof-32"><a knowl="" class="id-ref" refid="hk-proof-32"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-32" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-299">If \(d \ne q\) then \(de = q\text{,}\) \(e \ne 1\text{,}\) \(\alpha = \alpha_1 + d\alpha_2\) so</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_\alpha = \sum_{\alpha_1,d,\overline 4 \alpha_1 ^2 = 1 \pmod d} e\left( \frac{\alpha_1 u}{q}\right)  \sum_{\alpha_2} e\left( \frac{\alpha_2 u}{q}\right) = 0\text{.}
 \end{equation*}
 </div></article></div>
-<p id="p-301">This finishes the proof for Salié sums.</p>
+<p id="p-300">This finishes the proof for Salié sums.</p>
 <article class="theorem-like" id="theorem-22"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.40</span> <span class="title">Major theorem (Iwaniec '87)</span>
 </h6>
-<p id="p-302">Use this calculation + Petersson formula + genus Let \(f\in S_k(N)\) of weight \(2k \ge 1 \) and \(2k\) odd. Then for \(n \) squarefree and \(\forall \epsilon \gt 0\text{:}\)</p>
+<p id="p-301">Use this calculation + Petersson formula + genus Let \(f\in S_k(N)\) of weight \(2k \ge 1 \) and \(2k\) odd. Then for \(n \) squarefree and \(\forall \epsilon \gt 0\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 a_f(n) \ll_\epsilon n^{k/2 - 1/4 - 1/28 + \epsilon}\text{.}
@@ -1639,12 +1640,12 @@ a_f(n) \ll_\epsilon n^{k/2 - 1/4 - 1/28 + \epsilon}\text{.}
 </div></article><article class="theorem-like" id="corollary-5"><h6 class="heading">
 <span class="type">Corollary</span> <span class="codenumber">2.41</span>
 </h6>
-<div class="displaymath" id="p-303">
+<div class="displaymath" id="p-302">
 \begin{equation*}
 r_3(n, P) \ll n^{k/2 - 1/4 - 1/28 + \epsilon}
 \end{equation*}
 </div>
-<p>for all \(\deg(P) \gt 0\text{.}\)</p></article><p id="p-304">Final input: Lower bound (Gauss, Siegel): Gauss showed</p>
+<p>for all \(\deg(P) \gt 0\text{.}\)</p></article><p id="p-303">Final input: Lower bound (Gauss, Siegel): Gauss showed</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(n) = \frac{24}{w(d)} h(d) \left( 1- \legendre d2 \right)
@@ -1653,15 +1654,15 @@ r_3(n) = \frac{24}{w(d)} h(d) \left( 1- \legendre d2 \right)
 <p>where \(h(d)\) is the class number \(\QQ(\sqrt{-n})\) where \(d = \disc (\QQ{-n})\) and \(w(d)\) is the number of roots of unity in this field.</p>
 <article class="exercise-like" id="exercise-6"><a knowl="" class="id-ref" refid="hk-exercise-6"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.42</span>
-</h6></a></article><div id="hk-exercise-6" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-305">Show this</p></article></div>
+</h6></a></article><div id="hk-exercise-6" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-304">Show this</p></article></div>
 <article class="example-like" id="question-2"><h6 class="heading">
 <span class="type">Question</span> <span class="codenumber">2.43</span>
 </h6>
-<p id="p-306">How large is \(h(d)\text{?}\)</p></article><p id="p-307">Euler, Siegel</p>
+<p id="p-305">How large is \(h(d)\text{?}\)</p></article><p id="p-306">Euler, Siegel</p>
 <article class="theorem-like" id="theorem-23"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.44</span>
 </h6>
-<div class="displaymath" id="p-308">
+<div class="displaymath" id="p-307">
 \begin{equation*}
 h(D) \gg_\epsilon |D|^{1/2 - \epsilon}
 \end{equation*}
@@ -1670,18 +1671,18 @@ h(D) \gg_\epsilon |D|^{1/2 - \epsilon}
 \begin{equation*}
 L(q,\chi_D)  \gg_\epsilon |D|^{-\epsilon}
 \end{equation*}
-</div></article></article><aside class="aside-like" id="aside-14"><p id="p-309">Lecture 14 30/10/2018</p></aside><p id="p-310">Last  time \(f\in S_k(\Gamma), k \in \frac 12 + \ZZ\) for \(n \) squarefree Iwaniec implies \(|a_f(n)| \ll_\epsilon n^{k/2  - 1/4 - 1/28 + \epsilon}\text{.}\) This gives \(r_3(n; P) \ll n^{k/2 - 1/4 - \delta}\text{.}\)</p>
-<p id="p-311">Finding the argument \(P = \) spherical harmonic, \(\deg (P) = l\) and \(h= l + 3/2\text{.}\)</p>
+</div></article></article><aside class="aside-like" id="aside-14"><p id="p-308">Lecture 14 30/10/2018</p></aside><p id="p-309">Last  time \(f\in S_k(\Gamma), k \in \frac 12 + \ZZ\) for \(n \) squarefree Iwaniec implies \(|a_f(n)| \ll_\epsilon n^{k/2  - 1/4 - 1/28 + \epsilon}\text{.}\) This gives \(r_3(n; P) \ll n^{k/2 - 1/4 - \delta}\text{.}\)</p>
+<p id="p-310">Finding the argument \(P = \) spherical harmonic, \(\deg (P) = l\) and \(h= l + 3/2\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 r_3(n; P) = \sum_{|\alpha|^2 = n} P(\alpha)\text{.}
 \end{equation*}
 </div>
-<p id="p-312">Today:</p>
-<p id="p-313">\(P \equiv 1\) main contribution.</p>
-<p id="p-314">\(P \not \equiv 1\) error.</p>
+<p id="p-311">Today:</p>
+<p id="p-312">\(P \equiv 1\) main contribution.</p>
+<p id="p-313">\(P \not \equiv 1\) error.</p>
 <article class="paragraphs" id="paragraphs-22"><h5 class="heading"><span class="title">\(P \equiv 1\)</span></h5>
-<div class="displaymath" id="p-315">
+<div class="displaymath" id="p-314">
 \begin{equation*}
 r_3(n ) = \sum_{|\alpha|^2= n }1
 \end{equation*}
@@ -1690,7 +1691,7 @@ r_3(n ) = \sum_{|\alpha|^2= n }1
 <article class="theorem-like" id="theorem-24"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.45</span> <span class="title">Gauss</span>
 </h6>
-<div class="displaymath" id="p-316">
+<div class="displaymath" id="p-315">
 \begin{equation*}
 r_3(n) = \frac{24 h(\tilde n)}{w(\tilde n)} \left(1 - \legendre {\tilde n}{2} \right)
 \end{equation*}
@@ -1708,14 +1709,14 @@ w(\tilde n) = \# \text{roots of 1 in }\QQ(\sqrt{-n})
 </div></article><article class="remark-like" id="note-7"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">2.46</span>
 </h6>
-<p id="p-317">\(\tilde n \sim n\) as we are squarefree so off by at most  a factor of 4. Then \(r_3(n) \sim h(\tilde n)\)</p></article><article class="exercise-like" id="exercise-7"><a knowl="" class="id-ref" refid="hk-exercise-7"><h6 class="heading">
+<p id="p-316">\(\tilde n \sim n\) as we are squarefree so off by at most  a factor of 4. Then \(r_3(n) \sim h(\tilde n)\)</p></article><article class="exercise-like" id="exercise-7"><a knowl="" class="id-ref" refid="hk-exercise-7"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.47</span>
-</h6></a></article><div id="hk-exercise-7" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-318">Prove the theorem.</p></article></div>
-<p id="p-319">We now wish to demonstrate a lower bound on \(h(\tilde n)\text{.}\)</p>
+</h6></a></article><div id="hk-exercise-7" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-317">Prove the theorem.</p></article></div>
+<p id="p-318">We now wish to demonstrate a lower bound on \(h(\tilde n)\text{.}\)</p>
 <article class="theorem-like" id="theorem-25"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.48</span> <span class="title">Siegel '35</span>
 </h6>
-<p id="p-320">\(\forall \epsilon \gt 0\) have</p>
+<p id="p-319">\(\forall \epsilon \gt 0\) have</p>
 <div class="displaymath">
 \begin{equation*}
 L(1, \chi_d)  \gg_\epsilon |d|^{-\epsilon}\text{.}
@@ -1723,25 +1724,25 @@ L(1, \chi_d)  \gg_\epsilon |d|^{-\epsilon}\text{.}
 </div></article><article class="theorem-like" id="corollary-6"><h6 class="heading">
 <span class="type">Corollary</span> <span class="codenumber">2.49</span>
 </h6>
-<div class="displaymath" id="p-321">
+<div class="displaymath" id="p-320">
 \begin{equation*}
 h(\tilde n) \gg_\epsilon n^{1/2 - \epsilon}\text{.}
 \end{equation*}
 </div></article><article class="exercise-like" id="exercise-8"><a knowl="" class="id-ref" refid="hk-exercise-8"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.50</span>
-</h6></a></article><div id="hk-exercise-8" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-322">Prove the corollary (Analytic class number formula)</p></article></div>
+</h6></a></article><div id="hk-exercise-8" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-321">Prove the corollary (Analytic class number formula)</p></article></div>
 <article class="remark-like" id="note-8"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">2.51</span>
 </h6>
-<p id="p-323">The constant in Siegel's theorem is ineffective, meaning one cannot actually calculate it (without proving there are no Landau-Siegel zeroes).</p></article><p id="p-324">Finally Siegel + Iwaniec implies</p>
+<p id="p-322">The constant in Siegel's theorem is ineffective, meaning one cannot actually calculate it (without proving there are no Landau-Siegel zeroes).</p></article><p id="p-323">Finally Siegel + Iwaniec implies</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{\sqrt n} \# \{ \alpha \in \ZZ^3 : |\alpha|^2 = n\}
 \end{equation*}
 </div>
-<p>gets <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> on \(S^3\) as \(n \to \infty\text{.}\)</p></article><p id="p-325">Recall this above was problem 1.</p>
+<p>gets <a knowl="./knowl/def-equidist.html" title="Definition 1.50: Equidistribution">equidistributed</a> on \(S^3\) as \(n \to \infty\text{.}\)</p></article><p id="p-324">Recall this above was problem 1.</p>
 <article class="paragraphs" id="paragraphs-23"><h5 class="heading"><span class="title">Problem 2</span></h5>
-<p id="p-326">\(\Gamma = \SL_2(\ZZ)\)</p>
+<p id="p-325">\(\Gamma = \SL_2(\ZZ)\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{\# \Lambda_d} \sum_{z_Q \in \Lambda_d} f(z_Q) \to \int_{\Gamma \backslash \HH} f(z) \diff \mu (z)
@@ -1756,13 +1757,13 @@ z_Q =  \frac{-b + \sqrt{b^2 - 4ac}}{2a} \in \HH\text{.}
 <article class="theorem-like" id="theorem-26"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.52</span> <span class="title">Duke '88</span>
 </h6>
-<p id="p-327">Problem 2 is true.</p></article></article><article class="paragraphs" id="paragraphs-24"><h5 class="heading"><span class="title">Duke's proof</span></h5>
-<ol id="p-328" class="decimal">
+<p id="p-326">Problem 2 is true.</p></article></article><article class="paragraphs" id="paragraphs-24"><h5 class="heading"><span class="title">Duke's proof</span></h5>
+<ol id="p-327" class="decimal">
 <li id="li-56">What to replace the exponential sums, i.e. the \(P\)'s?</li>
 <li id="li-57">Follow the same strategy and bound the nontrivial sums from above (\(P \not \equiv 1\)), trivial sums from below (\(P \equiv 1\)).</li>
 </ol>
-<p id="p-329">Recall \(\lb 0 ,1) \leadsto P = e(nx)\text{,}\) \(S^2 \leadsto P\) spherical harmonics, \(\Gamma \backslash \HH \leadsto\) automorphic forms \(E(z,s)\) or Maass cusp forms.</p>
-<p id="p-330">Digression \(\Delta_{\text{hyp}} \acts \Gamma\backslash \HH\) fourier transform on \(\RR\) then \(f(x) = \int_{i\RR} \hat f(\alpha) e(\alpha x) \diff x\)</p>
+<p id="p-328">Recall \(\lb 0 ,1) \leadsto P = e(nx)\text{,}\) \(S^2 \leadsto P\) spherical harmonics, \(\Gamma \backslash \HH \leadsto\) automorphic forms \(E(z,s)\) or Maass cusp forms.</p>
+<p id="p-329">Digression \(\Delta_{\text{hyp}} \acts \Gamma\backslash \HH\) fourier transform on \(\RR\) then \(f(x) = \int_{i\RR} \hat f(\alpha) e(\alpha x) \diff x\)</p>
 <div class="displaymath">
 \begin{equation*}
 S^1 \implies f(x) = \sum_{n\in \ZZ} \hat f (n) e(nx)
@@ -1780,11 +1781,11 @@ L^2( \Gamma\backslash \HH) = \oint_\RR E( z, \frac 12 + iit) \diff \mu (t)
 \end{equation*}
 </div>
 <p>\(\phi_\lambda\) a Maass cusp form of eigenvalue \(\lambda\text{.}\)</p>
-<p id="p-331">Detour: <a knowl="./knowl/def-equidist-maass-form.html" title="Definition 2.53: Maass form">Maass forms</a> and Eisenstein series</p>
+<p id="p-330">Detour: <a knowl="./knowl/def-equidist-maass-form.html" title="Definition 2.53: Maass form">Maass forms</a> and Eisenstein series</p>
 <article class="definition-like" id="def-equidist-maass-form"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.53</span> <span class="title">Maass form</span>
 </h6>
-<p id="p-332">\(f\colon \HH \to \CC\) is a <dfn class="terminology">Maass form</dfn> if \(\forall \gamma \in \Gamma = \SL_2(\ZZ)\text{.}\)</p>
+<p id="p-331">\(f\colon \HH \to \CC\) is a <dfn class="terminology">Maass form</dfn> if \(\forall \gamma \in \Gamma = \SL_2(\ZZ)\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 f(\gamma z) = f(z)
@@ -1802,7 +1803,7 @@ f(z) = O(y^N)
 \end{equation*}
 </div>
 <p>for some \(N\text{.}\)</p>
-<p id="p-333">Cusp form if</p>
+<p id="p-332">Cusp form if</p>
 <div class="displaymath">
 \begin{equation*}
 \int_0^1 f(x  + iy) \diff x = 0\text{.}
@@ -1810,7 +1811,7 @@ f(z) = O(y^N)
 </div></article><article class="example-like" id="example-13"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.54</span> <span class="title">Eisenstein series</span>
 </h6>
-<div class="displaymath" id="p-334">
+<div class="displaymath" id="p-333">
 \begin{equation*}
 E(z,s) = \sum_{(c,d)=1} \frac{y^s}{|cz+d|^{2s}}
 \end{equation*}
@@ -1822,13 +1823,13 @@ E(z,s) = \sum_{(c,d)=1} \frac{y^s}{|cz+d|^{2s}}
 </div></article><article class="theorem-like" id="fact-3"><h6 class="heading">
 <span class="type">Fact</span> <span class="codenumber">2.55</span>
 </h6>
-<ol id="p-335" class="decimal">
+<ol id="p-334" class="decimal">
 <li id="li-58">\(E(z,s)\) converges for \(\Re(s) \gg1\text{.}\)</li>
 <li id="li-59">Has analytic continuation to \(\CC\) in the \(s\)-variable.</li>
 <li id="li-60">Has a simple pole at \(s =1\) which is a constant \(\Res_{s=1} E(z,s) = \frac 12\text{.}\)</li>
 <li id="li-61">\(E(z,s) = E(z,1-s)\text{.}\)</li>
 <li id="li-62">\(E(z,s) \sim y^\sigma\) where \(\sigma = \max \{ \Re(s), \Re(1-s)\}\text{.}\)</li>
-</ol></article><p id="p-336">Back on track</p>
+</ol></article><p id="p-335">Back on track</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{|\alpha|^2 = n} P\left( \frac {\alpha}{|\alpha|}\right)
@@ -1852,7 +1853,7 @@ E(z,s) = \sum_{(c,d)=1} \frac{y^s}{|cz+d|^{2s}}
 <article class="theorem-like" id="lemma-15"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.56</span>
 </h6>
-<div class="displaymath" id="p-337">
+<div class="displaymath" id="p-336">
 \begin{equation*}
 \zeta(2s) \sum_{z_Q \in \Lambda_d} E(z_Q, s)
 \end{equation*}
@@ -1861,7 +1862,7 @@ E(z,s) = \sum_{(c,d)=1} \frac{y^s}{|cz+d|^{2s}}
 \begin{equation*}
 \left( \frac {|d|}{4}\right)^{\frac s2} \underbrace{\zeta_{\QQ(\sqrt{d})}(s)}_{=\zeta(s) L(s, \chi_d)}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-33"><a knowl="" class="id-ref" refid="hk-proof-33"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-33" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-338">
+</div></article><article class="hiddenproof" id="proof-33"><a knowl="" class="id-ref" refid="hk-proof-33"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-33" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-337">
 \begin{equation*}
 \sum_{z_Q} \zeta(2s) E(z_Q,s) =\sum_{z_Q} \sum_{(u,v)\in \ZZ^2 \smallsetminus (0,0)} \frac{y_Q^2}{|uz_Q + v|^2s}
 \end{equation*}
@@ -1883,7 +1884,7 @@ E(z,s) = \sum_{(c,d)=1} \frac{y^s}{|cz+d|^{2s}}
 = \left(\frac{|d|}{4a}\right)^{s/2} \sum _{Q\in \Lambda_d} \frac{1}{Q(u,v)^s}\text{.}
 \end{equation*}
 </div></article></div>
-<p id="p-339">This gives</p>
+<p id="p-338">This gives</p>
 <ol class="decimal">
 <li id="li-63">
 <div class="displaymath">
@@ -1903,11 +1904,11 @@ L(\frac 12 + it, \chi_d) \ll |d|^{\frac 14 - 8}\text{.}
 </div>
 </li>
 </ol>
-<p id="p-340">We also need:</p>
+<p id="p-339">We also need:</p>
 <article class="theorem-like" id="theorem-27"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.57</span> <span class="title">de la Vallée Poussin</span>
 </h6>
-<div class="displaymath" id="p-341">
+<div class="displaymath" id="p-340">
 \begin{equation*}
 \zeta(1  + 2i t ) \gg \text{something} \gt 0
 \end{equation*}
@@ -1916,27 +1917,27 @@ L(\frac 12 + it, \chi_d) \ll |d|^{\frac 14 - 8}\text{.}
 \begin{equation*}
 |\zeta(1+ 2it)| \gg \log(2 + 1 + 1 )\inv
 \end{equation*}
-</div></article><p id="p-342">Phragmén-Lindelöf principle gives convexity bound on the \(d\)-aspect</p>
+</div></article><p id="p-341">Phragmén-Lindelöf principle gives convexity bound on the \(d\)-aspect</p>
 <div class="displaymath">
 \begin{equation*}
 L(\frac 12  + it, \chi_d   ) \ll_\epsilon | d|^{\frac 14 + \epsilon}\text{.}
 \end{equation*}
 </div>
-<p id="p-343">Subconvexity bound</p>
+<p id="p-342">Subconvexity bound</p>
 <article class="theorem-like" id="theorem-28"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.58</span> <span class="title">Burgess</span>
 </h6>
-<div class="displaymath" id="p-344">
+<div class="displaymath" id="p-343">
 \begin{equation*}
 L(\frac 12  + it, \chi_d   ) \ll_\epsilon | d|^{\frac 1{16} + \epsilon}
 \end{equation*}
-</div></article><p id="p-345">What about</p>
+</div></article><p id="p-344">What about</p>
 <div class="displaymath">
 \begin{equation*}
 \sum \phi_\lambda (z_Q)\text{?}
 \end{equation*}
 </div>
-<p>Harder even!</p></article><aside class="aside-like" id="aside-15"><p id="p-346">Lecture 15 1/11/2018</p></aside><p id="p-347">Last time</p>
+<p>Harder even!</p></article><aside class="aside-like" id="aside-15"><p id="p-345">Lecture 15 1/11/2018</p></aside><p id="p-346">Last time</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{|\Lambda_d|} \sum_{z_Q \in \Lambda_d} f(z_Q) \to \int_{\Gamma \backslash \HH} \diff \mu (z)
@@ -1962,7 +1963,7 @@ L(\frac 12  + it, \chi_d   ) \ll_\epsilon | d|^{\frac 1{16} + \epsilon}
 </div>
 <p>a cusp form?</p>
 <article class="paragraphs" id="paragraphs-25"><h5 class="heading"><span class="title">Waldspurger's formula</span></h5>
-<p id="p-348">Roughly Waldspurger says</p>
+<p id="p-347">Roughly Waldspurger says</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{|a_{|D|}|}{\pair ff} = \frac{(k - \frac 32)!}{\pi} \frac{|D|^{k-1}}{\pair gg} L(g\otimes \chi_D, k- \frac 12)
@@ -1972,7 +1973,7 @@ L(\frac 12  + it, \chi_d   ) \ll_\epsilon | d|^{\frac 1{16} + \epsilon}
 <article class="remark-like" id="remark-10"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">2.59</span>
 </h6>
-<p id="p-349">Shimura lifting takes weight \(k\) to weight \(2k-1\) so \(k- \frac 12\) is the center of the critical strip of</p>
+<p id="p-348">Shimura lifting takes weight \(k\) to weight \(2k-1\) so \(k- \frac 12\) is the center of the critical strip of</p>
 <div class="displaymath">
 \begin{equation*}
 L(g \otimes \chi_D, s)\text{.}
@@ -1982,7 +1983,7 @@ L(g \otimes \chi_D, s)\text{.}
 \begin{equation*}
 L(g\otimes, \chi_d, s) = \sum \frac{b_n \chi_D(n)}{n^s}\text{.}
 \end{equation*}
-</div></article></article><div class="displaymath" id="p-350">
+</div></article></article><div class="displaymath" id="p-349">
 \begin{equation*}
 \sum \phi (z_Q) \leadsto a_{\theta_\phi}(|D|)
 \end{equation*}
@@ -1993,15 +1994,15 @@ L(g\otimes, \chi_d, s) = \sum \frac{b_n \chi_D(n)}{n^s}\text{.}
 P\left(\frac{\alpha}{|\alpha|}\right) \leadsto \sum r_3(P, n) e(nz) = \theta_P(z)
 \end{equation*}
 </div>
-<p id="p-351">Then “all we need to do” is to show that</p>
+<p id="p-350">Then “all we need to do” is to show that</p>
 <article class="paragraphs" id="paragraphs-26"><h5 class="heading"><span class="title">Subconvexity bound</span></h5>
-<div class="displaymath" id="p-352">
+<div class="displaymath" id="p-351">
 \begin{equation*}
 L(g \otimes \chi_D, k- \frac 12)  \ll |D|^{\frac 12 - \delta}
 \end{equation*}
 </div>
 <p>this would be enough</p>
-<p id="p-353">Why? Recall</p>
+<p id="p-352">Why? Recall</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{|\alpha|^s = n} P(\alpha) \leadsto \theta_P(z)
@@ -2013,7 +2014,7 @@ L(g \otimes \chi_D, k- \frac 12)  \ll |D|^{\frac 12 - \delta}
 \end{equation*}
 </div>
 <p>\(\theta_P(z)\) of weight \(\deg P + \frac 32\text{.}\)</p>
-<p id="p-354">Want</p>
+<p id="p-353">Want</p>
 <div class="displaymath">
 \begin{equation*}
 \frac {|a_{|D|}|^2}{|D|^{\deg P}} \ll |D|^{1-s}
@@ -2049,7 +2050,7 @@ g =\text{weight } 2k-1 - 2\deg P + 2
 <p>it is enough.</p></article><article class="theorem-like" id="conjecture-3"><h6 class="heading">
 <span class="type">Conjecture</span> <span class="codenumber">2.60</span> <span class="title">Lindelöf</span>
 </h6>
-<p id="p-355">In the \(D\)-aspect</p>
+<p id="p-354">In the \(D\)-aspect</p>
 <div class="displaymath">
 \begin{equation*}
 L(g \otimes \chi_D, \frac 12 ) \ll |D|^\epsilon
@@ -2059,22 +2060,21 @@ L(g \otimes \chi_D, \frac 12 ) \ll |D|^\epsilon
 \begin{equation*}
 L(g, \frac 12 + it) \ll (1+t)^\epsilon
 \end{equation*}
-</div></article><p id="p-356">This follows from GRH.</p>
+</div></article><p id="p-355">This follows from GRH.</p>
 <article class="theorem-like" id="lemma-16"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">2.61</span> <span class="title">Convexity bound</span>
 </h6>
-<p id="p-357">For all \(\epsilon \gt 0\text{:}\)</p>
+<p id="p-356">For all \(\epsilon \gt 0\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta( \frac 12 + it )  = O_\epsilon(( 1+ |t|)^{1/4 + \epsilon})\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-34"><a knowl="" class="id-ref" refid="hk-proof-34"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-34" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-358">(Sketch)</p>
-<div class="displaymath">
+</div></article><article class="hiddenproof" id="proof-34"><a knowl="" class="id-ref" refid="hk-proof-34"><h6 class="heading"><span class="title">Proof (sketch)</span></h6></a></article><div id="hk-proof-34" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-357">
 \begin{equation*}
 |\zeta(1+ \epsilon + it)| \le \zeta(1+ \epsilon ) \le c_{\epsilon \gt 0}\text{.}
 \end{equation*}
 </div>
-<p id="p-359">Functional equation + Stirling gives</p>
+<p id="p-358">Functional equation + Stirling gives</p>
 <div class="displaymath">
 \begin{equation*}
 |\zeta( -\epsilon - it)| = O_\epsilon( |t|^{1/2 + \epsilon})
@@ -2085,7 +2085,7 @@ L(g, \frac 12 + it) \ll (1+t)^\epsilon
 |\zeta(\sigma+ it)| \sim | \zeta(1- \sigma-it) \left| \frac{t}{2\pi} \right|^{\frac 12 - \sigma}\text{.}
 \end{equation*}
 </div>
-<div class="displaymath" id="p-360">
+<div class="displaymath" id="p-359">
 \begin{equation*}
 f(s) = \zeta(s) \zeta(1-s)
 \end{equation*}

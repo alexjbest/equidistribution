@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,25 +12,47 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Without proof Hurwitz stated</p>
+<p>We denote \(P =  P(N), Q = Q(N)\) We may suppose \(k = 0\) since</p>
 <div class="displaymath">
 \begin{equation*}
-r_3(N^2) =  6 P \prod_{q|Q} ( q^a + 2q^{a-1} + \cdots + 2q + q)
+r_3(4n) =  r_3(n)
 \end{equation*}
 </div>
-<p>where \(N = 2^k PQ\) and each prime factor of \(P\) is \(\equiv 1 \pmod 4\) and each prime factor of \(Q\) is \(\equiv -1 \pmod 4\) and</p>
+<p>(each solution of \(4n = x^2 + y^2 + z^2\) has \(x,y,z\) all even). So  \(N\) is odd and each solution of \(N^2 = x^2 + y^2 + z^2\) has two of \(x,y,z\) even. Hence</p>
 <div class="displaymath">
 \begin{equation*}
-q^a || Q
+r_3(N^2) =  \frac 32  \sum_{x \text{\,even}} r_2( N^2-  x^2) = \frac 22 \sum_{a+b = 2N,a,b\text{\,odd}} r_2(ab)
 \end{equation*}
 </div>
-<p>he suggested a proof along the lines of his published note on</p>
+<p>now \(r_2(n)\) is the number of Gaussian integers \(z\) with \(z \bar z = n\text{.}\) As \(\ZZ \lb i \rb\) is a PID with 4 units \(\pm 1, \pm i\text{,}\) the function \(\rho(n) =  \frac 14 r_2(n)\) is multiplicative!</p>
 <div class="displaymath">
 \begin{equation*}
-r_5(N^2)\text{,}
+\rho (ab) = \rho(a)\rho(b) \text{\,if\,} a,b \text{\,coprime}
 \end{equation*}
 </div>
-<p>here is such a proof:</p>
+<p>clearly</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(N^2) = 6 \sum_{a+b = 2N,\,a,b\,\text{odd}}\rho (ab)\text{.}
+\end{equation*}
+</div>
+<p>To evaluate \(\rho(ab)\) we need spme standard functions,</p>
+<div class="displaymath">
+\begin{equation*}
+\tau(n)= \# \text{divisors }d\text{ of }n,\,\sigma(n) = \sum d
+\end{equation*}
+</div>
+<p>the Möbius function \(\mu(n)\text{.}\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\square (n) = \frac 12 r_1(n)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+w(n) = \mu(P)|\mu(Q)|
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec-duke.html#p-210">in-context</a></span>
 </body>
 </html>

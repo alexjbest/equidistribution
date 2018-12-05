@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">The genus of a quadratic space</span></h5>
+<p>For us,</p>
+<div class="displaymath">
+\begin{equation*}
+L\subseteq \QQ^3
+\end{equation*}
+</div>
+<p>a lattice, then</p>
+<div class="displaymath">
+\begin{equation*}
+\GL_3(\adeles_f) \ni g = \prod g_p
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+g\cdot L = \{ \alpha \subseteq \QQ^3 : \alpha_p = g_p L_p \,\forall p\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\operatorname{genus}_{\specialorthogonal_3} (\mathcal L_p) = \specialorthogonal_3(\adeles_f) \mathcal L_0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\mathcal L_0 = \ZZ^3,\,a^2+b^2 + c^2\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.37</span>
+</h6>
+<p>There is one \(\specialorthogonal_3(\QQ)\) orbit of \(\mathcal L_0\text{.}\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\adeles_f) = \specialorthogonal_3(\QQ) \specialorthogonal_3(\widehat\ZZ)
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-42-hidden.html" title="Proof 3.37.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>More definitions:</p>
+<div class="displaymath">
+\begin{equation*}
+P = \{ (\mathcal L, x) : \mathcal L \in \operatorname{genus}_{\specialorthogonal_3} (\mathcal L_0), x \in \mathcal L,\, x \cdot x = d\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+P_{(q)} = \{ (\mathcal L, \bar x) : \mathcal L \in \operatorname{genus}_{\specialorthogonal_3} (\mathcal L_0), \bar x \in \mathcal L/q\mathcal L,\, \bar x \cdot \bar x = d \pmod q\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\widetilde{\mathscr H_d} \simeq \specialorthogonal_3 (\QQ) \backslash P
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+K_f [q] = \ker(\specialorthogonal_3(\widehat \ZZ) \to \specialorthogonal_3(\ZZ/q\ZZ))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+K'_f [q] = \{ g \in \specialorthogonal_3(\widehat \ZZ) : g \bar x_q = \bar x_q\}
+\end{equation*}
+</div>
+<p>we fix a base point \(\bar x_q \in \mathscr H_d(q)\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde{\mathscr H_d}(q) \simeq \specialorthogonal_3 (\QQ) \backslash P_{(q)} \simeq  \specialorthogonal_3 (\QQ) \backslash \specialorthogonal_3(\adeles_f) / K_f'[q]
+\end{equation*}
+</div>
+<p>here we are heavily using the exceptional isomorphism</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3 \simeq \PGL_2\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Claim</span> <span class="codenumber">3.38</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q) \simeq \specialorthogonal_3(\QQ) \backslash P_{(q)}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-43-hidden.html" title="Proof 3.38.1: Proof sketch"><h6 class="heading"><span class="title">Proof sketch</span></h6></a></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Claim</span> <span class="codenumber">3.39</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\QQ) \backslash P_{(q)} \simeq \specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q) / K'_f[q]
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-44-hidden.html" title="Proof 3.39.1: Proof sketch"><h6 class="heading"><span class="title">Proof sketch</span></h6></a></article><article class="remark-like"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">3.40</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash S^3 \simeq \specialorthogonal_3(\QQ)\backslash  \specialorthogonal_3(\adeles)/ K_\infty \specialorthogonal_3(\widehat \ZZ)
+\end{equation*}
+</div></article><p>What about</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash \mathscr H_d\text ?
+\end{equation*}
+</div>
+<p>Fix another base point \(x_0\in \mathscr H_d\)</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash \mathscr H_d \simeq \specialorthogonal_{x_0} (\QQ) \backslash \specialorthogonal_{x_0} (\adeles_f)/ \specialorthogonal_{x_0}(\widehat \ZZ)
+\end{equation*}
+</div>
+<p>where \(\specialorthogonal_{x_0}\) is the stabiliser of \(x_0\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+\mathscr H_d \acts \text{ class gp.} \ar[d] \\
+\mathscr H_d(a) \acts \specialorthogonal_3(\adeles_f)
+}
+\end{equation*}
+</div>
+<p>More concretely</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_{x_0} : \QQ^3 \simeq  B^{(0)} (\QQ)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3 \simeq PB^\times
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_{x_0} \simeq PB^\times_{x_0} \simeq \langle a + b x_0 \rangle / Z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\simeq \Res_{K/\QQ} \mathbf G_m / \mathbf G_m
+\end{equation*}
+</div>
+<p>where \(K = \QQ(\sqrt{-d})\text{.}\)</p>
+<p>Recall</p>
+<div class="displaymath">
+\begin{equation*}
+K^\times \backslash \adeles_{K,f}^\times / \widehat \ints_K^\times \simeq \Pic(\ints_K)
+\end{equation*}
+</div></article><span class="incontext"><a href="sec-linnik.html#paragraphs-36">in-context</a></span>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,7 +12,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So the number of representations of \(R\) by \(Q/ \specialorthogonal_3(\ZZ)\) bounds number of solutions \(x_1 x_2 = e\text{.}\)</p>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+r(a,b,c) = \{ \text{reps. of } ax^2 + bxy + cy^2 \text{ by } x^2 + y^2 + z^2\}
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+r(a,b,c) = 24 \cdot 2^\nu \prod_{p| 2(b^2 - 4ac)} r_p(a,b,c)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\nu = \#\text{primes dividing } b^2 - 4ac
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+r_p(a,b,c) = O(1) \text{ unless } p^2 | \gcd(a,b,c)
+\end{equation*}
+</div>
+<p>for us \(r(d,2e,d)\text{,}\) \(b^2 - 4ac = 4(e^2 - d^2)\) and</p>
+<div class="displaymath">
+\begin{equation*}
+r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
+\end{equation*}
+</div>
 <span class="incontext"><a href="sec-linnik.html#p-438">in-context</a></span>
 </body>
 </html>

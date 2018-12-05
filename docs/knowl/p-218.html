@@ -3,7 +3,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <head>
@@ -12,18 +12,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>So</p>
+<p>Pasing to Dirichlet series</p>
 <div class="displaymath">
 \begin{equation*}
-r_3(N^2)=  6\sum_{d|N} w(d) \sigma\left(\frac Nd\right)
+\sum_{N\text{ odd}} \frac{ r_3 (N^2)} {N^s} = 6 \sum _{d\text{ odd}} \frac{w(d)}{d^s } \sum _{m\text{ odd}} \frac{\sigma(m)}{m^s }
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= 6(w \ast \sigma) (N)
+= 6\underbrace{ \prod_p(1- p^{-s})\prod_q (1+ q^{-s})}_{L(s, \legendre{-4}{\cdot})\inv}\underbrace{\sum_{k \text{ odd}} \frac{1}{k^s}}_{\zeta_{\text{odd}}(s-1)}\underbrace{\sum_{l \text{ odd}} \frac{l}{l^s}}_{\zeta_{\text{odd}}(s-1)}
 \end{equation*}
 </div>
-<p>where \(\ast\) denotes Dirichlet convolution.</p>
+<div class="displaymath">
+\begin{equation*}
+= 6\prod_p \sum_a \frac{p^a}{p^{as}} \prod_q \sum_a \frac{q^a + 2q^{a -1} + \cdots  + 2q + 2} {q^{as}}
+\end{equation*}
+</div>
+<p>which gives</p>
+<div class="displaymath">
+\begin{equation*}
+r_3(N^2) = 6 \prod_{p^a||N} p^a \prod_{q^a||N} (q^a + 2q^{a-1} + \cdots 2q + 2)
+\end{equation*}
+</div>
+<p>as in Hurwitz and</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}\infty \frac{r_3(n^2)}{n^s} = 6 L(s, \legendre{-4}{\cdot}) \inv \zeta(s) \zeta_{\text{odd}}(s-1)
+\end{equation*}
+</div>
+<p>as in Duke.</p>
 <span class="incontext"><a href="sec-duke.html#p-218">in-context</a></span>
 </body>
 </html>

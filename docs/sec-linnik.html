@@ -2,7 +2,7 @@
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -286,14 +286,15 @@ var login_required = false;
 <li><a href="sec-equidistribution-intro.html#subsection-7" data-scroll="subsection-7">A different perspective (Ergodic)</a></li>
 </ul>
 <h2 class="link"><a href="sec-duke.html" data-scroll="sec-duke"><span class="codenumber">2</span> <span class="title">Duke's theorem</span></a></h2>
-<h2 class="link active"><a href="sec-linnik.html" data-scroll="sec-linnik"><span class="codenumber">3</span> <span class="title">Linnik's theorem</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link active"><a href="sec-linnik.html" data-scroll="sec-linnik"><span class="codenumber">3</span> <span class="title">Linnik's theorem</span></a></h2>
+<ul><li><a href="sec-linnik.html#subsection-8" data-scroll="subsection-8">The adelic picture</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-linnik"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Linnik's theorem</span>
 </h2>
-<a href="sec-linnik.html" class="permalink">¶</a><p id="p-361">We will mostly follow Ellenberg, Michel, Venkatesh. Linnik's ergodic method and the distribution of integer points on spheres.</p>
+<a href="sec-linnik.html" class="permalink">¶</a><p id="p-360">We will mostly follow Ellenberg, Michel, Venkatesh. Linnik's ergodic method and the distribution of integer points on spheres.</p>
 <article class="paragraphs" id="paragraphs-27"><h5 class="heading"><span class="title">Problem</span></h5>
-<aside class="aside-like" id="aside-16"><p id="p-362">Lecture 16 6/11/2018</p></aside><p id="p-363">Distribution of</p>
+<aside class="aside-like" id="aside-16"><p id="p-361">Lecture 16 6/11/2018</p></aside><p id="p-362">Distribution of</p>
 <div class="displaymath">
 \begin{equation*}
 \mathscr H_d = \{ (x,y,z) \in \ZZ^3 : x^2 + y^2 + z^2 = d\}
@@ -303,7 +304,7 @@ var login_required = false;
 <article class="theorem-like" id="theorem-29"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.1</span> <span class="title">Linnik</span>
 </h6>
-<p id="p-364">As \(d \to \infty\) squarefree such that \(d\not\equiv 7 \pmod 8\text{,}\)  \(d \equiv \pm 1 \pmod 5\)</p>
+<p id="p-363">As \(d \to \infty\) squarefree such that \(d\not\equiv 7 \pmod 8\text{,}\)  \(d \equiv \pm 1 \pmod 5\)</p>
 <div class="displaymath">
 \begin{equation*}
 \left\{ \frac {x}{\sqrt d} : x \in \mathscr H_d \right\}
@@ -326,12 +327,12 @@ var login_required = false;
 \frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
 \end{equation*}
 </div>
-<p>for any \(\Omega\) a reasonable subset of \(S^2\text{.}\)</p></article><p id="p-365">The \(\pm 1\pmod 5\) condition comes from a splitting condition in \(\QQ(\sqrt{d})\) that we need to find an appropriate group action.</p>
-<p id="p-366">We will rather focus on the following variant</p>
+<p>for any \(\Omega\) a reasonable subset of \(S^2\text{.}\)</p></article><p id="p-364">The \(\pm 1\pmod 5\) condition comes from a splitting condition in \(\QQ(\sqrt{d})\) that we need to find an appropriate group action.</p>
+<p id="p-365">We will rather focus on the following variant</p>
 <article class="theorem-like" id="theorem-30"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.2</span> <span class="title">Linnik variant</span>
 </h6>
-<div class="displaymath" id="p-367">
+<div class="displaymath" id="p-366">
 \begin{equation*}
 \overline{\mathscr H}_d = \{ (x,y,x) \pmod q : (x,y,z)\in \mathscr H_d\}
 \end{equation*}
@@ -342,18 +343,18 @@ var login_required = false;
 \frac{| \operatorname{red}\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
 \end{equation*}
 </div>
-<p>as \(d \to \infty\text{.}\)</p></article><p id="p-368">Actually we will prove something a little strange.</p>
+<p>as \(d \to \infty\text{.}\)</p></article><p id="p-367">Actually we will prove something a little strange.</p>
 <article class="definition-like" id="def-deviation"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">3.3</span> <span class="title">Deviation</span>
 </h6>
-<p id="p-369">\(\infty\text{,}\) let \(\rho \gt 0\text{,}\) \(x\in S^2\) and consider the cap \(\Omega(x,\rho)\text{.}\)</p>
+<p id="p-368">\(\infty\text{,}\) let \(\rho \gt 0\text{,}\) \(x\in S^2\) and consider the cap \(\Omega(x,\rho)\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \operatorname{dev}_d(\Omega) = \frac {1}{\operatorname{Vol}(\Omega)} \frac{| \operatorname{red}\inv_\infty(\Omega)|}{|\mathscr H_d|} - 1
 \end{equation*}
 </div>
 <p>(we want to show this is \(o(1)\)).</p>
-<p id="p-370">\(q\text{,}\) let \(\bar x \in \mathscr H_d(q)\) then</p>
+<p id="p-369">\(q\text{,}\) let \(\bar x \in \mathscr H_d(q)\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \operatorname{dev}_d(\bar x) = \frac {| \mathscr H_d(q)| | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|} - 1\text{.}
@@ -361,7 +362,7 @@ var login_required = false;
 </div></article><article class="theorem-like" id="theorem-31"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.4</span>
 </h6>
-<p id="p-371">Fix \(\delta, \eta \gt 0\) then for every</p>
+<p id="p-370">Fix \(\delta, \eta \gt 0\) then for every</p>
 <div class="displaymath">
 \begin{equation*}
 \rho \ge d^{-1/4 + \eta}
@@ -382,8 +383,8 @@ var login_required = false;
 \begin{equation*}
 \frac{| \{ \bar x \in \mathscr H_d(q) : \operatorname{dev}_d(\bar x) \ge \delta \} |}{ |\mathscr H_d(q)|} \to 0\text{.}
 \end{equation*}
-</div></article><p id="p-372">How? Sketch of the argument:</p>
-<p id="p-373">Fix \(\delta ,\eta \gt 0\text{,}\)</p>
+</div></article><p id="p-371">How? Sketch of the argument:</p>
+<p id="p-372">Fix \(\delta ,\eta \gt 0\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 B_\delta = \{ \bar x \in \mathscr H_q(d) : \operatorname{dev}_d(\bar x) \gt \delta \}
@@ -395,7 +396,7 @@ B_\delta = \{ \bar x \in \mathscr H_q(d) : \operatorname{dev}_d(\bar x) \gt \del
 |B_\delta| \ge \eta |\mathscr H_d(q)|\text{.}
 \end{equation*}
 </div>
-<p id="p-374">Inputs</p>
+<p id="p-373">Inputs</p>
 <ol class="decimal">
 <li id="li-65">There is an action of \(H(d) = \) class group of \(\QQ(\sqrt{-d})\) on \(\mathscr H_d(q)/ \specialorthogonal_3(\ZZ)\text{.}\) As \(d \equiv \pm 1 \pmod 5\) so \((5) = \ideal p \bar{\ideal p}\) in \(\QQ(\sqrt{-d})\text{:}\) This gives us a well defined dynamical system by considering the action<div class="displaymath">
 \begin{equation*}
@@ -439,13 +440,13 @@ B_\delta = \gamma_X^{(l)} \cap B_\delta\text{.}
 \left| \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l+1 } - \frac{|B_\delta|}{|\mathscr H_d(q)|} \right| \gt \delta\eta/2
 \end{equation*}
 </div>There can not be too many of these. This will give a contradiction. Will take some work and depend on many things.</li>
-</ol></article><aside class="aside-like" id="aside-17"><p id="p-375">Lecture 17 8/11/2018</p></aside><article class="paragraphs" id="paragraphs-28"><h5 class="heading"><span class="title">Class group actions</span></h5>
-<div class="displaymath" id="p-376">
+</ol></article><aside class="aside-like" id="aside-17"><p id="p-374">Lecture 17 8/11/2018</p></aside><article class="paragraphs" id="paragraphs-28"><h5 class="heading"><span class="title">Class group actions</span></h5>
+<div class="displaymath" id="p-375">
 \begin{equation*}
 \mathscr H_d  = \{ (x,y,z ) \in \ZZ^2:  x^2 + y^2+  z^2 = d \}
 \end{equation*}
 </div>
-<p id="p-377">Aim:</p>
+<p id="p-376">Aim:</p>
 <ol class="decimal">
 <li id="li-69">\(\widetilde {\mathscr H}_d^*\) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a>  for \(H(d) = \Cl(\QQ(\sqrt{-d}))\text{.}\)</li>
 <li id="li-70">Describe the action explicitly.</li>
@@ -453,7 +454,7 @@ B_\delta = \gamma_X^{(l)} \cap B_\delta\text{.}
 <article class="definition-like" id="def-prin-homog-sp"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">3.5</span> <span class="title">Principal homogeneous spaces</span>
 </h6>
-<p id="p-378">Let \(G\) be a group, \(X \ne \emptyset\) a set. \(X\) is a <dfn class="terminology">principal homogeneous space</dfn> for \(G\) if</p>
+<p id="p-377">Let \(G\) be a group, \(X \ne \emptyset\) a set. \(X\) is a <dfn class="terminology">principal homogeneous space</dfn> for \(G\) if</p>
 <div class="displaymath">
 \begin{equation*}
 G\acts X
@@ -462,10 +463,10 @@ G\acts X
 <p>in a transitive, free manner. \(X\) is also called a \(G\)-<dfn class="terminology">torsor</dfn>.</p></article><article class="remark-like" id="remark-11"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">3.6</span>
 </h6>
-<p id="p-379">Of \(G\) is non-abelian we have notions of a left-<a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">torsor</a> and right-<a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">torsor</a>.</p></article><article class="example-like" id="example-14"><h6 class="heading">
+<p id="p-378">Of \(G\) is non-abelian we have notions of a left-<a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">torsor</a> and right-<a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">torsor</a>.</p></article><article class="example-like" id="example-14"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">3.7</span>
 </h6>
-<ul id="p-380" class="disc">
+<ul id="p-379" class="disc">
 <li id="li-71">\(G\) is a \(G\)-<a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">torsor</a>
 </li>
 <li id="li-72">\(G= V\) a \(n\)-dimensional vector space then \(\aff^n\)  is a \(G\)-<a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">torsor</a>
@@ -474,7 +475,7 @@ G\acts X
 </ul></article><article class="remark-like" id="note-9"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">3.8</span>
 </h6>
-<div class="displaymath" id="p-381">
+<div class="displaymath" id="p-380">
 \begin{equation*}
 \specialorthogonal_3 (\ZZ)\acts \mathscr H_d
 \end{equation*}
@@ -485,7 +486,7 @@ v = \begin{pmatrix} x \\ y \\  z \end{pmatrix}\in \mathscr H_d,\,\gamma \in \spe
 \end{equation*}
 </div></article><article class="exercise-like" id="exercise-9"><a knowl="" class="id-ref" refid="hk-exercise-9"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">3.9</span>
-</h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol id="p-382" class="decimal">
+</h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol id="p-381" class="decimal">
 <li id="li-74"><div class="displaymath">
 \begin{equation*}
 \# \specialorthogonal_3(\ZZ) =  24
@@ -496,7 +497,7 @@ v = \begin{pmatrix} x \\ y \\  z \end{pmatrix}\in \mathscr H_d,\,\gamma \in \spe
 <article class="definition-like" id="definition-13"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">3.10</span>
 </h6>
-<div class="displaymath" id="p-383">
+<div class="displaymath" id="p-382">
 \begin{equation*}
 \widetilde{\mathscr H}_d = \specialorthogonal_3(\ZZ) \backslash \mathscr H_d
 \end{equation*}
@@ -519,12 +520,12 @@ v = \begin{pmatrix} x \\ y \\  z \end{pmatrix}\in \mathscr H_d,\,\gamma \in \spe
 \specialorthogonal_3(\ZZ) \backslash \mathscr H_d ,\amp d \equiv 3 \pmod 4
 \end{cases}
 \end{equation*}
-</div></article><p id="p-384">For all practical purposes we can basically assume that  \(d \equiv 3 \pmod 4\text{.}\)</p>
+</div></article><p id="p-383">For all practical purposes we can basically assume that  \(d \equiv 3 \pmod 4\text{.}\)</p>
 <article class="theorem-like" id="proposition-7"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">3.11</span>
 </h6>
-<p id="p-385">\(\widetilde{\mathscr H}_d^* \) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(H(d)\text{.}\) Idea: Venkov 1922: Use quaternion algebras.</p></article></article><article class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">Digression: Hamilton Quaternions</span></h5>
-<div class="displaymath" id="p-386">
+<p id="p-384">\(\widetilde{\mathscr H}_d^* \) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(H(d)\text{.}\) Idea: Venkov 1922: Use quaternion algebras.</p></article></article><article class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">Digression: Hamilton Quaternions</span></h5>
+<div class="displaymath" id="p-385">
 \begin{equation*}
 B  = \{ u  + ia  + jb + kc : u,a,b,c \in \RR\}
 \end{equation*}
@@ -549,13 +550,13 @@ N(x) = x\bar x = u^2 + a^2 + b^2 + c^2
 B^{(0)} = \{ x\in B : \trace (x) =  0\}
 \end{equation*}
 </div>
-<p id="p-387">Note</p>
+<p id="p-386">Note</p>
 <div class="displaymath">
 \begin{equation*}
 N(x) =a^2 + b^2 + c^2 \text{ if } x \in  B^{(0)}\text{.}
 \end{equation*}
 </div>
-<div class="displaymath" id="p-388">
+<div class="displaymath" id="p-387">
 \begin{equation*}
 B^\times  = \text{units} ,\, B^1 = \{ x \in B : N(x)= 1\}
 \end{equation*}
@@ -568,14 +569,14 @@ PB^\times = B^\times/ Z(B^\times)
 <article class="remark-like" id="remark-12"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">3.12</span>
 </h6>
-<div class="displaymath" id="p-389">
+<div class="displaymath" id="p-388">
 \begin{equation*}
 B^\times \acts B^{(0)}
 \end{equation*}
 </div>
 <p>via conjugation.</p></article><article class="exercise-like" id="exercise-10"><a knowl="" class="id-ref" refid="hk-exercise-10"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">3.13</span>
-</h6></a></article><div id="hk-exercise-10" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="displaymath" id="p-390">
+</h6></a></article><div id="hk-exercise-10" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="displaymath" id="p-389">
 \begin{equation*}
 1 \to Z(B^\times) \to B^\times \to PB^\times \simeq \specialorthogonal_3 (\QQ)  \to 1
 \end{equation*}
@@ -583,42 +584,42 @@ B^\times \acts B^{(0)}
 <article class="definition-like" id="definition-14"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">3.14</span> <span class="title">Hurwitz quaternions</span>
 </h6>
-<div class="displaymath" id="p-391">
+<div class="displaymath" id="p-390">
 \begin{equation*}
 B(\ZZ) = \ZZ[ i ,j, \frac{i+j+ k}{2} ]
 \end{equation*}
-</div></article><p id="p-392">The Lipschitz quaternions are</p>
+</div></article><p id="p-391">The Lipschitz quaternions are</p>
 <div class="displaymath">
 \begin{equation*}
 \ZZ[ i ,j, k]\text{.}
 \end{equation*}
 </div>
-<ol id="p-393" class="decimal">
+<ol id="p-392" class="decimal">
 <li id="li-76">\(B(\ZZ)\) is a maximal order</li>
 <li id="item-hurwitz-quat-euc-dom">\(B(\ZZ)\) is a Euclidean domain</li>
 <li id="li-78">Lipschitz quaternions are not a Euclidean domain</li>
 </ol>
 <article class="exercise-like" id="exercise-11"><a knowl="" class="id-ref" refid="hk-exercise-11"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">3.15</span>
-</h6></a></article><div id="hk-exercise-11" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol id="p-394" class="decimal">
+</h6></a></article><div id="hk-exercise-11" class="hidden-content tex2jax_ignore"><article class="exercise-like"><ol id="p-393" class="decimal">
 <li id="li-79">Show these properties.</li>
 <li id="li-80">Show \(\Cl(\ZZ\lb i, j, k \rb)   =2\text{.}\)</li>
 </ol></article></div>
-<p id="p-395"><a knowl="./knowl/item-hurwitz-quat-euc-dom.html" title="Item 2">2</a> implies \(B(\ZZ)\) is a PID</p>
+<p id="p-394"><a knowl="./knowl/item-hurwitz-quat-euc-dom.html" title="Item 2">2</a> implies \(B(\ZZ)\) is a PID</p>
 <div class="displaymath">
 \begin{equation*}
 (\QQ^3, a^2+ b^2+  c^2) \simeq (B^{(0)}, N)
 \end{equation*}
 </div>
 <p>as metric spaces</p>
-<p id="p-396">The image of</p>
+<p id="p-395">The image of</p>
 <div class="displaymath">
 \begin{equation*}
 B^\times(\ZZ) \to \specialorthogonal_3(\ZZ)
 \end{equation*}
 </div>
 <p>is \(\specialorthogonal_3^+(\ZZ)\text{.}\)</p></article><article class="paragraphs" id="paragraphs-30"><h5 class="heading"><span class="title">The action of \(H(d)\)</span></h5>
-<p id="p-397">Start with \(x = (a,b,c) \in \mathscr H_d\text{.}\) This gives rise to an embedding</p>
+<p id="p-396">Start with \(x = (a,b,c) \in \mathscr H_d\text{.}\) This gives rise to an embedding</p>
 <div class="displaymath">
 \begin{equation*}
 \iota_x \colon \QQ(\sqrt{-d}) \hookrightarrow B
@@ -630,7 +631,7 @@ B^\times(\ZZ) \to \specialorthogonal_3(\ZZ)
 \end{equation*}
 </div>
 <p>note \(x^2 = -d\text{.}\)</p>
-<p id="p-398">Let \(K= \QQ(\sqrt{-d})\) \(\iota_x\) is integral ion the sense that if</p>
+<p id="p-397">Let \(K= \QQ(\sqrt{-d})\) \(\iota_x\) is integral ion the sense that if</p>
 <div class="displaymath">
 \begin{equation*}
 \ints_x = B(\ZZ) \cap \QQ \lb x \rb
@@ -644,14 +645,14 @@ B^\times(\ZZ) \to \specialorthogonal_3(\ZZ)
 </div>
 <article class="exercise-like" id="exercise-12"><a knowl="" class="id-ref" refid="hk-exercise-12"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">3.16</span>
-</h6></a></article><div id="hk-exercise-12" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-399">Prove this</p></article></div>
-<p id="p-400">\(I \in H(d) \leadsto y= y(x,I)\)</p>
-<p id="p-401">Consider \(B(\ZZ) \iota_x(I) = B(\ZZ) q\) for some \(q\in B(\QQ)\text{.}\) Since \(B(\ZZ)\) is a PID.</p>
-<p id="p-402">Then \(y = q xq\inv\in \mathscr H_d\)</p>
+</h6></a></article><div id="hk-exercise-12" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-398">Prove this</p></article></div>
+<p id="p-399">\(I \in H(d) \leadsto y= y(x,I)\)</p>
+<p id="p-400">Consider \(B(\ZZ) \iota_x(I) = B(\ZZ) q\) for some \(q\in B(\QQ)\text{.}\) Since \(B(\ZZ)\) is a PID.</p>
+<p id="p-401">Then \(y = q xq\inv\in \mathscr H_d\)</p>
 <article class="remark-like" id="note-10"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">3.17</span>
 </h6>
-<ol id="p-403" class="decimal">
+<ol id="p-402" class="decimal">
 <li id="li-81"><div class="displaymath">
 \begin{equation*}
 y^2 = -d
@@ -659,8 +660,8 @@ y^2 = -d
 </div></li>
 <li id="li-82">If we take \(\lambda I\) for \(\lambda \in K^\times\text{,}\) \(y(x, \lambda I) = y(x, I)\) so we get a well defined construction \(H(d)\text{.}\)</li>
 <li id="li-83">\(q\) is defined up to conjugation by \(B(\ZZ)^\times\text{.}\)</li>
-</ol></article><p id="p-404">To sum up:</p>
-<p id="p-405">For any \(x \in \mathscr H_d\) we have a well defined map</p>
+</ol></article><p id="p-403">To sum up:</p>
+<p id="p-404">For any \(x \in \mathscr H_d\) we have a well defined map</p>
 <div class="displaymath">
 \begin{equation*}
 \Cl(d) \to \widetilde{\mathscr H}_d^\times
@@ -674,16 +675,16 @@ I \mapsto y(x,I)\text{.}
 <article class="theorem-like" id="claim-1"><h6 class="heading">
 <span class="type">Claim</span> <span class="codenumber">3.18</span>
 </h6>
-<p id="p-406">This map makes \(\widetilde{\mathscr H}_d^\times\) a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> over \(\Cl(d)\text{.}\)</p></article><p id="p-407">Let \(x,y \in \mathscr H_d\text{.}\)</p>
-<p id="p-408">Construct an ideal \(\Lambda_{x\mapsto y}\) s.t. \(y(x,\Lambda_{x\mapsto y}) = y\text{.}\)</p>
+<p id="p-405">This map makes \(\widetilde{\mathscr H}_d^\times\) a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> over \(\Cl(d)\text{.}\)</p></article><p id="p-406">Let \(x,y \in \mathscr H_d\text{.}\)</p>
+<p id="p-407">Construct an ideal \(\Lambda_{x\mapsto y}\) s.t. \(y(x,\Lambda_{x\mapsto y}) = y\text{.}\)</p>
 <article class="definition-like" id="definition-15"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">3.19</span>
 </h6>
-<div class="displaymath" id="p-409">
+<div class="displaymath" id="p-408">
 \begin{equation*}
 \Lambda_{x\mapsto y} = \{ \lambda \in B(\ZZ) : x \lambda =  \lambda y \}\text{.}
 \end{equation*}
-</div></article><p id="p-410">\(x, y \in \mathscr H_d\) Witt's theorem implies there exists \(q \in PB^\times(\QQ) = \specialorthogonal_3(\QQ)\) s.t.</p>
+</div></article><p id="p-409">\(x, y \in \mathscr H_d\) Witt's theorem implies there exists \(q \in PB^\times(\QQ) = \specialorthogonal_3(\QQ)\) s.t.</p>
 <ul class="disc">
 <li id="li-84"><div class="displaymath">
 \begin{equation*}
@@ -699,13 +700,13 @@ y = q\inv x q
 <article class="remark-like" id="note-11"><h6 class="heading">
 <span class="type">Note</span> <span class="codenumber">3.20</span>
 </h6>
-<p id="p-411">\(\Lambda_{x\mapsto y} \) is locally free and rank 1</p>
+<p id="p-410">\(\Lambda_{x\mapsto y} \) is locally free and rank 1</p>
 <div class="displaymath">
 \begin{equation*}
 \implies [\Lambda_{x \mapsto y}] \in \Pic(\ints_x)  \simeq \Pic(\ints_K) \simeq \Cl(d)\text{.}
 \end{equation*}
-</div></article></article><aside class="aside-like" id="aside-18"><p id="p-412">Lecture 18 13/11/2018</p></aside><p id="p-413">Summary \(\widetilde {\mathscr H_d}^*\) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(\Cl(d)\text{,}\) the class group of \(\QQ(\sqrt{-d})\text{.}\)</p>
-<p id="p-414">How? \(x\in\mathscr H_d\) defined</p>
+</div></article></article><aside class="aside-like" id="aside-18"><p id="p-411">Lecture 18 13/11/2018</p></aside><p id="p-412">Summary \(\widetilde {\mathscr H_d}^*\) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(\Cl(d)\text{,}\) the class group of \(\QQ(\sqrt{-d})\text{.}\)</p>
+<p id="p-413">How? \(x\in\mathscr H_d\) defined</p>
 <div class="displaymath">
 \begin{equation*}
 \QQ(\sqrt{-d}) \xhookrightarrow i B(\QQ)
@@ -717,7 +718,7 @@ y = q\inv x q
 \end{equation*}
 </div>
 <p>any \(I \in \Cl(d) \leadsto B(\ZZ) i(I) = B(\ZZ) q\) for some \(q\text{.}\)</p>
-<div class="displaymath" id="p-415">
+<div class="displaymath" id="p-414">
 \begin{equation*}
 B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ, \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
 \end{equation*}
@@ -746,7 +747,7 @@ I x=  y
 <article class="theorem-like" id="proposition-8"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">3.21</span>
 </h6>
-<p id="p-416">\(\widetilde { \mathscr H_d}^*\) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(\Cl(d)\text{.}\)</p>
+<p id="p-415">\(\widetilde { \mathscr H_d}^*\) is a <a knowl="./knowl/def-prin-homog-sp.html" title="Definition 3.5: Principal homogeneous spaces">principal homogeneous space</a> for \(\Cl(d)\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \widetilde { \mathscr H_d} =  \widetilde { \mathscr H_d}^*
@@ -762,9 +763,9 @@ I x=  y
 \begin{equation*}
 |\mathscr H_d | = 12 |h(d)| \text{\,if\,} d \equiv 1,2 \pmod4
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-35"><a knowl="" class="id-ref" refid="hk-proof-35"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-35" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-417">Requires checking everything works as intended, it is local.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-35"><a knowl="" class="id-ref" refid="hk-proof-35"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-35" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-416">Requires checking everything works as intended, it is local.</p></article></div>
 <article class="paragraphs" id="paragraphs-31"><h5 class="heading"><span class="title">Explicit realization</span></h5>
-<div class="displaymath" id="p-418">
+<div class="displaymath" id="p-417">
 \begin{equation*}
 P \in \Cl(d)
 \end{equation*}
@@ -784,14 +785,14 @@ x\in \mathscr H_d \implies Px = M_P x
 x = \begin{pmatrix} a\\b\\c \end{pmatrix}
 \end{equation*}
 </div>
-<p id="p-419">Let</p>
+<p id="p-418">Let</p>
 <div class="displaymath">
 \begin{equation*}
 P \bar P = (5)
 \end{equation*}
 </div>
 <p>because of the assumption on \(d\text{.}\)</p>
-<p id="p-420">\(P\) action, let \(x\in\mathscr H_d\text{.}\)</p>
+<p id="p-419">\(P\) action, let \(x\in\mathscr H_d\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 N(P) = 5\leadsto q \in B(\ZZ)
@@ -805,7 +806,7 @@ N(q) = 5 \implies 5 \in \{1\pm2i, 1\pm2j,1\pm2k\}B^\times(\ZZ)
 <p>two of these will give you the action of \(P, \bar P\text{.}\)</p></article><article class="example-like" id="example-15"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">3.22</span>
 </h6>
-<p id="p-421">\(q\) will act by \(q\inv x q\) acting on \(B^{(0)}\text{,}\) enough to check the action on \(i,j,k\text{.}\) Say</p>
+<p id="p-420">\(q\) will act by \(q\inv x q\) acting on \(B^{(0)}\text{,}\) enough to check the action on \(i,j,k\text{.}\) Say</p>
 <div class="displaymath">
 \begin{equation*}
 q  = 1+2i,\bar q = (1-2i)/5
@@ -826,24 +827,24 @@ q  = 1+2i,\bar q = (1-2i)/5
 j-2k - 2k - 2j????????
 \end{equation*}
 </div></article><article class="paragraphs" id="paragraphs-32"><h5 class="heading"><span class="title">Basic construction</span></h5>
-<p id="p-422">Let \(\mathscr A_5 = \{M_1^\pm, M_2^\pm, M_3^\pm\}\) starting with a solution \(x\in \mathscr H_d\) one gets two matrices \(\omega_1, \omega_{-1} \in\mathscr A_5\)</p>
+<p id="p-421">Let \(\mathscr A_5 = \{M_1^\pm, M_2^\pm, M_3^\pm\}\) starting with a solution \(x\in \mathscr H_d\) one gets two matrices \(\omega_1, \omega_{-1} \in\mathscr A_5\)</p>
 <div class="displaymath">
 \begin{equation*}
 x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarrow{\omega_{-1}} x \xrightarrow{\omega_{1}}x_1 \xrightarrow{\omega_{2}}x_2 \xrightarrow{\omega_{3}} x_3
 \end{equation*}
 </div>
 <p>where \(w_1\) comes from \(P\) and \(w_{-1}\) from \(\bar P\text{.}\)</p>
-<p id="p-423">This construction gives a well-defined (up to flip) path starting with a solution \(x \in \mathscr H_d\text{.}\)</p>
+<p id="p-422">This construction gives a well-defined (up to flip) path starting with a solution \(x \in \mathscr H_d\text{.}\)</p>
 <article class="remark-like" id="remark-13"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">3.23</span>
 </h6>
-<p id="p-424">These chains are periodic.</p></article></article><article class="paragraphs" id="paragraphs-33"><h5 class="heading"><span class="title">Back to proof</span></h5>
-<p id="p-425">Idea: if \(x\in\mathscr H_d\) then \(x\) and these paths are well defined mod \(p\text{.}\)</p>
-<p id="p-426">We are aiming for</p>
+<p id="p-423">These chains are periodic.</p></article></article><article class="paragraphs" id="paragraphs-33"><h5 class="heading"><span class="title">Back to proof</span></h5>
+<p id="p-424">Idea: if \(x\in\mathscr H_d\) then \(x\) and these paths are well defined mod \(p\text{.}\)</p>
+<p id="p-425">We are aiming for</p>
 <article class="theorem-like" id="proposition-9"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">3.24</span>
 </h6>
-<p id="p-427">Let \(\Sigma(d,l,q)\) denote</p>
+<p id="p-426">Let \(\Sigma(d,l,q)\) denote</p>
 <div class="displaymath">
 \begin{equation*}
 \#\{(x,x') \in \mathscr H_d\times \mathscr H_d : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \text{ in } \mathscr H_d\}
@@ -860,14 +861,14 @@ x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarr
 \begin{equation*}
 \sigma (l,d,q)  \ll_\epsilon |\mathscr H_d| + d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-36"><a knowl="" class="id-ref" refid="hk-proof-36"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-36" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-428">Next time, Linnik's lemma \(\#\{xy = d\} \le d^\epsilon\text{.}\) One more input.</p></article></div></article><aside class="aside-like" id="aside-19"><p id="p-429">Lecture 19 27/11/2018</p></aside><p id="p-430">In \(\QQ(\sqrt d)\) we have \((5) = \ideal p \bar{ \ideal p}\)</p>
+</div></article><article class="hiddenproof" id="proof-36"><a knowl="" class="id-ref" refid="hk-proof-36"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-36" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-427">Next time, Linnik's lemma \(\#\{xy = d\} \le d^\epsilon\text{.}\) One more input.</p></article></div></article><aside class="aside-like" id="aside-19"><p id="p-428">Lecture 19 27/11/2018</p></aside><p id="p-429">In \(\QQ(\sqrt d)\) we have \((5) = \ideal p \bar{ \ideal p}\)</p>
 <div class="displaymath">
 \begin{equation*}
 x \in \mathscr H_d = \{(x_1,x_2,x_3) : x_1^2 + x_2^2 + x_3^2 = d\}
 \end{equation*}
 </div>
 <p>there are 6 matrices \(\mathcal A = \{A^\pm, B^\pm, C^\pm\}\text{,}\) \(A,B,C \in \GL_2(\ZZ)\text{,}\) reduction of these \(\pmod q \acts \mathscr H_d(q)\text{.}\)</p>
-<p id="p-431">This induces a graph structure on \(\mathscr H_d(q)\text{,}\) (multiple edges between vertices are allowed).</p>
+<p id="p-430">This induces a graph structure on \(\mathscr H_d(q)\text{,}\) (multiple edges between vertices are allowed).</p>
 <div class="displaymath">
 \begin{equation*}
 \mathscr H_d \to \mathscr H_d(q)
@@ -885,7 +886,7 @@ x \in \mathscr H_d = \{(x_1,x_2,x_3) : x_1^2 + x_2^2 + x_3^2 = d\}
 \end{equation*}
 </div>
 <article class="paragraphs" id="paragraphs-34"><h5 class="heading"><span class="title">Linnik's basic lemma</span></h5>
-<p id="p-432">Generalisatiion of the following</p>
+<p id="p-431">Generalisation of the following</p>
 <div class="displaymath">
 \begin{equation*}
 r(d) = \sum_{a| d} 1 \le d^\epsilon\,\forall \epsilon\text{.}
@@ -894,16 +895,16 @@ r(d) = \sum_{a| d} 1 \le d^\epsilon\,\forall \epsilon\text{.}
 <article class="theorem-like" id="proposition-10"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">3.25</span> <span class="title">Linnik</span>
 </h6>
-<p id="p-433">Fix \(d\text{,}\) let \(c\in \ZZ\text{,}\) s.t. \(|c| \lt d\text{.}\) Then \(\forall \epsilon \gt 0\text{,}\)</p>
+<p id="p-432">Fix \(d\text{,}\) let \(c\in \ZZ\text{,}\) s.t. \(|c| \lt d\text{.}\) Then \(\forall \epsilon \gt 0\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \#\{ (x_1,x_2) \in\mathscr H_d^2 : x_1\cdot x_2 = e\} \ll_\epsilon d^\epsilon\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-37"><a knowl="" class="id-ref" refid="hk-proof-37"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-434">Short detour on representations of quadratic forms by other quadratic forms.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-37"><a knowl="" class="id-ref" refid="hk-proof-37"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-433">Short detour on representations of quadratic forms by other quadratic forms.</p></article></div>
 <article class="definition-like" id="definition-16"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">3.26</span>
 </h6>
-<p id="p-435">Let \((Q, \ZZ^m)\text{,}\) \((R, \ZZ^n)\text{,}\) \(m\ge n\) be nondegenerate quadratic forms. Then \(Q\) is said to represent \(R\) if there exists a  \(\ZZ\)-linear map</p>
+<p id="p-434">Let \((Q, \ZZ^m)\text{,}\) \((R, \ZZ^n)\text{,}\) \(m\ge n\) be nondegenerate quadratic forms. Then \(Q\) is said to represent \(R\) if there exists a  \(\ZZ\)-linear map</p>
 <div class="displaymath">
 \begin{equation*}
 \iota\colon \ZZ^n \to \ZZ^m
@@ -917,7 +918,7 @@ Q(\iota(x)) = R(x)\,\forall x\in \ZZ^n\text{.}
 </div></article><article class="example-like" id="example-16"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">3.27</span>
 </h6>
-<div class="displaymath" id="p-436">
+<div class="displaymath" id="p-435">
 \begin{equation*}
 Q(x,y) = x \cdot y
 \end{equation*}
@@ -943,7 +944,7 @@ x \mapsto (ax,bx) \text{ where } ab =d
 \begin{equation*}
 Q(\iota(x)) = R(x)\text{.}
 \end{equation*}
-</div></article><p id="p-437">Let \(x_1, x_2 \in \mathscr H_d\) s.t. \(x_1\cdot x_2 =e\text{.}\)</p>
+</div></article><p id="p-436">Let \(x_1, x_2 \in \mathscr H_d\) s.t. \(x_1\cdot x_2 =e\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 x_1=(a_1,b_1,c_1)\, x_2=(a_2,b_2,c_2)
@@ -976,11 +977,11 @@ Q(\iota(u,v)) = (u a_1 + v a_1)^2 + (u b_1 + v b_2)^2 + (u c_1 + v c_2)^2
 = R_{d,e} (u,v)\text{.}
 \end{equation*}
 </div>
-<p id="p-438">So the number of representations of \(R\) by \(Q/ \specialorthogonal_3(\ZZ)\) bounds number of solutions \(x_1 x_2 = e\text{.}\)</p>
+<p id="p-437">So the number of representations of \(R\) by \(Q/ \specialorthogonal_3(\ZZ)\) bounds number of solutions \(x_1 x_2 = e\text{.}\)</p>
 <article class="theorem-like" id="theorem-32"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.28</span> <span class="title">Gordon Pell 1949</span>
 </h6>
-<p id="p-439">Let</p>
+<p id="p-438">Let</p>
 <div class="displaymath">
 \begin{equation*}
 r(a,b,c) = \{ \text{reps. of } ax^2 + bxy + cy^2 \text{ by } x^2 + y^2 + z^2\}
@@ -1010,11 +1011,11 @@ r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
 \end{equation*}
 </div></article><article class="exercise-like" id="exercise-13"><a knowl="" class="id-ref" refid="hk-exercise-13"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">3.29</span>
-</h6></a></article><div id="hk-exercise-13" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-440">Show this (recall \(d\) is a fundamental discriminant).</p></article></div>
+</h6></a></article><div id="hk-exercise-13" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-439">Show this (recall \(d\) is a fundamental discriminant).</p></article></div>
 <article class="theorem-like" id="lemma-17"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">3.30</span> <span class="title">Shadowing lemma</span>
 </h6>
-<p id="p-441">Let</p>
+<p id="p-440">Let</p>
 <div class="displaymath">
 \begin{equation*}
 [x_{-l},\ldots, x_0, x_1 ,\ldots, x_l], [x'_{-l},\ldots, x'_0, x'_1 ,\ldots, x'_l]
@@ -1023,7 +1024,7 @@ r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
 <p>be two marked paths in \(\mathscr H_d\text{.}\) Then these paths have the same reduction mod \(q\) iff \(x_0 = \pm x_0' \pmod{q5^l}\text{.}\)</p></article><article class="theorem-like" id="theorem-33"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.31</span>
 </h6>
-<div class="displaymath" id="p-442">
+<div class="displaymath" id="p-441">
 \begin{equation*}
 \Sigma (d,l,q) = \#\{(x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \in \mathscr H_d(q)\}
 \end{equation*}
@@ -1032,7 +1033,7 @@ r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
 \begin{equation*}
 \implies \Sigma (d,l,q) \ll_\epsilon \# \mathscr H_d  + d^\epsilon ( 1+ \frac{d}{q^2 5^{2l}}) \,\forall \epsilon \gt 0\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-38"><a knowl="" class="id-ref" refid="hk-proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-443">
+</div></article><article class="hiddenproof" id="proof-38"><a knowl="" class="id-ref" refid="hk-proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-442">
 \begin{equation*}
 \gamma_x^{(l)} = \gamma_{x'}^{(l)} \implies x = \pm x' \pmod{q5^l} \text{(by the Shadowing lemma)}
 \end{equation*}
@@ -1048,7 +1049,7 @@ r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
 \implies (x-x') ( x- x') \equiv 0 \pmod{q^2 5^{2l}}\text{.}
 \end{equation*}
 </div>
-<div class="displaymath" id="p-444">
+<div class="displaymath" id="p-443">
 \begin{equation*}
 \implies \Sigma(d,l,q) \ll 2\#\{(x,x') : x\ne x',\, x\cdot x' = d \pmod{q^2 5^{2l}}\}
 \end{equation*}
@@ -1059,7 +1060,7 @@ r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
 \sum_{|e| \lt d,\,e = d \pmod{q^2 5^{2l}} } \{(x,x') : x\cdot x' = e\} \ll_\epsilon d^\epsilon (1+ \frac{d}{q^2 5^{2l}})\text{.}
 \end{equation*}
 </div></article></div></article><article class="paragraphs" id="paragraphs-35"><h5 class="heading"><span class="title">Proof of the equidistribution statement</span></h5>
-<p id="p-445">Recall:</p>
+<p id="p-444">Recall:</p>
 <div class="displaymath">
 \begin{equation*}
 \operatorname{dev}_d(\bar x) = \frac { | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|/| \mathscr H_d(q)|} - 1
@@ -1070,21 +1071,21 @@ r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
 \operatorname{dev}_d(\bar x) \to 0\text{ as } d \to \infty,\,d \equiv \pm 1 \pmod 5\,\, d\text{ fund. disc.}\text{.}
 \end{equation*}
 </div>
-<article class="hiddenproof" id="proof-39"><a knowl="" class="id-ref" refid="hk-proof-39"><h6 class="heading"><span class="title">Sketch of proof</span></h6></a></article><div id="hk-proof-39" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-446">Assume \(B_\delta = \{ \bar x : \operatorname{dev}_d)\bar x) \\gt \delta\}\text{.}\) Lower bound by counting the number of paths that lie in \(\operatorname{red}\inv_q(B_\delta)\text{.}\) Upper bound by the expansion property of \(\mathscr H_d(q)\text{.}\)</p></article></div></article><aside class="aside-like" id="aside-20"><p id="p-447">Lecture 20 29/11/2018</p></aside><article class="theorem-like" id="theorem-34"><h6 class="heading">
+<article class="hiddenproof" id="proof-39"><a knowl="" class="id-ref" refid="hk-proof-39"><h6 class="heading"><span class="title">Sketch of proof</span></h6></a></article><div id="hk-proof-39" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-445">Assume \(B_\delta = \{ \bar x : \operatorname{dev}_d)\bar x) \\gt \delta\}\text{.}\) Lower bound by counting the number of paths that lie in \(\operatorname{red}\inv_q(B_\delta)\text{.}\) Upper bound by the expansion property of \(\mathscr H_d(q)\text{.}\)</p></article></div></article><aside class="aside-like" id="aside-20"><p id="p-446">Lecture 20 29/11/2018</p></aside><article class="theorem-like" id="theorem-34"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.32</span> <span class="title">Linnik</span>
 </h6>
-<p id="p-448">Fix \(\nu, \delta\gt 0\) and let \(q \le d^{\frac 14 - \nu}\text{,}\) \((q,30) = 1\text{.}\) Then the fraction of \(\bar x \in \mathscr H_d(q)\) for which</p>
+<p id="p-447">Fix \(\nu, \delta\gt 0\) and let \(q \le d^{\frac 14 - \nu}\text{,}\) \((q,30) = 1\text{.}\) Then the fraction of \(\bar x \in \mathscr H_d(q)\) for which</p>
 <div class="displaymath">
 \begin{equation*}
 |\operatorname{dev}_d(\bar x)| \gt \delta
 \end{equation*}
 </div>
-<p>tends to 0 as \(d \to \infty\) through \(d \equiv \mp 1 \pmod 5\text{.}\)</p></article><p id="p-449">Recall <a knowl="./knowl/def-deviation.html" title="Definition 3.3: Deviation">3.3</a>.</p>
-<p id="p-450">Last time</p>
+<p>tends to 0 as \(d \to \infty\) through \(d \equiv \mp 1 \pmod 5\text{.}\)</p></article><p id="p-448">Recall <a knowl="./knowl/def-deviation.html" title="Definition 3.3: Deviation">3.3</a>.</p>
+<p id="p-449">Last time</p>
 <article class="theorem-like" id="proposition-11"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">3.33</span>
 </h6>
-<p id="p-451">Let</p>
+<p id="p-450">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \Sigma(d,l,q) = \# \{ (x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} =\gamma_{x'}^{(l)}\}
@@ -1095,7 +1096,7 @@ r(d,2e,d) \ll_\epsilon d^\epsilon\text{.}
 \begin{equation*}
 \Sigma(d,l,q) \ll_\epsilon| \mathscr H_d | +  d^\epsilon \left(1+  \frac{d}{q^2 5^{2l}}\right)\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-40"><a knowl="" class="id-ref" refid="hk-proof-40"><h6 class="heading"><span class="title">Proof of theorem</span></h6></a></article><div id="hk-proof-40" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-452">Let</p>
+</div></article><article class="hiddenproof" id="proof-40"><a knowl="" class="id-ref" refid="hk-proof-40"><h6 class="heading"><span class="title">Proof of theorem</span></h6></a></article><div id="hk-proof-40" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-451">Let</p>
 <div class="displaymath">
 \begin{equation*}
 B_\delta = \{ \bar x\in \mathscr H_d (q) : \operatorname{dev}_d(\bar x)  \gt \delta\}
@@ -1108,7 +1109,7 @@ B_\delta  \ge \eta | \mathscr H_d(q)|
 \end{equation*}
 </div>
 <p>for some \(\eta  \gt 0\text{.}\)</p>
-<p id="p-453">Observe that</p>
+<p id="p-452">Observe that</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d }  |\gamma_x^{(l)} \cap B_\delta | =  (2l+ 1)  \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
@@ -1120,14 +1121,14 @@ B_\delta  \ge \eta | \mathscr H_d(q)|
 \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d } \frac{ |\gamma_x^{(l)} \cap B_\delta | }{  (2l+ 1)} =   \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}\tag{3.1}
 \end{equation}
 </div>
-<p id="p-454">Choose an  \(l\) s.t.</p>
+<p id="p-453">Choose an  \(l\) s.t.</p>
 <div class="displaymath">
 \begin{equation*}
 \frac 15 |\mathscr H_d| \le q^2 5^{2l} \le 5 |\mathscr H_d|
 \end{equation*}
 </div>
 <p>note that we can indeed choose such an \(l\text{.}\)</p>
-<p id="p-455">By definition every \(\bar x \in B_\delta\) satisfies</p>
+<p id="p-454">By definition every \(\bar x \in B_\delta\) satisfies</p>
 <div class="displaymath">
 \begin{equation*}
 \operatorname{dev}_d(\bar x) \gt \delta
@@ -1139,7 +1140,7 @@ B_\delta  \ge \eta | \mathscr H_d(q)|
 \frac{ |\operatorname{red}_q\inv(\bar x)|}{ |\mathscr H_d|/|\mathscr H_d(q)|} \gt 1 + \delta\text{.}
 \end{equation*}
 </div>
-<div class="displaymath" id="p-456">
+<div class="displaymath" id="p-455">
 \begin{equation*}
 | \operatorname{red}_q \inv(B_\delta)|  \ge \frac{ |B_\delta | |\mathscr H_d| }{ |\mathscr H_d(q)|} (1+\delta)
 \end{equation*}
@@ -1162,13 +1163,13 @@ B_\delta  \ge \eta | \mathscr H_d(q)|
 \ge \frac{|B_\delta|}{|\mathscr H_d(q)|}+\eta\delta\text{.}
 \end{equation*}
 </div>
-<p id="p-457">Let</p>
+<p id="p-456">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \Phi = \left\{ x\in \mathscr H_d : \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right\}
 \end{equation*}
 </div>
-<p id="p-458">Note that</p>
+<p id="p-457">Note that</p>
 <div class="displaymath">
 \begin{equation*}
 \mathscr H_d  =  \Phi \sqcup \Phi^c
@@ -1189,27 +1190,27 @@ B_\delta  \ge \eta | \mathscr H_d(q)|
 \implies |\Phi| \ge  \frac{\eta \delta }{2} | \mathscr H_d|\text{.}\label{eqn-phi-bd-linnik-pf}\tag{3.2}
 \end{equation}
 </div>
-<p id="p-459">Now we count the number of marked non-backtracking paths on \(\mathscr H_d(q)\)  of length \(2l+1\) (write \(MNBP(\mathscr H_d(q))\)) satisfying</p>
+<p id="p-458">Now we count the number of marked non-backtracking paths on \(\mathscr H_d(q)\)  of length \(2l+1\) (write \(MNBP(\mathscr H_d(q))\) for this quantity), which in addition satisfy</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q) | } +   \frac{\delta \eta}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-460">By <a knowl="./knowl/eqn-phi-bd-linnik-pf.html" title="Equation 3.2">(3.2)</a> we have \(\eta \delta |\mathscr H_d|/2\) of these paths “upstairs”.</p>
-<p id="p-461">Recall Siegel implies</p>
+<p id="p-459">By <a knowl="./knowl/eqn-phi-bd-linnik-pf.html" title="Equation 3.2">(3.2)</a> we have \(\eta \delta |\mathscr H_d|/2\) of these paths “upstairs”.</p>
+<p id="p-460">Recall Siegel implies</p>
 <div class="displaymath">
 \begin{equation*}
 d^{\frac 12 - \epsilon} \lt | \mathscr H_d| \lt d^{\frac 12 + \epsilon}
 \end{equation*}
 </div>
 <p>so upstairs we have \(\gg_\epsilon \frac{\eta \delta }{2} d^{\frac 12 - \epsilon }\) paths.</p>
-<p id="p-462">Claim 1: The previous proposition implies not mant of these paths give the same path mod \(q\)</p>
+<p id="p-461">Claim 1: The previous proposition implies not mant of these paths give the same path mod \(q\)</p>
 <div class="displaymath">
 \begin{equation*}
 MNBP(\mathscr H_d(q)) \gg_{\epsilon,\delta \eta} d^{\frac 12 - \epsilon}\text{.}
 \end{equation*}
 </div>
-<p id="p-463">On the other hand the total number of marked non-backtracking paths on</p>
+<p id="p-462">On the other hand the total number of marked non-backtracking paths on</p>
 <div class="displaymath">
 \begin{equation*}
 \mathscr H_d(q)
@@ -1227,11 +1228,11 @@ MNBP(\mathscr H_d(q)) \gg_{\epsilon,\delta \eta} d^{\frac 12 - \epsilon}\text{.}
 \frac 15 |\mathscr H_d| \lt q^2 5^{2l} \lt 5 |\mathscr H_d|
 \end{equation*}
 </div>
-<p id="p-464">Final input is a Chernoff type bound.</p></article></div>
+<p id="p-463">Final input is a Chernoff type bound.</p></article></div>
 <article class="theorem-like" id="proposition-12"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">3.34</span>
 </h6>
-<p id="p-465">Fix \(\eta, \epsilon \gt 0\) for any subset</p>
+<p id="p-464">Fix \(\eta, \epsilon \gt 0\) for any subset</p>
 <div class="displaymath">
 \begin{equation*}
 B \subseteq \mathscr H_d(q)
@@ -1255,7 +1256,7 @@ B \subseteq \mathscr H_d(q)
 \ll_{\epsilon,\eta} e^{-cl}
 \end{equation*}
 </div>
-<p>for some \(c =c(\epsilon, \eta) \gt 0\text{.}\)</p></article><p id="p-466">Claim 2: This proposition implies that the fraction</p>
+<p>for some \(c =c(\epsilon, \eta) \gt 0\text{.}\)</p></article><p id="p-465">Claim 2: This proposition implies that the fraction</p>
 <div class="displaymath">
 \begin{equation*}
 MNBP(\mathscr H_d(q)) \ll d^{\frac 12 - \tau}
@@ -1273,11 +1274,11 @@ MNBP(\mathscr H_d(q)) \ll d^{\frac 12 - \tau}
 \end{equation*}
 </div>
 <p>give a contradiction.</p>
-<p id="p-467">We now check some claims made above.</p>
+<p id="p-466">We now check some claims made above.</p>
 <article class="theorem-like" id="claim-2"><h6 class="heading">
 <span class="type">Claim</span> <span class="codenumber">3.35</span> <span class="title">Claim 1</span>
 </h6>
-<p id="p-468">Bound on \(\#\{(x,x') : \gamma_x ^{(l) } =  \gamma_{x'}^{(l)}\}\) gives a bound on the number of distinct paths.</p></article><article class="hiddenproof" id="proof-41"><a knowl="" class="id-ref" refid="hk-proof-41"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-41" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-469">
+<p id="p-467">Bound on \(\#\{(x,x') : \gamma_x ^{(l) } =  \gamma_{x'}^{(l)}\}\) gives a bound on the number of distinct paths.</p></article><article class="hiddenproof" id="proof-41"><a knowl="" class="id-ref" refid="hk-proof-41"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-41" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-468">
 \begin{equation*}
 \#\{ (a,a')  \in A^2 : a  \equiv a' \pmod q\} = \sum n_{a_i}
 \end{equation*}
@@ -1292,7 +1293,7 @@ MNBP(\mathscr H_d(q)) \ll d^{\frac 12 - \tau}
 <article class="theorem-like" id="claim-3"><h6 class="heading">
 <span class="type">Claim</span> <span class="codenumber">3.36</span> <span class="title">Claim 2</span>
 </h6>
-<p id="p-470">Follows from two points</p>
+<p id="p-469">Follows from two points</p>
 <div class="displaymath">
 \begin{equation*}
 d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
@@ -1302,7 +1303,256 @@ d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
 \begin{equation*}
 q \lt d^{\frac 14 - \nu}
 \end{equation*}
-</div></article></section></div></main>
+</div></article><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1</span> <span class="title">The adelic picture</span>
+</h3>
+<aside class="aside-like" id="aside-21"><p id="p-470">Lecture 21 4/12/2018</p></aside><p id="p-471">Notation: \(\adeles\) is the ring of adeles of \(\QQ\)</p>
+<div class="displaymath">
+\begin{equation*}
+\prod_p' \QQ_p
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\adeles_f = \prod_{p \text{ finite}}' \QQ_p
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles = \RR \times \adeles_f\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\widetilde \ZZ \colon \varprojlim_n \ZZ/n = \prod \ZZ_p\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-472">
+\begin{equation*}
+\widehat \ZZ \subseteq \adeles_f
+\end{equation*}
+</div>
+<p>maximal compact.</p>
+<article class="paragraphs" id="paragraphs-36"><h5 class="heading"><span class="title">The genus of a quadratic space</span></h5>
+<p id="p-473">For us,</p>
+<div class="displaymath">
+\begin{equation*}
+L\subseteq \QQ^3
+\end{equation*}
+</div>
+<p>a lattice, then</p>
+<div class="displaymath">
+\begin{equation*}
+\GL_3(\adeles_f) \ni g = \prod g_p
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+g\cdot L = \{ \alpha \subseteq \QQ^3 : \alpha_p = g_p L_p \,\forall p\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\operatorname{genus}_{\specialorthogonal_3} (\mathcal L_p) = \specialorthogonal_3(\adeles_f) \mathcal L_0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\mathcal L_0 = \ZZ^3,\,a^2+b^2 + c^2\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="proposition-13"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.37</span>
+</h6>
+<p id="p-474">There is one \(\specialorthogonal_3(\QQ)\) orbit of \(\mathcal L_0\text{.}\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\adeles_f) = \specialorthogonal_3(\QQ) \specialorthogonal_3(\widehat\ZZ)
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-42"><a knowl="" class="id-ref" refid="hk-proof-42"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-42" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-475">Based on quaternions having class number 1.</p></article></div>
+<p id="p-476">More definitions:</p>
+<div class="displaymath">
+\begin{equation*}
+P = \{ (\mathcal L, x) : \mathcal L \in \operatorname{genus}_{\specialorthogonal_3} (\mathcal L_0), x \in \mathcal L,\, x \cdot x = d\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+P_{(q)} = \{ (\mathcal L, \bar x) : \mathcal L \in \operatorname{genus}_{\specialorthogonal_3} (\mathcal L_0), \bar x \in \mathcal L/q\mathcal L,\, \bar x \cdot \bar x = d \pmod q\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\widetilde{\mathscr H_d} \simeq \specialorthogonal_3 (\QQ) \backslash P
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+K_f [q] = \ker(\specialorthogonal_3(\widehat \ZZ) \to \specialorthogonal_3(\ZZ/q\ZZ))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+K'_f [q] = \{ g \in \specialorthogonal_3(\widehat \ZZ) : g \bar x_q = \bar x_q\}
+\end{equation*}
+</div>
+<p>we fix a base point \(\bar x_q \in \mathscr H_d(q)\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\widetilde{\mathscr H_d}(q) \simeq \specialorthogonal_3 (\QQ) \backslash P_{(q)} \simeq  \specialorthogonal_3 (\QQ) \backslash \specialorthogonal_3(\adeles_f) / K_f'[q]
+\end{equation*}
+</div>
+<p>here we are heavily using the exceptional isomorphism</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3 \simeq \PGL_2\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="claim-4"><h6 class="heading">
+<span class="type">Claim</span> <span class="codenumber">3.38</span>
+</h6>
+<div class="displaymath" id="p-477">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q) \simeq \specialorthogonal_3(\QQ) \backslash P_{(q)}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-43"><a knowl="" class="id-ref" refid="hk-proof-43"><h6 class="heading"><span class="title">Proof sketch</span></h6></a></article><div id="hk-proof-43" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-478">
+\begin{equation*}
+\specialorthogonal_3(\QQ) \acts P_{(q)} \text{ diagonally}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\adeles_f) = \specialorthogonal_3(\QQ) \specialorthogonal_3(\widehat \ZZ)
+\end{equation*}
+</div>
+<p>every orbit has a representation \(\simeq (\mathcal L_0, \bar x),\,\bar x \in \mathscr H_d(q)\text{.}\)</p>
+<div class="displaymath" id="p-479">
+\begin{equation*}
+(\mathcal L_0, \bar x) \simeq (\mathcal L_0, \bar x')
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\iff
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\exists \gamma  \in \underbrace{\specialorthogonal_3(\widehat \ZZ)  \cap \specialorthogonal_3(\QQ)}_{\specialorthogonal_3(\ZZ)}
+\end{equation*}
+</div></article></div>
+<article class="theorem-like" id="claim-5"><h6 class="heading">
+<span class="type">Claim</span> <span class="codenumber">3.39</span>
+</h6>
+<div class="displaymath" id="p-480">
+\begin{equation*}
+\specialorthogonal_3(\QQ) \backslash P_{(q)} \simeq \specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q) / K'_f[q]
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-44"><a knowl="" class="id-ref" refid="hk-proof-44"><h6 class="heading"><span class="title">Proof sketch</span></h6></a></article><div id="hk-proof-44" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-481">Observe</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\adeles_f) \acts P_{(q)}
+\end{equation*}
+</div>
+<p>via</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal L \otimes \widehat \ZZ/ q\mathcal L \otimes \widehat \ZZ
+\end{equation*}
+</div>
+<p id="p-482">This action is transitive, i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+P_{(q)} = \specialorthogonal_3(\adeles_f) [ \mathcal L_0, \bar x_q]
+\end{equation*}
+</div></article></div>
+<article class="remark-like" id="remark-14"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">3.40</span>
+</h6>
+<div class="displaymath" id="p-483">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash S^3 \simeq \specialorthogonal_3(\QQ)\backslash  \specialorthogonal_3(\adeles)/ K_\infty \specialorthogonal_3(\widehat \ZZ)
+\end{equation*}
+</div></article><p id="p-484">What about</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash \mathscr H_d\text ?
+\end{equation*}
+</div>
+<p>Fix another base point \(x_0\in \mathscr H_d\)</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3(\ZZ) \backslash \mathscr H_d \simeq \specialorthogonal_{x_0} (\QQ) \backslash \specialorthogonal_{x_0} (\adeles_f)/ \specialorthogonal_{x_0}(\widehat \ZZ)
+\end{equation*}
+</div>
+<p>where \(\specialorthogonal_{x_0}\) is the stabiliser of \(x_0\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\xymatrix{
+\mathscr H_d \acts \text{ class gp.} \ar[d] \\
+\mathscr H_d(a) \acts \specialorthogonal_3(\adeles_f)
+}
+\end{equation*}
+</div>
+<p id="p-485">More concretely</p>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_{x_0} : \QQ^3 \simeq  B^{(0)} (\QQ)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_3 \simeq PB^\times
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\specialorthogonal_{x_0} \simeq PB^\times_{x_0} \simeq \langle a + b x_0 \rangle / Z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\simeq \Res_{K/\QQ} \mathbf G_m / \mathbf G_m
+\end{equation*}
+</div>
+<p>where \(K = \QQ(\sqrt{-d})\text{.}\)</p>
+<p id="p-486">Recall</p>
+<div class="displaymath">
+\begin{equation*}
+K^\times \backslash \adeles_{K,f}^\times / \widehat \ints_K^\times \simeq \Pic(\ints_K)
+\end{equation*}
+</div></article><article class="paragraphs" id="paragraphs-37"><h5 class="heading"><span class="title">The graph structure on \(\mathscr H_d(q)\)</span></h5>
+<p id="p-487">\(\specialorthogonal_3(\adeles_f)\) is a large group, but so is \(K_f' \lb q\rb \text{.}\) What is indeed true is</p>
+<div class="displaymath">
+\begin{equation*}
+\mathscr H_d(q) \cong \Gamma_{(3,q)}   \specialorthogonal_3(\QQ_5) / K_5
+\end{equation*}
+</div>
+<p>analogous to</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbf H = \specialorthogonal_2 \backslash \SL_2(\RR)/ \SL_2(\ZZ)\text{.}
+\end{equation*}
+</div>
+<p id="p-488">Where</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_{(3,q)} PB^\times(\QQ) \cap PB^\times(\QQ_5) K_f[3,q]
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+K_{f} [3,q] = K_f[3] \cap K_f'[q] \subseteq K_f'[q]
+\end{equation*}
+</div>
+<p id="p-489">Now</p>
+<div class="displaymath">
+\begin{equation*}
+\PGL_2(\QQ_5) / \PGL_2(\ZZ_5)
+\end{equation*}
+</div>
+<p>is a Bruhat-Tits tree, a 6-regular tree.</p></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
