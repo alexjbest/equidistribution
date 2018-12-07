@@ -2190,691 +2190,694 @@ section#sec-duke
 section#sec-linnik
     title Linnik's theorem
 
-    p
+    introduction: p
         | We will mostly follow Ellenberg, Michel, Venkatesh.
         | Linnik's ergodic method and the distribution of integer points on spheres.
 
-    paragraphs
-        title Problem
+    subsection#subsec-linnik
+        title Linnik's theorem
 
-        aside: p Lecture 16 6/11/2018
-        p
-            | Distribution of
-            me \mathscr H_d = \{ (x,y,z) \in \ZZ^3 : x^2 + y^2 + z^2 = d\}
-            | as #[m d \to \infty].
-        theorem
-            title Linnik
-            statement: p
-                | As #[m d \to \infty] squarefree such that #[m d\not\equiv 7 \pmod 8],  #[m d \equiv \pm 1 \pmod 5]
-                me \left\{ \frac {x}{\sqrt d} : x \in \mathscr H_d \right\}
-                | is equidistributed w.r.t. the Lebesgue measure
-                me \operatorname{red}_\infty \colon \mathscr H_d \to S^2
-                me \frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
-                | in the sense that
-                me \frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
-                | for any #[m \Omega] a reasonable subset of #[m S^2].
+        paragraphs
+            title Problem
 
-        p
-            | The #[m \pm 1\pmod 5] condition comes from a splitting condition in #[m \QQ(\sqrt{d})] that we need to find an appropriate group action.
-
-        p
-            | We will rather focus on the following variant
-        theorem
-            title Linnik variant
-            statement: p
-                me \overline{\mathscr H}_d = \{ (x,y,x) \pmod q : (x,y,z)\in \mathscr H_d\}
-                | with #[m q] fixed #[m \gt 0] and #[m (q,30)  =1] (non-essential).
-                | As #[m d \to  \infty], #[m d] squarefree such that #[m d \not \equiv 7 \pmod 8] and #[m d \equiv \pm 1 \pmod 5].
-                | #[m \overline {\mathscr H}_d(q)] becomes equidistributed in #[m \mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}] w.r.t. counting measure, explicitly
-                me \frac{| \operatorname{red}\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
+            aside: p Lecture 16 6/11/2018
+            p
+                | Distribution of
+                me \mathscr H_d = \{ (x,y,z) \in \ZZ^3 : x^2 + y^2 + z^2 = d\}
                 | as #[m d \to \infty].
+            theorem
+                title Linnik
+                statement: p
+                    | As #[m d \to \infty] squarefree such that #[m d\not\equiv 7 \pmod 8],  #[m d \equiv \pm 1 \pmod 5]
+                    me \left\{ \frac {x}{\sqrt d} : x \in \mathscr H_d \right\}
+                    | is equidistributed w.r.t. the Lebesgue measure
+                    me \operatorname{red}_\infty \colon \mathscr H_d \to S^2
+                    me \frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  \to \operatorname{Vol} (\Omega)
+                    | in the sense that
+                    me \frac{|\operatorname{red}_\infty\inv (\Omega)|}{|\mathscr H_d|}  = \operatorname{Vol} (\Omega) ( 1 + o(1))
+                    | for any #[m \Omega] a reasonable subset of #[m S^2].
+
+            p
+                | The #[m \pm 1\pmod 5] condition comes from a splitting condition in #[m \QQ(\sqrt{d})] that we need to find an appropriate group action.
+
+            p
+                | We will rather focus on the following variant
+            theorem
+                title Linnik variant
+                statement: p
+                    me \overline{\mathscr H}_d = \{ (x,y,x) \pmod q : (x,y,z)\in \mathscr H_d\}
+                    | with #[m q] fixed #[m \gt 0] and #[m (q,30)  =1] (non-essential).
+                    | As #[m d \to  \infty], #[m d] squarefree such that #[m d \not \equiv 7 \pmod 8] and #[m d \equiv \pm 1 \pmod 5].
+                    | #[m \overline {\mathscr H}_d(q)] becomes equidistributed in #[m \mathscr H_d(q) = \{ (x,y,z ) \in (\ZZ/q)^3 : x^2 + y^2 + z^2 = d\}] w.r.t. counting measure, explicitly
+                    me \frac{| \operatorname{red}\inv_q(x)|}{| \mathscr H_d|} = \frac{1}{|\mathscr H_d(q)|} ( 1+ o(1))
+                    | as #[m d \to \infty].
+
+            p
+                | Actually we will prove something a little strange.
+
+            definition#def-deviation
+                title Deviation
+                statement
+                    p
+                        | #[m \infty], let #[m \rho \gt 0], #[m x\in S^2] and consider the cap #[m \Omega(x,\rho)].
+                        me \operatorname{dev}_d(\Omega) = \frac {1}{\operatorname{Vol}(\Omega)} \frac{| \operatorname{red}\inv_\infty(\Omega)|}{|\mathscr H_d|} - 1
+                        | (we want to show this is #[m o(1)]).
+                    p
+                        | #[m q], let #[m \bar x \in \mathscr H_d(q)] then
+                        me \operatorname{dev}_d(\bar x) = \frac {| \mathscr H_d(q)| | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|} - 1
+                        |.
+                        // TODO check here
+
+            theorem
+                statement: p
+                    | Fix #[m \delta, \eta \gt 0] then for every
+                    me \rho \ge d^{-1/4 + \eta}
+                    me \frac 1q  \ge d^{-1/4 + \eta}
+                    | #[m (q,30) = 1], then as #[m d\to \infty]
+                    me \mu_{S^2}(x : \operatorname{dev}_d(\Omega(x, \rho)) \ge \delta) \to 0
+                    me \frac{| \{ \bar x \in \mathscr H_d(q) : \operatorname{dev}_d(\bar x) \ge \delta \} |}{ |\mathscr H_d(q)|} \to 0
+                    | .
+            p
+                | How?
+                | Sketch of the argument:
+            p
+                | Fix #[m \delta ,\eta \gt 0],
+                me B_\delta = \{ \bar x \in \mathscr H_q(d) : \operatorname{dev}_d(\bar x) \gt \delta \}
+                | and assume that
+                me  |B_\delta| \ge \eta |\mathscr H_d(q)|
+                | .
+            p
+                | Inputs
+                ol
+                    li
+                        | There is an action of #[m H(d) = ] class group of #[m \QQ(\sqrt{-d})] on #[m \mathscr H_d(q)/ \specialorthogonal_3(\ZZ)].
+                        | As #[m d \equiv \pm 1 \pmod 5] so #[m (5) = \ideal p \bar{\ideal p}] in #[m \QQ(\sqrt{-d})]:
+                        | This gives us a well defined dynamical system by considering the action
+                        me \mathscr H_d(q) \ni  x \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
+                        | and in reverse
+                        me x_{-2} \to x_{-1} \to x  \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
+                        | call this chain #[m \gamma_X] and for any #[m l \gt 0 \in \ZZ]
+                        me \gamma_X^{(l)} = [x_{-l}, x_{-l + 1}, \ldots, x_{-1} ,  x,x_1, \ldots, x_l]
+                    li
+                        | Consider the average on
+                        me B_\delta = \gamma_X^{(l)} \cap B_\delta
+                        | .
+                        | On one hand the expected size of #[m \gamma_X^{(l)} \cap B_\delta] is
+                        me \frac{1}{|\mathscr H_d|} \sum_{x \in \mathscr H_d} | \gamma_X^{(l)} \cap B_\delta|
+                        | on the other hand the expectation is
+                        me \frac{(2l+ 1)}{|\mathscr H_d|} \operatorname{red}_q\inv (B_\delta)
+                        | .
+                        | i.e.
+                        me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l + 1} = \frac{| \operatorname{red}\inv_q(B_\delta)|}{|\mathscr H_d|}
+                    li
+                        | Since we assume that the deviation set is large (#[m \operatorname{dev}_d(x)  \gt \delta]) this implies on average
+                        me \frac{| \gamma_X^{(l)} \cap B_\delta|}{2l+1}
+                        | is large,
+                        | gives a lower bound for this.
+                    li
+                        | Then we count  #[m \gamma_X^{(l)}] in another way, action of #[m H(d)] on #[m \mathscr H_d] and on #[m \mathscr H_d(q)].
+                        | action of #[m \ideal p] induces a graph structure on #[m \mathscr H_d(q)].
+                        | Then #[m \gamma_X^{(l)}] is a path on #[m \mathscr H_d(q)] which is non-backtracking.
+                        | Count these:
+                        | Inputs: for #[m l \sim  \log(d)] the number of non-backtracking paths for which #[m |\gamma_X^{(l)} \cap B_\delta|/(2l+1)] is large is #[m \gg d^{1/2 + \epsilon}].
+                        | Count the total number of non-backtracking paths of length #[m 2l+1] for which
+                        me \left| \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l+1 } - \frac{|B_\delta|}{|\mathscr H_d(q)|} \right| \gt \delta\eta/2
+                        | There can not be too many of these.
+                        | This will give a contradiction.
+                        | Will take some work and depend on many things.
+
+        aside: p Lecture 17 8/11/2018
+
+        paragraphs
+            title Class group actions
+
+            p
+                me \mathscr H_d  = \{ (x,y,z ) \in \ZZ^2:  x^2 + y^2+  z^2 = d \}
+
+            p
+                | Aim:
+                ol
+                    li
+                        | #[m \widetilde {\mathscr H}_d^*] is a principal homogeneous space  for #[m H(d) = \Cl(\QQ(\sqrt{-d}))].
+                    li
+                        | Describe the action explicitly.
+
+            definition#def-prin-homog-sp
+                title Principal homogeneous spaces
+                statement: p
+                    | Let #[m G] be a group, #[m X \ne \emptyset] a set.
+                    | #[m X] is a #[term principal homogeneous space] for #[m G]
+                    | if
+                    me G\acts X
+                    | in a transitive, free manner.
+                    | #[m X] is also called a #[m G]-#[term torsor].
+
+            remark: p
+                | Of #[m G] is non-abelian we have notions of a left-torsor and right-torsor.
+
+            example: statement: p: ul
+                li #[m G] is a #[m G]-torsor
+                li #[m G= V] a #[m n]-dimensional vector space then #[m \aff^n]  is a #[m G]-torsor
+                li #[m G = \mu_n] then #[m X(2) =  \{ x \in \CC: x^n = 2\}]
+
+            note
+                p
+                    me \specialorthogonal_3 (\ZZ)\acts \mathscr H_d
+                    me v = \begin{pmatrix} x \\ y \\  z \end{pmatrix}\in \mathscr H_d,\,\gamma \in \specialorthogonal_3 (\ZZ) \leadsto \gamma v \in \mathscr H_d
+                    | .
+
+            exercise
+                statement: p
+                    ol
+                        li
+                            me \# \specialorthogonal_3(\ZZ) =  24
+                        li
+                            | #[m \specialorthogonal_3(\ZZ)] has a  subgroup #[m \specialorthogonal_3^+(\ZZ)] of index 2 acting via even permutations.
+
+            definition
+                statement: p
+                    me \widetilde{\mathscr H}_d = \specialorthogonal_3(\ZZ) \backslash \mathscr H_d
+                    me \widetilde{\mathscr H}_d (q) = \specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q)
+                    me \widetilde S^2 = \specialorthogonal_3 (\ZZ) \backslash S^2
+                    me.
+                        \widetilde{\mathscr H}_d^*  =
+                        \begin{cases}
+                        \specialorthogonal_3^+(\ZZ) \backslash \mathscr H_d ,\amp d \equiv 1,2 \pmod 4 \\
+                        \specialorthogonal_3(\ZZ) \backslash \mathscr H_d ,\amp d \equiv 3 \pmod 4
+                        \end{cases}
+
+            p
+                | For all practical purposes we can basically assume that  #[m d \equiv 3 \pmod 4].
+
+            proposition
+                statement: p
+                    | #[m \widetilde{\mathscr H}_d^* ] is a principal homogeneous space for #[m H(d)].
+                    | Idea: Venkov 1922: Use quaternion algebras.
+
+        paragraphs
+            title Digression: Hamilton Quaternions
+
+            p
+                me B  = \{ u  + ia  + jb + kc : u,a,b,c \in \RR\}
+                me \bar x =  u - ia - j b - kc
+                me N(x) = x\bar x = u^2 + a^2 + b^2 + c^2
+                me \trace (x) = x + \bar x =  2u
+                me B^{(0)} = \{ x\in B : \trace (x) =  0\}
+            p
+                | Note
+                me N(x) =a^2 + b^2 + c^2 \text{ if } x \in  B^{(0)}
+                |.
+            p
+                me B^\times  = \text{units} ,\, B^1 = \{ x \in B : N(x)= 1\}
+                me PB^\times = B^\times/ Z(B^\times)
+
+            remark
+                p
+                    me B^\times \acts B^{(0)}
+                    | via conjugation.
+
+            exercise
+                statement: p
+                    me  1 \to Z(B^\times) \to B^\times \to PB^\times \simeq \specialorthogonal_3 (\QQ)  \to 1
+
+            definition
+                title Hurwitz quaternions
+                statement: p
+                    me B(\ZZ) = \ZZ[ i ,j, \frac{i+j+ k}{2} ]
+            p
+                | The Lipschitz quaternions are
+                me \ZZ[ i ,j, k]
+                |.
+            p
+                ol
+                    li
+                        | #[m B(\ZZ)] is a maximal order
+                    li#item-hurwitz-quat-euc-dom
+                        | #[m B(\ZZ)] is a Euclidean domain
+                    li
+                        | Lipschitz quaternions are not a Euclidean domain
+            exercise
+                statement: p
+                    ol
+                        li
+                            | Show these properties.
+                        li
+                            | Show #[m \Cl(\ZZ\lb i, j, k \rb)   =2].
+            p
+                | #[xref(ref="item-hurwitz-quat-euc-dom")/] implies #[m B(\ZZ)] is a PID
+
+                me (\QQ^3, a^2+ b^2+  c^2) \simeq (B^{(0)}, N)
+                | as metric spaces
+            p
+                | The image of
+                me B^\times(\ZZ) \to \specialorthogonal_3(\ZZ)
+                | is #[m \specialorthogonal_3^+(\ZZ)].
+
+        paragraphs
+            title The action of #[m H(d)]
+
+
+            p
+                | Start with #[m x = (a,b,c) \in \mathscr H_d].
+                | This gives rise to an embedding
+                me \iota_x \colon \QQ(\sqrt{-d}) \hookrightarrow B
+                me \sqrt{-d} \mapsto  x + ai + bj + ck
+                | note #[m x^2 = -d].
+
+            p
+                | Let #[m K= \QQ(\sqrt{-d})]
+                | #[m \iota_x] is integral ion the sense that if
+                me \ints_x = B(\ZZ) \cap \QQ \lb x \rb
+                | then
+                me \iota\inv (\ints_x) = \ints_K
+                | .
+
+            exercise: statement: p Prove this
+
+
+            p
+                | #[m I \in H(d) \leadsto y= y(x,I)]
+            p
+                | Consider #[m B(\ZZ) \iota_x(I) = B(\ZZ) q] for some #[m q\in B(\QQ)].
+                | Since #[m B(\ZZ)] is a PID.
+            p
+                | Then #[m y = q xq\inv\in \mathscr H_d]
+
+            note
+                p
+                    ol
+                        li: me y^2 = -d
+                        li
+                            | If we take #[m \lambda I] for #[m \lambda \in K^\times], #[m y(x, \lambda I) = y(x, I)]
+                            | so we get a well defined construction #[m H(d)].
+                        li
+                            | #[m q] is defined up to conjugation by #[m B(\ZZ)^\times].
+
+            p
+                | To sum up:
+            p
+                | For any #[m x \in \mathscr H_d] we have a well defined map
+                me \Cl(d) \to \widetilde{\mathscr H}_d^\times
+                me I \mapsto y(x,I)
+                | .
+
+            claim
+                statement: p
+                    | This map makes #[m \widetilde{\mathscr H}_d^\times] a principal homogeneous space over #[m \Cl(d)].
+            p
+                | Let #[m x,y \in \mathscr H_d].
+
+            p
+                | Construct an ideal #[m \Lambda_{x\mapsto y}] s.t. #[m y(x,\Lambda_{x\mapsto y}) = y].
+
+            definition
+                statement: p
+                    me \Lambda_{x\mapsto y} = \{ \lambda \in B(\ZZ) : x \lambda =  \lambda y \}
+                    | .
+
+            p
+                | #[m x, y \in \mathscr H_d]
+                | Witt's theorem implies there exists #[m q \in PB^\times(\QQ) = \specialorthogonal_3(\QQ)] s.t.
+                ul
+                    li: me y = q\inv x q
+                    li: me \Lambda_{x\mapsto y} = B(\ZZ) \cap \QQ [x] q
+
+            note: p
+                | #[m \Lambda_{x\mapsto y} ] is locally free and rank 1
+                me \implies [\Lambda_{x \mapsto y}] \in \Pic(\ints_x)  \simeq \Pic(\ints_K) \simeq \Cl(d)
+                | .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        aside: p Lecture 18 13/11/2018
 
         p
-            | Actually we will prove something a little strange.
+            |Summary #[m \widetilde {\mathscr H_d}^*] is a principal homogeneous space for #[m \Cl(d)], the class group of #[m \QQ(\sqrt{-d})].
 
-        definition#def-deviation
-            title Deviation
-            statement
-                p
-                    | #[m \infty], let #[m \rho \gt 0], #[m x\in S^2] and consider the cap #[m \Omega(x,\rho)].
-                    me \operatorname{dev}_d(\Omega) = \frac {1}{\operatorname{Vol}(\Omega)} \frac{| \operatorname{red}\inv_\infty(\Omega)|}{|\mathscr H_d|} - 1
-                    | (we want to show this is #[m o(1)]).
-                p
-                    | #[m q], let #[m \bar x \in \mathscr H_d(q)] then
-                    me \operatorname{dev}_d(\bar x) = \frac {| \mathscr H_d(q)| | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|} - 1
-                    |.
-                    // TODO check here
-
-        theorem
-            statement: p
-                | Fix #[m \delta, \eta \gt 0] then for every
-                me \rho \ge d^{-1/4 + \eta}
-                me \frac 1q  \ge d^{-1/4 + \eta}
-                | #[m (q,30) = 1], then as #[m d\to \infty]
-                me \mu_{S^2}(x : \operatorname{dev}_d(\Omega(x, \rho)) \ge \delta) \to 0
-                me \frac{| \{ \bar x \in \mathscr H_d(q) : \operatorname{dev}_d(\bar x) \ge \delta \} |}{ |\mathscr H_d(q)|} \to 0
-                | .
         p
             | How?
-            | Sketch of the argument:
+            | #[m x\in\mathscr H_d] defined
+            me \QQ(\sqrt{-d}) \xhookrightarrow i B(\QQ)
+            me \sqrt{-d} \mapsto x
+            | any #[m I \in \Cl(d) \leadsto B(\ZZ) i(I) = B(\ZZ) q] for some #[m q].
         p
-            | Fix #[m \delta ,\eta \gt 0],
-            me B_\delta = \{ \bar x \in \mathscr H_q(d) : \operatorname{dev}_d(\bar x) \gt \delta \}
-            | and assume that
-            me  |B_\delta| \ge \eta |\mathscr H_d(q)|
-            | .
-        p
-            | Inputs
-            ol
-                li
-                    | There is an action of #[m H(d) = ] class group of #[m \QQ(\sqrt{-d})] on #[m \mathscr H_d(q)/ \specialorthogonal_3(\ZZ)].
-                    | As #[m d \equiv \pm 1 \pmod 5] so #[m (5) = \ideal p \bar{\ideal p}] in #[m \QQ(\sqrt{-d})]:
-                    | This gives us a well defined dynamical system by considering the action
-                    me \mathscr H_d(q) \ni  x \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
-                    | and in reverse
-                    me x_{-2} \to x_{-1} \to x  \xrightarrow {\ideal p} x_1 \to x_2 \to x_2 \to \cdots
-                    | call this chain #[m \gamma_X] and for any #[m l \gt 0 \in \ZZ]
-                    me \gamma_X^{(l)} = [x_{-l}, x_{-l + 1}, \ldots, x_{-1} ,  x,x_1, \ldots, x_l]
-                li
-                    | Consider the average on
-                    me B_\delta = \gamma_X^{(l)} \cap B_\delta
-                    | .
-                    | On one hand the expected size of #[m \gamma_X^{(l)} \cap B_\delta] is
-                    me \frac{1}{|\mathscr H_d|} \sum_{x \in \mathscr H_d} | \gamma_X^{(l)} \cap B_\delta|
-                    | on the other hand the expectation is
-                    me \frac{(2l+ 1)}{|\mathscr H_d|} \operatorname{red}_q\inv (B_\delta)
-                    | .
-                    | i.e.
-                    me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l + 1} = \frac{| \operatorname{red}\inv_q(B_\delta)|}{|\mathscr H_d|}
-                li
-                    | Since we assume that the deviation set is large (#[m \operatorname{dev}_d(x)  \gt \delta]) this implies on average
-                    me \frac{| \gamma_X^{(l)} \cap B_\delta|}{2l+1}
-                    | is large,
-                    | gives a lower bound for this.
-                li
-                    | Then we count  #[m \gamma_X^{(l)}] in another way, action of #[m H(d)] on #[m \mathscr H_d] and on #[m \mathscr H_d(q)].
-                    | action of #[m \ideal p] induces a graph structure on #[m \mathscr H_d(q)].
-                    | Then #[m \gamma_X^{(l)}] is a path on #[m \mathscr H_d(q)] which is non-backtracking.
-                    | Count these:
-                    | Inputs: for #[m l \sim  \log(d)] the number of non-backtracking paths for which #[m |\gamma_X^{(l)} \cap B_\delta|/(2l+1)] is large is #[m \gg d^{1/2 + \epsilon}].
-                    | Count the total number of non-backtracking paths of length #[m 2l+1] for which
-                    me \left| \frac{|\gamma_X^{(l)} \cap B_\delta|}{2l+1 } - \frac{|B_\delta|}{|\mathscr H_d(q)|} \right| \gt \delta\eta/2
-                    | There can not be too many of these.
-                    | This will give a contradiction.
-                    | Will take some work and depend on many things.
-
-    aside: p Lecture 17 8/11/2018
-
-    paragraphs
-        title Class group actions
-
-        p
-            me \mathscr H_d  = \{ (x,y,z ) \in \ZZ^2:  x^2 + y^2+  z^2 = d \}
-
-        p
-            | Aim:
-            ol
-                li
-                    | #[m \widetilde {\mathscr H}_d^*] is a principal homogeneous space  for #[m H(d) = \Cl(\QQ(\sqrt{-d}))].
-                li
-                    | Describe the action explicitly.
-
-        definition#def-prin-homog-sp
-            title Principal homogeneous spaces
-            statement: p
-                | Let #[m G] be a group, #[m X \ne \emptyset] a set.
-                | #[m X] is a #[term principal homogeneous space] for #[m G]
-                | if
-                me G\acts X
-                | in a transitive, free manner.
-                | #[m X] is also called a #[m G]-#[term torsor].
-
-        remark: p
-            | Of #[m G] is non-abelian we have notions of a left-torsor and right-torsor.
-
-        example: statement: p: ul
-            li #[m G] is a #[m G]-torsor
-            li #[m G= V] a #[m n]-dimensional vector space then #[m \aff^n]  is a #[m G]-torsor
-            li #[m G = \mu_n] then #[m X(2) =  \{ x \in \CC: x^n = 2\}]
-
-        note
-            p
-                me \specialorthogonal_3 (\ZZ)\acts \mathscr H_d
-                me v = \begin{pmatrix} x \\ y \\  z \end{pmatrix}\in \mathscr H_d,\,\gamma \in \specialorthogonal_3 (\ZZ) \leadsto \gamma v \in \mathscr H_d
-                | .
-
-        exercise
-            statement: p
-                ol
-                    li
-                        me \# \specialorthogonal_3(\ZZ) =  24
-                    li
-                        | #[m \specialorthogonal_3(\ZZ)] has a  subgroup #[m \specialorthogonal_3^+(\ZZ)] of index 2 acting via even permutations.
-
-        definition
-            statement: p
-                me \widetilde{\mathscr H}_d = \specialorthogonal_3(\ZZ) \backslash \mathscr H_d
-                me \widetilde{\mathscr H}_d (q) = \specialorthogonal_3(\ZZ) \backslash \mathscr H_d(q)
-                me \widetilde S^2 = \specialorthogonal_3 (\ZZ) \backslash S^2
-                me.
-                    \widetilde{\mathscr H}_d^*  =
-                    \begin{cases}
-                    \specialorthogonal_3^+(\ZZ) \backslash \mathscr H_d ,\amp d \equiv 1,2 \pmod 4 \\
-                    \specialorthogonal_3(\ZZ) \backslash \mathscr H_d ,\amp d \equiv 3 \pmod 4
-                    \end{cases}
-
-        p
-            | For all practical purposes we can basically assume that  #[m d \equiv 3 \pmod 4].
-
+            me B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ, \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
+            me y=  q\inv x q
+            me I x=  y
+            me [ \Lambda_{x\mapsto y}]
+            |inverse of this construction
+            me \specialorthogonal(3, \QQ) \simeq PB^\times (\QQ)
         proposition
             statement: p
-                | #[m \widetilde{\mathscr H}_d^* ] is a principal homogeneous space for #[m H(d)].
-                | Idea: Venkov 1922: Use quaternion algebras.
+                | #[m \widetilde { \mathscr H_d}^*] is a principal homogeneous space for #[m \Cl(d)].
+                me \widetilde { \mathscr H_d} =  \widetilde { \mathscr H_d}^*
+                | if #[m d \equiv 3 \pmod 4].
 
-    paragraphs
-        title Digression: Hamilton Quaternions
-
-        p
-            me B  = \{ u  + ia  + jb + kc : u,a,b,c \in \RR\}
-            me \bar x =  u - ia - j b - kc
-            me N(x) = x\bar x = u^2 + a^2 + b^2 + c^2
-            me \trace (x) = x + \bar x =  2u
-            me B^{(0)} = \{ x\in B : \trace (x) =  0\}
-        p
-            | Note
-            me N(x) =a^2 + b^2 + c^2 \text{ if } x \in  B^{(0)}
-            |.
-        p
-            me B^\times  = \text{units} ,\, B^1 = \{ x \in B : N(x)= 1\}
-            me PB^\times = B^\times/ Z(B^\times)
-
-        remark
-            p
-                me B^\times \acts B^{(0)}
-                | via conjugation.
-
-        exercise
-            statement: p
-                me  1 \to Z(B^\times) \to B^\times \to PB^\times \simeq \specialorthogonal_3 (\QQ)  \to 1
-
-        definition
-            title Hurwitz quaternions
-            statement: p
-                me B(\ZZ) = \ZZ[ i ,j, \frac{i+j+ k}{2} ]
-        p
-            | The Lipschitz quaternions are
-            me \ZZ[ i ,j, k]
-            |.
-        p
-            ol
-                li
-                    | #[m B(\ZZ)] is a maximal order
-                li#item-hurwitz-quat-euc-dom
-                    | #[m B(\ZZ)] is a Euclidean domain
-                li
-                    | Lipschitz quaternions are not a Euclidean domain
-        exercise
-            statement: p
-                ol
-                    li
-                        | Show these properties.
-                    li
-                        | Show #[m \Cl(\ZZ\lb i, j, k \rb)   =2].
-        p
-            | #[xref(ref="item-hurwitz-quat-euc-dom")/] implies #[m B(\ZZ)] is a PID
-
-            me (\QQ^3, a^2+ b^2+  c^2) \simeq (B^{(0)}, N)
-            | as metric spaces
-        p
-            | The image of
-            me B^\times(\ZZ) \to \specialorthogonal_3(\ZZ)
-            | is #[m \specialorthogonal_3^+(\ZZ)].
-
-    paragraphs
-        title The action of #[m H(d)]
-
-
-        p
-            | Start with #[m x = (a,b,c) \in \mathscr H_d].
-            | This gives rise to an embedding
-            me \iota_x \colon \QQ(\sqrt{-d}) \hookrightarrow B
-            me \sqrt{-d} \mapsto  x + ai + bj + ck
-            | note #[m x^2 = -d].
-
-        p
-            | Let #[m K= \QQ(\sqrt{-d})]
-            | #[m \iota_x] is integral ion the sense that if
-            me \ints_x = B(\ZZ) \cap \QQ \lb x \rb
-            | then
-            me \iota\inv (\ints_x) = \ints_K
-            | .
-
-        exercise: statement: p Prove this
-
-
-        p
-            | #[m I \in H(d) \leadsto y= y(x,I)]
-        p
-            | Consider #[m B(\ZZ) \iota_x(I) = B(\ZZ) q] for some #[m q\in B(\QQ)].
-            | Since #[m B(\ZZ)] is a PID.
-        p
-            | Then #[m y = q xq\inv\in \mathscr H_d]
-
-        note
-            p
-                ol
-                    li: me y^2 = -d
-                    li
-                        | If we take #[m \lambda I] for #[m \lambda \in K^\times], #[m y(x, \lambda I) = y(x, I)]
-                        | so we get a well defined construction #[m H(d)].
-                    li
-                        | #[m q] is defined up to conjugation by #[m B(\ZZ)^\times].
-
-        p
-            | To sum up:
-        p
-            | For any #[m x \in \mathscr H_d] we have a well defined map
-            me \Cl(d) \to \widetilde{\mathscr H}_d^\times
-            me I \mapsto y(x,I)
-            | .
-
-        claim
-            statement: p
-                | This map makes #[m \widetilde{\mathscr H}_d^\times] a principal homogeneous space over #[m \Cl(d)].
-        p
-            | Let #[m x,y \in \mathscr H_d].
-
-        p
-            | Construct an ideal #[m \Lambda_{x\mapsto y}] s.t. #[m y(x,\Lambda_{x\mapsto y}) = y].
-
-        definition
-            statement: p
-                me \Lambda_{x\mapsto y} = \{ \lambda \in B(\ZZ) : x \lambda =  \lambda y \}
-                | .
-
-        p
-            | #[m x, y \in \mathscr H_d]
-            | Witt's theorem implies there exists #[m q \in PB^\times(\QQ) = \specialorthogonal_3(\QQ)] s.t.
-            ul
-                li: me y = q\inv x q
-                li: me \Lambda_{x\mapsto y} = B(\ZZ) \cap \QQ [x] q
-
-        note: p
-            | #[m \Lambda_{x\mapsto y} ] is locally free and rank 1
-            me \implies [\Lambda_{x \mapsto y}] \in \Pic(\ints_x)  \simeq \Pic(\ints_K) \simeq \Cl(d)
-            | .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    aside: p Lecture 18 13/11/2018
-
-    p
-        |Summary #[m \widetilde {\mathscr H_d}^*] is a principal homogeneous space for #[m \Cl(d)], the class group of #[m \QQ(\sqrt{-d})].
-
-    p
-        | How?
-        | #[m x\in\mathscr H_d] defined
-        me \QQ(\sqrt{-d}) \xhookrightarrow i B(\QQ)
-        me \sqrt{-d} \mapsto x
-        | any #[m I \in \Cl(d) \leadsto B(\ZZ) i(I) = B(\ZZ) q] for some #[m q].
-    p
-        me B(\ZZ) = \{ x + ai +bj + ck : a,b,c,d \in \ZZ, \text{ or all }\in \frac 12\ZZ\smallsetminus \ZZ\}
-        me y=  q\inv x q
-        me I x=  y
-        me [ \Lambda_{x\mapsto y}]
-        |inverse of this construction
-        me \specialorthogonal(3, \QQ) \simeq PB^\times (\QQ)
-    proposition
-        statement: p
-            | #[m \widetilde { \mathscr H_d}^*] is a principal homogeneous space for #[m \Cl(d)].
-            me \widetilde { \mathscr H_d} =  \widetilde { \mathscr H_d}^*
-            | if #[m d \equiv 3 \pmod 4].
-
-            | The stabiliser of any point in #[m \widetilde { \mathscr H_d}] is the order 2 subgroup generated by #[m \ideal p | (2)].
-            me \implies |\mathscr H_d | = 24 |h(d)| \text{\,if\,} d \equiv 3 \pmod4
-            me          |\mathscr H_d | = 12 |h(d)| \text{\,if\,} d \equiv 1,2 \pmod4
-        proof: p
-            | Requires checking everything works as intended, it is local.
-
-    paragraphs
-        title Explicit realization
-
-        p
-            me P \in \Cl(d)
-            me \leadsto M_P \in \specialorthogonal(3)
-
-            me x\in \mathscr H_d \implies Px = M_P x
-            me x = \begin{pmatrix} a\\b\\c \end{pmatrix}
-        p
-            |Let
-            me P \bar P = (5)
-            | because of the assumption on #[m d].
-
-        p
-            | #[m P] action, let #[m x\in\mathscr H_d].
-            me N(P) = 5\leadsto q \in B(\ZZ)
-            me N(q) = 5 \implies 5 \in \{1\pm2i, 1\pm2j,1\pm2k\}B^\times(\ZZ)
-            | two of these will give you the action of #[m P, \bar P].
-
-    example
-        statement: p
-            | #[m q] will act by #[m q\inv x q] acting on #[m B^{(0)}], enough to check the action on #[m i,j,k].
-            | Say
-            me q  = 1+2i,\bar q = (1-2i)/5
-            me \bar q j q = \frac{(1-2i)}{5} j (1+2i)
-            me = \frac{j- 2k}{5} 1+2i
-            me j-2k - 2k - 2j????????
-    paragraphs
-        title Basic construction
-        p
-            | Let #[m \mathscr A_5 = \{M_1^\pm, M_2^\pm, M_3^\pm\}] starting with a solution #[m x\in \mathscr H_d] one gets two matrices #[m \omega_1, \omega_{-1} \in\mathscr A_5]
-            me x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarrow{\omega_{-1}} x \xrightarrow{\omega_{1}}x_1 \xrightarrow{\omega_{2}}x_2 \xrightarrow{\omega_{3}} x_3
-            | where #[m w_1] comes from #[m P] and #[m w_{-1}] from #[m \bar P].
-
-        p
-            | This construction gives a well-defined (up to flip) path starting with a solution #[m x \in \mathscr H_d].
-
-        remark
-            p
-                | These chains are periodic.
-    paragraphs
-        title Back to proof
-        p
-            | Idea: if #[m x\in\mathscr H_d] then #[m x] and these paths are well defined mod #[m p].
-
-        p
-            |We are aiming for
-        proposition
-            statement: p
-                | Let #[m \Sigma(d,l,q)] denote
-                me \#\{(x,x') \in \mathscr H_d\times \mathscr H_d : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \text{ in } \mathscr H_d\}
-                | where
-                me \gamma_x^{(l)}\in \mathscr H_d(q)
-                | is the chain cut at #[m \lb -l,l\rb] and then reduced mod #[m q].
-                | Then
-                me \sigma (l,d,q)  \ll_\epsilon |\mathscr H_d| + d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
+                | The stabiliser of any point in #[m \widetilde { \mathscr H_d}] is the order 2 subgroup generated by #[m \ideal p | (2)].
+                me \implies |\mathscr H_d | = 24 |h(d)| \text{\,if\,} d \equiv 3 \pmod4
+                me          |\mathscr H_d | = 12 |h(d)| \text{\,if\,} d \equiv 1,2 \pmod4
             proof: p
-                | Next time, Linnik's lemma #[m \#\{xy = d\} \le d^\epsilon].
-                | One more input.
+                | Requires checking everything works as intended, it is local.
 
-    aside: p Lecture 19 27/11/2018
-    p
-        | In #[m \QQ(\sqrt d)] we have #[m (5) = \ideal p \bar{ \ideal p}]
-        me x \in \mathscr H_d = \{(x_1,x_2,x_3) : x_1^2 + x_2^2 + x_3^2 = d\}
-        | there are 6 matrices #[m \mathcal A = \{A^\pm, B^\pm, C^\pm\}], #[m A,B,C \in \GL_2(\ZZ)],
-        | reduction of these #[m \pmod q \acts \mathscr H_d(q)].
-    p
-        | This induces a graph structure on #[m \mathscr H_d(q)], (multiple edges between vertices are allowed).
-        me \mathscr H_d \to \mathscr H_d(q)
-        me [\ldots, x_{-1}, x_0, x_1, \ldots] \to \text{path in graph}
-        | for #[m l \in \NN],
-        me \gamma_x^{(l)} \subseteq \mathscr H_d(q)
-        | .
-    paragraphs
-        title Linnik's basic lemma
+        paragraphs
+            title Explicit realization
 
-        p
-            | Generalisation of the following
-            me r(d) = \sum_{a| d} 1 \le d^\epsilon\,\forall \epsilon
-            | .
+            p
+                me P \in \Cl(d)
+                me \leadsto M_P \in \specialorthogonal(3)
 
-        proposition
-            title Linnik
-            statement: p
-                | Fix #[m d], let #[m c\in \ZZ], s.t. #[m |c| \lt d].
-                | Then #[m \forall \epsilon \gt 0],
-                me \#\{ (x_1,x_2) \in\mathscr H_d^2 : x_1\cdot x_2 = e\} \ll_\epsilon d^\epsilon
-                | .
-            proof
-                p
-                    | Short detour on representations of quadratic forms by other quadratic forms.
+                me x\in \mathscr H_d \implies Px = M_P x
+                me x = \begin{pmatrix} a\\b\\c \end{pmatrix}
+            p
+                |Let
+                me P \bar P = (5)
+                | because of the assumption on #[m d].
 
-        definition
-            statement: p
-                | Let #[m (Q, \ZZ^m)], #[m (R, \ZZ^n)], #[m m\ge n] be nondegenerate quadratic forms.
-                | Then #[m Q] is said to represent #[m R] if there exists a  #[m \ZZ]-linear map
-                me \iota\colon \ZZ^n \to \ZZ^m
-                | s.t.
-                me Q(\iota(x)) = R(x)\,\forall x\in \ZZ^n
-                | .
+            p
+                | #[m P] action, let #[m x\in\mathscr H_d].
+                me N(P) = 5\leadsto q \in B(\ZZ)
+                me N(q) = 5 \implies 5 \in \{1\pm2i, 1\pm2j,1\pm2k\}B^\times(\ZZ)
+                | two of these will give you the action of #[m P, \bar P].
 
         example
             statement: p
-                me Q(x,y) = x \cdot y
-                me R(x) = d x^2
-                | then let
-                me \iota\colon \ZZ \to \ZZ^2
-                me x \mapsto (ax,bx) \text{ where } ab =d
-                | then
-                me Q(\iota(x)) = R(x)
-                | .
+                | #[m q] will act by #[m q\inv x q] acting on #[m B^{(0)}], enough to check the action on #[m i,j,k].
+                | Say
+                me q  = 1+2i,\bar q = (1-2i)/5
+                me \bar q j q = \frac{(1-2i)}{5} j (1+2i)
+                me = \frac{j- 2k}{5} 1+2i
+                me j-2k - 2k - 2j????????
+        paragraphs
+            title Basic construction
+            p
+                | Let #[m \mathscr A_5 = \{M_1^\pm, M_2^\pm, M_3^\pm\}] starting with a solution #[m x\in \mathscr H_d] one gets two matrices #[m \omega_1, \omega_{-1} \in\mathscr A_5]
+                me x_{-3} \xleftarrow{\omega_{-3}} x_{-2} \xleftarrow{\omega_{-2}} x_{-1} \xleftarrow{\omega_{-1}} x \xrightarrow{\omega_{1}}x_1 \xrightarrow{\omega_{2}}x_2 \xrightarrow{\omega_{3}} x_3
+                | where #[m w_1] comes from #[m P] and #[m w_{-1}] from #[m \bar P].
 
-        p
-            | Let #[m x_1, x_2 \in \mathscr H_d] s.t. #[m x_1\cdot x_2 =e].
-            me x_1=(a_1,b_1,c_1)\, x_2=(a_2,b_2,c_2)
-            |consider
-            me \iota \colon \ZZ^2 \to \ZZ^3
-            me (u,v) \mapsto (u a_1 + v a_2, u b_1 + u b_2, u c_1 + v c_2) = u x_1 + v x_2
-            | let #[m Q(a,b,c) = a^2  + b^2 + c^2].
-            me Q(\iota(u,v)) = (u a_1 + v a_1)^2 + (u b_1 + v b_2)^2 + (u c_1 + v c_2)^2
-            me = du^2 + 2euv + dv^2
-            me = R_{d,e} (u,v)
-            | .
-        p
-            | So the number of representations of #[m R] by #[m Q/ \specialorthogonal_3(\ZZ)] bounds number of solutions #[m x_1 x_2 = e].
+            p
+                | This construction gives a well-defined (up to flip) path starting with a solution #[m x \in \mathscr H_d].
 
-        theorem
-            title Gordon Pell 1949
-            statement: p
-                | Let
-                me r(a,b,c) = \{ \text{reps. of } ax^2 + bxy + cy^2 \text{ by } x^2 + y^2 + z^2\}
-                | then
-                me r(a,b,c) = 24 \cdot 2^\nu \prod_{p| 2(b^2 - 4ac)} r_p(a,b,c)
-                |  where
-                me \nu = \#\text{primes dividing } b^2 - 4ac
-                me r_p(a,b,c) = O(1) \text{ unless } p^2 | \gcd(a,b,c)
-                | for us #[m r(d,2e,d)], #[m b^2 - 4ac = 4(e^2 - d^2)] and
-                me r(d,2e,d) \ll_\epsilon d^\epsilon
-                | .
-
-        exercise
-            statement: p
-                | Show this (recall #[m d] is a fundamental discriminant).
-
-        lemma
-            title Shadowing lemma
-            statement: p
-                | Let
-                me [x_{-l},\ldots, x_0, x_1 ,\ldots, x_l], [x'_{-l},\ldots, x'_0, x'_1 ,\ldots, x'_l]
-                | be two marked paths in #[m \mathscr H_d].
-
-                | Then these paths have the same reduction mod #[m q] iff #[m x_0 = \pm x_0' \pmod{q5^l}].
-
-        theorem
-            statement: p
-                me \Sigma (d,l,q) = \#\{(x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \in \mathscr H_d(q)\}
-                me \implies \Sigma (d,l,q) \ll_\epsilon \# \mathscr H_d  + d^\epsilon ( 1+ \frac{d}{q^2 5^{2l}}) \,\forall \epsilon \gt 0
-                |.
-            proof
+            remark
                 p
-                    me \gamma_x^{(l)} = \gamma_{x'}^{(l)} \implies x = \pm x' \pmod{q5^l} \text{(by the Shadowing lemma)}
-                    me \implies (x+x') ( x+ x') \equiv 0 \pmod{q^2 5^{2l}}
-                    | or
-                    me \implies (x-x') ( x- x') \equiv 0 \pmod{q^2 5^{2l}}
+                    | These chains are periodic.
+        paragraphs
+            title Back to proof
+            p
+                | Idea: if #[m x\in\mathscr H_d] then #[m x] and these paths are well defined mod #[m p].
+
+            p
+                |We are aiming for
+            proposition
+                statement: p
+                    | Let #[m \Sigma(d,l,q)] denote
+                    me \#\{(x,x') \in \mathscr H_d\times \mathscr H_d : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \text{ in } \mathscr H_d\}
+                    | where
+                    me \gamma_x^{(l)}\in \mathscr H_d(q)
+                    | is the chain cut at #[m \lb -l,l\rb] and then reduced mod #[m q].
+                    | Then
+                    me \sigma (l,d,q)  \ll_\epsilon |\mathscr H_d| + d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
+                proof: p
+                    | Next time, Linnik's lemma #[m \#\{xy = d\} \le d^\epsilon].
+                    | One more input.
+
+        aside: p Lecture 19 27/11/2018
+        p
+            | In #[m \QQ(\sqrt d)] we have #[m (5) = \ideal p \bar{ \ideal p}]
+            me x \in \mathscr H_d = \{(x_1,x_2,x_3) : x_1^2 + x_2^2 + x_3^2 = d\}
+            | there are 6 matrices #[m \mathcal A = \{A^\pm, B^\pm, C^\pm\}], #[m A,B,C \in \GL_2(\ZZ)],
+            | reduction of these #[m \pmod q \acts \mathscr H_d(q)].
+        p
+            | This induces a graph structure on #[m \mathscr H_d(q)], (multiple edges between vertices are allowed).
+            me \mathscr H_d \to \mathscr H_d(q)
+            me [\ldots, x_{-1}, x_0, x_1, \ldots] \to \text{path in graph}
+            | for #[m l \in \NN],
+            me \gamma_x^{(l)} \subseteq \mathscr H_d(q)
+            | .
+        paragraphs
+            title Linnik's basic lemma
+
+            p
+                | Generalisation of the following
+                me r(d) = \sum_{a| d} 1 \le d^\epsilon\,\forall \epsilon
+                | .
+
+            proposition
+                title Linnik
+                statement: p
+                    | Fix #[m d], let #[m c\in \ZZ], s.t. #[m |c| \lt d].
+                    | Then #[m \forall \epsilon \gt 0],
+                    me \#\{ (x_1,x_2) \in\mathscr H_d^2 : x_1\cdot x_2 = e\} \ll_\epsilon d^\epsilon
                     | .
-                p
-                    me \implies \Sigma(d,l,q) \ll 2\#\{(x,x') : x\ne x',\, x\cdot x' = d \pmod{q^2 5^{2l}}\}
-                    | recall
-                    me \sum_{|e| \lt d,\,e = d \pmod{q^2 5^{2l}} } \{(x,x') : x\cdot x' = e\} \ll_\epsilon d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
-                    |.
+                proof
+                    p
+                        | Short detour on representations of quadratic forms by other quadratic forms.
 
-    paragraphs
-        title Proof of the equidistribution statement
+            definition
+                statement: p
+                    | Let #[m (Q, \ZZ^m)], #[m (R, \ZZ^n)], #[m m\ge n] be nondegenerate quadratic forms.
+                    | Then #[m Q] is said to represent #[m R] if there exists a  #[m \ZZ]-linear map
+                    me \iota\colon \ZZ^n \to \ZZ^m
+                    | s.t.
+                    me Q(\iota(x)) = R(x)\,\forall x\in \ZZ^n
+                    | .
+
+            example
+                statement: p
+                    me Q(x,y) = x \cdot y
+                    me R(x) = d x^2
+                    | then let
+                    me \iota\colon \ZZ \to \ZZ^2
+                    me x \mapsto (ax,bx) \text{ where } ab =d
+                    | then
+                    me Q(\iota(x)) = R(x)
+                    | .
+
+            p
+                | Let #[m x_1, x_2 \in \mathscr H_d] s.t. #[m x_1\cdot x_2 =e].
+                me x_1=(a_1,b_1,c_1)\, x_2=(a_2,b_2,c_2)
+                |consider
+                me \iota \colon \ZZ^2 \to \ZZ^3
+                me (u,v) \mapsto (u a_1 + v a_2, u b_1 + u b_2, u c_1 + v c_2) = u x_1 + v x_2
+                | let #[m Q(a,b,c) = a^2  + b^2 + c^2].
+                me Q(\iota(u,v)) = (u a_1 + v a_1)^2 + (u b_1 + v b_2)^2 + (u c_1 + v c_2)^2
+                me = du^2 + 2euv + dv^2
+                me = R_{d,e} (u,v)
+                | .
+            p
+                | So the number of representations of #[m R] by #[m Q/ \specialorthogonal_3(\ZZ)] bounds number of solutions #[m x_1 x_2 = e].
+
+            theorem
+                title Gordon Pell 1949
+                statement: p
+                    | Let
+                    me r(a,b,c) = \{ \text{reps. of } ax^2 + bxy + cy^2 \text{ by } x^2 + y^2 + z^2\}
+                    | then
+                    me r(a,b,c) = 24 \cdot 2^\nu \prod_{p| 2(b^2 - 4ac)} r_p(a,b,c)
+                    |  where
+                    me \nu = \#\text{primes dividing } b^2 - 4ac
+                    me r_p(a,b,c) = O(1) \text{ unless } p^2 | \gcd(a,b,c)
+                    | for us #[m r(d,2e,d)], #[m b^2 - 4ac = 4(e^2 - d^2)] and
+                    me r(d,2e,d) \ll_\epsilon d^\epsilon
+                    | .
+
+            exercise
+                statement: p
+                    | Show this (recall #[m d] is a fundamental discriminant).
+
+            lemma
+                title Shadowing lemma
+                statement: p
+                    | Let
+                    me [x_{-l},\ldots, x_0, x_1 ,\ldots, x_l], [x'_{-l},\ldots, x'_0, x'_1 ,\ldots, x'_l]
+                    | be two marked paths in #[m \mathscr H_d].
+
+                    | Then these paths have the same reduction mod #[m q] iff #[m x_0 = \pm x_0' \pmod{q5^l}].
+
+            theorem
+                statement: p
+                    me \Sigma (d,l,q) = \#\{(x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} = \gamma_{x'}^{(l)} \in \mathscr H_d(q)\}
+                    me \implies \Sigma (d,l,q) \ll_\epsilon \# \mathscr H_d  + d^\epsilon ( 1+ \frac{d}{q^2 5^{2l}}) \,\forall \epsilon \gt 0
+                    |.
+                proof
+                    p
+                        me \gamma_x^{(l)} = \gamma_{x'}^{(l)} \implies x = \pm x' \pmod{q5^l} \text{(by the Shadowing lemma)}
+                        me \implies (x+x') ( x+ x') \equiv 0 \pmod{q^2 5^{2l}}
+                        | or
+                        me \implies (x-x') ( x- x') \equiv 0 \pmod{q^2 5^{2l}}
+                        | .
+                    p
+                        me \implies \Sigma(d,l,q) \ll 2\#\{(x,x') : x\ne x',\, x\cdot x' = d \pmod{q^2 5^{2l}}\}
+                        | recall
+                        me \sum_{|e| \lt d,\,e = d \pmod{q^2 5^{2l}} } \{(x,x') : x\cdot x' = e\} \ll_\epsilon d^\epsilon (1+ \frac{d}{q^2 5^{2l}})
+                        |.
+
+        paragraphs
+            title Proof of the equidistribution statement
+
+            p
+                | Recall:
+                me \operatorname{dev}_d(\bar x) = \frac { | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|/| \mathscr H_d(q)|} - 1
+                me \operatorname{dev}_d(\bar x) \to 0\text{ as } d \to \infty,\,d \equiv \pm 1 \pmod 5\,\, d\text{ fund. disc.}
+                | .
+
+            proof
+                title Sketch of proof
+                p
+                    | Assume #[m B_\delta = \{ \bar x : \operatorname{dev}_d)\bar x) \\gt \delta\}].
+                    | Lower bound by counting the number of paths that lie in #[m \operatorname{red}\inv_q(B_\delta)].
+                    | Upper bound by the expansion property of #[m \mathscr H_d(q)].
+
+
+        aside: p Lecture 20 29/11/2018
+
+        theorem
+            title Linnik
+            statement: p
+                | Fix #[m \nu, \delta\gt 0] and let #[m q \le d^{\frac 14 - \nu}], #[m (q,30) = 1].
+                | Then the fraction of #[m \bar x \in \mathscr H_d(q)] for which
+                me |\operatorname{dev}_d(\bar x)| \gt \delta
+                | tends to 0 as #[m d \to \infty] through #[m d \equiv \mp 1 \pmod 5].
 
         p
-            | Recall:
-            me \operatorname{dev}_d(\bar x) = \frac { | \operatorname{red}\inv_q(\bar x)|}{|\mathscr H_d|/| \mathscr H_d(q)|} - 1
-            me \operatorname{dev}_d(\bar x) \to 0\text{ as } d \to \infty,\,d \equiv \pm 1 \pmod 5\,\, d\text{ fund. disc.}
-            | .
+            | Recall #[xref(ref="def-deviation")/].
+
+        p
+            | Last time
+        proposition
+            statement: p
+                | Let
+                me \Sigma(d,l,q) = \# \{ (x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} =\gamma_{x'}^{(l)}\}
+                | then
+                me \Sigma(d,l,q) \ll_\epsilon| \mathscr H_d | +  d^\epsilon \left(1+  \frac{d}{q^2 5^{2l}}\right)
+                | .
 
         proof
-            title Sketch of proof
+            title Proof of theorem
             p
-                | Assume #[m B_\delta = \{ \bar x : \operatorname{dev}_d)\bar x) \\gt \delta\}].
-                | Lower bound by counting the number of paths that lie in #[m \operatorname{red}\inv_q(B_\delta)].
-                | Upper bound by the expansion property of #[m \mathscr H_d(q)].
+                | Let
+                me B_\delta = \{ \bar x\in \mathscr H_d (q) : \operatorname{dev}_d(\bar x)  \gt \delta\}
+                | and assume that
+                me B_\delta  \ge \eta | \mathscr H_d(q)|
+                | for some #[m \eta  \gt 0].
+            p
+                | Observe that
+                me \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d }  |\gamma_x^{(l)} \cap B_\delta | =  (2l+ 1)  \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
+                | or
+                men \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d } \frac{ |\gamma_x^{(l)} \cap B_\delta | }{  (2l+ 1)} =   \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
+            p
+                | Choose an  #[m l] s.t.
+                me \frac 15 |\mathscr H_d| \le q^2 5^{2l} \le 5 |\mathscr H_d|
+                | note that we can indeed choose such an #[m l].
 
+            p
+                | By definition every #[m \bar x \in B_\delta] satisfies
+                me \operatorname{dev}_d(\bar x) \gt \delta
+                | implies
+                me \frac{ |\operatorname{red}_q\inv(\bar x)|}{ |\mathscr H_d|/|\mathscr H_d(q)|} \gt 1 + \delta
+                | .
 
-    aside: p Lecture 20 29/11/2018
+            p
+                me | \operatorname{red}_q \inv(B_\delta)|  \ge \frac{ |B_\delta | |\mathscr H_d| }{ |\mathscr H_d(q)|} (1+\delta)
+                | so
+                me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|}(1+\delta)
+                | by the assumption that
+                me B_\delta  \ge \eta | \mathscr H_d(q)|
+                | we have this is
+                me \ge \frac{|B_\delta|}{|\mathscr H_d(q)|}+\eta\delta
+                | .
+            p
+                | Let
+                me \Phi = \left\{ x\in \mathscr H_d : \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right\}
+            p
+                | Note that
+                me \mathscr H_d  =  \Phi \sqcup \Phi^c
+                me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}  =  \frac{1}{|\mathscr H_d|} \left( \sum_{x\in \Phi } \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{\le 1} + \sum_{x\in \Phi^c} \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{ \le  \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2}  }  \right)
+                me \le\frac{1}{|\mathscr H_d|} \left( |\Phi | + \overbrace{| \Phi^c|}^{=|\mathscr H_d| - |\Phi|} \left( \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right)\right)
+                men#eqn-phi-bd-linnik-pf \implies |\Phi| \ge  \frac{\eta \delta }{2} | \mathscr H_d|
+                |.
+            p
+                | Now we count the number of marked non-backtracking paths on #[m \mathscr H_d(q)]  of length #[m 2l+1] (write #[m MNBP(\mathscr H_d(q))] for this quantity), which in addition satisfy
+                me \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q) | } +   \frac{\delta \eta}{2}
+                | .
+            p
+                | By #[xref(ref="eqn-phi-bd-linnik-pf")/] we have #[m \eta \delta |\mathscr H_d|/2] of these paths #[q upstairs].
+            p
+                | Recall Siegel implies
+                me d^{\frac 12 - \epsilon} \lt | \mathscr H_d| \lt d^{\frac 12 + \epsilon}
+                | so upstairs we have #[m \gg_\epsilon \frac{\eta \delta }{2} d^{\frac 12 - \epsilon }] paths.
 
-    theorem
-        title Linnik
-        statement: p
-            | Fix #[m \nu, \delta\gt 0] and let #[m q \le d^{\frac 14 - \nu}], #[m (q,30) = 1].
-            | Then the fraction of #[m \bar x \in \mathscr H_d(q)] for which
-            me |\operatorname{dev}_d(\bar x)| \gt \delta
-            | tends to 0 as #[m d \to \infty] through #[m d \equiv \mp 1 \pmod 5].
+            p
+                | Claim 1:
+                | The previous proposition implies not mant of these paths give the same path mod #[m q]
+                me MNBP(\mathscr H_d(q)) \gg_{\epsilon,\delta \eta} d^{\frac 12 - \epsilon}
+                | .
+            p
+                | On the other hand the total number of marked non-backtracking paths on
+                me \mathscr H_d(q)
+                | is
+                me | \mathscr H_d(q)| 6 \cdot 5^{2l -1}
+                | also observe that #[m |\mathscr H_d(q)| \ll q^2]
+                | so  the total number #[m \sim q^2 5^{2l} \ll d^{1/2  + \epsilon}]
+                me \frac 15 |\mathscr H_d| \lt q^2 5^{2l} \lt 5 |\mathscr H_d|
 
-    p
-        | Recall #[xref(ref="def-deviation")/].
-
-    p
-        | Last time
-    proposition
-        statement: p
-            | Let
-            me \Sigma(d,l,q) = \# \{ (x,x') \in \mathscr H_d^2 : \gamma_x^{(l)} =\gamma_{x'}^{(l)}\}
-            | then
-            me \Sigma(d,l,q) \ll_\epsilon| \mathscr H_d | +  d^\epsilon \left(1+  \frac{d}{q^2 5^{2l}}\right)
-            | .
-
-    proof
-        title Proof of theorem
-        p
-            | Let
-            me B_\delta = \{ \bar x\in \mathscr H_d (q) : \operatorname{dev}_d(\bar x)  \gt \delta\}
-            | and assume that
-            me B_\delta  \ge \eta | \mathscr H_d(q)|
-            | for some #[m \eta  \gt 0].
-        p
-            | Observe that
-            me \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d }  |\gamma_x^{(l)} \cap B_\delta | =  (2l+ 1)  \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
-            | or
-            men \frac{1}{|\mathscr H_d(q) |  } \sum_{x\in \mathscr H_d } \frac{ |\gamma_x^{(l)} \cap B_\delta | }{  (2l+ 1)} =   \frac { | \operatorname{red}_q\inv (B_\delta)|}{|\mathscr H_d|}
-        p
-            | Choose an  #[m l] s.t.
-            me \frac 15 |\mathscr H_d| \le q^2 5^{2l} \le 5 |\mathscr H_d|
-            | note that we can indeed choose such an #[m l].
-
-        p
-            | By definition every #[m \bar x \in B_\delta] satisfies
-            me \operatorname{dev}_d(\bar x) \gt \delta
-            | implies
-            me \frac{ |\operatorname{red}_q\inv(\bar x)|}{ |\mathscr H_d|/|\mathscr H_d(q)|} \gt 1 + \delta
-            | .
-
-        p
-            me | \operatorname{red}_q \inv(B_\delta)|  \ge \frac{ |B_\delta | |\mathscr H_d| }{ |\mathscr H_d(q)|} (1+\delta)
-            | so
-            me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|}(1+\delta)
-            | by the assumption that
-            me B_\delta  \ge \eta | \mathscr H_d(q)|
-            | we have this is
-            me \ge \frac{|B_\delta|}{|\mathscr H_d(q)|}+\eta\delta
-            | .
-        p
-            | Let
-            me \Phi = \left\{ x\in \mathscr H_d : \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right\}
-        p
-            | Note that
-            me \mathscr H_d  =  \Phi \sqcup \Phi^c
-            me \frac{1}{|\mathscr H_d|} \sum_{x\in \mathscr H_d} \frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}  =  \frac{1}{|\mathscr H_d|} \left( \sum_{x\in \Phi } \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{\le 1} + \sum_{x\in \Phi^c} \underbrace{\frac{ | \gamma_x^{(l)} \cap B_\delta | }{ (2l + 1)}}_{ \le  \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2}  }  \right)
-            me \le\frac{1}{|\mathscr H_d|} \left( |\Phi | + \overbrace{| \Phi^c|}^{=|\mathscr H_d| - |\Phi|} \left( \frac{|B_\delta|}{\mathscr H_d(q)|} + \frac{\eta \delta }{2} \right)\right)
-            men#eqn-phi-bd-linnik-pf \implies |\Phi| \ge  \frac{\eta \delta }{2} | \mathscr H_d|
-            |.
-        p
-            | Now we count the number of marked non-backtracking paths on #[m \mathscr H_d(q)]  of length #[m 2l+1] (write #[m MNBP(\mathscr H_d(q))] for this quantity), which in addition satisfy
-            me \frac{|\gamma_x^{(l)} \cap B_\delta|}{(2l+1)} \gt \frac{|B_\delta|}{|\mathscr H_d(q) | } +   \frac{\delta \eta}{2}
-            | .
-        p
-            | By #[xref(ref="eqn-phi-bd-linnik-pf")/] we have #[m \eta \delta |\mathscr H_d|/2] of these paths #[q upstairs].
-        p
-            | Recall Siegel implies
-            me d^{\frac 12 - \epsilon} \lt | \mathscr H_d| \lt d^{\frac 12 + \epsilon}
-            | so upstairs we have #[m \gg_\epsilon \frac{\eta \delta }{2} d^{\frac 12 - \epsilon }] paths.
+            p
+                | Final input is a Chernoff type bound.
+        proposition
+            statement: p
+                | Fix #[m \eta, \epsilon \gt 0] for any subset
+                me B \subseteq \mathscr H_d(q)
+                | s.t.
+                me | B | \ge  \eta | \mathscr H_d(q)|
+                | the fraction of non-backtracking paths of length #[m 2l + 1] satisfying
+                me \left| \frac{| \gamma \cap B|}{2l + 1 } - \frac{|B | }{|\mathscr H_d(q)|}  \right| \ge \epsilon
+                | is
+                me \ll_{\epsilon,\eta} e^{-cl}
+                | for some #[m c =c(\epsilon, \eta) \gt 0].
 
         p
-            | Claim 1:
-            | The previous proposition implies not mant of these paths give the same path mod #[m q]
-            me MNBP(\mathscr H_d(q)) \gg_{\epsilon,\delta \eta} d^{\frac 12 - \epsilon}
-            | .
-        p
-            | On the other hand the total number of marked non-backtracking paths on
-            me \mathscr H_d(q)
-            | is
-            me | \mathscr H_d(q)| 6 \cdot 5^{2l -1}
-            | also observe that #[m |\mathscr H_d(q)| \ll q^2]
-            | so  the total number #[m \sim q^2 5^{2l} \ll d^{1/2  + \epsilon}]
-            me \frac 15 |\mathscr H_d| \lt q^2 5^{2l} \lt 5 |\mathscr H_d|
+            | Claim 2: This proposition implies that the fraction
+            me MNBP(\mathscr H_d(q)) \ll d^{\frac 12 - \tau}
+            | for some #[m \tau \gt 0].
+            | Then
+            me \gg_\epsilon d^{\frac 12 - \epsilon}
+            me \ll_\epsilon d^{\frac 12 - \tau}
+            | give a contradiction.
 
         p
-            | Final input is a Chernoff type bound.
-    proposition
-        statement: p
-            | Fix #[m \eta, \epsilon \gt 0] for any subset
-            me B \subseteq \mathscr H_d(q)
-            | s.t.
-            me | B | \ge  \eta | \mathscr H_d(q)|
-            | the fraction of non-backtracking paths of length #[m 2l + 1] satisfying
-            me \left| \frac{| \gamma \cap B|}{2l + 1 } - \frac{|B | }{|\mathscr H_d(q)|}  \right| \ge \epsilon
-            | is
-            me \ll_{\epsilon,\eta} e^{-cl}
-            | for some #[m c =c(\epsilon, \eta) \gt 0].
+            | We now check some claims made above.
 
-    p
-        | Claim 2: This proposition implies that the fraction
-        me MNBP(\mathscr H_d(q)) \ll d^{\frac 12 - \tau}
-        | for some #[m \tau \gt 0].
-        | Then
-        me \gg_\epsilon d^{\frac 12 - \epsilon}
-        me \ll_\epsilon d^{\frac 12 - \tau}
-        | give a contradiction.
+        claim
+            title Claim 1
+            statement: p
+                | Bound on #[m \#\{(x,x') : \gamma_x ^{(l) } =  \gamma_{x'}^{(l)}\}]
+                | gives a bound on the number of distinct paths.
+            proof: p
+                me \#\{ (a,a')  \in A^2 : a  \equiv a' \pmod q\} = \sum n_{a_i}
+                | gives a lower bound on #[m A \pmod q].
 
-    p
-        | We now check some claims made above.
-
-    claim
-        title Claim 1
-        statement: p
-            | Bound on #[m \#\{(x,x') : \gamma_x ^{(l) } =  \gamma_{x'}^{(l)}\}]
-            | gives a bound on the number of distinct paths.
-        proof: p
-            me \#\{ (a,a')  \in A^2 : a  \equiv a' \pmod q\} = \sum n_{a_i}
-            | gives a lower bound on #[m A \pmod q].
-
-            | To show this note that the
-            me | A(q)| = | A |  - \sum_{i=1}^{|A|} \frac{n_{a_i} - 1}{n_{a_i}}  - \sum_{i=1}^{|A|} \frac 1{n_{a_i}}
-            | where #[m n_{a_i} = \# \{ a \in A : a \equiv a_i \pmod q\}].
+                | To show this note that the
+                me | A(q)| = | A |  - \sum_{i=1}^{|A|} \frac{n_{a_i} - 1}{n_{a_i}}  - \sum_{i=1}^{|A|} \frac 1{n_{a_i}}
+                | where #[m n_{a_i} = \# \{ a \in A : a \equiv a_i \pmod q\}].
 
 
 
-    claim
-        title Claim 2
-        statement: p
-            | Follows from two points
-            me d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
-            me q \lt d^{\frac 14 - \nu}
+        claim
+            title Claim 2
+            statement: p
+                | Follows from two points
+                me d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
+                me q \lt d^{\frac 14 - \nu}
 
     subsection
         title The adelic picture
@@ -2987,6 +2990,7 @@ section#sec-linnik
             p
                 | Recall
                 me K^\times \backslash \adeles_{K,f}^\times / \widehat \ints_K^\times \simeq \Pic(\ints_K)
+                | .
 
         paragraphs
             title The graph structure on #[m \mathscr H_d(q)]
@@ -3007,4 +3011,197 @@ section#sec-linnik
                 me \PGL_2(\QQ_5) / \PGL_2(\ZZ_5)
                 | is a Bruhat-Tits tree, a 6-regular tree.
 
+
+        aside: p Lecture 22 6/12/2018
+
+        paragraphs
+            title Automorphic spectrum of #[m \PGL_2] of #[m \mathbf F_q(t)]
+
+            p
+                | Analogous to #[m \SL_2(\ZZ) \backslash \HH].
+
+            p
+                | Reference I. Efrat: Automorphic spectrum on the tree of #[m \PGL_2]
+
+            p
+                | Setup: #[m k = \FF_q], #[m v_\infty =  - \deg] so #[m |f|_\infty = q^{\deg (f)}].
+                me K = (k(t))_\infty = k((\frac 1t ))
+                me \ints_\infty = \ints = k [[ t \inv ]]
+                me \Gamma = \PGL_2(\FF_q[[t]])
+            p
+                | Analogies:
+                me \HH \leftrightsquigarrow \PGL_2(K) / \PGL_2(\ints) = X
+                me \SL_2(\ZZ) \leftrightsquigarrow \Gamma
+            p
+                | Problem: decompose #[m L^2(\Gamma \backslash X)].
+                | In the case of
+                me \SL_2(\ZZ) \backslash \HH \leadsto L^2(\SL_2(\ZZ)\backslash \HH) = \underbrace{R}_{\text{Residual}} \oplus \underbrace{C}_{\text{cusp forms}} \oplus \underbrace{E}_{\text{Eisenstein}}
+                | .
+
+            theorem
+                statement: p
+                    me L^2( \Gamma \backslash X) = R\oplus E
+                    | #[m \dim(R) = 2,\,\dim(E) = \infty] i.e.  no cusp forms.
+
+        paragraphs
+            title Little bit on #[m X] (a #[m (q+1)]-regular tree)
+
+            p
+                | Ref: Serre #[q Trees].
+
+            p
+                | Description
+                ol
+                    li
+                        p
+                            | In terms of lattices
+                            me L = \{ av_1 + bv_2 : a,b\in \ints\}
+                            | s.t.
+                            me L\otimes_\ints K \simeq K^2
+                            | .
+                        p
+                            | Matrix
+                            me \begin{pmatrix} v_1 \amp v_2 \end{pmatrix} \GL_2(K)
+                            | changing basis implies #[m L] a class in #[m \GL_2(K) / \GL_2(\ints)].
+                            me L_1 \sim L_2
+                            | if #[m \exists a \in K^\times] s.t. #[m L_1 = a L_2].
+                        p
+                            me X = \{ \text{equivalence classes of lattices} \}
+                            | A class #[m L] is adjacent to #[m L'] #[m \iff] #[m \exists] representations #[m L_0, L_0'] s.t. #[m L_0' \subseteq L_0] and #[m L_0/L_0' \simeq \FF_q].
+                    li
+                        p
+                            | Group theoretic
+                            me B = \left\{ \begin{pmatrix} * \amp * \\ 0 \amp 1 \end{pmatrix} \right\}/K
+
+                            | Fact: #[m \PGL_2(K) = B \cdot \PGL_2(\ints)].
+                            | Each coset #[m b \PGL_2(\ints)] has a representative
+                            me \begin{pmatrix} t^n \amp x \\ 0 \amp 1\end{pmatrix}
+                            | #[m n] unique and #[m x \in K].
+                        p
+                            | Vertices of #[m X]
+                            me \begin{pmatrix} t^n \amp x \\ 0 \amp 1\end{pmatrix} \PGL_2(\ints)
+                            me.
+                                \begin{pmatrix} t^n \amp x \\ 0 \amp 1\end{pmatrix} \sim_{\text{adjacent}}
+                                \begin{cases}
+                                \begin{pmatrix} t^{n-1} \amp \xi t^n + x \\ 0 \amp 1\end{pmatrix},\, \xi \in \FF_q
+                                \begin{pmatrix} t^{n+1} \amp x \\ 0 \amp 1\end{pmatrix}
+                                \end{cases}
+                        p
+                            | Fact:
+                            me \Gamma\backslash X = \text{chain } \bullet -\bullet - \bullet - \cdots
+
+            p
+                | Measures: Normalise Haar on #[m \PGL_2] s.t. #[m \mu(\PGL_2(\ints)) = q(q-1)].
+                | #[m \leadsto] On #[m \Gamma\backslash X], #[m \mu] gives vertices weights
+                me n=0: \frac{1}{q+1}
+                me n=1: \frac{1}{q}
+                me n=2: \frac{1}{q^2}
+                me \vdots
+                me n: \frac{1}{q^n}
+            remark
+                p
+                    | We have
+                    me \pair fg_\mu = \int_{\Gamma \backslash X} f \cdot \bar g \diff \mu = \frac{1}{q+1} f(0)\bar g(0) + \sum_{i=1}^\infty \frac{f(i) \bar g(i)}{q^i}
+                    | .
+            fact
+                statement: p
+                    | The algebra of operators on functions on #[m X] that commute with the automorphisms of #[m X] is generated by
+                    me (T(f))(s)  = \sum_{s' \sim s} f(s')
+
+            remark
+                p
+                    me \Delta = (q+1) \id - T
+                    | and #[m T] descends to #[m \Gamma\backslash X].
+
+            p
+                | Given #[m f\colon \Gamma\backslash X \simeq \NN \to \CC]
+                me (T(f))(n) = \begin{cases} (q+1)f(1),\amp n=0 \\ qf(n-1) + f(n+1),\amp n \gt 0 \end{cases}
+
+            p
+                | #[m T] is self-adjoint with respect to #[m \pair{}{}_\mu].
+
+        paragraphs
+            title Eigenfunctions of #[m T]
+
+            p
+                me (T f)(n) = \lambda \cdot f(n),\,\forall n \in \NN
+                | .
+            p
+                me \implies \lambda f(0) = (q+1) f(1)
+                me          \lambda f(n) = q f(n-1) + f(n+1),\,\forall n \gt 0
+                | i.e.
+                me \begin{pmatrix} f(n+1) \\ f(n) \end{pmatrix} = \begin{pmatrix} \lambda \amp -q \\ 1 \amp 0 \end{pmatrix}^n\begin{pmatrix} f(1) \\ f(0) \end{pmatrix}
+                | .
+            p
+                | Now fix a normalization
+                me f(0) = q+1
+                me f(1) = \lambda
+                |.
+            p
+                | Characteristic values:
+                me x_1, x_2 = \frac{-\lambda \pm \sqrt{\lambda^2 - 4q}}{2}
+                | note #[m x_1 = x_2 \iff \lambda = \pm 2\sqrt q].
+            p
+                | Eigenfunctions
+                me f_\lambda (n) = \begin{cases} \frac{1}{\sqrt{\lambda^2 - 4q}} \left(\lambda( x_1^n - x_2^n) - q(q+1)(x_1^{n-1} - x_2^{n-1})\right),\amp n \gt0 \\ q+1,\amp n=0 \end{cases}
+                | for #[m \lambda \ne \pm 2\sqrt q] note #[m f_{q+1} = q+1].
+                me f_{2\sqrt q} (n) = (q+1 - (q-1) n)q^{n/2}
+                me f_{-2\sqrt q} (n) = (-1)^n f_{2\sqrt q}
+            p
+                | We now consider the space #[m L^2( \Gamma\backslash X)] with the operator #[m T].
+            p
+                | Question: which the #[m f_\lambda] are in #[m L^2 (\Gamma\backslash X)]?
+
+            proposition
+                statement: p
+                    | The only #[m f_\lambda\in L^2] with #[m |\lambda| \gt 2 \sqrt q] are #[m \lambda = \pm(q+1)].
+                proof
+                    p
+                        | Normalise #[m f_\lambda] by
+                        me (x_2 - x_1) f = x_1^{n-1} (\lambda x_1 - q(q+1)) - x_2^{n-1} (\lambda x_2 - q(q+1))
+                        | assume WLOG #[m |x_1| \gt \sqrt q] #[m \implies] #[m |x_2| \lt \sqrt q] (since #[m |\lambda| \gt 2 \sqrt q])
+                        | so #[m x_2^n = o(q^{n/2})].
+                    p
+                        | So #[m \lambda x_1 - q(q+1) = 0] (to be in #[m L^2]).
+                        | So #[m \lambda = \pm q(q+1)].
+
+            p
+                | What about the rest?
+            p
+                | Note: #[m |\lambda|  \lt 2 \sqrt q \implies x_1 = \bar x_2].
+
+            p
+                | Renormalise: Let #[m x_1 = \sqrt q e^{i\theta},x_2 = \sqrt q e^{-i\theta}].
+                me \lambda = 2\sqrt q \cos \theta,\,0 \lt \theta \lt \pi
+                me \tilde f_\theta(n) = \frac{x_1 - x_2}{2\sqrt q} f_{2\sqrt q \cos \theta} (n)
+                | so
+                me \tilde f_\theta(n) = \begin{cases} q^{n/2} i (\sin(n+1)) \theta - q\sin(n-1) \theta\\ (q+1) i \sin \theta\end{cases}
+
+            proposition
+                statement: p
+                    me \tilde f_\theta \not \in L^2
+                    | for #[m 0 \lt \theta \lt \pi].
+
+        paragraphs
+            title Spectral decomposition of #[m L^2(\Gamma \backslash X)]
+
+            p
+                | Continuous spectrum: Extend #[m \tilde f_\theta] to an odd function #[m - \pi \lt \theta \lt \pi].
+                | Given #[m \psi \in L^2(\Lambda\backslash X)] consider
+                me F_\psi(n) = \frac{1}{2\pi} \int_{-\pi}^\pi \psi(\theta) \tilde f_\theta (n) \diff \theta
+                | .
+
+            theorem
+                statement: p
+                    | #[m F_\psi \in L^2(\Gamma\backslash X)].
+                    me \pair{F_\psi}{F_\phi}_\mu = \pair{\psi}{\phi} \frac{1}{2\pi} \int_0^\pi \psi(x) \overline{\phi(x)} ((q-1)^2 - 4 q \sin^2(x)) \diff x
+
+            theorem
+                statement: p
+                    | Let #[m g \in L^2(\Gamma \backslash X)].
+                    | Then
+                    me g(n) = \pair{g}{u_1} u_1(n) + \pair{g}{u_2} u_2(n) + 2 \pi \int_0^\pi \pair{g }{\tilde f _\theta} \tilde f _\theta \frac{\diff \theta}{(q-1)^2 - 4q \sin^2 \theta}
+                    | where
+                    me u_1 = \sqrt{\frac{q^2-1}{2q}},\, u_2 = \sqrt{\frac{q^2-1}{2q}} (-1)^n
+                    | .
 

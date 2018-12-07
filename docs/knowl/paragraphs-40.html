@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Eigenfunctions of \(T\)</span></h5>
+<div class="displaymath">
+\begin{equation*}
+(T f)(n) = \lambda \cdot f(n),\,\forall n \in \NN\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies \lambda f(0) = (q+1) f(1)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda f(n) = q f(n-1) + f(n+1),\,\forall n \gt 0
+\end{equation*}
+</div>
+<p>i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} f(n+1) \\ f(n) \end{pmatrix} = \begin{pmatrix} \lambda \amp -q \\ 1 \amp 0 \end{pmatrix}^n\begin{pmatrix} f(1) \\ f(0) \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p>Now fix a normalization</p>
+<div class="displaymath">
+\begin{equation*}
+f(0) = q+1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f(1) = \lambda\text{.}
+\end{equation*}
+</div>
+<p>Characteristic values:</p>
+<div class="displaymath">
+\begin{equation*}
+x_1, x_2 = \frac{-\lambda \pm \sqrt{\lambda^2 - 4q}}{2}
+\end{equation*}
+</div>
+<p>note \(x_1 = x_2 \iff \lambda = \pm 2\sqrt q\text{.}\)</p>
+<p>Eigenfunctions</p>
+<div class="displaymath">
+\begin{equation*}
+f_\lambda (n) = \begin{cases} \frac{1}{\sqrt{\lambda^2 - 4q}} \left(\lambda( x_1^n - x_2^n) - q(q+1)(x_1^{n-1} - x_2^{n-1})\right),\amp n \gt0 \\ q+1,\amp n=0 \end{cases}
+\end{equation*}
+</div>
+<p>for \(\lambda \ne \pm 2\sqrt q\) note \(f_{q+1} = q+1\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f_{2\sqrt q} (n) = (q+1 - (q-1) n)q^{n/2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f_{-2\sqrt q} (n) = (-1)^n f_{2\sqrt q}
+\end{equation*}
+</div>
+<p>We now consider the space \(L^2( \Gamma\backslash X)\) with the operator \(T\text{.}\)</p>
+<p>Question: which the \(f_\lambda\) are in \(L^2 (\Gamma\backslash X)\text{?}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.45</span>
+</h6>
+<p>The only \(f_\lambda\in L^2\) with \(|\lambda| \gt 2 \sqrt q\) are \(\lambda = \pm(q+1)\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-45-hidden.html" title="Proof 3.45.1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>What about the rest?</p>
+<p>Note: \(|\lambda|  \lt 2 \sqrt q \implies x_1 = \bar x_2\text{.}\)</p>
+<p>Renormalise: Let \(x_1 = \sqrt q e^{i\theta},x_2 = \sqrt q e^{-i\theta}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda = 2\sqrt q \cos \theta,\,0 \lt \theta \lt \pi
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\tilde f_\theta(n) = \frac{x_1 - x_2}{2\sqrt q} f_{2\sqrt q \cos \theta} (n)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde f_\theta(n) = \begin{cases} q^{n/2} i (\sin(n+1)) \theta - q\sin(n-1) \theta\\ (q+1) i \sin \theta\end{cases}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.46</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\tilde f_\theta \not \in L^2
+\end{equation*}
+</div>
+<p>for \(0 \lt \theta \lt \pi\text{.}\)</p></article></article><span class="incontext"><a href="sec-linnik.html#paragraphs-40">in-context</a></span>
+</body>
+</html>

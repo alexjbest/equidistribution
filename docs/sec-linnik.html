@@ -287,13 +287,18 @@ var login_required = false;
 </ul>
 <h2 class="link"><a href="sec-duke.html" data-scroll="sec-duke"><span class="codenumber">2</span> <span class="title">Duke's theorem</span></a></h2>
 <h2 class="link active"><a href="sec-linnik.html" data-scroll="sec-linnik"><span class="codenumber">3</span> <span class="title">Linnik's theorem</span></a></h2>
-<ul><li><a href="sec-linnik.html#subsection-8" data-scroll="subsection-8">The adelic picture</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<ul>
+<li><a href="sec-linnik.html#subsec-linnik" data-scroll="subsec-linnik">Linnik's theorem</a></li>
+<li><a href="sec-linnik.html#subsection-9" data-scroll="subsection-9">The adelic picture</a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/equidistribution/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-linnik"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Linnik's theorem</span>
 </h2>
-<a href="sec-linnik.html" class="permalink">¶</a><p id="p-360">We will mostly follow Ellenberg, Michel, Venkatesh. Linnik's ergodic method and the distribution of integer points on spheres.</p>
-<article class="paragraphs" id="paragraphs-27"><h5 class="heading"><span class="title">Problem</span></h5>
+<a href="sec-linnik.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-360">We will mostly follow Ellenberg, Michel, Venkatesh. Linnik's ergodic method and the distribution of integer points on spheres.</p></section><section class="subsection" id="subsec-linnik"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1</span> <span class="title">Linnik's theorem</span>
+</h3>
+<a href="sec-linnik.html#subsec-linnik" class="permalink">¶</a><article class="paragraphs" id="paragraphs-27"><h5 class="heading"><span class="title">Problem</span></h5>
 <aside class="aside-like" id="aside-16"><p id="p-361">Lecture 16 6/11/2018</p></aside><p id="p-362">Distribution of</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1303,8 +1308,8 @@ d^{\frac 12  - \epsilon} \ll q^2 5^{2l}  \ll d^{\frac 12 + \epsilon}
 \begin{equation*}
 q \lt d^{\frac 14 - \nu}
 \end{equation*}
-</div></article><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.1</span> <span class="title">The adelic picture</span>
+</div></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2</span> <span class="title">The adelic picture</span>
 </h3>
 <aside class="aside-like" id="aside-21"><p id="p-470">Lecture 21 4/12/2018</p></aside><p id="p-471">Notation: \(\adeles\) is the ring of adeles of \(\QQ\)</p>
 <div class="displaymath">
@@ -1520,7 +1525,7 @@ P_{(q)} = \specialorthogonal_3(\adeles_f) [ \mathcal L_0, \bar x_q]
 <p id="p-486">Recall</p>
 <div class="displaymath">
 \begin{equation*}
-K^\times \backslash \adeles_{K,f}^\times / \widehat \ints_K^\times \simeq \Pic(\ints_K)
+K^\times \backslash \adeles_{K,f}^\times / \widehat \ints_K^\times \simeq \Pic(\ints_K)\text{.}
 \end{equation*}
 </div></article><article class="paragraphs" id="paragraphs-37"><h5 class="heading"><span class="title">The graph structure on \(\mathscr H_d(q)\)</span></h5>
 <p id="p-487">\(\specialorthogonal_3(\adeles_f)\) is a large group, but so is \(K_f' \lb q\rb \text{.}\) What is indeed true is</p>
@@ -1552,7 +1557,307 @@ K_{f} [3,q] = K_f[3] \cap K_f'[q] \subseteq K_f'[q]
 \PGL_2(\QQ_5) / \PGL_2(\ZZ_5)
 \end{equation*}
 </div>
-<p>is a Bruhat-Tits tree, a 6-regular tree.</p></article></section></section></div></main>
+<p>is a Bruhat-Tits tree, a 6-regular tree.</p></article><aside class="aside-like" id="aside-22"><p id="p-490">Lecture 22 6/12/2018</p></aside><article class="paragraphs" id="paragraphs-38"><h5 class="heading"><span class="title">Automorphic spectrum of \(\PGL_2\) of \(\mathbf F_q(t)\)</span></h5>
+<p id="p-491">Analogous to \(\SL_2(\ZZ) \backslash \HH\text{.}\)</p>
+<p id="p-492">Reference I. Efrat: Automorphic spectrum on the tree of \(\PGL_2\)</p>
+<p id="p-493">Setup: \(k = \FF_q\text{,}\) \(v_\infty =  - \deg\) so \(|f|_\infty = q^{\deg (f)}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+K = (k(t))_\infty = k((\frac 1t ))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\ints_\infty = \ints = k [[ t \inv ]]
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Gamma = \PGL_2(\FF_q[[t]])
+\end{equation*}
+</div>
+<p id="p-494">Analogies:</p>
+<div class="displaymath">
+\begin{equation*}
+\HH \leftrightsquigarrow \PGL_2(K) / \PGL_2(\ints) = X
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\SL_2(\ZZ) \leftrightsquigarrow \Gamma
+\end{equation*}
+</div>
+<p id="p-495">Problem: decompose \(L^2(\Gamma \backslash X)\text{.}\) In the case of</p>
+<div class="displaymath">
+\begin{equation*}
+\SL_2(\ZZ) \backslash \HH \leadsto L^2(\SL_2(\ZZ)\backslash \HH) = \underbrace{R}_{\text{Residual}} \oplus \underbrace{C}_{\text{cusp forms}} \oplus \underbrace{E}_{\text{Eisenstein}}\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-35"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.41</span>
+</h6>
+<div class="displaymath" id="p-496">
+\begin{equation*}
+L^2( \Gamma \backslash X) = R\oplus E
+\end{equation*}
+</div>
+<p>\(\dim(R) = 2,\,\dim(E) = \infty\) i.e.  no cusp forms.</p></article></article><article class="paragraphs" id="paragraphs-39"><h5 class="heading"><span class="title">Little bit on \(X\) (a \((q+1)\)-regular tree)</span></h5>
+<p id="p-497">Ref: Serre “Trees”.</p>
+<p id="p-498">Description</p>
+<ol class="decimal">
+<li id="li-86">
+<p id="p-499">In terms of lattices</p>
+<div class="displaymath">
+\begin{equation*}
+L = \{ av_1 + bv_2 : a,b\in \ints\}
+\end{equation*}
+</div>
+<p>s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+L\otimes_\ints K \simeq K^2\text{.}
+\end{equation*}
+</div>
+<p id="p-500">Matrix</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} v_1 \amp v_2 \end{pmatrix} \GL_2(K)
+\end{equation*}
+</div>
+<p>changing basis implies \(L\) a class in \(\GL_2(K) / \GL_2(\ints)\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+L_1 \sim L_2
+\end{equation*}
+</div>
+<p>if \(\exists a \in K^\times\) s.t. \(L_1 = a L_2\text{.}\)</p>
+<div class="displaymath" id="p-501">
+\begin{equation*}
+X = \{ \text{equivalence classes of lattices} \}
+\end{equation*}
+</div>
+<p>A class \(L\) is adjacent to \(L'\) \(\iff\) \(\exists\) representations \(L_0, L_0'\) s.t. \(L_0' \subseteq L_0\) and \(L_0/L_0' \simeq \FF_q\text{.}\)</p>
+</li>
+<li id="li-87">
+<p id="p-502">Group theoretic</p>
+<div class="displaymath">
+\begin{equation*}
+B = \left\{ \begin{pmatrix} * \amp * \\ 0 \amp 1 \end{pmatrix} \right\}/K
+\end{equation*}
+</div>
+<p>Fact: \(\PGL_2(K) = B \cdot \PGL_2(\ints)\text{.}\) Each coset \(b \PGL_2(\ints)\) has a representative</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} t^n \amp x \\ 0 \amp 1\end{pmatrix}
+\end{equation*}
+</div>
+<p>\(n\) unique and \(x \in K\text{.}\)</p>
+<p id="p-503">Vertices of \(X\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} t^n \amp x \\ 0 \amp 1\end{pmatrix} \PGL_2(\ints)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} t^n \amp x \\ 0 \amp 1\end{pmatrix} \sim_{\text{adjacent}}
+\begin{cases}
+\begin{pmatrix} t^{n-1} \amp \xi t^n + x \\ 0 \amp 1\end{pmatrix},\, \xi \in \FF_q
+\begin{pmatrix} t^{n+1} \amp x \\ 0 \amp 1\end{pmatrix}
+\end{cases}
+\end{equation*}
+</div>
+<p id="p-504">Fact:</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma\backslash X = \text{chain } \bullet -\bullet - \bullet - \cdots
+\end{equation*}
+</div>
+</li>
+</ol>
+<p id="p-505">Measures: Normalise Haar on \(\PGL_2\) s.t. \(\mu(\PGL_2(\ints)) = q(q-1)\text{.}\) \(\leadsto\) On \(\Gamma\backslash X\text{,}\) \(\mu\) gives vertices weights</p>
+<div class="displaymath">
+\begin{equation*}
+n=0: \frac{1}{q+1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+n=1: \frac{1}{q}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+n=2: \frac{1}{q^2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\vdots
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+n: \frac{1}{q^n}
+\end{equation*}
+</div>
+<article class="remark-like" id="remark-15"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">3.42</span>
+</h6>
+<p id="p-506">We have</p>
+<div class="displaymath">
+\begin{equation*}
+\pair fg_\mu = \int_{\Gamma \backslash X} f \cdot \bar g \diff \mu = \frac{1}{q+1} f(0)\bar g(0) + \sum_{i=1}^\infty \frac{f(i) \bar g(i)}{q^i}\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="fact-4"><h6 class="heading">
+<span class="type">Fact</span> <span class="codenumber">3.43</span>
+</h6>
+<p id="p-507">The algebra of operators on functions on \(X\) that commute with the automorphisms of \(X\) is generated by</p>
+<div class="displaymath">
+\begin{equation*}
+(T(f))(s)  = \sum_{s' \sim s} f(s')
+\end{equation*}
+</div></article><article class="remark-like" id="remark-16"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">3.44</span>
+</h6>
+<div class="displaymath" id="p-508">
+\begin{equation*}
+\Delta = (q+1) \id - T
+\end{equation*}
+</div>
+<p>and \(T\) descends to \(\Gamma\backslash X\text{.}\)</p></article><p id="p-509">Given \(f\colon \Gamma\backslash X \simeq \NN \to \CC\)</p>
+<div class="displaymath">
+\begin{equation*}
+(T(f))(n) = \begin{cases} (q+1)f(1),\amp n=0 \\ qf(n-1) + f(n+1),\amp n \gt 0 \end{cases}
+\end{equation*}
+</div>
+<p id="p-510">\(T\) is self-adjoint with respect to \(\pair{}{}_\mu\text{.}\)</p></article><article class="paragraphs" id="paragraphs-40"><h5 class="heading"><span class="title">Eigenfunctions of \(T\)</span></h5>
+<div class="displaymath" id="p-511">
+\begin{equation*}
+(T f)(n) = \lambda \cdot f(n),\,\forall n \in \NN\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-512">
+\begin{equation*}
+\implies \lambda f(0) = (q+1) f(1)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda f(n) = q f(n-1) + f(n+1),\,\forall n \gt 0
+\end{equation*}
+</div>
+<p>i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} f(n+1) \\ f(n) \end{pmatrix} = \begin{pmatrix} \lambda \amp -q \\ 1 \amp 0 \end{pmatrix}^n\begin{pmatrix} f(1) \\ f(0) \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p id="p-513">Now fix a normalization</p>
+<div class="displaymath">
+\begin{equation*}
+f(0) = q+1
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f(1) = \lambda\text{.}
+\end{equation*}
+</div>
+<p id="p-514">Characteristic values:</p>
+<div class="displaymath">
+\begin{equation*}
+x_1, x_2 = \frac{-\lambda \pm \sqrt{\lambda^2 - 4q}}{2}
+\end{equation*}
+</div>
+<p>note \(x_1 = x_2 \iff \lambda = \pm 2\sqrt q\text{.}\)</p>
+<p id="p-515">Eigenfunctions</p>
+<div class="displaymath">
+\begin{equation*}
+f_\lambda (n) = \begin{cases} \frac{1}{\sqrt{\lambda^2 - 4q}} \left(\lambda( x_1^n - x_2^n) - q(q+1)(x_1^{n-1} - x_2^{n-1})\right),\amp n \gt0 \\ q+1,\amp n=0 \end{cases}
+\end{equation*}
+</div>
+<p>for \(\lambda \ne \pm 2\sqrt q\) note \(f_{q+1} = q+1\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f_{2\sqrt q} (n) = (q+1 - (q-1) n)q^{n/2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f_{-2\sqrt q} (n) = (-1)^n f_{2\sqrt q}
+\end{equation*}
+</div>
+<p id="p-516">We now consider the space \(L^2( \Gamma\backslash X)\) with the operator \(T\text{.}\)</p>
+<p id="p-517">Question: which the \(f_\lambda\) are in \(L^2 (\Gamma\backslash X)\text{?}\)</p>
+<article class="theorem-like" id="proposition-14"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.45</span>
+</h6>
+<p id="p-518">The only \(f_\lambda\in L^2\) with \(|\lambda| \gt 2 \sqrt q\) are \(\lambda = \pm(q+1)\text{.}\)</p></article><article class="hiddenproof" id="proof-45"><a knowl="" class="id-ref" refid="hk-proof-45"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-45" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-519">Normalise \(f_\lambda\) by</p>
+<div class="displaymath">
+\begin{equation*}
+(x_2 - x_1) f = x_1^{n-1} (\lambda x_1 - q(q+1)) - x_2^{n-1} (\lambda x_2 - q(q+1))
+\end{equation*}
+</div>
+<p>assume WLOG \(|x_1| \gt \sqrt q\) \(\implies\) \(|x_2| \lt \sqrt q\) (since \(|\lambda| \gt 2 \sqrt q\)) so \(x_2^n = o(q^{n/2})\text{.}\)</p>
+<p id="p-520">So \(\lambda x_1 - q(q+1) = 0\) (to be in \(L^2\)). So \(\lambda = \pm q(q+1)\text{.}\)</p></article></div>
+<p id="p-521">What about the rest?</p>
+<p id="p-522">Note: \(|\lambda|  \lt 2 \sqrt q \implies x_1 = \bar x_2\text{.}\)</p>
+<p id="p-523">Renormalise: Let \(x_1 = \sqrt q e^{i\theta},x_2 = \sqrt q e^{-i\theta}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda = 2\sqrt q \cos \theta,\,0 \lt \theta \lt \pi
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\tilde f_\theta(n) = \frac{x_1 - x_2}{2\sqrt q} f_{2\sqrt q \cos \theta} (n)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde f_\theta(n) = \begin{cases} q^{n/2} i (\sin(n+1)) \theta - q\sin(n-1) \theta\\ (q+1) i \sin \theta\end{cases}
+\end{equation*}
+</div>
+<article class="theorem-like" id="proposition-15"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.46</span>
+</h6>
+<div class="displaymath" id="p-524">
+\begin{equation*}
+\tilde f_\theta \not \in L^2
+\end{equation*}
+</div>
+<p>for \(0 \lt \theta \lt \pi\text{.}\)</p></article></article><article class="paragraphs" id="paragraphs-41"><h5 class="heading"><span class="title">Spectral decomposition of \(L^2(\Gamma \backslash X)\)</span></h5>
+<p id="p-525">Continuous spectrum: Extend \(\tilde f_\theta\) to an odd function \(- \pi \lt \theta \lt \pi\text{.}\) Given \(\psi \in L^2(\Lambda\backslash X)\) consider</p>
+<div class="displaymath">
+\begin{equation*}
+F_\psi(n) = \frac{1}{2\pi} \int_{-\pi}^\pi \psi(\theta) \tilde f_\theta (n) \diff \theta\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-36"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.47</span>
+</h6>
+<p id="p-526">\(F_\psi \in L^2(\Gamma\backslash X)\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\pair{F_\psi}{F_\phi}_\mu = \pair{\psi}{\phi} \frac{1}{2\pi} \int_0^\pi \psi(x) \overline{\phi(x)} ((q-1)^2 - 4 q \sin^2(x)) \diff x
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-37"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.48</span>
+</h6>
+<p id="p-527">Let \(g \in L^2(\Gamma \backslash X)\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+g(n) = \pair{g}{u_1} u_1(n) + \pair{g}{u_2} u_2(n) + 2 \pi \int_0^\pi \pair{g }{\tilde f _\theta} \tilde f _\theta \frac{\diff \theta}{(q-1)^2 - 4q \sin^2 \theta}
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+u_1 = \sqrt{\frac{q^2-1}{2q}},\, u_2 = \sqrt{\frac{q^2-1}{2q}} (-1)^n\text{.}
+\end{equation*}
+</div></article></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script>
 var _gaq = _gaq || [];
